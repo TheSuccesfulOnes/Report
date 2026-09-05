@@ -4,19 +4,19 @@
 
 ### 2.1.1. Análisis competitivo
 
-| Sección | Criterio | SafeSpace | Officevibe | Culture Amp | 15Five |
-| :---- | :---- | :---- | :---- | :---- | :---- |
-| **Perfil** | Overview | Plataforma de contacto y análisis basada en encuestas, foro y análisis organizacional. | Plataforma de engagement basada en encuestas rápidas y feedback continuo. | Plataforma avanzada de análisis de clima laboral y cultura organizacional. | Software de desempeño con enfoque en feedback continuo y objetivos (OKRs). |
-| | Ventaja competitiva | Simplicidad y accesibilidad para empresas de distintas magnitudes. | Simplicidad y facilidad de uso en encuestas semanales. | Potente analítica y benchmarking global. | Integración de desempeño, objetivos y seguimiento del empleado. |
-| **Marketing** | Mercado objetivo | Empresas medianas o grandes que buscan mejorar su clima laboral. | Empresas medianas y grandes. | Corporaciones globales. | Empresas que buscan analizar desempeño. |
-| | Estrategia | Branding y marketing direccionado a redes sociales y canales digitales. | Marketing digital enfocado en HR Tech. | Branding y estudios organizacionales. | Contenido educativo y enfoque en managers. |
-| **Producto** | Servicios | Encuestas, personalización de usuario, dashboards, foros de trabajo y canal de comunicación anónimo. | Encuestas, feedback anónimo y reportes básicos. | Encuestas, analítica avanzada y planes de acción. | Evaluaciones, seguimiento de objetivos y feedback continuo. |
-| | Precios & Costos | Suscripción por usuario u organización. | Suscripción por usuario. | SaaS con precios elevados. | Suscripción escalable por usuario. |
-| | Canales de distribución | Aplicación móvil y plataforma web. | Web y aplicación móvil. | Web y aplicación móvil. | Web y aplicación móvil. |
-| **SWOT** | Fortalezas | Integración sencilla y enfoque en privacidad. | Fácil adopción. | Alto nivel de análisis. | Plataforma integral de talento. |
-| | Debilidades | Producto nuevo en proceso de validación. | Funcionalidad limitada. | Alto costo. | Complejidad para equipos pequeños. |
-| | Oportunidades | Monitoreo específico del clima laboral y acompañamiento a empresas locales. | Crecimiento del trabajo remoto. | Expansión global. | Tendencia hacia OKRs. |
-| | Amenazas | Mercado con competidores ya establecidos. | Competencia más completa. | Nuevas startups. | Mercado saturado. |
+| Sección       | Criterio                | SafeSpace                                                                                            | Officevibe                                                                | Culture Amp                                                                | 15Five                                                                     |
+| :------------ | :---------------------- | :--------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ | :------------------------------------------------------------------------- | :------------------------------------------------------------------------- |
+| **Perfil**    | Overview                | Plataforma de contacto y análisis basada en encuestas, foro y análisis organizacional.               | Plataforma de engagement basada en encuestas rápidas y feedback continuo. | Plataforma avanzada de análisis de clima laboral y cultura organizacional. | Software de desempeño con enfoque en feedback continuo y objetivos (OKRs). |
+|               | Ventaja competitiva     | Simplicidad y accesibilidad para empresas de distintas magnitudes.                                   | Simplicidad y facilidad de uso en encuestas semanales.                    | Potente analítica y benchmarking global.                                   | Integración de desempeño, objetivos y seguimiento del empleado.            |
+| **Marketing** | Mercado objetivo        | Empresas medianas o grandes que buscan mejorar su clima laboral.                                     | Empresas medianas y grandes.                                              | Corporaciones globales.                                                    | Empresas que buscan analizar desempeño.                                    |
+|               | Estrategia              | Branding y marketing direccionado a redes sociales y canales digitales.                              | Marketing digital enfocado en HR Tech.                                    | Branding y estudios organizacionales.                                      | Contenido educativo y enfoque en managers.                                 |
+| **Producto**  | Servicios               | Encuestas, personalización de usuario, dashboards, foros de trabajo y canal de comunicación anónimo. | Encuestas, feedback anónimo y reportes básicos.                           | Encuestas, analítica avanzada y planes de acción.                          | Evaluaciones, seguimiento de objetivos y feedback continuo.                |
+|               | Precios & Costos        | Suscripción por usuario u organización.                                                              | Suscripción por usuario.                                                  | SaaS con precios elevados.                                                 | Suscripción escalable por usuario.                                         |
+|               | Canales de distribución | Aplicación móvil y plataforma web.                                                                   | Web y aplicación móvil.                                                   | Web y aplicación móvil.                                                    | Web y aplicación móvil.                                                    |
+| **SWOT**      | Fortalezas              | Integración sencilla y enfoque en privacidad.                                                        | Fácil adopción.                                                           | Alto nivel de análisis.                                                    | Plataforma integral de talento.                                            |
+|               | Debilidades             | Producto nuevo en proceso de validación.                                                             | Funcionalidad limitada.                                                   | Alto costo.                                                                | Complejidad para equipos pequeños.                                         |
+|               | Oportunidades           | Monitoreo específico del clima laboral y acompañamiento a empresas locales.                          | Crecimiento del trabajo remoto.                                           | Expansión global.                                                          | Tendencia hacia OKRs.                                                      |
+|               | Amenazas                | Mercado con competidores ya establecidos.                                                            | Competencia más completa.                                                 | Nuevas startups.                                                           | Mercado saturado.                                                          |
 
 ---
 
@@ -150,6 +150,34 @@ Por el momento, se registra únicamente la entrevista desarrollada por un integr
 
 Jorge es administrador de Recursos Humanos en su empresa. En esta organización se aborda de manera moderada el tema del comportamiento y el bienestar emocional de los empleados. Él comenta que cuentan con protocolos diseñados para asegurarse de que los trabajadores se sientan cómodos y tengan un buen ambiente laboral. Asimismo, dispone de procedimientos específicos para actuar cuando surge algún problema con uno o más empleados. Ante este tipo de situaciones, se llevan a cabo reuniones con el fin de comprender mejor lo ocurrido y encontrar una solución adecuada. Jorge considera que en su empresa sería muy útil contar con una aplicación como la que estamos desarrollando, ya que permitiría gestionar estos procesos de forma más rápida y eficiente en comparación con el método actual.
 
+##### Entrevista 2: Diego Salazar Huaman
+
+- **Sexo:** Masculino.
+- **Edad:** 29 años.
+- **Link:** [Ver entrevista](https://upcedupe-my.sharepoint.com/personal/u202312566_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202312566%5Fupc%5Fedu%5Fpe%2FDocuments%2Fentrevista1%5Fsegmento2%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E2e801207%2D7694%2D4a7e%2D8ebd%2Dfc3de9727f2d)
+- **Inicio:** 00:00.
+- **Duración:** 05:49.
+
+![Entrevista 2 RRHH](../assets/images/cap2/registro-entrevistas/e2_RRHH.jpeg)
+
+**Resumen de la Entrevista**
+
+Diego es Jefe de Recursos Humanos en una empresa de servicios logísticos de aproximadamente 180 colaboradores. En esta organización, el clima laboral se evalúa mediante una encuesta semestral y reuniones uno a uno entre jefes de área y colaboradores, aunque reconoce que es un proceso todavía artesanal. Cuentan con un canal de WhatsApp para temas de bienestar, pero su uso es bajo porque los empleados no lo perciben como anónimo. Renato comenta que el mayor reto no está en recolectar información, sino en procesarla y lograr que los jefes de área actúen a partir de ella. Frente a problemas graves, la respuesta suele ser rápida, pero ante situaciones más difusas el proceso puede tomar semanas. Considera que una herramienta digital con un canal verdaderamente anónimo, filtros por área y alertas automáticas sería muy útil, ya que actualmente los reportes se elaboran manualmente en Excel y consumen mucho tiempo que podría destinarse a diseñar acciones concretas. Está dispuesto a invertir en una solución así, pues considera que los problemas de clima laboral terminan generando costos más altos en rotación y productividad que los que implicaría una suscripción a la herramienta.
+
+##### Entrevista 3: Julio Adolfo Guillen
+
+- **Sexo:** Masculino.
+- **Edad:** 25 años.
+- **Link:** [Ver entrevista](https://upcedupe-my.sharepoint.com/personal/u202312566_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202312566%5Fupc%5Fedu%5Fpe%2FDocuments%2Fentrevista2%5Fsegmento2%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Eba3ff320%2D0798%2D4aa5%2Da1f9%2D2b62e18261c2)
+- **Inicio:** 00:00.
+- **Duración:** 06:15.
+
+![Entrevista 3 RRHH](../assets/images/cap2/registro-entrevistas/e3_RRHH.jpeg)
+
+**Resumen de la Entrevista**
+
+Julio es Coordinador de Bienestar y Cultura Organizacional en una empresa manufacturera de alrededor de 350 colaboradores. En esta organización, el clima laboral se evalúa principalmente mediante una encuesta anual tercerizada, complementada con un buzón de sugerencias físico, dado que buena parte del personal es operario y no tiene acceso constante a herramientas digitales. Manuel señala que gestionar el clima laboral es complicado porque conviven dos realidades distintas dentro de la empresa —personal de planta y personal administrativo— que requieren estrategias de comunicación diferentes. La comunicación con empleados que presentan incomodidades se maneja mayormente de forma presencial, y muchas veces los problemas no llegan a tiempo a RRHH porque se quedan primero en manos de los supervisores de línea. Aunque la consultora externa entrega un informe visual completo una vez al año, en el día a día no cuentan con reportes actualizados, solo hojas de cálculo dispersas. Manuel considera que un dashboard automatizado representaría un cambio significativo frente a la actual "ceguera" entre encuesta y encuesta, y destaca que cualquier solución debería funcionar bien desde el celular y permitir segmentar por planta o turno. Está dispuesto a apoyar la inversión en una herramienta digital, aunque señala que tendría que sustentarla ante gerencia general con datos concretos sobre reducción de rotación o ausentismo.
+
 ---
 
 ### 2.2.3. Análisis de entrevistas
@@ -224,14 +252,14 @@ La matriz de tareas permite visualizar qué acciones realizan los usuarios y con
 
 ![User Task Matrix](../assets/images/cap2/UserTaskMatrix.jpg)
 
-| Tarea / Acción | Frecuencia | Prioridad | Beatriz (RRHH) | Andrés (Empleado) |
-| :---- | :---- | :---- | :---- | :---- |
-| Reportar estado de ánimo | Diaria | Alta | - | Acción principal |
-| Consolidación de datos/reportes | Semanal | Alta | Acción principal | - |
-| Solicitud de ayuda/soporte | Ocasional | Crítica | - | Acción necesaria |
-| Identificación de patrones de agotamiento | Mensual | Alta | Acción principal | - |
-| Intervención ante conflicto | Eventual | Crítica | Acción principal | - |
-| Consumo de contenido de apoyo | Diario | Media | - | Acción deseada |
+| Tarea / Acción                            | Frecuencia | Prioridad | Beatriz (RRHH)   | Andrés (Empleado) |
+| :---------------------------------------- | :--------- | :-------- | :--------------- | :---------------- |
+| Reportar estado de ánimo                  | Diaria     | Alta      | -                | Acción principal  |
+| Consolidación de datos/reportes           | Semanal    | Alta      | Acción principal | -                 |
+| Solicitud de ayuda/soporte                | Ocasional  | Crítica   | -                | Acción necesaria  |
+| Identificación de patrones de agotamiento | Mensual    | Alta      | Acción principal | -                 |
+| Intervención ante conflicto               | Eventual   | Crítica   | Acción principal | -                 |
+| Consumo de contenido de apoyo             | Diario     | Media     | -                | Acción deseada    |
 
 ---
 
@@ -279,11 +307,11 @@ El As-is Scenario Mapping permite representar la experiencia actual de los usuar
 
 #### As-is Scenario Map - Andrés (Empleado)
 
-| Fases | Fase 1: Identificación del malestar | Fase 2: Evaluación de canales disponibles | Fase 3: Intento de comunicación | Fase 4: Retención del reporte y silencio |
-| :---- | :---- | :---- | :---- | :---- |
-| **Doing** | Experimenta un conflicto continuo o sobrecarga de trabajo en su área. | Busca en la intranet corporativa o consulta con compañeros si existe un medio para quejarse. | Redacta un borrador de correo para RRHH, pero duda en enviarlo. | Borra el borrador y decide guardar silencio mientras evalúa otras opciones. |
-| **Thinking** | "Esto está afectando mi salud mental y mi rendimiento diario." | "Si envío un correo directo a RRHH, mi jefe podría enterarse." | "¿Realmente me garantizan que este reporte no tendrá consecuencias?" | "No vale la pena arriesgar mi trabajo; mejor no digo nada." |
-| **Feeling** | Frustración e impotencia. | Miedo a represalias y desconfianza. | Ansiedad e incertidumbre. | Desolación y desvinculación laboral. |
+| Fases        | Fase 1: Identificación del malestar                                   | Fase 2: Evaluación de canales disponibles                                                    | Fase 3: Intento de comunicación                                      | Fase 4: Retención del reporte y silencio                                    |
+| :----------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | :------------------------------------------------------------------- | :-------------------------------------------------------------------------- |
+| **Doing**    | Experimenta un conflicto continuo o sobrecarga de trabajo en su área. | Busca en la intranet corporativa o consulta con compañeros si existe un medio para quejarse. | Redacta un borrador de correo para RRHH, pero duda en enviarlo.      | Borra el borrador y decide guardar silencio mientras evalúa otras opciones. |
+| **Thinking** | "Esto está afectando mi salud mental y mi rendimiento diario."        | "Si envío un correo directo a RRHH, mi jefe podría enterarse."                               | "¿Realmente me garantizan que este reporte no tendrá consecuencias?" | "No vale la pena arriesgar mi trabajo; mejor no digo nada."                 |
+| **Feeling**  | Frustración e impotencia.                                             | Miedo a represalias y desconfianza.                                                          | Ansiedad e incertidumbre.                                            | Desolación y desvinculación laboral.                                        |
 
 **Evaluación del escenario:**
 
@@ -292,11 +320,11 @@ El As-is Scenario Mapping permite representar la experiencia actual de los usuar
 
 #### As-is Scenario Map - Beatriz (Gerente de RRHH)
 
-| Fases | Fase 1: Planificación de evaluación | Fase 2: Recolección de encuestas | Fase 3: Procesamiento de datos | Fase 4: Presentación de resultados |
-| :---- | :---- | :---- | :---- | :---- |
-| **Doing** | Diseña un formulario de clima laboral. | Envía correos solicitando participación de los colaboradores. | Consolida manualmente los datos para generar gráficos. | Elabora un reporte para presentar a la dirección. |
-| **Thinking** | "Espero que las respuestas reflejen la realidad de los equipos." | "Necesito más participación para tener información representativa." | "Esto consume mucho tiempo y retrasa las acciones." | "Los datos ya pueden estar desactualizados." |
-| **Feeling** | Optimismo inicial. | Frustración por baja participación. | Agotamiento y sobrecarga manual. | Impotencia ante resultados reactivos. |
+| Fases        | Fase 1: Planificación de evaluación                              | Fase 2: Recolección de encuestas                                    | Fase 3: Procesamiento de datos                         | Fase 4: Presentación de resultados                |
+| :----------- | :--------------------------------------------------------------- | :------------------------------------------------------------------ | :----------------------------------------------------- | :------------------------------------------------ |
+| **Doing**    | Diseña un formulario de clima laboral.                           | Envía correos solicitando participación de los colaboradores.       | Consolida manualmente los datos para generar gráficos. | Elabora un reporte para presentar a la dirección. |
+| **Thinking** | "Espero que las respuestas reflejen la realidad de los equipos." | "Necesito más participación para tener información representativa." | "Esto consume mucho tiempo y retrasa las acciones."    | "Los datos ya pueden estar desactualizados."      |
+| **Feeling**  | Optimismo inicial.                                               | Frustración por baja participación.                                 | Agotamiento y sobrecarga manual.                       | Impotencia ante resultados reactivos.             |
 
 **Evaluación del escenario:**
 
