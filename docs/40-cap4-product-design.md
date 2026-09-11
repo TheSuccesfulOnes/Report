@@ -6,228 +6,131 @@ En este capítulo se presenta la propuesta integral de diseño del producto **Sa
 
 ## 4.1. Style Guidelines
 
-Las guías de estilo definen los lineamientos visuales y de interacción que aseguran consistencia entre la Landing Page, la aplicación web y la aplicación móvil. Estas reglas permiten mantener una experiencia clara, accesible y coherente con la identidad de SafeSpace.
+Las guías de estilo permiten mantener una identidad común entre web y Android, respetando sus patrones de interacción. Esta versión documenta los estilos identificados en los frontends y deja pendiente su conciliación con la landing page cuando se reciba su diseño.
 
 ### 4.1.1. General Style Guidelines
 
 #### Branding
 
-El logo de **SafeSpace** comunica profesionalismo, confianza y cercanía. Su aplicación debe reforzar la idea de un espacio seguro donde los colaboradores puedan expresarse sin temor y donde Recursos Humanos pueda tomar decisiones informadas.
-
-- **Versiones:** fondo oscuro para headers o pantallas iniciales y versión sin fondo para superficies claras.
-- **Margen mínimo:** 16px alrededor del isotipo o logotipo.
-- **Uso monocromático:** permitido en blanco o gris oscuro cuando el contraste lo requiera.
-
-![Logo de referencia](../assets/images/cap3/style-guidelines/elysium-logo.jpg){ width=25% }
+La marca visible es **SafeSpace**. Se utiliza el recurso gráfico incluido en los frontends, acompañado del nombre del producto en el acceso y la navegación. Los wireframes usan un placeholder para el logo y las imágenes; los mockups conservan el logo original incrustado.
 
 #### Tipografía
 
-La fuente principal propuesta para la solución es **Exo**, debido a su apariencia moderna y buena legibilidad en interfaces digitales. Para componentes web o móviles que requieran máxima compatibilidad, puede complementarse con fuentes del sistema como **Inter**, **Roboto** o **Arial**.
+La aplicación web emplea **Manrope** como fuente principal y **DM Mono** para etiquetas auxiliares. Android utiliza la familia sans serif del sistema mediante la tipografía de Material 3. Los mockups móviles usan **Roboto** con Arial de respaldo; los wireframes usan Arial. Estos valores documentan los recursos revisados y no implican que todos los textos de ambas plataformas tengan idénticas medidas.
 
-| Jerarquía | Fuente y peso | Tamaño sugerido | Uso principal |
-| :---- | :---- | :----: | :---- |
-| Display | Exo ExtraBold 800 | 32px | Títulos principales y pantallas de bienvenida. |
-| Heading 1 | Exo Bold 700 | 22px | Encabezados de secciones principales. |
-| Heading 2 | Exo SemiBold 600 | 18px | Subtítulos, cards y módulos. |
-| Body | Exo Regular 400 | 15px | Texto principal, reportes y formularios. |
-| Caption | Exo Light 300 | 12px | Etiquetas, timestamps y estados. |
-| Button | Exo SemiBold 600 | 14px | Botones y llamadas a la acción. |
-| Badge | Exo Medium 500 | 11px | Categorías, filtros y chips. |
+En web, los títulos de página emplean Manrope con peso destacado y tamaños adaptables entre 28 y 36 px. Los textos de los formularios y sus controles se sitúan habitualmente entre 12 y 14 px. Las fechas, los estados y otras etiquetas auxiliares utilizan DM Mono, normalmente a 10 px, para diferenciarlos del contenido principal.
+
+En Android, las jerarquías headline y title de Material 3 distinguen los encabezados. Los estilos bodyLarge y bodyMedium organizan la lectura con interlineados de 24 y 21 sp, mientras que los estilos label identifican acciones y controles. Los mockups se representan con un ancho base de 1440 px para web y 412 px para Android; estos valores describen los lienzos de diseño.
+
+![Muestras tipográficas de Manrope, DM Mono y Roboto para SafeSpace](../assets/images/cap4/revision-20260911/style-guidelines/tipografia.png)
 
 #### Paleta de colores
 
-| Nombre | Código Hex | Uso |
-| :---- | :----: | :---- |
-| Azul Navy | `#1C4B78` | Headers, navegación principal y CTAs corporativos. |
-| Azul Cielo | `#4DA8DA` | Botones primarios, enlaces y estados activos. |
-| Verde Teal | `#19A4A1` | Acentos, confirmaciones y estados positivos. |
-| Blanco Neutro | `#F2F4F7` | Fondos de pantalla y superficies claras. |
-| Gris Oscuro | `#3E3E3E` | Texto principal e iconografía neutra. |
-| Gris Menta | `#A5E3D8` | Chips, fondos suaves y notificaciones. |
+La base visual combina el **verde oscuro (#243432)** en navegación y acciones principales con el **verde salvia (#A7C4A5)** en contenedores y estados destacados. El texto principal utiliza **#16211F** y las descripciones o metadatos emplean **#73807B**. El fondo claro **#F5F6F1** separa el espacio general de las tarjetas, formularios y diálogos blancos **#FFFFFF**. Esta distribución permite reconocer las áreas de contenido y sus acciones.
 
-#### Colores semánticos
+![Paleta base de SafeSpace: colores y códigos hexadecimales](../assets/images/cap4/revision-20260911/style-guidelines/paleta-base.png)
 
-| Nombre semántico | Código Hex | Uso |
-| :---- | :----: | :---- |
-| Éxito | `#19A4A1` | Confirmaciones, reportes enviados y check-ins positivos. |
-| Advertencia | `#E8A838` | Alertas de clima o riesgo medio. |
-| Peligro | `#C94040` | Denuncias críticas, errores y acciones destructivas. |
-| Información | `#4DA8DA` | Mensajes informativos, ayudas y tooltips. |
+Los acentos ayudan a diferenciar tipos de información. El **coral (#EE8E79)** aparece en detalles y selección de navegación; el **azul suave (#B9D8E5)** distingue contenido informativo, y el **dorado (#E9C36C)** destaca estados como En revisión. En web también se utiliza **lila (#E2D0FA)** en recursos y acentos auxiliares, y **#B64F43** para mensajes y acciones de error. Estos colores acompañan las etiquetas y los controles correspondientes.
 
-**Tokens auxiliares:**
+![Colores de acento de SafeSpace y color de error web](../assets/images/cap4/revision-20260911/style-guidelines/paleta-acentos.png)
 
-- **Border radius:** cards 16px, botones 12px y chips 20px.
-- **Espaciado base:** grilla modular de 8px.
-- **Estilo visual:** interfaces limpias, contraste adecuado y jerarquía clara.
+Los colores no sustituyen las etiquetas: una encuesta distingue **Borrador**, **Publicada** y **Cerrada** mediante texto; un reporte distingue **Nuevo**, **En revisión**, **Atendido** y **Cerrado**. El tema oscuro dispone de tokens propios, entre ellos fondo `#18211F`, panel `#202B28` y texto `#E6ECE8`.
+
+![Muestras del fondo, panel y texto del tema oscuro](../assets/images/cap4/revision-20260911/style-guidelines/paleta-oscura.png)
+
+#### Espaciado y agrupación
+
+Los controles relacionados se agrupan en tarjetas y formularios. Los márgenes exteriores separan la navegación del contenido; las distancias entre etiqueta, campo y mensaje permiten reconocer cada unidad de interacción. En las reconstrucciones se mantienen separaciones consistentes dentro de cada plataforma, con mayor espacio entre secciones que entre elementos de un mismo grupo. Las pantallas móviles largas admiten desplazamiento y conservan el orden de lectura. Esta descripción no atribuye al código una escala universal de espaciado que no se haya verificado.
+
+#### Tono de comunicación
+
+Como criterio de comunicación se adopta un tono **serio, casual, respetuoso y sereno**, siguiendo las cuatro dimensiones solicitadas por el enunciado. Se priorizan indicaciones breves, cercanas y sin juicios sobre el estado emocional. Los errores explican qué ocurrió y qué acción permite continuar; las confirmaciones describen únicamente operaciones aceptadas. Por ejemplo, «No se pudo enviar. Vuelve a intentarlo» comunica una falla sin responsabilizar al usuario. Este criterio editorial deberá contrastarse con todas las cadenas de texto al implementar ajustes.
+
+#### Componentes y estados
+
+La estructura visual distingue navegación, título de página, contenido principal y acciones. Los formularios identifican los campos necesarios y comunican el resultado de la operación. Se consideran estados de carga, contenido vacío, datos rechazados, fallas del servicio y operación completada. El mensaje de éxito se vincula con una respuesta aceptada por el servicio, no con la sola selección de un botón.
 
 ### 4.1.2. Web Style Guidelines
 
-Las guías web se aplican a la Landing Page y a la aplicación web usada por Recursos Humanos.
+La web está disponible para **empleados y RRHH**. En escritorio utiliza una barra lateral de 248 px, una cabecera y un área principal desplazable. Los estilos incluyen ajustes a 900, 680 y 430 px; no se asume una grilla de doce columnas que no esté documentada en el código.
 
-- **Breakpoints:** Mobile menor a 640px, Tablet entre 641px y 1024px, Desktop entre 1025px y 1440px, Large Desktop mayor a 1440px.
-- **Layout:** grilla fluida de 12 columnas para desktop y estructura de una columna en mobile.
-- **Componentes:** formularios con validación, cards de métricas, tablas, modales accesibles y navegación consistente.
-- **Accesibilidad:** contraste suficiente, textos legibles, foco visible en elementos interactivos y etiquetas claras para inputs.
-- **Contenido:** lenguaje directo, profesional y orientado a la acción.
+Las acciones principales tienen contornos rectos en buena parte del área de trabajo, mientras que el acceso usa una tarjeta redondeada. La página **Encuestas** reúne las pestañas Encuestas, Actividades semanales y Reportes. **Gestión** muestra formularios de creación dentro de la página. El detalle de reportes y la edición o eliminación de conversaciones utilizan modales.
+
+Las etiquetas de los campos, el foco visible y los textos que acompañan a los estados contribuyen a la comprensión de la interfaz. Una evaluación formal de accesibilidad y de adaptación a todos los tamaños deberá realizarse sobre la aplicación ejecutada; estos artefactos no constituyen esa validación.
 
 ### 4.1.3. Mobile Style Guidelines
 
-Las guías móviles priorizan interacción rápida, navegación simple y claridad visual para usuarios que responden encuestas, revisan mensajes o reportan situaciones laborales desde su dispositivo.
+La documentación móvil corresponde al frontend **Android desarrollado con Jetpack Compose**. La navegación inferior separa las tareas principales por rol. Las pantallas secundarias incorporan acciones para regresar y los formularios largos permiten desplazamiento vertical. Las imágenes muestran el contenido completo de esas pantallas; su altura no representa necesariamente un único viewport del teléfono.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
-La versión iOS debe seguir los principios de **Human Interface Guidelines**, considerando:
-
-- Navegación clara mediante tab bar inferior.
-- Uso de gestos nativos, jerarquía visual amplia y controles familiares.
-- Compatibilidad con modo claro y modo oscuro.
-- Respeto de áreas seguras (*safe areas*) y tamaños mínimos táctiles.
+No se dispone de un frontend iOS en los repositorios considerados. Por ello, los mockups Android no se presentan como un diseño iOS ya implementado. La adaptación a iOS y sus patrones de navegación queda pendiente de un alcance y una implementación propios.
 
 #### 4.1.3.2. Android Mobile Style Guidelines
 
-La versión Android debe seguir los principios de **Material Design**, considerando:
+La interfaz utiliza componentes Material 3, tarjetas, botones, campos delineados y diálogos. Los tokens de forma incluyen radios de 8, 12, 18 y 28 dp. Se consideran tema claro y oscuro, textos traducibles al español e inglés y navegación inferior con cuatro destinos según el rol.
 
-- Bottom Navigation Bar para secciones principales.
-- Floating Action Button para acciones frecuentes como crear publicación o reporte.
-- Componentes visuales consistentes con Jetpack Compose.
-- Estados claros para formularios, encuestas, confirmaciones y errores.
-
----
+El empleado accede al **Centro de Encuestas**, desde el que abre encuestas diarias, actividades semanales o el formulario de reporte. Los ajustes de cuenta usan diálogos por campo. RRHH crea encuestas y actividades mediante diálogos y confirma su cierre. En reportes, el detalle es una hoja de consulta; el cambio de estado se realiza desde la tarjeta de la bandeja.
 
 ## 4.2. Information Architecture
 
-La arquitectura de información de SafeSpace organiza los contenidos, flujos y etiquetas del producto para que empleados y profesionales de Recursos Humanos puedan encontrar rápidamente las funcionalidades que necesitan.
+La arquitectura de información organiza el producto en torno a tareas de bienestar, participación, orientación y gestión. Los destinos se ajustan al rol de la sesión; no se propone un selector manual de empleado o RRHH en el inicio de sesión.
 
 ### 4.2.1. Organization Systems
 
-El contenido de SafeSpace se organiza mediante distintos esquemas según el canal y el perfil de usuario.
+| Contexto | Organización | Contenido disponible |
+| :--- | :--- | :--- |
+| Acceso | Secuencia de formularios | Inicio de sesión, registro y recuperación de acceso. |
+| Empleado, web | Navegación por tareas y pestañas | Inicio; Encuestas, Actividades semanales y Reportes; Chat AI; Perfil y Configuración. |
+| Empleado, Android | Navegación inferior y centro de tareas | Inicio; Centro de Encuestas y sus destinos; Chat IA; Perfil y ajustes. |
+| RRHH, ambas plataformas | Resumen y gestión por tipo de contenido | Resumen de bienestar, gestión de encuestas y actividades, bandeja de reportes y cuenta. |
+| Conversaciones | Historial y detalle | Crear, abrir, renombrar y eliminar conversaciones. |
+| Reportes de RRHH | Lista, filtros y detalle | Todos, En revisión y Atendidos; consulta del caso y actualización de estado. |
 
-| Contexto | Sistema de organización | Esquema de categorización | Justificación |
-| :---- | :---- | :---- | :---- |
-| Landing Page | Secuencial | Por audiencia y propuesta de valor | Guía al visitante desde el problema hasta la solicitud de contacto. |
-| Aplicación móvil | Jerárquico por rol | Por tareas frecuentes | Permite separar funcionalidades de empleado y RRHH. |
-| Dashboard RRHH | Matricial | Por área, período e indicador | Facilita el análisis de información desde múltiples dimensiones. |
-| Foro | Por tópicos | Clima laboral, sugerencias, eventos, dudas y reconocimientos | Ayuda a encontrar conversaciones relevantes. |
+Los comentarios están asociados a encuestas. No se incorpora un foro independiente, pagos, membresías, suscripciones ni acceso con Google, porque esos recorridos no están presentes en los frontends revisados. Las tarjetas de recursos guiados y métricas personales aparecen como **Próximamente** y no se incluyen como funciones completadas.
 
 ### 4.2.2. Labeling Systems
 
-El sistema de etiquetado prioriza claridad y brevedad. Las etiquetas se redactan principalmente en español, manteniendo algunos términos técnicos en inglés cuando son parte del vocabulario común del dominio.
+| Grupo | Etiquetas | Finalidad |
+| :--- | :--- | :--- |
+| Navegación de empleado | Inicio, Encuestas, Chat AI/Chat IA, Perfil | Localizar las tareas personales. |
+| Navegación de RRHH | Inicio, Gestión, Reportes, Perfil | Acceder a resumen, contenido y casos reportados. |
+| Participación | Enviar respuesta, Mostrar comentarios, Votar, Crear reporte | Diferenciar respuesta, comentario, voto y reporte. |
+| Gestión | Nueva encuesta, Nueva actividad, Publicar, Cerrar, Cambiar estado | Comunicar operaciones sobre contenido y reportes. |
+| Cuenta | Configuración, Cambiar nombre, Cambiar correo, Idioma, Tema oscuro | Administrar los datos y preferencias propias. |
+| Estados | Respuesta registrada, Voto registrado, Borrador, Publicada, Cerrada, Nuevo, En revisión, Atendido | Dar visibilidad al resultado y al estado del recurso. |
 
-| Contexto | Etiquetas principales | Propósito |
-| :---- | :---- | :---- |
-| Navegación empleado | Inicio, Foro, Mis Encuestas, Mensajes, Perfil | Acceso a tareas diarias del colaborador. |
-| Navegación RRHH | Dashboard, Foro, Feedback, Suscripción, Perfil | Gestión y análisis del clima laboral. |
-| Acciones frecuentes | Nueva publicación, Comentar, Útil, Reportar, Modo anónimo | Facilitar acciones rápidas y comprensibles. |
-| Estados | Pendiente, Completada, Anónimo, En revisión, Confirmado, Fallido | Comunicar el estado de procesos internos. |
-| Categorías del foro | Clima laboral, Sugerencias, Eventos, Dudas, Reconocimientos | Ordenar conversaciones por tema. |
+El anonimato se explica donde corresponde: comentarios anónimos de encuestas y opción de envío anónimo del reporte. No se documenta como una preferencia global que cambie todas las operaciones de la cuenta.
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-**Landing Page**
+La landing page se revisará por separado. En la web autenticada, el archivo de entrada consultado declara idioma español, codificación UTF-8, viewport adaptable, título SafeSpace, color de tema `#243432` y la descripción **«SafeSpace: bienestar laboral seguro y humano.»**
 
-```html
-<!-- Title -->
-<title>SafeSpace | Plataforma de Bienestar y Clima Laboral para Empresas</title>
-
-<!-- Meta Description -->
-<meta name="description" content="SafeSpace es la plataforma móvil que conecta a empleados y Recursos Humanos de forma segura y anónima. Mejora el clima laboral con foros, encuestas, dashboards analíticos e inteligencia artificial.">
-
-<!-- Meta Keywords -->
-<meta name="keywords" content="clima laboral, bienestar laboral, recursos humanos, aplicación RRHH, foro laboral anónimo, encuestas de clima, dashboard RRHH, gestión de talento, retención de empleados, Perú">
-
-<!-- Meta Author -->
-<meta name="author" content="TheSuccesfulOnesCorp">
-
-<!-- Meta Robots -->
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph -->
-<meta property="og:title" content="SafeSpace | Bienestar Laboral Inteligente">
-<meta property="og:description" content="Conecta a tus empleados con RRHH de forma segura, anónima y basada en datos. Descubre SafeSpace.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.safespace.pe">
-<meta property="og:locale" content="es_PE">
-
-<!-- Meta Viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Meta Charset -->
-<meta charset="UTF-8">
-```
-
-**Web Application**
-
-```html
-<!-- Title -->
-<title>Iniciar Sesión | SafeSpace</title>
-
-<!-- Meta Description -->
-<meta name="description" content="Accede a tu cuenta SafeSpace para gestionar el bienestar laboral de tu organización o reportar tu estado anímico de forma anónima y segura.">
-
-<!-- Meta Keywords -->
-<meta name="keywords" content="iniciar sesión SafeSpace, acceso RRHH, plataforma laboral, empleado anónimo">
-
-<!-- Meta Author -->
-<meta name="author" content="TheSuccesfulOnesCorp">
-
-<!-- Meta Robots -->
-<meta name="robots" content="noindex, nofollow">
-```
+La versión revisada no declara una directiva `noindex, nofollow`; por ello no se presenta como implementada. Si se decide añadirla, deberá tratarse como una mejora independiente. Tampoco se atribuyen a la aplicación metadatos de una landing page o un dominio comercial no verificado.
 
 ### 4.2.4. Searching Systems
 
-SafeSpace ofrece mecanismos de búsqueda y filtrado diferenciados según la sección y el rol del usuario.
+| Sección | Mecanismo actual | Sin contenido o con error |
+| :--- | :--- | :--- |
+| Encuestas y actividades | Navegación por pestaña o categoría, según plataforma. | Estado vacío o aviso de carga fallida. |
+| Reportes RRHH | Filtros Todos, En revisión y Atendidos. | Resultado vacío del filtro; posibilidad de cambiarlo. |
+| Conversaciones | Selección desde el historial. | Estado sin conversaciones; opción de crear una. |
+| Resumen RRHH | Consulta agregada del resumen disponible. | Error de consulta o indicadores sin respuestas, diferenciados. |
 
-| Sección | Búsqueda de texto | Filtros | Ordenamiento |
-| :---- | :----: | :---- | :---- |
-| Workers Forum | Sí | Categoría | Recientes, votados o comentados. |
-| Dashboard Analítico | No aplica | Área, periodo, indicador y equipo | No aplica. |
-| Encuestas enviadas | No aplica | Estado, área y fecha | Cronológico. |
-| Historial de pagos | No aplica | No aplica | Cronológico. |
-| Mis publicaciones | No aplica | No aplica | Cronológico. |
-
-Si una búsqueda o filtro no devuelve resultados, el sistema muestra mensajes claros como: *"No se encontraron publicaciones con ese término. Intenta con otras palabras o revisa las categorías."*
+No se documentan buscadores de texto, filtros por área o período del dashboard ni historiales de pagos que no estén implementados en estas interfaces.
 
 ### 4.2.5. Navigation Systems
 
-SafeSpace utiliza un sistema de navegación diseñado para que tanto el empleado como el responsable de RRHH puedan cumplir sus objetivos con pocos pasos.
+| Plataforma y rol | Recorrido principal |
+| :--- | :--- |
+| Web, empleado | Inicio → Encuestas / Chat AI; acceso a Perfil y Configuración desde el espacio de cuenta. |
+| Web, RRHH | Inicio → Gestión / Reportes; acceso a Perfil y Configuración. |
+| Android, empleado | Inicio · Encuestas · Chat IA · Perfil. |
+| Android, RRHH | Inicio · Gestión · Reportes · Perfil. |
 
-**Landing Page**
+En Android, **Encuestas → Centro de Encuestas** abre encuestas diarias, actividades semanales o creación de reportes. En web, esas tareas se agrupan en pestañas de una misma página. Las respuestas y los votos modifican el estado del contenido; no representan necesariamente navegación a otra pantalla.
 
-```text
-[ SafeSpace Logo ]  [ Funcionalidades ]  [ Planes ]  [ Contacto ]  [ Iniciar Sesión ]
-```
-
-**Aplicación móvil - Empleado**
-
-```text
-[ Inicio ]  [ Foro ]  [ Mis Encuestas ]  [ Mensajes ]  [ Perfil ]
-```
-
-**Aplicación móvil - RRHH**
-
-```text
-[ Dashboard ]  [ Foro ]  [ Feedback ]  [ Suscripción ]  [ Perfil ]
-```
-
-**Flujos principales**
-
-```text
-Empleado publica en foro:
-Inicio -> Foro -> Selecciona categoría -> Nueva publicación -> Completa formulario -> Envía
-```
-
-```text
-Empleado responde encuesta:
-Inicio -> Mis Encuestas -> Selecciona encuesta -> Responde preguntas -> Confirma envío
-```
-
-```text
-RRHH analiza clima:
-Dashboard -> Aplica filtro de área -> Revisa indicador -> Abre detalle -> Define acción
-```
-
----
+Los wireflows usan los mismos identificadores de las vistas del catálogo. Las flechas indican la acción y, cuando corresponde, la aceptación del servicio. Los user flows distinguen pasos, decisiones y resultados: verde para el recorrido exitoso, coral para condiciones que impiden completarlo y línea discontinua para el retorno o reintento. Las salidas alternativas válidas —cancelar o encontrar una encuesta ya respondida— se describen explícitamente y no se confunden con un fallo técnico.
 
 ## 4.3. Landing Page UI Design
 
@@ -281,281 +184,1040 @@ Quinta vista: Cierre de conversión y contacto.
 
 ## 4.4. Mobile Applications UX/UI Design
 
-En esta sección se presentan los artefactos de diseño para la aplicación móvil de SafeSpace. Los wireframes muestran la estructura funcional inicial y los mock-ups representan la aplicación visual de la identidad gráfica.
+Los mockups y wireframes son reconstrucciones de diseño basadas en el frontend, con datos ficticios. Representan la interfaz y sus estados; no constituyen evidencia de ejecución ni de validación con usuarios.
+
+Esta sección contiene exclusivamente la experiencia Android. Incluye acceso, registro emocional, encuestas y comentarios, actividades, reportes, chat de apoyo, resumen de RRHH, gestión de contenido y cuenta. Se distinguen los destinos del Centro de Encuestas, los diálogos de edición y la navegación inferior.
 
 ### 4.4.1. Mobile Applications Wireframes
 
-**Registro de Usuario**
+El catálogo de Android contiene **55 vistas y estados estructurales**, agrupados por acceso, empleado y RRHH. Se mantienen los identificadores de las vistas para relacionar imágenes y flujos. Las láminas siguientes contienen el catálogo completo en imágenes PNG.
 
-![Register Wireframe](../assets/images/cap3/mobile-app/wireframes/Registro.png){ width=30% }
+**Vistas 01, 02, 03.** Inicio de sesión; Registro de cuenta; Recuperar acceso.
 
-**Registro con Google**
+![Android wireframes — 01, 02, 03](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-01.png)
 
-![Google Wireframe](../assets/images/cap3/mobile-app/wireframes/RegistroGoogle.png){ width=30% }
+**Vistas 04, 05, 06.** Enlace de recuperación enviado; Nueva contraseña con token; Contraseña actualizada.
 
-**Planes de Membresía**
+![Android wireframes — 04, 05, 06](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-02.png)
 
-![Memberships Wireframe](../assets/images/cap3/mobile-app/wireframes/PlanesPago.png){ width=30% }
+**Vistas 07, 10, 11.** Acceso · error de credenciales; Inicio del empleado; Estado de ánimo registrado.
 
-**Menú Principal del Empleado**
+![Android wireframes — 07, 10, 11](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-03.png)
 
-![Employee Menu Wireframe](../assets/images/cap3/mobile-app/wireframes/MenuEmpleado.png){ width=30% }
+**Vistas 12, 13, 14.** Centro de encuestas; Encuestas diarias · responder; Encuesta respondida.
 
-**Menú Principal de RRHH**
+![Android wireframes — 12, 13, 14](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-04.png)
 
-![HR Menu Wireframe](../assets/images/cap3/mobile-app/wireframes/MenuRRHH.png){ width=30% }
+**Vistas 15, 16, 17.** Comentarios anónimos; Responder a un comentario; Encuestas · sin contenido.
 
-**Llenado de Encuestas**
+![Android wireframes — 15, 16, 17](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-05.png)
 
-![Filling Survey Wireframe](../assets/images/cap3/mobile-app/wireframes/LlenarEncuesta.png){ width=30% }
+**Vistas 18, 19, 20.** Actividades semanales · votación; Actividad · voto registrado; Actividades · sin contenido.
 
-**Edición de Perfil del Empleado**
+![Android wireframes — 18, 19, 20](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-06.png)
 
-![Profile Edit Employee Wireframe](../assets/images/cap3/mobile-app/wireframes/EditarPerfil.png){ width=30% }
+**Vistas 21, 22, 23.** Crear reporte confidencial; Reporte · seleccionar área; Reporte · validación de campos.
 
-**Modo Anónimo**
+![Android wireframes — 21, 22, 23](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-07.png)
 
-![Anonymous Mode Wireframe](../assets/images/cap3/mobile-app/wireframes/ModoAnonimo.png){ width=30% }
+**Vistas 30, 31, 32.** Historial de conversaciones; Conversaciones · vacío; Conversación de apoyo.
 
-**Foro de Comunicación**
+![Android wireframes — 30, 31, 32](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-08.png)
 
-![Forum Wireframe](../assets/images/cap3/mobile-app/wireframes/Foro.png){ width=30% }
+**Vistas 33, 34, 35.** Nueva conversación; Editar nombre de conversación; Eliminar conversación.
 
-**Publicación en el Foro**
+![Android wireframes — 33, 34, 35](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-09.png)
 
-![New Post Wireframe](../assets/images/cap3/mobile-app/wireframes/PublicarForo.png){ width=30% }
+**Vistas 36, 37, 38.** Opciones de conversación; Chat · asistente escribiendo; Chat · error de conexión.
 
-**Comentarios en Publicaciones**
+![Android wireframes — 36, 37, 38](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-10.png)
 
-![New Comment Wireframe](../assets/images/cap3/mobile-app/wireframes/ComentarForo.png){ width=30% }
+**Vistas 40, 41, 43.** Resumen de bienestar RRHH; Gestión de encuestas; Nueva encuesta.
 
-**Reporte de Publicaciones**
+![Android wireframes — 40, 41, 43](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-11.png)
 
-![Forum Report Wireframe](../assets/images/cap3/mobile-app/wireframes/ReportarForo.png){ width=30% }
+**Vistas 44, 45, 46.** Gestión de actividades y resultados; Nueva actividad; Cerrar encuesta · confirmación.
 
-**Reportes de Datos para RRHH**
+![Android wireframes — 44, 45, 46](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-12.png)
 
-![Data Report Wireframe](../assets/images/cap3/mobile-app/wireframes/ReporteRRHH.png){ width=30% }
+**Vistas 47, 48, 49.** Cerrar actividad · confirmación; Gestión · contenido vacío; Gestión · actividad cerrada.
+
+![Android wireframes — 47, 48, 49](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-13.png)
+
+**Vistas 50, 51, 52.** Bandeja de reportes RRHH; Reportes · filtro en revisión; Reporte · detalle de consulta.
+
+![Android wireframes — 50, 51, 52](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-14.png)
+
+**Vistas 53, 60, 61.** Reportes · sin resultados; Perfil empleado; Configuración empleado.
+
+![Android wireframes — 53, 60, 61](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-15.png)
+
+**Vistas 62, 70, 71.** Configuración · tema oscuro empleado; Perfil rrhh; Configuración rrhh.
+
+![Android wireframes — 62, 70, 71](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-16.png)
+
+**Vistas 72, 63, 64.** Configuración · tema oscuro rrhh; Cambiar nombre visible; Cambiar nombre de usuario.
+
+![Android wireframes — 72, 63, 64](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-17.png)
+
+**Vistas 65, 66, 80.** Cambiar correo electrónico; Seleccionar idioma; Carga de contenido.
+
+![Android wireframes — 65, 66, 80](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-18.png)
+
+**Vistas 81.** Error de carga.
+
+![Android wireframes — 81](../assets/images/cap4/revision-20260911/assets/mobile/boards/wireframes-19.png)
 
 ### 4.4.2. Mobile Applications Wireflow Diagrams
 
-Los wireflow diagrams conectan wireframes para explicar la secuencia de pantallas necesarias para completar tareas clave.
+Los diagramas mantienen la idea de los wireflows anteriores —pantallas enlazadas por acciones— y sustituyen las vistas y transiciones por las del frontend revisado. Un estado de la misma pantalla puede aparecer varias veces para representar el cambio producido por una acción.
 
-**Escenario de registro**
+#### G00. Acceder al espacio correspondiente a mi rol
 
-![Sign up Wireflow](../assets/images/cap3/userflow/wireframes/Registro.png)
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Cuenta existente y sesión no iniciada.
 
-**Escenario de pago de suscripción**
+**Resultado esperado:** Sesión iniciada y navegación correspondiente al rol.
 
-![Payment Wireflow](../assets/images/cap3/userflow/wireframes/PagoMembresia.png)
+La imagen de error representa una alternativa, no un paso obligatorio. El sistema decide el destino por el rol; no existe un selector de rol en Login.
 
-**Escenario de inicio de sesión**
+![Android wireflows G00](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G00.png)
 
-![Log in Wireflow](../assets/images/cap3/userflow/wireframes/InicioSesion.png)
+#### G01. Crear una cuenta para utilizar SafeSpace
 
-**Escenario de edición del perfil del empleado**
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Nuevo usuario. **Precondición:** No tener una cuenta utilizable.
 
-![Profile Employee Wireflow](../assets/images/cap3/userflow/wireframes/EdicionPerfilEmpleado.png)
+**Resultado esperado:** Registro aceptado y retorno a Inicio de sesión.
 
-**Escenario de edición del perfil de RRHH**
+Android solicita usuario, correo, contraseña y confirmación. No se añade un campo de nombre visible al registro.
 
-![Profile RRHH Wireflow](../assets/images/cap3/userflow/wireframes/EdicionPerfilRRHH.png)
+![Android wireflows G01](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G01.png)
 
-**Escenario de completar encuesta**
+#### G02. Restablecer mi contraseña
 
-![Survey Wireflow](../assets/images/cap3/userflow/wireframes/Encuesta.png)
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Usuario sin acceso. **Precondición:** Recordar el usuario o correo asociado a la cuenta.
 
-**Escenario de acceso a estadísticas**
+**Resultado esperado:** Contraseña actualizada; el usuario puede volver a iniciar sesión.
 
-![Stats Wireflow](../assets/images/cap3/userflow/wireframes/Estadisticas.png)
+El aviso «si la cuenta existe» no confirma que el correo se haya entregado ni revela la existencia de la cuenta.
 
-**Escenario de acceso y uso del foro**
+![Android wireflows G02](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G02.png)
 
-![Forum Wireflow](../assets/images/cap3/userflow/wireframes/Foro.png)
+#### G03. Registrar cómo me siento hoy
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión de empleado activa.
+
+**Resultado esperado:** Estado de ánimo del día registrado y selección bloqueada para ese día.
+
+Las tarjetas Métricas de bienestar y Recursos guiados están marcadas Próximamente y no forman parte de este recorrido.
+
+![Android wireflows G03](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G03.png)
+
+#### G04. Responder una encuesta y aportar contexto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y encuesta publicada disponible.
+
+**Resultado esperado:** Respuesta registrada; los comentarios son opcionales y dependen de la encuesta.
+
+Los comentarios permiten respuestas anidadas. No existe un foro independiente.
+
+![Android wireflows G04](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G04.png)
+
+#### G05. Elegir una actividad del equipo mediante mi voto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y actividad abierta.
+
+**Resultado esperado:** Voto aceptado para la opción seleccionada.
+
+La interfaz permite cambiar el voto y actualiza los resultados después del envío.
+
+![Android wireflows G05](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G05.png)
+
+#### G06. Comunicar una situación laboral a RRHH
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa; conocer los datos de la situación.
+
+**Resultado esperado:** Reporte aceptado y retorno al Centro de Encuestas.
+
+El anonimato se selecciona para este reporte; no es un modo anónimo global. La validación es una rama alternativa, no una pantalla obligatoria.
+
+![Android wireflows G06](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G06.png)
+
+#### G07. Obtener orientación y conservar una conversación
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y servicio de IA disponible.
+
+**Resultado esperado:** Conversación con respuesta del asistente disponible en el historial.
+
+El camino de error exige reescribir o revisar el mensaje antes de volver a enviarlo; no se presupone reenvío automático. Renombrar y eliminar son operaciones opcionales; eliminar requiere confirmación.
+
+![Android wireflows G07](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G07.png)
+
+#### G08. Publicar una encuesta para escuchar al equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Encuesta publicada después de su creación como borrador.
+
+Crear y cerrar usan diálogos. Al cerrar, el ViewModel retira la encuesta de la lista local; no se garantiza que quede visible como historial inmediato.
+
+![Android wireflows G08](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G08.png)
+
+#### G09. Crear una votación y cerrar la actividad
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Actividad creada, abierta a votación y cerrada mediante una operación aceptada.
+
+Las opciones se escriben una por línea y deben ser al menos dos. Al cerrar se retira la actividad de la lista local; el estado de destino se explica en el pie del wireflow.
+
+![Android wireflows G09](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G09.png)
+
+#### G10. Revisar un reporte y actualizar su atención
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión activa y reporte existente.
+
+**Resultado esperado:** Estado del reporte actualizado tras confirmación del servicio.
+
+En Android, el detalle es una hoja de consulta. Cambiar estado está en la tarjeta de la bandeja, no dentro de la hoja.
+
+![Android wireflows G10](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G10.png)
+
+#### G11. Consultar el resumen de bienestar del equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Consultar distribución emocional, empleados activos y tasa de respuesta.
+
+No se añaden filtros de área, período ni navegación a personas: el frontend revisado presenta un resumen agregado. Cero respuestas no equivale a un error.
+
+![Android wireflows G11](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G11.png)
+
+#### G12. Actualizar mi cuenta y mis preferencias
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Sesión activa y acceso a la cuenta propia.
+
+**Resultado esperado:** Datos o preferencias actualizados con respuesta satisfactoria.
+
+Cada dato de cuenta se edita en un diálogo; idioma y tema se guardan al seleccionarlos. Cambiar contraseña aparece como Próximamente.
+
+![Android wireflows G12](../assets/images/cap4/revision-20260911/diagrams/mobile/wireflows/G12.png)
 
 ### 4.4.3. Mobile Applications Mock-ups
 
-**Bienvenida**
+El catálogo de Android contiene **55 vistas y estados visuales**, agrupados por acceso, empleado y RRHH. Se mantienen los identificadores de las vistas para relacionar imágenes y flujos. Las láminas siguientes contienen el catálogo completo en imágenes PNG.
 
-![Welcome Mockup](../assets/images/cap3/mobile-app/mockups/Bienvenida.png){ width=30% }
+**Vistas 01, 02, 03.** Inicio de sesión; Registro de cuenta; Recuperar acceso.
 
-**Registro de Usuario**
+![Android mockups — 01, 02, 03](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-01.png)
 
-![Register Mockup](../assets/images/cap3/mobile-app/mockups/Registro.png){ width=30% }
+**Vistas 04, 05, 06.** Enlace de recuperación enviado; Nueva contraseña con token; Contraseña actualizada.
 
-**Registro con Google**
+![Android mockups — 04, 05, 06](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-02.png)
 
-![Google Mockup](../assets/images/cap3/mobile-app/mockups/RegistroGoogle.png){ width=30% }
+**Vistas 07, 10, 11.** Acceso · error de credenciales; Inicio del empleado; Estado de ánimo registrado.
 
-**Planes de Membresía**
+![Android mockups — 07, 10, 11](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-03.png)
 
-![Memberships Mockup](../assets/images/cap3/mobile-app/mockups/PlanesPago.png){ width=30% }
+**Vistas 12, 13, 14.** Centro de encuestas; Encuestas diarias · responder; Encuesta respondida.
 
-**Método de Pago**
+![Android mockups — 12, 13, 14](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-04.png)
 
-![Payment Method Mockup](../assets/images/cap3/mobile-app/mockups/MetodoPago.png){ width=30% }
+**Vistas 15, 16, 17.** Comentarios anónimos; Responder a un comentario; Encuestas · sin contenido.
 
-**Menú Principal del Empleado**
+![Android mockups — 15, 16, 17](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-05.png)
 
-![Employee Menu Mockup](../assets/images/cap3/mobile-app/mockups/MenuEmpleado.png){ width=30% }
+**Vistas 18, 19, 20.** Actividades semanales · votación; Actividad · voto registrado; Actividades · sin contenido.
 
-**Menú Principal de RRHH**
+![Android mockups — 18, 19, 20](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-06.png)
 
-![HR Menu Mockup](../assets/images/cap3/mobile-app/mockups/MenuRRHH.png){ width=30% }
+**Vistas 21, 22, 23.** Crear reporte confidencial; Reporte · seleccionar área; Reporte · validación de campos.
 
-**Llenado de Encuestas**
+![Android mockups — 21, 22, 23](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-07.png)
 
-![Filling Survey Mockup](../assets/images/cap3/mobile-app/mockups/LlenarEncuesta.png){ width=30% }
+**Vistas 30, 31, 32.** Historial de conversaciones; Conversaciones · vacío; Conversación de apoyo.
 
-**Sesión Iniciada**
+![Android mockups — 30, 31, 32](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-08.png)
 
-![Session Mockup](../assets/images/cap3/mobile-app/mockups/SesionIniciada.png){ width=30% }
+**Vistas 33, 34, 35.** Nueva conversación; Editar nombre de conversación; Eliminar conversación.
 
-**Edición de Perfil**
+![Android mockups — 33, 34, 35](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-09.png)
 
-![Profile Edit Mockup](../assets/images/cap3/mobile-app/mockups/EditarPerfil.png){ width=30% }
+**Vistas 36, 37, 38.** Opciones de conversación; Chat · asistente escribiendo; Chat · error de conexión.
 
-**Modo Anónimo**
+![Android mockups — 36, 37, 38](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-10.png)
 
-![Anonymous Mode Mockup](../assets/images/cap3/mobile-app/mockups/ModoAnonimo.png){ width=30% }
+**Vistas 40, 41, 43.** Resumen de bienestar RRHH; Gestión de encuestas; Nueva encuesta.
 
-**Foro de Comunicación**
+![Android mockups — 40, 41, 43](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-11.png)
 
-![Forum Mockup](../assets/images/cap3/mobile-app/mockups/Foro.png){ width=30% }
+**Vistas 44, 45, 46.** Gestión de actividades y resultados; Nueva actividad; Cerrar encuesta · confirmación.
 
-**Publicación en el Foro**
+![Android mockups — 44, 45, 46](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-12.png)
 
-![New Post Mockup](../assets/images/cap3/mobile-app/mockups/PublicarForo.png){ width=30% }
+**Vistas 47, 48, 49.** Cerrar actividad · confirmación; Gestión · contenido vacío; Gestión · actividad cerrada.
 
-**Comentarios en Publicaciones**
+![Android mockups — 47, 48, 49](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-13.png)
 
-![New Comment Mockup](../assets/images/cap3/mobile-app/mockups/ComentarForo.png){ width=30% }
+**Vistas 50, 51, 52.** Bandeja de reportes RRHH; Reportes · filtro en revisión; Reporte · detalle de consulta.
 
-**Reporte de Publicaciones**
+![Android mockups — 50, 51, 52](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-14.png)
 
-![Forum Report Mockup](../assets/images/cap3/mobile-app/mockups/ReporteForo.png){ width=30% }
+**Vistas 53, 60, 61.** Reportes · sin resultados; Perfil empleado; Configuración empleado.
 
-**Reportes para RRHH**
+![Android mockups — 53, 60, 61](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-15.png)
 
-![Data Report Mockup](../assets/images/cap3/mobile-app/mockups/ReporteRRHH.png){ width=30% }
+**Vistas 62, 70, 71.** Configuración · tema oscuro empleado; Perfil rrhh; Configuración rrhh.
+
+![Android mockups — 62, 70, 71](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-16.png)
+
+**Vistas 72, 63, 64.** Configuración · tema oscuro rrhh; Cambiar nombre visible; Cambiar nombre de usuario.
+
+![Android mockups — 72, 63, 64](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-17.png)
+
+**Vistas 65, 66, 80.** Cambiar correo electrónico; Seleccionar idioma; Carga de contenido.
+
+![Android mockups — 65, 66, 80](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-18.png)
+
+**Vistas 81.** Error de carga.
+
+![Android mockups — 81](../assets/images/cap4/revision-20260911/assets/mobile/boards/mockups-19.png)
 
 ### 4.4.4. Mobile Applications User Flow Diagrams
 
-Los user flow diagrams muestran el recorrido completo del usuario a partir de mock-ups de mayor fidelidad.
+Los objetivos se formulan desde la intención de la persona. Cada diagrama presenta un happy path y un unhappy path explícitos, unidos por una decisión Sí/No. Se selecciona un caso de error concreto por objetivo; las demás condiciones del recorrido se asumen válidas en este escenario. La ruta de error indica qué impide cumplir el objetivo y cómo reintentarlo. Los mockups muestran la vista de interacción y el resultado; cuando no existe un mockup específico del error, la condición se describe fuera de la interfaz, sin inventar una pantalla. Los errores se describen como estados de interfaz y no como nuevas pantallas que necesariamente existan. Las acciones opcionales se explican en el pie y no condicionan el logro principal.
 
-**Escenario de registro**
+#### G00. Acceder al espacio correspondiente a mi rol
 
-![Sign up User Flow](../assets/images/cap3/userflow/mockups/Registro.png)
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Cuenta existente y sesión no iniciada.
 
-**Escenario de pago de suscripción**
+**Resultado esperado:** Sesión iniciada y navegación correspondiente al rol.
 
-![Payment User Flow](../assets/images/cap3/userflow/mockups/Pago.png)
+La imagen de error representa una alternativa, no un paso obligatorio. El sistema decide el destino por el rol; no existe un selector de rol en Login.
 
-**Escenario de inicio de sesión**
+**Happy path:** Abrir Inicio de sesión e ingresar usuario o correo y contraseña → EMPLOYEE → Inicio del empleado. HR_MEMBER → Resumen de bienestar. → Acceso al espacio de trabajo del rol correcto
 
-![Log in User Flow](../assets/images/cap3/userflow/mockups/InicioSesion.png)
+**Unhappy path:** Credenciales incorrectas. La sesión no se inicia. Corregir las credenciales y volver a iniciar sesión. El objetivo permanece pendiente hasta que el reintento sea aceptado.
 
-**Escenario de edición del perfil del empleado**
+![Android user-flows G00](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G00.png)
 
-![Profile Employee User Flow](../assets/images/cap3/userflow/mockups/EdicionPerfilEmpleado.png)
+#### G01. Crear una cuenta para utilizar SafeSpace
 
-**Escenario de edición del perfil de RRHH**
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Nuevo usuario. **Precondición:** No tener una cuenta utilizable.
 
-![Profile RRHH User Flow](../assets/images/cap3/userflow/mockups/EdicionPerfilRRHH.png)
+**Resultado esperado:** Registro aceptado y retorno a Inicio de sesión.
 
-**Escenario de completar encuesta**
+Android solicita usuario, correo, contraseña y confirmación. No se añade un campo de nombre visible al registro.
 
-![Survey User Flow](../assets/images/cap3/userflow/mockups/Encuesta.png)
+**Happy path:** Inicio de sesión → Regístrate → Completar usuario, correo, contraseña y confirmación → Seleccionar Registrar cuenta → Volver a Inicio de sesión con la cuenta creada
 
-**Escenario de acceso a estadísticas**
+**Unhappy path:** Las contraseñas no coinciden. El registro no continúa. Corregir la confirmación y volver a registrar la cuenta. El objetivo permanece pendiente hasta que el reintento sea aceptado.
 
-![Stats User Flow](../assets/images/cap3/userflow/mockups/Estadistica.png)
+![Android user-flows G01](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G01.png)
 
-**Escenario de acceso y uso del foro**
+#### G02. Restablecer mi contraseña
 
-![Forum User Flow](../assets/images/cap3/userflow/mockups/Foro.png)
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Usuario sin acceso. **Precondición:** Recordar el usuario o correo asociado a la cuenta.
 
----
+**Resultado esperado:** Contraseña actualizada; el usuario puede volver a iniciar sesión.
+
+El aviso «si la cuenta existe» no confirma que el correo se haya entregado ni revela la existencia de la cuenta.
+
+**Happy path:** Inicio de sesión → ¿Olvidaste tu contraseña? → Introducir usuario o correo y enviar solicitud → Mostrar aviso: si la cuenta existe, recibirá instrucciones → Ya tengo el enlace → pegar token y nueva contraseña → Contraseña actualizada → Volver al inicio de sesión
+
+**Unhappy path:** El token venció. La contraseña no se actualiza. Volver al acceso, solicitar otro enlace e introducir el nuevo token. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G02](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G02.png)
+
+#### G03. Registrar cómo me siento hoy
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión de empleado activa.
+
+**Resultado esperado:** Estado de ánimo del día registrado y selección bloqueada para ese día.
+
+Las tarjetas Métricas de bienestar y Recursos guiados están marcadas Próximamente y no forman parte de este recorrido.
+
+**Happy path:** Abrir Inicio y consultar el estado de ánimo de hoy → Seleccionar Muy mal, Mal, Bien o Muy bien → Estado de ánimo registrado para hoy
+
+**Unhappy path:** El guardado falla. El estado de ánimo no queda confirmado. Volver a seleccionar el estado de ánimo cuando termine la solicitud. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G03](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G03.png)
+
+#### G04. Responder una encuesta y aportar contexto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y encuesta publicada disponible.
+
+**Resultado esperado:** Respuesta registrada; los comentarios son opcionales y dependen de la encuesta.
+
+Los comentarios permiten respuestas anidadas. No existe un foro independiente.
+
+**Happy path:** Encuestas → Centro de Encuestas → Encuestas diarias → Escribir una respuesta no vacía y seleccionar Enviar respuesta → Opcional: mostrar comentarios, publicar uno o responder a otro → Respuesta registrada; contexto adicional publicado si se eligió y fue aceptado
+
+**Unhappy path:** Falla el envío de la respuesta. La encuesta sigue pendiente. Revisar la respuesta y volver a enviarla. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G04](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G04.png)
+
+#### G05. Elegir una actividad del equipo mediante mi voto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y actividad abierta.
+
+**Resultado esperado:** Voto aceptado para la opción seleccionada.
+
+La interfaz permite cambiar el voto y actualiza los resultados después del envío.
+
+**Happy path:** Centro de Encuestas → Actividades semanales → Seleccionar una opción disponible → Seleccionar Votar → Voto registrado y resultados actualizados; se puede cambiar el voto
+
+**Unhappy path:** Falla el envío del voto. No hay voto confirmado. Revisar la opción seleccionada y volver a votar. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G05](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G05.png)
+
+#### G06. Comunicar una situación laboral a RRHH
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa; conocer los datos de la situación.
+
+**Resultado esperado:** Reporte aceptado y retorno al Centro de Encuestas.
+
+El anonimato se selecciona para este reporte; no es un modo anónimo global. La validación es una rama alternativa, no una pantalla obligatoria.
+
+**Happy path:** Centro de Encuestas → Crear reporte → Completar área, título, descripción y prioridad; elegir envío anónimo o identificado → Seleccionar Enviar reporte → Retorno al Centro de Encuestas tras la creación
+
+**Unhappy path:** Faltan campos obligatorios. El reporte no se envía. Completar los campos señalados y volver a enviar el reporte. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G06](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G06.png)
+
+#### G07. Obtener orientación y conservar una conversación
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y servicio de IA disponible.
+
+**Resultado esperado:** Conversación con respuesta del asistente disponible en el historial.
+
+El camino de error exige reescribir o revisar el mensaje antes de volver a enviarlo; no se presupone reenvío automático. Renombrar y eliminar son operaciones opcionales; eliminar requiere confirmación.
+
+**Happy path:** Chat IA → historial → crear o abrir una conversación → Escribir un mensaje no vacío y seleccionar Enviar → Leer la respuesta y regresar al historial → Conversación disponible para continuar después
+
+**Unhappy path:** El asistente no responde por un error del servicio. Reescribir el mensaje y volver a enviarlo. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G07](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G07.png)
+
+#### G08. Publicar una encuesta para escuchar al equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Encuesta publicada después de su creación como borrador.
+
+Crear y cerrar usan diálogos. Al cerrar, el ViewModel retira la encuesta de la lista local; no se garantiza que quede visible como historial inmediato.
+
+**Happy path:** Gestión → Encuestas → Nueva encuesta → Completar título, pregunta, frecuencia y permiso de comentarios → Encuesta creada como borrador → seleccionar Publicar → Encuesta publicada y disponible para los empleados
+
+**Unhappy path:** Falla la publicación. La encuesta no queda publicada. Volver a seleccionar Publicar desde la encuesta en borrador. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G08](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G08.png)
+
+#### G09. Crear una votación y cerrar la actividad
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Actividad creada, abierta a votación y cerrada mediante una operación aceptada.
+
+Las opciones se escriben una por línea y deben ser al menos dos. Al cerrar se retira la actividad de la lista local; el estado de destino se explica en el pie del wireflow.
+
+**Happy path:** Gestión → Actividades → Nueva actividad → Ingresar título y al menos dos opciones; descripción opcional → Actividad abierta → consultar participación → seleccionar Cerrar → Actividad cerrada y retirada de la lista local
+
+**Unhappy path:** Falla el cierre. La actividad no tiene un cierre confirmado. Comprobar el estado y volver a cerrar la actividad. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G09](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G09.png)
+
+#### G10. Revisar un reporte y actualizar su atención
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión activa y reporte existente.
+
+**Resultado esperado:** Estado del reporte actualizado tras confirmación del servicio.
+
+En Android, el detalle es una hoja de consulta. Cambiar estado está en la tarjeta de la bandeja, no dentro de la hoja.
+
+**Happy path:** Reportes → Todos, En revisión o Atendidos → Abrir detalle y revisar categoría, descripción, prioridad e identidad declarada → Cerrar detalle → Cambiar estado desde la tarjeta → Estado actualizado: Nuevo, En revisión, Atendido o Cerrado
+
+**Unhappy path:** Falla la actualización del reporte. No se confirma el nuevo estado. Volver a seleccionar el estado del reporte. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G10](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G10.png)
+
+#### G11. Consultar el resumen de bienestar del equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Consultar distribución emocional, empleados activos y tasa de respuesta.
+
+No se añaden filtros de área, período ni navegación a personas: el frontend revisado presenta un resumen agregado. Cero respuestas no equivale a un error.
+
+**Happy path:** Abrir Inicio de RRHH → Revisar distribución emocional y proporción positiva → Consultar empleados activos y tasa de respuesta → Información agregada consultada para orientar el seguimiento
+
+**Unhappy path:** No se puede cargar el resumen de bienestar. Actualizar o volver a abrir Inicio de RRHH. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G11](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G11.png)
+
+#### G12. Actualizar mi cuenta y mis preferencias
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Sesión activa y acceso a la cuenta propia.
+
+**Resultado esperado:** Datos o preferencias actualizados con respuesta satisfactoria.
+
+Cada dato de cuenta se edita en un diálogo; idioma y tema se guardan al seleccionarlos. Cambiar contraseña aparece como Próximamente.
+
+**Happy path:** Abrir Perfil / Configuración → Elegir nombre, usuario o correo y abrir el diálogo → Opcional: seleccionar idioma o alternar Tema oscuro → Cuenta y preferencias actualizadas según las acciones realizadas
+
+**Unhappy path:** Falla el guardado de la cuenta. No se confirma la actualización. Revisar los datos y volver a guardar. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Android user-flows G12](../assets/images/cap4/revision-20260911/diagrams/mobile/user-flows/G12.png)
 
 ## 4.5. Mobile Applications Prototyping
 
-El prototipado móvil permite validar la navegación principal, el entendimiento de las pantallas y la percepción de confianza en los flujos de registro, encuesta, foro y reporte.
+Los wireflows y los mockups forman un storyboard de diseño para revisar las tareas de ambos roles. Las imágenes PNG documentan las vistas y transiciones; las conexiones del prototipo deben configurarse en la herramienta de diseño. No se presentan como un prototipo interactivo ya probado.
 
 ### 4.5.1. Android Mobile Applications Prototyping
 
-Para Android, el prototipo considera los flujos principales de usuario trabajador y usuario RRHH. La implementación futura debe priorizar patrones de Material Design, navegación inferior y pantallas optimizadas para interacción táctil.
-
-**Prototipo de referencia:** [PENDIENTE - Agregar enlace real del prototipo Android]
+El diseño define las vistas y transiciones que se conectarían en un prototipo Android. La revisión debe comprobar que las personas puedan identificar la tarea, comprender los estados, recuperar un envío fallido y diferenciar el anonimato de cada reporte. Los objetivos G00–G12 permiten preparar esas tareas de evaluación. La evidencia de sesiones de prueba y el enlace a un prototipo interactivo quedan pendientes; no se fabrican resultados de validación.
 
 ### 4.5.2. iOS Mobile Applications Prototyping
 
-Para iOS, el prototipo debe mantener los mismos flujos funcionales, adaptando navegación, jerarquías visuales y gestos a las guías de Apple Human Interface Guidelines.
-
-**Prototipo de referencia:** [PENDIENTE - Agregar enlace real del prototipo iOS]
-
----
+Pendiente de alcance específico. No se atribuye al proyecto un prototipo iOS validado ni una implementación SwiftUI a partir del código Android.
 
 ## 4.6. Web Applications UX/UI Design
 
-En esta sección se presentan los artefactos de diseño correspondientes a la experiencia web. Para el alcance del proyecto, la experiencia web se enfoca en el acceso de usuarios, vistas de dashboard y flujos administrativos de RRHH.
+Esta sección contiene exclusivamente las vistas web de empleado y RRHH. La documentación respeta la navegación lateral, las pestañas de Encuestas, los formularios de Gestión dentro de la página y los modales propios de esta plataforma. No se reutilizan pantallas de teléfono para representar la aplicación web.
 
 ### 4.6.1. Web Applications Wireframes
 
-Los wireframes web se representan a partir de los flujos principales diseñados para registro, inicio de sesión, estadísticas y gestión de perfiles.
+El catálogo de Web contiene **50 vistas y estados estructurales**, agrupados por acceso, empleado y RRHH. Se mantienen los identificadores de las vistas para relacionar imágenes y flujos. Las láminas siguientes contienen el catálogo completo en imágenes PNG.
 
-![Web Wireframe - Registro](../assets/images/cap3/userflow/wireframes/Registro.png)
+**Vistas 01, 02.** Inicio de sesión; Registro de cuenta.
 
-![Web Wireframe - Inicio de Sesión](../assets/images/cap3/userflow/wireframes/InicioSesion.png)
+![Web wireframes — 01, 02](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-01.png)
 
-![Web Wireframe - Estadísticas](../assets/images/cap3/userflow/wireframes/Estadisticas.png)
+**Vistas 03, 04.** Recuperar acceso; Enlace de recuperación enviado.
+
+![Web wireframes — 03, 04](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-02.png)
+
+**Vistas 07, 08.** Acceso · error de credenciales; Acceso restringido a administración.
+
+![Web wireframes — 07, 08](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-03.png)
+
+**Vistas 10, 11.** Inicio del empleado; Estado de ánimo registrado.
+
+![Web wireframes — 10, 11](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-04.png)
+
+**Vistas 13, 14.** Encuestas diarias · responder; Encuesta respondida.
+
+![Web wireframes — 13, 14](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-05.png)
+
+**Vistas 15, 17.** Comentarios anónimos; Encuestas · sin contenido.
+
+![Web wireframes — 15, 17](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-06.png)
+
+**Vistas 18, 19.** Actividades semanales · votación; Actividad · voto registrado.
+
+![Web wireframes — 18, 19](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-07.png)
+
+**Vistas 20, 21.** Actividades · sin contenido; Crear reporte confidencial.
+
+![Web wireframes — 20, 21](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-08.png)
+
+**Vistas 22, 23.** Reporte · seleccionar área; Reporte · validación de campos.
+
+![Web wireframes — 22, 23](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-09.png)
+
+**Vistas 24, 25.** Reporte enviado e historial; Mis reportes · historial.
+
+![Web wireframes — 24, 25](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-10.png)
+
+**Vistas 26, 30.** Mis reportes · vacío; Historial de conversaciones.
+
+![Web wireframes — 26, 30](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-11.png)
+
+**Vistas 31, 32.** Conversaciones · vacío; Conversación de apoyo.
+
+![Web wireframes — 31, 32](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-12.png)
+
+**Vistas 33, 34.** Nueva conversación; Editar nombre de conversación.
+
+![Web wireframes — 33, 34](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-13.png)
+
+**Vistas 35, 37.** Eliminar conversación; Chat · asistente escribiendo.
+
+![Web wireframes — 35, 37](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-14.png)
+
+**Vistas 38, 40.** Chat · error de conexión; Resumen de bienestar RRHH.
+
+![Web wireframes — 38, 40](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-15.png)
+
+**Vistas 41, 42.** Gestión de encuestas; Gestión · comentarios y respuestas.
+
+![Web wireframes — 41, 42](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-16.png)
+
+**Vistas 43, 44.** Nueva encuesta; Gestión de actividades y resultados.
+
+![Web wireframes — 43, 44](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-17.png)
+
+**Vistas 45, 48.** Nueva actividad; Gestión · contenido vacío.
+
+![Web wireframes — 45, 48](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-18.png)
+
+**Vistas 49, 50.** Gestión · actividad cerrada; Bandeja de reportes RRHH.
+
+![Web wireframes — 49, 50](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-19.png)
+
+**Vistas 51, 52.** Reportes · filtro en revisión; Reporte · detalle y estado.
+
+![Web wireframes — 51, 52](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-20.png)
+
+**Vistas 53, 60.** Reportes · sin resultados; Perfil empleado.
+
+![Web wireframes — 53, 60](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-21.png)
+
+**Vistas 61, 62.** Configuración empleado; Configuración · tema oscuro empleado.
+
+![Web wireframes — 61, 62](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-22.png)
+
+**Vistas 70, 71.** Perfil rrhh; Configuración rrhh.
+
+![Web wireframes — 70, 71](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-23.png)
+
+**Vistas 72, 67.** Configuración · tema oscuro rrhh; Configuración guardada.
+
+![Web wireframes — 72, 67](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-24.png)
+
+**Vistas 80, 81.** Carga de contenido; Error de carga.
+
+![Web wireframes — 80, 81](../assets/images/cap4/revision-20260911/assets/web/boards/wireframes-25.png)
 
 ### 4.6.2. Web Applications Wireflow Diagrams
 
-Los wireflow diagrams web describen la secuencia de interacción entre las pantallas principales de acceso y gestión.
+Los diagramas mantienen la idea de los wireflows anteriores —pantallas enlazadas por acciones— y sustituyen las vistas y transiciones por las del frontend revisado. Un estado de la misma pantalla puede aparecer varias veces para representar el cambio producido por una acción.
 
-![Web Wireflow - Registro](../assets/images/cap3/userflow/wireframes/Registro.png)
+#### G00. Acceder al espacio correspondiente a mi rol
 
-![Web Wireflow - Perfil RRHH](../assets/images/cap3/userflow/wireframes/EdicionPerfilRRHH.png)
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Cuenta existente y sesión no iniciada.
 
-![Web Wireflow - Estadísticas](../assets/images/cap3/userflow/wireframes/Estadisticas.png)
+**Resultado esperado:** Sesión iniciada y navegación correspondiente al rol.
+
+La imagen de error representa una alternativa, no un paso obligatorio. El sistema decide el destino por el rol; no existe un selector de rol en Login.
+
+![Web wireflows G00](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G00.png)
+
+#### G01. Crear una cuenta para utilizar SafeSpace
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Nuevo usuario. **Precondición:** No tener una cuenta utilizable.
+
+**Resultado esperado:** Registro aceptado y retorno a Inicio de sesión.
+
+Web solicita además el nombre visible. El registro exitoso vuelve al acceso; no inicia sesión automáticamente.
+
+![Web wireflows G01](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G01.png)
+
+#### G02. Solicitar instrucciones para recuperar mi acceso
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Usuario sin acceso. **Precondición:** Recordar el usuario o correo asociado a la cuenta.
+
+**Resultado esperado:** Solicitud aceptada y aviso condicional mostrado; este frontend no incluye la confirmación con token.
+
+El aviso «si la cuenta existe» no confirma que el correo se haya entregado ni revela la existencia de la cuenta.
+
+![Web wireflows G02](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G02.png)
+
+#### G03. Registrar cómo me siento hoy
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión de empleado activa.
+
+**Resultado esperado:** Estado de ánimo del día registrado y selección bloqueada para ese día.
+
+Las tarjetas Métricas de bienestar y Recursos guiados están marcadas Próximamente y no forman parte de este recorrido.
+
+![Web wireflows G03](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G03.png)
+
+#### G04. Responder una encuesta y aportar contexto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y encuesta publicada disponible.
+
+**Resultado esperado:** Respuesta registrada; los comentarios son opcionales y dependen de la encuesta.
+
+Los comentarios pertenecen a la encuesta; el cliente web permite publicar y dar Me gusta, sin compositor de respuestas anidadas.
+
+![Web wireflows G04](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G04.png)
+
+#### G05. Elegir una actividad del equipo mediante mi voto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y actividad abierta.
+
+**Resultado esperado:** Voto aceptado para la opción seleccionada.
+
+La interfaz muestra Voto registrado al aceptar el envío. No se presupone una actualización automática de los conteos porque este handler no vuelve a consultarlos.
+
+![Web wireflows G05](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G05.png)
+
+#### G06. Comunicar una situación laboral a RRHH
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa; conocer los datos de la situación.
+
+**Resultado esperado:** Reporte aceptado e incorporado a Mis reportes.
+
+El anonimato se selecciona para este reporte; no es un modo anónimo global. La validación es una rama alternativa, no una pantalla obligatoria.
+
+![Web wireflows G06](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G06.png)
+
+#### G07. Obtener orientación y conservar una conversación
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y servicio de IA disponible.
+
+**Resultado esperado:** Conversación con respuesta del asistente disponible en el historial.
+
+El camino de error exige reescribir o revisar el mensaje antes de volver a enviarlo; no se presupone reenvío automático. Renombrar y eliminar son operaciones opcionales; eliminar requiere confirmación.
+
+![Web wireflows G07](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G07.png)
+
+#### G08. Publicar una encuesta para escuchar al equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Encuesta publicada después de su creación como borrador.
+
+Crear abre un formulario dentro de Gestión. Publicar y cerrar son acciones de la tarjeta; no se añade un diálogo de confirmación inexistente.
+
+![Web wireflows G08](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G08.png)
+
+#### G09. Crear una votación y cerrar la actividad
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Actividad creada, abierta a votación y cerrada mediante una operación aceptada.
+
+Las opciones usan campos separados y se pueden añadir más. El cierre se ejecuta desde la tarjeta y conserva el estado actualizado en la lista local.
+
+![Web wireflows G09](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G09.png)
+
+#### G10. Revisar un reporte y actualizar su atención
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión activa y reporte existente.
+
+**Resultado esperado:** Estado del reporte actualizado tras confirmación del servicio.
+
+En web, el selector de estado está dentro del modal. La selección envía el cambio sin un botón adicional de Guardar.
+
+![Web wireflows G10](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G10.png)
+
+#### G11. Consultar el resumen de bienestar del equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Consultar distribución emocional, empleados activos y tasa de respuesta.
+
+No se añaden filtros de área, período ni navegación a personas: el frontend revisado presenta un resumen agregado. Cero respuestas no equivale a un error.
+
+![Web wireflows G11](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G11.png)
+
+#### G12. Actualizar mi cuenta y mis preferencias
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Sesión activa y acceso a la cuenta propia.
+
+**Resultado esperado:** Datos o preferencias actualizados con respuesta satisfactoria.
+
+Cuenta y preferencias tienen botones Guardar cambios separados. La foto se actualiza desde Perfil con un selector local.
+
+![Web wireflows G12](../assets/images/cap4/revision-20260911/diagrams/web/wireflows/G12.png)
 
 ### 4.6.3. Web Applications Mock-ups
 
-Los mock-ups web muestran el estilo visual final aplicado a las pantallas principales de la experiencia administrativa.
+El catálogo de Web contiene **50 vistas y estados visuales**, agrupados por acceso, empleado y RRHH. Se mantienen los identificadores de las vistas para relacionar imágenes y flujos. Las láminas siguientes contienen el catálogo completo en imágenes PNG.
 
-![Web Mock-up - Registro](../assets/images/cap3/userflow/mockups/Registro.png)
+**Vistas 01, 02.** Inicio de sesión; Registro de cuenta.
 
-![Web Mock-up - Inicio de Sesión](../assets/images/cap3/userflow/mockups/InicioSesion.png)
+![Web mockups — 01, 02](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-01.png)
 
-![Web Mock-up - Estadísticas](../assets/images/cap3/userflow/mockups/Estadistica.png)
+**Vistas 03, 04.** Recuperar acceso; Enlace de recuperación enviado.
+
+![Web mockups — 03, 04](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-02.png)
+
+**Vistas 07, 08.** Acceso · error de credenciales; Acceso restringido a administración.
+
+![Web mockups — 07, 08](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-03.png)
+
+**Vistas 10, 11.** Inicio del empleado; Estado de ánimo registrado.
+
+![Web mockups — 10, 11](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-04.png)
+
+**Vistas 13, 14.** Encuestas diarias · responder; Encuesta respondida.
+
+![Web mockups — 13, 14](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-05.png)
+
+**Vistas 15, 17.** Comentarios anónimos; Encuestas · sin contenido.
+
+![Web mockups — 15, 17](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-06.png)
+
+**Vistas 18, 19.** Actividades semanales · votación; Actividad · voto registrado.
+
+![Web mockups — 18, 19](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-07.png)
+
+**Vistas 20, 21.** Actividades · sin contenido; Crear reporte confidencial.
+
+![Web mockups — 20, 21](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-08.png)
+
+**Vistas 22, 23.** Reporte · seleccionar área; Reporte · validación de campos.
+
+![Web mockups — 22, 23](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-09.png)
+
+**Vistas 24, 25.** Reporte enviado e historial; Mis reportes · historial.
+
+![Web mockups — 24, 25](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-10.png)
+
+**Vistas 26, 30.** Mis reportes · vacío; Historial de conversaciones.
+
+![Web mockups — 26, 30](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-11.png)
+
+**Vistas 31, 32.** Conversaciones · vacío; Conversación de apoyo.
+
+![Web mockups — 31, 32](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-12.png)
+
+**Vistas 33, 34.** Nueva conversación; Editar nombre de conversación.
+
+![Web mockups — 33, 34](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-13.png)
+
+**Vistas 35, 37.** Eliminar conversación; Chat · asistente escribiendo.
+
+![Web mockups — 35, 37](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-14.png)
+
+**Vistas 38, 40.** Chat · error de conexión; Resumen de bienestar RRHH.
+
+![Web mockups — 38, 40](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-15.png)
+
+**Vistas 41, 42.** Gestión de encuestas; Gestión · comentarios y respuestas.
+
+![Web mockups — 41, 42](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-16.png)
+
+**Vistas 43, 44.** Nueva encuesta; Gestión de actividades y resultados.
+
+![Web mockups — 43, 44](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-17.png)
+
+**Vistas 45, 48.** Nueva actividad; Gestión · contenido vacío.
+
+![Web mockups — 45, 48](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-18.png)
+
+**Vistas 49, 50.** Gestión · actividad cerrada; Bandeja de reportes RRHH.
+
+![Web mockups — 49, 50](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-19.png)
+
+**Vistas 51, 52.** Reportes · filtro en revisión; Reporte · detalle y estado.
+
+![Web mockups — 51, 52](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-20.png)
+
+**Vistas 53, 60.** Reportes · sin resultados; Perfil empleado.
+
+![Web mockups — 53, 60](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-21.png)
+
+**Vistas 61, 62.** Configuración empleado; Configuración · tema oscuro empleado.
+
+![Web mockups — 61, 62](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-22.png)
+
+**Vistas 70, 71.** Perfil rrhh; Configuración rrhh.
+
+![Web mockups — 70, 71](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-23.png)
+
+**Vistas 72, 67.** Configuración · tema oscuro rrhh; Configuración guardada.
+
+![Web mockups — 72, 67](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-24.png)
+
+**Vistas 80, 81.** Carga de contenido; Error de carga.
+
+![Web mockups — 80, 81](../assets/images/cap4/revision-20260911/assets/web/boards/mockups-25.png)
 
 ### 4.6.4. Web Applications User Flow Diagrams
 
-Los user flow diagrams web conectan las pantallas finales para explicar recorridos de uso frecuentes.
+Los objetivos se formulan desde la intención de la persona. Cada diagrama presenta un happy path y un unhappy path explícitos, unidos por una decisión Sí/No. Se selecciona un caso de error concreto por objetivo; las demás condiciones del recorrido se asumen válidas en este escenario. La ruta de error indica qué impide cumplir el objetivo y cómo reintentarlo. Los mockups muestran la vista de interacción y el resultado; cuando no existe un mockup específico del error, la condición se describe fuera de la interfaz, sin inventar una pantalla. Los errores se describen como estados de interfaz y no como nuevas pantallas que necesariamente existan. Las acciones opcionales se explican en el pie y no condicionan el logro principal.
 
-```text
-Registro web:
-Landing Page -> Registro -> Validación de datos -> Confirmación -> Inicio de sesión
-```
+#### G00. Acceder al espacio correspondiente a mi rol
 
-```text
-Dashboard RRHH:
-Inicio de sesión -> Dashboard -> Filtro de área -> Revisión de estadísticas -> Acción de seguimiento
-```
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Cuenta existente y sesión no iniciada.
 
-![Web User Flow - Inicio de Sesión](../assets/images/cap3/userflow/mockups/InicioSesion.png)
+**Resultado esperado:** Sesión iniciada y navegación correspondiente al rol.
 
-![Web User Flow - Estadísticas](../assets/images/cap3/userflow/mockups/Estadistica.png)
+La imagen de error representa una alternativa, no un paso obligatorio. El sistema decide el destino por el rol; no existe un selector de rol en Login.
 
----
+**Happy path:** Abrir Inicio de sesión e ingresar usuario o correo y contraseña → EMPLOYEE → Inicio del empleado. HR_MEMBER → Resumen de bienestar. → Acceso al espacio de trabajo del rol correcto
+
+**Unhappy path:** Credenciales incorrectas. La sesión no se inicia. Corregir las credenciales y volver a iniciar sesión. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G00](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G00.png)
+
+#### G01. Crear una cuenta para utilizar SafeSpace
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Nuevo usuario. **Precondición:** No tener una cuenta utilizable.
+
+**Resultado esperado:** Registro aceptado y retorno a Inicio de sesión.
+
+Web solicita además el nombre visible. El registro exitoso vuelve al acceso; no inicia sesión automáticamente.
+
+**Happy path:** Inicio de sesión → Regístrate → Completar nombre visible, usuario, correo, contraseña y confirmación → Seleccionar Registrar cuenta → Volver a Inicio de sesión con la cuenta creada
+
+**Unhappy path:** Las contraseñas no coinciden. El registro no continúa. Corregir la confirmación y volver a registrar la cuenta. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G01](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G01.png)
+
+#### G02. Solicitar instrucciones para recuperar mi acceso
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Usuario sin acceso. **Precondición:** Recordar el usuario o correo asociado a la cuenta.
+
+**Resultado esperado:** Solicitud aceptada y aviso condicional mostrado; este frontend no incluye la confirmación con token.
+
+El aviso «si la cuenta existe» no confirma que el correo se haya entregado ni revela la existencia de la cuenta.
+
+**Happy path:** Inicio de sesión → ¿Olvidaste tu contraseña? → Introducir usuario o correo y enviar solicitud → Mostrar aviso: si la cuenta existe, recibirá instrucciones → Solicitud registrada. Restablecimiento fuera del alcance de esta vista web
+
+**Unhappy path:** La solicitud de recuperación falla. No hay envío confirmado. Revisar usuario o correo y volver a solicitar instrucciones. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G02](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G02.png)
+
+#### G03. Registrar cómo me siento hoy
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión de empleado activa.
+
+**Resultado esperado:** Estado de ánimo del día registrado y selección bloqueada para ese día.
+
+Las tarjetas Métricas de bienestar y Recursos guiados están marcadas Próximamente y no forman parte de este recorrido.
+
+**Happy path:** Abrir Inicio y consultar el estado de ánimo de hoy → Seleccionar Muy mal, Mal, Bien o Muy bien → Estado de ánimo registrado para hoy
+
+**Unhappy path:** El guardado falla. El estado de ánimo no queda confirmado. Volver a seleccionar el estado de ánimo cuando termine la solicitud. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G03](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G03.png)
+
+#### G04. Responder una encuesta y aportar contexto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y encuesta publicada disponible.
+
+**Resultado esperado:** Respuesta registrada; los comentarios son opcionales y dependen de la encuesta.
+
+Los comentarios pertenecen a la encuesta; el cliente web permite publicar y dar Me gusta, sin compositor de respuestas anidadas.
+
+**Happy path:** Encuestas → pestaña Encuestas → Escribir una respuesta no vacía y seleccionar Enviar respuesta → Opcional: mostrar comentarios, publicar uno o dar Me gusta → Respuesta registrada; contexto adicional publicado si se eligió y fue aceptado
+
+**Unhappy path:** Falla el envío de la respuesta. La encuesta sigue pendiente. Revisar la respuesta y volver a enviarla. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G04](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G04.png)
+
+#### G05. Elegir una actividad del equipo mediante mi voto
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y actividad abierta.
+
+**Resultado esperado:** Voto aceptado para la opción seleccionada.
+
+La interfaz muestra Voto registrado al aceptar el envío. No se presupone una actualización automática de los conteos porque este handler no vuelve a consultarlos.
+
+**Happy path:** Encuestas → Actividades semanales → Seleccionar una opción disponible → Seleccionar Votar → Voto registrado en la actividad
+
+**Unhappy path:** Falla el envío del voto. No hay voto confirmado. Revisar la opción seleccionada y volver a votar. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G05](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G05.png)
+
+#### G06. Comunicar una situación laboral a RRHH
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa; conocer los datos de la situación.
+
+**Resultado esperado:** Reporte aceptado e incorporado a Mis reportes.
+
+El anonimato se selecciona para este reporte; no es un modo anónimo global. La validación es una rama alternativa, no una pantalla obligatoria.
+
+**Happy path:** Encuestas → pestaña Reportes → Completar área, título, descripción y prioridad; elegir envío anónimo o identificado → Seleccionar Enviar reporte → Confirmación de envío y nuevo registro en Mis reportes
+
+**Unhappy path:** Faltan campos obligatorios. El reporte no se envía. Completar los campos señalados y volver a enviar el reporte. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G06](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G06.png)
+
+#### G07. Obtener orientación y conservar una conversación
+
+**User Persona:** Andrés (El Empleado). **Actor:** Empleado. **Precondición:** Sesión activa y servicio de IA disponible.
+
+**Resultado esperado:** Conversación con respuesta del asistente disponible en el historial.
+
+El camino de error exige reescribir o revisar el mensaje antes de volver a enviarlo; no se presupone reenvío automático. Renombrar y eliminar son operaciones opcionales; eliminar requiere confirmación.
+
+**Happy path:** Chat IA → historial → crear o abrir una conversación → Escribir un mensaje no vacío y seleccionar Enviar → Leer la respuesta y regresar al historial → Conversación disponible para continuar después
+
+**Unhappy path:** El asistente no responde por un error del servicio. Reescribir el mensaje y volver a enviarlo. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G07](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G07.png)
+
+#### G08. Publicar una encuesta para escuchar al equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Encuesta publicada después de su creación como borrador.
+
+Crear abre un formulario dentro de Gestión. Publicar y cerrar son acciones de la tarjeta; no se añade un diálogo de confirmación inexistente.
+
+**Happy path:** Gestión → Encuestas → Nueva encuesta → Completar título, pregunta, frecuencia y permiso de comentarios → Encuesta creada como borrador → seleccionar Publicar → Encuesta publicada y disponible para los empleados
+
+**Unhappy path:** Falla la publicación. La encuesta no queda publicada. Volver a seleccionar Publicar desde la encuesta en borrador. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G08](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G08.png)
+
+#### G09. Crear una votación y cerrar la actividad
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Actividad creada, abierta a votación y cerrada mediante una operación aceptada.
+
+Las opciones usan campos separados y se pueden añadir más. El cierre se ejecuta desde la tarjeta y conserva el estado actualizado en la lista local.
+
+**Happy path:** Gestión → Actividades → Nueva actividad → Ingresar título y al menos dos opciones; descripción opcional → Actividad abierta → consultar participación → seleccionar Cerrar → Actividad cerrada; resultados finales visibles
+
+**Unhappy path:** Falla el cierre. La actividad no tiene un cierre confirmado. Comprobar el estado y volver a cerrar la actividad. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G09](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G09.png)
+
+#### G10. Revisar un reporte y actualizar su atención
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión activa y reporte existente.
+
+**Resultado esperado:** Estado del reporte actualizado tras confirmación del servicio.
+
+En web, el selector de estado está dentro del modal. La selección envía el cambio sin un botón adicional de Guardar.
+
+**Happy path:** Reportes → Todos, En revisión o Atendidos → Abrir detalle y revisar categoría, descripción, prioridad e identidad declarada → Elegir un estado dentro del modal de detalle → Estado actualizado: Nuevo, En revisión, Atendido o Cerrado
+
+**Unhappy path:** Falla la actualización del reporte. No se confirma el nuevo estado. Volver a seleccionar el estado del reporte. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G10](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G10.png)
+
+#### G11. Consultar el resumen de bienestar del equipo
+
+**User Persona:** Beatriz (La Gerente). **Actor:** RRHH. **Precondición:** Sesión de RRHH activa.
+
+**Resultado esperado:** Consultar distribución emocional, empleados activos y tasa de respuesta.
+
+No se añaden filtros de área, período ni navegación a personas: el frontend revisado presenta un resumen agregado. Cero respuestas no equivale a un error.
+
+**Happy path:** Abrir Inicio de RRHH → Revisar distribución emocional y proporción positiva → Consultar empleados activos y tasa de respuesta → Información agregada consultada para orientar el seguimiento
+
+**Unhappy path:** No se puede cargar el resumen de bienestar. Actualizar o volver a abrir Inicio de RRHH. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G11](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G11.png)
+
+#### G12. Actualizar mi cuenta y mis preferencias
+
+**User Persona:** Andrés / Beatriz, según la cuenta. **Actor:** Empleado / RRHH. **Precondición:** Sesión activa y acceso a la cuenta propia.
+
+**Resultado esperado:** Datos o preferencias actualizados con respuesta satisfactoria.
+
+Cuenta y preferencias tienen botones Guardar cambios separados. La foto se actualiza desde Perfil con un selector local.
+
+**Happy path:** Abrir Perfil / Configuración → Editar nombre visible, usuario o correo en Cuenta → Opcional: cambiar idioma o tema y guardar Preferencias → Cuenta y preferencias actualizadas según las acciones realizadas
+
+**Unhappy path:** Falla el guardado de la cuenta. No se confirma la actualización. Revisar los datos y volver a guardar. El objetivo permanece pendiente hasta que el reintento sea aceptado.
+
+![Web user-flows G12](../assets/images/cap4/revision-20260911/diagrams/web/user-flows/G12.png)
 
 ## 4.7. Web Applications Prototyping
 
-El prototipo web permite validar los flujos de acceso, consulta de métricas y navegación del usuario de RRHH dentro del dashboard. Este prototipo debe actualizarse cuando la aplicación web final esté disponible.
+Las vistas web y sus diagramas constituyen una base de prototipado para empleado y RRHH. Las tareas de revisión comprenden acceso, participación, reporte de situaciones, conversaciones, publicación de contenido, consulta de bienestar y gestión de cuenta. El éxito de cada tarea se define por el resultado aceptado, no por llegar a una pantalla intermedia.
 
-**Prototipo de referencia:** [PENDIENTE - Agregar enlace real del prototipo web]
+El prototipo interactivo y sus conexiones se realizarán en una etapa posterior; las imágenes entregadas no incluyen interacciones ejecutables. Los ensayos deberán cubrir rutas exitosas, campos incompletos, servicio no disponible, listas vacías y cancelación de operaciones cuando la interfaz la permite. No se afirman pruebas realizadas ni métricas de usabilidad sin evidencia.
 
----
 
 ## 4.8. Domain-Driven Software Architecture
 
