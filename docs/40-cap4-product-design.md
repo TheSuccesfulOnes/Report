@@ -1221,131 +1221,213 @@ El prototipo interactivo y sus conexiones se realizarán en una etapa posterior;
 
 ## 4.8. Domain-Driven Software Architecture
 
-La arquitectura de software de SafeSpace se organiza mediante Domain-Driven Design para separar responsabilidades por dominios de negocio. Esta división facilita la evolución del sistema, la mantenibilidad y el trabajo paralelo del equipo.
+SafeSpace se implementa como un monolito modular: las aplicaciones web y Android consumen una API que concentra los casos de uso y comparte una base de datos MySQL. La organización del diseño sigue los paquetes del backend: iam, authentication, profile, mood, survey, comment, activity, report, ai, payment, admin y audit. Esta separación documenta sus responsabilidades funcionales y sus dependencias; no implica que sean microservicios independientes.
+
+El paquete `shared` reúne infraestructura técnica reutilizada, como JWT, acceso al usuario autenticado, configuración CORS y manejo de excepciones. Se representa en la arquitectura por sus dependencias, pero **no se considera un bounded context de negocio** y no tiene una sección propia de clases ni de base de datos. Administración y auditoría proporcionan capacidades de soporte al negocio.
 
 ### 4.8.1. Software Architecture Context Diagram
 
-El diagrama de contexto muestra la relación entre SafeSpace, sus actores principales y sistemas externos.
+El empleado registra su bienestar y participa en encuestas, comentarios y actividades; también comunica situaciones laborales y utiliza la asistencia conversacional. RRHH consulta información de bienestar y gestiona encuestas, actividades y reportes. El administrador mantiene cuentas y recursos administrativos. Google Gemini es un proveedor externo opcional para generar respuestas del asistente.
 
-![Software Architecture Context Level Diagram](../assets/images/cap4/architecture/c4-context/context-level-diagram.png)
-
-**Actores principales:**
-
-- **Empleado:** interactúa con encuestas, foro, reportes y mensajes.
-- **Gerente de RRHH:** monitorea indicadores, gestiona encuestas y revisa reportes.
-- **SafeSpace Platform:** centraliza la gestión de clima laboral, comunicación y analítica.
+![Contexto de SafeSpace](../assets/images/cap4/arquitectura-final/c4/contexto.png)
 
 ### 4.8.2. Software Architecture Container Diagrams
 
-El diagrama de contenedores representa las aplicaciones y servicios principales de la solución.
+La aplicación web utiliza React y TypeScript; la aplicación Android utiliza Kotlin y Jetpack Compose. Ambas se comunican con el backend Java y Spring Boot mediante servicios REST y autenticación Bearer JWT. La API ejecuta las reglas de negocio, utiliza JPA para persistir en MySQL e integra Gemini cuando está configurado. Flyway administra la evolución del esquema de datos.
 
-![Software Architecture Container Level Diagram](../assets/images/cap4/architecture/c4-container/container-level-diagram.png)
-
-**Contenedores principales:**
-
-1. **Landing Page:** presenta la propuesta de valor y captura interesados.
-2. **Mobile Application:** permite a empleados y RRHH interactuar con las funcionalidades principales.
-3. **Web Application:** facilita la visualización de indicadores y gestión desde escritorio.
-4. **Backend API:** centraliza la lógica de negocio y expone servicios REST.
-5. **Database:** almacena usuarios, publicaciones, encuestas, reportes y suscripciones.
-6. **External Services:** servicios de notificación, autenticación, pagos o asistencia inteligente según el alcance técnico.
+![Contenedores de SafeSpace](../assets/images/cap4/arquitectura-final/c4/contenedores.png)
 
 ### 4.8.3. Software Architecture Components Diagrams
 
-Los diagramas de componentes muestran la estructura interna de los bounded contexts principales de SafeSpace.
+La vista integrada presenta todos los componentes del backend y sus conexiones en un único diagrama. authentication y profile reutilizan la identidad de iam; mood, survey, comment, activity, report y ai gestionan la participación y el bienestar; payment conserva registros de pagos; admin y audit respaldan la administración y la trazabilidad. shared aparece como infraestructura transversal, fuera de los bounded contexts de negocio.
 
-#### Identity and Access Management
+Las conexiones entre componentes representan dependencias dentro del mismo proceso. Por ejemplo, survey utiliza comment para publicar respuestas como comentarios y comment consulta survey para situar los aportes en una encuesta. No se presupone una independencia que el código actual no implementa.
 
-![IAM Component Diagram](../assets/images/cap4/architecture/c4-component/iamBCComponent.png)
-
-#### Subscription and Payments Management
-
-![Subscription Component Diagram](../assets/images/cap4/architecture/c4-component/subscriptionPaymentsComponent.png)
-
-#### Workers Forum
-
-![Workers Forum Component Diagram](../assets/images/cap4/architecture/c4-component/workersForumComponent.png)
-
-#### Dashboard and Analytics
-
-![Dashboard Component Diagram](../assets/images/cap4/architecture/c4-component/dashboardAnalyticsComponent.png)
-
-#### Feedback for Workers
-
-![Feedback Component Diagram](../assets/images/cap4/architecture/c4-component/feedbackWorkersComponent.png)
-
----
+![Componentes conectados del backend SafeSpace](../assets/images/cap4/arquitectura-final/c4/componentes.png)
 
 ## 4.9. Software Object-Oriented Design
 
-El diseño orientado a objetos define las entidades, agregados y servicios principales que soportan los casos de uso de SafeSpace.
+El diseño de clases refleja las entidades, enumeraciones, servicios y repositorios principales del backend. Las clases grises pertenecen a otros paquetes y muestran dependencias externas al contexto representado. Se omiten DTO, getters, setters y listas de parámetros para facilitar la lectura. Las dependencias de clases no deben interpretarse como relaciones entre tablas ni como llamadas de red.
 
 ### 4.9.1. Class Diagrams
 
-#### Identity and Access Management
+#### Identidad y cuentas (`iam`)
 
-![IAM Class Diagram](../assets/images/cap4/class-diagrams/iam-layer-class-diagram.png)
+User representa la cuenta, su rol y su habilitación; UserPreferences conserva idioma y tema. Los repositorios permiten recuperar y actualizar estas entidades. Este contexto proporciona una identidad consistente para asociar la participación de los empleados y aplicar los permisos correspondientes a empleados, RRHH y administradores.
 
-#### Subscription and Payments
+![Diagrama de clases de iam](../assets/images/cap4/arquitectura-final/clases/iam.png)
 
-![Subscription Class Diagram](../assets/images/cap4/class-diagrams/subscription-layer-class-diagram.png)
+#### Autenticación y recuperación (`authentication`)
 
-#### Workers Forum
+AuthService coordina registro e inicio de sesión. PasswordResetService valida la recuperación y PasswordResetToken controla caducidad y uso; PasswordResetNotificationPort abstrae la notificación. Su valor de negocio consiste en permitir el acceso de usuarios registrados y recuperar una cuenta sin crear una identidad nueva ni perder su historial.
 
-![Workers Forum Class Diagram](../assets/images/cap4/class-diagrams/workers-layer-class-diagram.png)
+![Diagrama de clases de authentication](../assets/images/cap4/arquitectura-final/clases/authentication.png)
 
-#### Dashboard and Analytics
+#### Perfil y preferencias (`profile`)
 
-![Dashboard Class Diagram](../assets/images/cap4/class-diagrams/dashboard-layer-class-diagram.png)
+ProfileService actualiza los datos de cuenta y las preferencias reutilizando User y UserPreferences de iam. También reemite el token cuando cambia el identificador utilizado por la sesión. Esto permite que cada participante mantenga sus datos y preferencias actualizados sin perder la continuidad de uso.
 
-#### Feedback for Workers
+![Diagrama de clases de profile](../assets/images/cap4/arquitectura-final/clases/profile.png)
 
-![Feedback Class Diagram](../assets/images/cap4/class-diagrams/feedback-layer-class-diagram.png)
+#### Bienestar diario (`mood`)
+
+MoodEntry representa el estado de ánimo registrado en una fecha y Mood delimita los valores admitidos. MoodService registra entradas y obtiene el resumen agregado para RRHH. Su valor consiste en convertir registros individuales en información que ayude a observar el bienestar laboral y orientar el seguimiento.
+
+![Diagrama de clases de mood](../assets/images/cap4/arquitectura-final/clases/mood.png)
+
+#### Encuestas (`survey`)
+
+Survey controla el ciclo de publicación y cierre, mientras SurveyAnswer conserva la respuesta del empleado. Los servicios coordinan las operaciones de participación y administración. El valor de negocio es recoger información estructurada del equipo para que RRHH conozca sus percepciones y necesidades.
+
+![Diagrama de clases de survey](../assets/images/cap4/arquitectura-final/clases/survey.png)
+
+#### Comentarios y reacciones (`comment`)
+
+Comment representa un aporte a una encuesta y puede referenciar un comentario padre para formar conversaciones. CommentLikeEntity registra la reacción de un usuario mediante una clave compuesta. Este contexto complementa las respuestas estructuradas con explicaciones y diálogo que ayudan a comprender las opiniones del equipo.
+
+![Diagrama de clases de comment](../assets/images/cap4/arquitectura-final/clases/comment.png)
+
+#### Actividades y votación (`activity`)
+
+WeeklyActivity agrupa las opciones de una actividad y permite abrir o cerrar la participación. ActivityVote conserva la elección del empleado; los servicios validan el estado de la actividad y la pertenencia de la opción. Su valor de negocio es involucrar al equipo en la elección de iniciativas de bienestar.
+
+![Diagrama de clases de activity](../assets/images/cap4/arquitectura-final/clases/activity.png)
+
+#### Reportes laborales (`report`)
+
+Report representa una situación laboral, su prioridad y su estado de seguimiento. ReportService permite registrar el caso y actualizar su atención según los permisos del usuario. El valor de negocio consiste en ofrecer un canal para comunicar problemas y organizar su revisión por RRHH.
+
+![Diagrama de clases de report](../assets/images/cap4/arquitectura-final/clases/report.png)
+
+#### Asistencia con inteligencia artificial (`ai`)
+
+AiConversation y AiMessage mantienen el historial del empleado. AiAssistantProvider abstrae la generación de respuestas y GeminiAiAdapter implementa la integración opcional con Gemini. El valor de negocio es facilitar una interacción de asistencia con continuidad entre mensajes, manteniendo cada conversación vinculada a su propietario.
+
+![Diagrama de clases de ai](../assets/images/cap4/arquitectura-final/clases/ai.png)
+
+#### Registro de pagos (`payment`)
+
+Payment representa un registro administrativo con beneficiario, comprobante y siguiente fecha de pago. PaymentPlan define la duración mensual o anual y PaymentService coordina el registro. Su valor es respaldar el control administrativo de pagos mediante evidencia documental; el backend no implementa cobros automáticos.
+
+![Diagrama de clases de payment](../assets/images/cap4/arquitectura-final/clases/payment.png)
+
+#### Administración (`admin`)
+
+AdminService coordina la gestión de cuentas y operaciones administrativas sobre recursos existentes. Se apoya en repositorios de otros contextos y en AuditService. Su valor de negocio es permitir que el administrador mantenga las cuentas y el contenido operativo bajo los permisos definidos.
+
+![Diagrama de clases de admin](../assets/images/cap4/arquitectura-final/clases/admin.png)
+
+#### Auditoría (`audit`)
+
+AuditLog conserva el actor, la acción y el recurso afectado; AuditService registra determinadas operaciones administrativas y de pagos. Su valor es aportar trazabilidad para revisar quién realizó una operación y sobre qué recurso. Es una capacidad de soporte al negocio; no registra automáticamente todas las acciones del sistema.
+
+![Diagrama de clases de audit](../assets/images/cap4/arquitectura-final/clases/audit.png)
 
 ### 4.9.2. Class Dictionary
 
-| Clase | Tipo | Bounded Context | Responsabilidad |
-| :---- | :---- | :---- | :---- |
-| `UserAccount` | Entity | IAM | Representa la cuenta de acceso de un usuario dentro del sistema. |
-| `Role` | Entity | IAM | Define permisos y alcance de acciones según el tipo de usuario. |
-| `Membership` | Aggregate | Subscription and Payments | Gestiona el ciclo de vida de la suscripción contratada. |
-| `MembershipPlan` | Entity | Subscription and Payments | Define las características asociadas a cada plan. |
-| `Payment` | Entity | Subscription and Payments | Registra transacciones y estados de pago. |
-| `Thread` | Aggregate | Workers Forum | Agrupa publicaciones y comentarios del foro laboral. |
-| `Message` | Entity | Workers Forum | Representa un mensaje publicado dentro de un hilo. |
-| `Dashboard` | Aggregate | Dashboard and Analytics | Organiza métricas e indicadores visibles para RRHH. |
-| `Widget` | Entity | Dashboard and Analytics | Representa un componente visual dentro del dashboard. |
-| `PerformanceReview` | Aggregate | Feedback for Workers | Gestiona evaluaciones o comentarios de retroalimentación. |
-| `FeedbackComment` | Entity | Feedback for Workers | Registra observaciones o comentarios asociados a un trabajador. |
-
----
+| Contexto | Clases principales | Responsabilidad |
+| :--- | :--- | :--- |
+| `iam` | `User`, `UserPreferences`, `UserRepository`, `UserPreferencesRepository` | User representa la cuenta, su rol y su habilitación; UserPreferences conserva idioma y tema. |
+| `authentication` | `AuthService`, `PasswordResetService`, `PasswordResetToken`, `PasswordResetNotificationPort` | AuthService coordina registro e inicio de sesión. |
+| `profile` | `ProfileService` | ProfileService actualiza los datos de cuenta y las preferencias reutilizando User y UserPreferences de iam. |
+| `mood` | `MoodEntry`, `Mood`, `MoodService` | MoodEntry representa el estado de ánimo registrado en una fecha y Mood delimita los valores admitidos. |
+| `survey` | `Survey`, `SurveyAnswer`, `SurveyService`, `AdminSurveyService` | Survey controla el ciclo de publicación y cierre, mientras SurveyAnswer conserva la respuesta del empleado. |
+| `comment` | `Comment`, `CommentLikeEntity`, `CommentService` | Comment representa un aporte a una encuesta y puede referenciar un comentario padre para formar conversaciones. |
+| `activity` | `WeeklyActivity`, `ActivityOption`, `ActivityVote`, `ActivityService`, `AdminActivityService` | WeeklyActivity agrupa las opciones de una actividad y permite abrir o cerrar la participación. |
+| `report` | `Report`, `ReportPriority`, `ReportStatus`, `ReportService` | Report representa una situación laboral, su prioridad y su estado de seguimiento. |
+| `ai` | `AiConversation`, `AiMessage`, `AiChatService`, `AiAssistantProvider`, `GeminiAiAdapter` | AiConversation y AiMessage mantienen el historial del empleado. |
+| `payment` | `Payment`, `PaymentPlan`, `PaymentService` | Payment representa un registro administrativo con beneficiario, comprobante y siguiente fecha de pago. |
+| `admin` | `AdminService` | AdminService coordina la gestión de cuentas y operaciones administrativas sobre recursos existentes. |
+| `audit` | `AuditLog`, `AuditService`, `AuditLogRepository` | AuditLog conserva el actor, la acción y el recurso afectado; AuditService registra determinadas operaciones administrativas y de pagos. |
 
 ## 4.10. Database Design
 
-El diseño de base de datos define la persistencia necesaria para soportar usuarios, roles, suscripciones, foros, encuestas, métricas y retroalimentación.
+SafeSpace utiliza un esquema relacional compartido con 16 tablas de aplicación. Las claves foráneas conectan la identidad de los usuarios con su participación, sus reportes y sus conversaciones; las restricciones únicas evitan registros duplicados en operaciones como responder encuestas o registrar el ánimo diario. Esta integridad permite que la información consultada por RRHH y los usuarios corresponda a registros coherentes.
+
+La distribución por contexto indica responsabilidad funcional sobre los datos, no bases de datos separadas. profile y admin reutilizan tablas de otros contextos. shared no define almacenamiento de negocio. El esquema se contrastó con las migraciones Flyway V1–V16; la tabla técnica de historial de migraciones no forma parte de estas vistas.
 
 ### 4.10.1. Relational/Non-Relational Database Diagram
 
-Para el alcance actual, SafeSpace utiliza un enfoque relacional que facilita la integridad de datos y la trazabilidad entre usuarios, empresas, reportes y módulos del sistema.
+#### Vista general
 
-#### Identity and Access Management
+La vista general muestra las 16 tablas y sus 22 relaciones. Las vistas siguientes permiten examinar cada contexto con mayor detalle e incluyen las tablas externas necesarias para comprender sus relaciones.
 
-![IAM Database Design Diagram](../assets/images/cap4/database/iam-database-design-diagram.png)
+![Diagrama general de base de datos](../assets/images/cap4/arquitectura-final/database/general.png)
 
-#### Subscription and Payments
+**Lectura de las capturas:** el editor muestra «NULL» en algunas columnas marcadas como clave primaria. En MySQL una clave primaria no admite nulos; prevalece la restricción PRIMARY KEY del esquema SQL. En particular, user_preferences.user_id es simultáneamente clave primaria y foránea: cada fila de preferencias pertenece exactamente a un usuario, y un usuario puede no tener aún una fila de preferencias. Las restricciones únicas compuestas y las políticas de eliminación se documentan en el SQL, aunque no todas aparezcan como texto en las capturas.
 
-![Subscription Database Design Diagram](../assets/images/cap4/database/subscription-database-design-diagram.png)
+#### Identidad y cuentas (`iam`)
 
-#### Workers Forum
+users centraliza las cuentas y user_preferences guarda una configuración por usuario mediante una clave primaria que también es foránea. Esta relación evita duplicar perfiles de preferencias y permite conservar una experiencia personalizada. Las referencias a users en los demás contextos reutilizan esta identidad; no representan nuevas tablas de usuarios.
 
-![Workers Forum Database Design Diagram](../assets/images/cap4/database/workers-database-design-diagram.png)
+![Base de datos de iam](../assets/images/cap4/arquitectura-final/database/iam.png)
 
-#### Dashboard and Analytics
+#### Autenticación y recuperación (`authentication`)
 
-![Dashboard Database Design Diagram](../assets/images/cap4/database/dashboard-database-design-diagram.png)
+password_reset_tokens se relaciona con users y conserva el hash del token, su vencimiento y el momento de uso. Estas evidencias permiten rechazar tokens vencidos o reutilizados y mantener la continuidad de acceso a la cuenta. Las credenciales permanecen en users, cuya entidad pertenece a iam.
 
-#### Feedback for Workers
+![Base de datos de authentication](../assets/images/cap4/arquitectura-final/database/authentication.png)
 
-![Feedback Database Design Diagram](../assets/images/cap4/database/feedbackDatabaseDesign.png)
+#### Perfil y preferencias (`profile`)
+
+Este contexto no declara tablas propias: sus operaciones consultan y actualizan users y user_preferences. La vista muestra esas dependencias de persistencia. Compartir estas entidades evita inconsistencias entre la identidad utilizada para iniciar sesión y los datos que el usuario ve en su perfil.
+
+![Base de datos de profile](../assets/images/cap4/arquitectura-final/database/profile.png)
+
+#### Bienestar diario (`mood`)
+
+mood_entries conserva usuario, estado de ánimo y fecha. La restricción única de user_id y mood_date impide duplicar el registro de un mismo día. Con ello, los resúmenes se apoyan en una participación diaria consistente; la ausencia de una entrada no debe interpretarse como un estado de ánimo negativo.
+
+![Base de datos de mood](../assets/images/cap4/arquitectura-final/database/mood.png)
+
+#### Encuestas (`survey`)
+
+surveys almacena la pregunta, el estado, el tipo y el creador; survey_answers relaciona cada respuesta con su encuesta y usuario. La unicidad de survey_id y user_id evita respuestas duplicadas de una misma persona. Esto permite interpretar la participación sin contar varias veces al mismo empleado.
+
+![Base de datos de survey](../assets/images/cap4/arquitectura-final/database/survey.png)
+
+#### Comentarios y reacciones (`comment`)
+
+comments vincula contenido, autor y encuesta, y parent_id conserva la jerarquía de respuestas. comment_likes utiliza la clave compuesta comment_id y user_id para impedir repetir la misma reacción. users y surveys aparecen como referencias externas necesarias para contextualizar la conversación.
+
+![Base de datos de comment](../assets/images/cap4/arquitectura-final/database/comment.png)
+
+#### Actividades y votación (`activity`)
+
+weekly_activities conserva la iniciativa y su creador; activity_options define sus alternativas y activity_votes registra la elección. La clave compuesta activity_id y user_id permite un voto vigente por empleado y actividad. La pertenencia de la opción a la actividad también se valida en el servicio, pues las claves foráneas por sí solas no garantizan esa correspondencia.
+
+![Base de datos de activity](../assets/images/cap4/arquitectura-final/database/activity.png)
+
+#### Reportes laborales (`report`)
+
+reports conserva categoría, título, descripción, prioridad y estado. user_id es opcional y admite reportes sin asociación a una cuenta; el servicio deja esa referencia vacía al crear un reporte anónimo. Esta estructura permite gestionar casos identificados o anónimos dentro del mismo proceso de seguimiento.
+
+![Base de datos de report](../assets/images/cap4/arquitectura-final/database/report.png)
+
+#### Asistencia con inteligencia artificial (`ai`)
+
+ai_conversations relaciona las conversaciones con users y ai_messages conserva emisor, contenido y fecha dentro de cada conversación. La estructura permite recuperar el historial y mantener el contexto de interacción. Los objetos de solicitud al proveedor no se almacenan como tablas independientes.
+
+![Base de datos de ai](../assets/images/cap4/arquitectura-final/database/ai.png)
+
+#### Registro de pagos (`payment`)
+
+payment_records guarda el PDF, sus metadatos, el plan y la siguiente fecha de pago. Las referencias al beneficiario y al registrador son opcionales, y los nombres se conservan en columnas propias. Esto permite mantener la evidencia del registro incluso cuando una cuenta asociada deja de existir.
+
+![Base de datos de payment](../assets/images/cap4/arquitectura-final/database/payment.png)
+
+#### Administración (`admin`)
+
+admin no declara tablas propias. La vista muestra users, surveys y weekly_activities como recursos que administra, sin duplicar su almacenamiento. Esta reutilización permite que los cambios administrativos se reflejen en los mismos datos utilizados por empleados y RRHH.
+
+![Base de datos de admin](../assets/images/cap4/arquitectura-final/database/admin.png)
+
+#### Auditoría (`audit`)
+
+audit_logs conserva acción, tipo e identificador del recurso y fecha. actor_user_id admite un valor vacío para preservar el registro cuando se elimina la cuenta del actor. Esta persistencia respalda la revisión de operaciones sin exigir que la cuenta original continúe activa.
+
+![Base de datos de audit](../assets/images/cap4/arquitectura-final/database/audit.png)
+
+Las columnas starts_at y ends_at de encuestas y actividades, así como updated_at de reports, pertenecen al esquema físico aunque las entidades Java actuales no las expongan como atributos. Por ello, las vistas de clases y de persistencia reflejan niveles diferentes del diseño.
 
 \newpage
