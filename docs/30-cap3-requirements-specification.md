@@ -145,46 +145,72 @@ Este apartado se dedica a las historias de investigación que el equipo debe rea
 
 ## 3.3. Product Backlog
 
-[Trello Board - SafeSpace](https://trello.com/invite/b/69ec16f90a18ae07a586815f/ATTI09fa38ae568497db954db4d23a814fb682BFF5BA/product-backlog)
+[Trello Board - SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog)
 
-| Orden | User Story Id | Título                                                    | Descripción                                                                                                                                                                                                                                 | Story Points |
-| :---- | :------------ | :-------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------- |
-| 1     | US01          | Visualización de la Propuesta de Valor en Landing Page    | Como visitante de la aplicación, quiero visualizar la propuesta de valor de SafeSpace de forma clara e impactante al ingresar al sitio, para comprender en segundos cómo el producto puede mejorar el bienestar en mi empresa.              | 2            |
-| 2     | US02          | Exploración de Funcionalidades y Módulos Clave            | Como visitante interesado, quiero navegar por una sección detallada de las funcionalidades clave del sistema para evaluar si las herramientas de monitoreo y foros se ajustan a las necesidades de mi departamento de RRHH.                 | 3            |
-| 3     | US03          | Comparativa de Planes de Suscripción y Tarifas            | Como administrador de RRHH, quiero acceder a una tabla comparativa de planes y precios para tomar una decisión informada sobre qué nivel de servicio (básico, profesional o enterprise) es el más rentable para el tamaño de mi plantilla.  | 3            |
-| 4     | US04          | Registro en el Boletín de Novedades y Tendencias          | Como visitante profesional, quiero suscribirme al boletín informativo proporcionando mi correo electrónico para recibir actualizaciones sobre el producto y artículos sobre gestión de clima laboral directamente en mi bandeja de entrada. | 2            |
-| 5     | US05          | Solicitud Formal de Demostración Personalizada            | Como líder de gestión de talento, quiero completar un formulario de contacto para solicitar una demostración en vivo con un asesor comercial, de modo que pueda resolver dudas específicas sobre la implementación técnica.                 | 3            |
-| 6     | US06          | Registro de Usuario mediante Dominio Corporativo          | Como empleado de una empresa cliente, quiero registrar mi cuenta utilizando exclusivamente mi correo institucional para que el sistema valide automáticamente que pertenezco a una organización con licencia activa.                        | 5            |
-| 7     | US07          | Acceso Seguro mediante Autenticación de Credenciales      | Como usuario registrado, quiero iniciar sesión de forma segura ingresando mis credenciales validadas, para acceder a mi entorno de trabajo personal y ver mis métricas o participar en los foros de la empresa.                             | 5            |
-| 8     | US08          | Recuperación de Acceso mediante Restablecimiento de Clave | Como usuario que ha olvidado sus datos de acceso, quiero solicitar el restablecimiento de mi contraseña mediante mi correo electrónico para recuperar la autonomía sobre mi cuenta de manera rápida y segura.                               | 5            |
-| 9     | US09          | Gestión de Perfil y Preferencias de Usuario               | Como empleado, quiero tener la posibilidad de actualizar mi nombre, foto de perfil y cargo dentro de la aplicación para que mi información esté siempre vigente frente a mis compañeros en el muro colaborativo.                            | 3            |
-| 10    | US10          | Activación de Identidad Protegida (Modo Anónimo)          | Como colaborador que desea emitir opiniones honestas, quiero activar el modo anónimo en mi configuración para que mi nombre y foto no sean visibles al publicar en foros sensibles o responder encuestas críticas.                          | 3            |
-| 11    | US11          | Finalización de Sesión y Protección de Datos              | Como usuario preocupado por la seguridad, quiero poder cerrar sesión de forma definitiva en el dispositivo actual para asegurar que nadie más pueda ver mi información privada si dejo mi móvil o PC desatendido.                           | 2            |
-| 12    | US12          | Control de Cupos y Uso de Licencias Disponibles           | Como administrador de RRHH, quiero visualizar en tiempo real cuántas licencias de empleado he consumido y cuántas me quedan disponibles, para gestionar correctamente el presupuesto y las nuevas contrataciones.                           | 5            |
-| 13    | US13          | Mejora de Plan para Escalabilidad de la Empresa           | Como administrador, quiero realizar un "upgrade" de mi plan actual a uno superior directamente desde la app, para habilitar nuevas funcionalidades analíticas o aumentar el límite de usuarios de forma inmediata.                          | 8            |
-| 14    | US14          | Configuración de Métodos de Pago y Facturación Automática | Como responsable financiero de la cuenta, quiero agregar o actualizar tarjetas de crédito asociadas para asegurar que el servicio no se interrumpa por fallos en el cobro recurrente de la suscripción.                                     | 8            |
-| 15    | US15          | Historial y Visualización de Comprobantes de Pago         | Como administrador de RRHH, quiero acceder a un histórico de todas las facturas pagadas con detalles como fecha, monto y método de pago para llevar un control financiero claro y ordenado de los gastos relacionados con la suscripción.   | 5            |
-| 16    | US16          | Gestión de Renovación y Cancelación de Servicio           | Como administrador de la suscripción, quiero poder desactivar la auto-renovación de mi plan en cualquier momento, de modo que el servicio finalice al terminar el ciclo pagado sin cargos adicionales no deseados.                          | 3            |
-| 17    | US17          | Notificación de Errores de Pago en Tiempo Real            | Como responsable de la cuenta corporativa, quiero recibir una notificación inmediata si un cobro es rechazado por el banco, para poder corregir el problema de pago antes de que el acceso de los empleados sea suspendido.                 | 5            |
-| 18    | US18          | Dashboard Global de Indicadores de Bienestar              | Como gerente de RRHH, quiero ver un panel resumen con los principales indicadores de clima y felicidad de toda la organización para tener una visión holística del estado de la empresa cada mañana.                                        | 8            |
-| 19    | US19          | Segmentación de Análisis por Departamento o Área          | Como líder de área, quiero filtrar las métricas de clima laboral específicamente por mi departamento, para entender las problemáticas locales de mi equipo sin que se mezclen con los datos de otras áreas.                                 | 5            |
-| 20    | US20          | Identificación Proactiva de Riesgo de Deserción (Churn)   | Como analista de RRHH, quiero visualizar un ranking de departamentos o perfiles con alto riesgo de rotación basado en sus respuestas de bienestar, para intervenir preventivamente y retener el talento.                                    | 13           |
-| 21    | US21          | Exportación de Datos Crudos para Informes Externos        | Como consultor de RRHH, quiero exportar las métricas de clima a un archivo CSV para realizar análisis cruzados con otros sistemas de la empresa (como nómina o desempeño) en herramientas externas como Excel o BI.                         | 3            |
-| 22    | US22          | Alerta Crítica por Anomalías en el Clima Laboral          | Como gerente de RRHH, quiero que el sistema me envíe una alerta automática si detecta una caída drástica y repentina en el índice de satisfacción de un equipo, para investigar posibles conflictos en tiempo real.                         | 8            |
-| 23    | US23          | Personalización de Vistas del Panel de Control            | Como usuario frecuente del dashboard, quiero poder elegir qué widgets analíticos ver primero para enfocarme en las métricas que son prioritarias para mis objetivos trimestrales.                                                           | 8            |
-| 24    | US24          | Navegación Infinita en Muros de Discusión                 | Como empleado, quiero desplazarme por el muro de foros y que las publicaciones antiguas se carguen automáticamente para tener una experiencia de navegación fluida sin interrupciones por paginación tradicional.                           | 5            |
-| 25    | US25          | Publicación de Casos y Consultas en el Foro               | Como empleado, quiero crear nuevas publicaciones de texto o imágenes en el muro compartido para pedir consejos a mis colegas o compartir noticias positivas que refuercen la cultura de equipo.                                             | 5            |
-| 26    | US26          | Participación mediante Comentarios en Hilos Existentes    | Como usuario del foro, quiero comentar en las publicaciones de otros compañeros para aportar soluciones a sus dudas o entablar diálogos constructivos sobre temas de la oficina.                                                            | 5            |
-| 27    | US27          | Reacciones y Votación de Contenido Relevante              | Como empleado, quiero votar positivamente las publicaciones que me resulten útiles para que el mejor contenido suba a las posiciones destacadas y sea más fácil de encontrar por otros.                                                     | 3            |
-| 28    | US28          | Filtrado de Discusiones por Etiquetas Temáticas           | Como usuario buscando información específica, quiero filtrar el contenido del muro por etiquetas (ej. #Sugerencias, #Eventos, #Dudas) para encontrar rápidamente conversaciones relacionadas con mis intereses.                             | 5            |
-| 29    | US29          | Denuncia de Comportamientos no Éticos en el Foro          | Como miembro de la comunidad, quiero reportar cualquier contenido que considere ofensivo o que viole las normas de convivencia para mantener un espacio de trabajo seguro y profesional para todos.                                         | 5            |
-| 30    | US30          | Respuesta a Encuesta Diaria de Pulso Emocional            | Como empleado, quiero responder una pregunta de 5 segundos sobre mi estado de ánimo al abrir la app, para que la empresa conozca el pulso diario de satisfacción de forma ágil y sin fricciones.                                            | 3            |
-| 31    | US31          | Recepción de Mensajería de Soporte y Acompañamiento       | Como usuario que ha reportado malestar, quiero recibir mensajes privados y recursos de apoyo de parte de RRHH para sentirme escuchado y recibir orientación sobre cómo manejar situaciones de estrés.                                       | 8            |
-| 32    | US32          | Reserva de Sesiones Individuales con Especialistas        | Como empleado que requiere ayuda profesional, quiero agendar una sesión 1 a 1 con un psicólogo o mentor de RRHH viendo sus horarios disponibles para recibir atención personalizada.                                                        | 8            |
-| 33    | US33          | Envío de Denuncias Confidenciales Cifradas                | Como testigo de una irregularidad grave, quiero enviar una denuncia detallada a través de un buzón cifrado y anónimo para que RRHH investigue el caso sin que mi identidad sea comprometida en ningún momento.                              | 8            |
-| 34    | US34          | Seguimiento de Evolución de Bienestar Personal            | Como usuario interesado en mi salud mental, quiero ver un gráfico de mi propia evolución emocional mes a mes para identificar patrones de estrés y tomar medidas preventivas en mi vida personal.                                           | 5            |
-| 35    | US35          | Recepción de Sugerencias de Pausas Activas Inteligentes   | Como empleado con altos niveles de estrés detectados por el sistema, quiero recibir sugerencias automáticas de pausas o ejercicios de respiración para reducir mi ansiedad durante la jornada laboral.                                      | 8            |
 
+
+
+| Jira   | ID   | Historia de usuario                           | Epic |
+| ------ | ---- | --------------------------------------------- | ---- |
+| SSB-1  | US01 | Registro de empleados                         | EP01 |
+| SSB-2  | US02 | Inicio de sesión con credenciales             | EP01 |
+| SSB-3  | US03 | Recuperación de contraseña de empleados       | EP01 |
+| SSB-4  | US04 | Actualización de perfil y preferencias        | EP01 |
+| SSB-5  | US05 | Administración de usuarios                    | EP01 |
+| SSB-6  | US06 | Registro diario de estado de ánimo            | EP02 |
+| SSB-7  | US07 | Resumen administrativo de estado de ánimo     | EP02 |
+| SSB-8  | US08 | Consulta de encuestas publicadas              | EP03 |
+| SSB-9  | US09 | Respuesta única a una encuesta                | EP03 |
+| SSB-10 | US10 | Gestión operativa de encuestas                | EP03 |
+| SSB-11 | US11 | Administración avanzada de encuestas          | EP03 |
+| SSB-12 | US12 | Comentarios anidados en encuestas             | EP03 |
+| SSB-13 | US13 | Like o unlike de comentarios                  | EP03 |
+| SSB-14 | US14 | Consulta de actividades abiertas              | EP04 |
+| SSB-15 | US15 | Votación y cambio de voto                     | EP04 |
+| SSB-16 | US16 | Gestión de actividades semanales              | EP04 |
+| SSB-17 | US17 | Creación de reportes anónimos o identificados | EP05 |
+| SSB-18 | US18 | Consulta de reportes propios                  | EP05 |
+| SSB-19 | US19 | Revisión y actualización de reportes          | EP05 |
+| SSB-20 | US20 | Registro de planes y comprobantes de pago     | EP06 |
+| SSB-21 | US21 | Administración de conversaciones propias      | EP07 |
+| SSB-22 | US22 | Envío de mensajes al asistente                | EP07 |
+
+
+## Tareas técnicas
+
+| Jira   | ID   | Tarea técnica                              | Historias relacionadas                     |
+| ------ | ---- | ------------------------------------------ | ------------------------------------------ |
+| SSB-23 | TS01 | Aplicación base con Spring Boot            | Todas                                      |
+| SSB-24 | TS02 | Persistencia relacional con MySQL y Flyway | Todas                                      |
+| SSB-25 | TS03 | Modelo de identidad y roles                | US01, US02, US05                           |
+| SSB-26 | TS04 | Autenticación JWT sin sesión de servidor   | US02, US04, US05, US06, US22               |
+| SSB-27 | TS05 | Hash seguro de contraseñas                 | US01, US02, US03, US05                     |
+| SSB-28 | TS06 | Autorización RBAC                          | US01–US22                                  |
+| SSB-29 | TS07 | Protección de la cuenta propietaria        | US05                                       |
+| SSB-30 | TS08 | Recuperación de contraseña con token hash  | US03                                       |
+| SSB-31 | TS09 | Configuración por propiedades y perfiles   | US02, US03, US20, US22                     |
+| SSB-32 | TS10 | Gestión de perfil y preferencias           | US04                                       |
+| SSB-33 | TS11 | Registro diario de mood con unicidad       | US06                                       |
+| SSB-34 | TS12 | Consulta agregada de mood                  | US07                                       |
+| SSB-35 | TS13 | Ciclo de vida de encuestas                 | US08, US09, US10, US11                     |
+| SSB-36 | TS14 | Respuestas únicas de encuestas             | US09                                       |
+| SSB-37 | TS15 | Comentarios jerárquicos                    | US12                                       |
+| SSB-38 | TS16 | Likes idempotentes por usuario             | US13                                       |
+| SSB-39 | TS17 | Actividades con opciones y votación única  | US14, US15, US16                           |
+| SSB-40 | TS18 | Protección de opciones después de votar    | US16                                       |
+| SSB-41 | TS19 | Reportes anónimos e identificados          | US17, US18                                 |
+| SSB-42 | TS20 | Seguimiento administrativo de reportes     | US19                                       |
+| SSB-43 | TS21 | Auditoría de operaciones administrativas   | US05, US10, US11, US16, US20               |
+| SSB-44 | TS22 | Persistencia de comprobantes PDF           | US20                                       |
+| SSB-45 | TS23 | Cálculo de siguiente fecha de pago         | US20                                       |
+| SSB-46 | TS24 | Conversaciones propiedad del empleado      | US21, US22                                 |
+| SSB-47 | TS25 | Integración opcional con Gemini            | US22                                       |
+| SSB-48 | TS26 | Respuesta local de contingencia para IA    | US22                                       |
+| SSB-49 | TS27 | Manejo común de errores HTTP               | US01–US22                                  |
+| SSB-50 | TS28 | CORS y API stateless                       | US02, US04–US22                            |
+| SSB-51 | TS29 | Migraciones y eliminación referencial      | US05, US06, US09, US11–US13, US17–US22     |
+| SSB-52 | TS30 | Documentación OpenAPI                      | Todas                                      |
+| SSB-53 | TS31 | Pruebas unitarias de servicios             | US01–US03, US05–US11, US14–US16, US20–US22 |
 
 
 ## 3.4. Impact Mapping
