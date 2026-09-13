@@ -78,27 +78,27 @@ La arquitectura de información organiza el producto en torno a tareas de bienes
 
 ### 4.2.1. Organization Systems
 
-| Contexto | Organización | Contenido disponible |
-| :--- | :--- | :--- |
-| Acceso | Secuencia de formularios | Inicio de sesión, registro y recuperación de acceso. |
-| Empleado, web | Navegación por tareas y pestañas | Inicio; Encuestas, Actividades semanales y Reportes; Chat AI; Perfil y Configuración. |
-| Empleado, Android | Navegación inferior y centro de tareas | Inicio; Centro de Encuestas y sus destinos; Chat IA; Perfil y ajustes. |
+| Contexto                | Organización                            | Contenido disponible                                                                    |
+| :---------------------- | :-------------------------------------- | :-------------------------------------------------------------------------------------- |
+| Acceso                  | Secuencia de formularios                | Inicio de sesión, registro y recuperación de acceso.                                    |
+| Empleado, web           | Navegación por tareas y pestañas        | Inicio; Encuestas, Actividades semanales y Reportes; Chat AI; Perfil y Configuración.   |
+| Empleado, Android       | Navegación inferior y centro de tareas  | Inicio; Centro de Encuestas y sus destinos; Chat IA; Perfil y ajustes.                  |
 | RRHH, ambas plataformas | Resumen y gestión por tipo de contenido | Resumen de bienestar, gestión de encuestas y actividades, bandeja de reportes y cuenta. |
-| Conversaciones | Historial y detalle | Crear, abrir, renombrar y eliminar conversaciones. |
-| Reportes de RRHH | Lista, filtros y detalle | Todos, En revisión y Atendidos; consulta del caso y actualización de estado. |
+| Conversaciones          | Historial y detalle                     | Crear, abrir, renombrar y eliminar conversaciones.                                      |
+| Reportes de RRHH        | Lista, filtros y detalle                | Todos, En revisión y Atendidos; consulta del caso y actualización de estado.            |
 
 Los comentarios están asociados a encuestas. No se incorpora un foro independiente, pagos, membresías, suscripciones ni acceso con Google, porque esos recorridos no están presentes en los frontends revisados. Las tarjetas de recursos guiados y métricas personales aparecen como **Próximamente** y no se incluyen como funciones completadas.
 
 ### 4.2.2. Labeling Systems
 
-| Grupo | Etiquetas | Finalidad |
-| :--- | :--- | :--- |
-| Navegación de empleado | Inicio, Encuestas, Chat AI/Chat IA, Perfil | Localizar las tareas personales. |
-| Navegación de RRHH | Inicio, Gestión, Reportes, Perfil | Acceder a resumen, contenido y casos reportados. |
-| Participación | Enviar respuesta, Mostrar comentarios, Votar, Crear reporte | Diferenciar respuesta, comentario, voto y reporte. |
-| Gestión | Nueva encuesta, Nueva actividad, Publicar, Cerrar, Cambiar estado | Comunicar operaciones sobre contenido y reportes. |
-| Cuenta | Configuración, Cambiar nombre, Cambiar correo, Idioma, Tema oscuro | Administrar los datos y preferencias propias. |
-| Estados | Respuesta registrada, Voto registrado, Borrador, Publicada, Cerrada, Nuevo, En revisión, Atendido | Dar visibilidad al resultado y al estado del recurso. |
+| Grupo                  | Etiquetas                                                                                         | Finalidad                                             |
+| :--------------------- | :------------------------------------------------------------------------------------------------ | :---------------------------------------------------- |
+| Navegación de empleado | Inicio, Encuestas, Chat AI/Chat IA, Perfil                                                        | Localizar las tareas personales.                      |
+| Navegación de RRHH     | Inicio, Gestión, Reportes, Perfil                                                                 | Acceder a resumen, contenido y casos reportados.      |
+| Participación          | Enviar respuesta, Mostrar comentarios, Votar, Crear reporte                                       | Diferenciar respuesta, comentario, voto y reporte.    |
+| Gestión                | Nueva encuesta, Nueva actividad, Publicar, Cerrar, Cambiar estado                                 | Comunicar operaciones sobre contenido y reportes.     |
+| Cuenta                 | Configuración, Cambiar nombre, Cambiar correo, Idioma, Tema oscuro                                | Administrar los datos y preferencias propias.         |
+| Estados                | Respuesta registrada, Voto registrado, Borrador, Publicada, Cerrada, Nuevo, En revisión, Atendido | Dar visibilidad al resultado y al estado del recurso. |
 
 El anonimato se explica donde corresponde: comentarios anónimos de encuestas y opción de envío anónimo del reporte. No se documenta como una preferencia global que cambie todas las operaciones de la cuenta.
 
@@ -110,23 +110,23 @@ La versión revisada no declara una directiva `noindex, nofollow`; por ello no s
 
 ### 4.2.4. Searching Systems
 
-| Sección | Mecanismo actual | Sin contenido o con error |
-| :--- | :--- | :--- |
-| Encuestas y actividades | Navegación por pestaña o categoría, según plataforma. | Estado vacío o aviso de carga fallida. |
-| Reportes RRHH | Filtros Todos, En revisión y Atendidos. | Resultado vacío del filtro; posibilidad de cambiarlo. |
-| Conversaciones | Selección desde el historial. | Estado sin conversaciones; opción de crear una. |
-| Resumen RRHH | Consulta agregada del resumen disponible. | Error de consulta o indicadores sin respuestas, diferenciados. |
+| Sección                 | Mecanismo actual                                      | Sin contenido o con error                                      |
+| :---------------------- | :---------------------------------------------------- | :------------------------------------------------------------- |
+| Encuestas y actividades | Navegación por pestaña o categoría, según plataforma. | Estado vacío o aviso de carga fallida.                         |
+| Reportes RRHH           | Filtros Todos, En revisión y Atendidos.               | Resultado vacío del filtro; posibilidad de cambiarlo.          |
+| Conversaciones          | Selección desde el historial.                         | Estado sin conversaciones; opción de crear una.                |
+| Resumen RRHH            | Consulta agregada del resumen disponible.             | Error de consulta o indicadores sin respuestas, diferenciados. |
 
 No se documentan buscadores de texto, filtros por área o período del dashboard ni historiales de pagos que no estén implementados en estas interfaces.
 
 ### 4.2.5. Navigation Systems
 
-| Plataforma y rol | Recorrido principal |
-| :--- | :--- |
-| Web, empleado | Inicio → Encuestas / Chat AI; acceso a Perfil y Configuración desde el espacio de cuenta. |
-| Web, RRHH | Inicio → Gestión / Reportes; acceso a Perfil y Configuración. |
-| Android, empleado | Inicio · Encuestas · Chat IA · Perfil. |
-| Android, RRHH | Inicio · Gestión · Reportes · Perfil. |
+| Plataforma y rol  | Recorrido principal                                                                       |
+| :---------------- | :---------------------------------------------------------------------------------------- |
+| Web, empleado     | Inicio → Encuestas / Chat AI; acceso a Perfil y Configuración desde el espacio de cuenta. |
+| Web, RRHH         | Inicio → Gestión / Reportes; acceso a Perfil y Configuración.                             |
+| Android, empleado | Inicio · Encuestas · Chat IA · Perfil.                                                    |
+| Android, RRHH     | Inicio · Gestión · Reportes · Perfil.                                                     |
 
 En Android, **Encuestas → Centro de Encuestas** abre encuestas diarias, actividades semanales o creación de reportes. En web, esas tareas se agrupan en pestañas de una misma página. Las respuestas y los votos modifican el estado del contenido; no representan necesariamente navegación a otra pantalla.
 
@@ -671,6 +671,8 @@ Cada dato de cuenta se edita en un diálogo; idioma y tema se guardan al selecci
 ## 4.5. Mobile Applications Prototyping
 
 Los wireflows y los mockups forman un storyboard de diseño para revisar las tareas de ambos roles. Las imágenes PNG documentan las vistas y transiciones; las conexiones del prototipo deben configurarse en la herramienta de diseño. No se presentan como un prototipo interactivo ya probado.
+
+Video: [Link del video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312566_upc_edu_pe/IQBfRe042xsqTZ0HxCQQ12jEASa0npquQuDSFxj4o-DhFvg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hMx8Zo)
 
 ### 4.5.1. Android Mobile Applications Prototyping
 
@@ -1218,6 +1220,7 @@ Las vistas web y sus diagramas constituyen una base de prototipado para empleado
 
 El prototipo interactivo y sus conexiones se realizarán en una etapa posterior; las imágenes entregadas no incluyen interacciones ejecutables. Los ensayos deberán cubrir rutas exitosas, campos incompletos, servicio no disponible, listas vacías y cancelación de operaciones cuando la interfaz la permite. No se afirman pruebas realizadas ni métricas de usabilidad sin evidencia.
 
+Video: [Link del video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312566_upc_edu_pe/IQD4PEoCLszORI3GQlkqA5pxAVjIaQCSqXUfbvSe87WFTLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=F3RlDd)
 
 ## 4.8. Domain-Driven Software Architecture
 
@@ -1325,20 +1328,20 @@ AuditLog conserva el actor, la acción y el recurso afectado; AuditService regis
 
 ### 4.9.2. Class Dictionary
 
-| Contexto | Clases principales | Responsabilidad |
-| :--- | :--- | :--- |
-| `iam` | `User`, `UserPreferences`, `UserRepository`, `UserPreferencesRepository` | User representa la cuenta, su rol y su habilitación; UserPreferences conserva idioma y tema. |
-| `authentication` | `AuthService`, `PasswordResetService`, `PasswordResetToken`, `PasswordResetNotificationPort` | AuthService coordina registro e inicio de sesión. |
-| `profile` | `ProfileService` | ProfileService actualiza los datos de cuenta y las preferencias reutilizando User y UserPreferences de iam. |
-| `mood` | `MoodEntry`, `Mood`, `MoodService` | MoodEntry representa el estado de ánimo registrado en una fecha y Mood delimita los valores admitidos. |
-| `survey` | `Survey`, `SurveyAnswer`, `SurveyService`, `AdminSurveyService` | Survey controla el ciclo de publicación y cierre, mientras SurveyAnswer conserva la respuesta del empleado. |
-| `comment` | `Comment`, `CommentLikeEntity`, `CommentService` | Comment representa un aporte a una encuesta y puede referenciar un comentario padre para formar conversaciones. |
-| `activity` | `WeeklyActivity`, `ActivityOption`, `ActivityVote`, `ActivityService`, `AdminActivityService` | WeeklyActivity agrupa las opciones de una actividad y permite abrir o cerrar la participación. |
-| `report` | `Report`, `ReportPriority`, `ReportStatus`, `ReportService` | Report representa una situación laboral, su prioridad y su estado de seguimiento. |
-| `ai` | `AiConversation`, `AiMessage`, `AiChatService`, `AiAssistantProvider`, `GeminiAiAdapter` | AiConversation y AiMessage mantienen el historial del empleado. |
-| `payment` | `Payment`, `PaymentPlan`, `PaymentService` | Payment representa un registro administrativo con beneficiario, comprobante y siguiente fecha de pago. |
-| `admin` | `AdminService` | AdminService coordina la gestión de cuentas y operaciones administrativas sobre recursos existentes. |
-| `audit` | `AuditLog`, `AuditService`, `AuditLogRepository` | AuditLog conserva el actor, la acción y el recurso afectado; AuditService registra determinadas operaciones administrativas y de pagos. |
+| Contexto         | Clases principales                                                                            | Responsabilidad                                                                                                                         |
+| :--------------- | :-------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| `iam`            | `User`, `UserPreferences`, `UserRepository`, `UserPreferencesRepository`                      | User representa la cuenta, su rol y su habilitación; UserPreferences conserva idioma y tema.                                            |
+| `authentication` | `AuthService`, `PasswordResetService`, `PasswordResetToken`, `PasswordResetNotificationPort`  | AuthService coordina registro e inicio de sesión.                                                                                       |
+| `profile`        | `ProfileService`                                                                              | ProfileService actualiza los datos de cuenta y las preferencias reutilizando User y UserPreferences de iam.                             |
+| `mood`           | `MoodEntry`, `Mood`, `MoodService`                                                            | MoodEntry representa el estado de ánimo registrado en una fecha y Mood delimita los valores admitidos.                                  |
+| `survey`         | `Survey`, `SurveyAnswer`, `SurveyService`, `AdminSurveyService`                               | Survey controla el ciclo de publicación y cierre, mientras SurveyAnswer conserva la respuesta del empleado.                             |
+| `comment`        | `Comment`, `CommentLikeEntity`, `CommentService`                                              | Comment representa un aporte a una encuesta y puede referenciar un comentario padre para formar conversaciones.                         |
+| `activity`       | `WeeklyActivity`, `ActivityOption`, `ActivityVote`, `ActivityService`, `AdminActivityService` | WeeklyActivity agrupa las opciones de una actividad y permite abrir o cerrar la participación.                                          |
+| `report`         | `Report`, `ReportPriority`, `ReportStatus`, `ReportService`                                   | Report representa una situación laboral, su prioridad y su estado de seguimiento.                                                       |
+| `ai`             | `AiConversation`, `AiMessage`, `AiChatService`, `AiAssistantProvider`, `GeminiAiAdapter`      | AiConversation y AiMessage mantienen el historial del empleado.                                                                         |
+| `payment`        | `Payment`, `PaymentPlan`, `PaymentService`                                                    | Payment representa un registro administrativo con beneficiario, comprobante y siguiente fecha de pago.                                  |
+| `admin`          | `AdminService`                                                                                | AdminService coordina la gestión de cuentas y operaciones administrativas sobre recursos existentes.                                    |
+| `audit`          | `AuditLog`, `AuditService`, `AuditLogRepository`                                              | AuditLog conserva el actor, la acción y el recurso afectado; AuditService registra determinadas operaciones administrativas y de pagos. |
 
 ## 4.10. Database Design
 
