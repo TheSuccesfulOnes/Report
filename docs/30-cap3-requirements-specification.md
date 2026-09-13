@@ -148,7 +148,7 @@ Este apartado se dedica a las historias de investigación que el equipo debe rea
 [Trello Board - SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog)
 
 
-
+![Product Backlog](../assets/images/cap3/product-backlog.png)
 
 | Jira   | ID   | Historia de usuario                           | Epic |
 | ------ | ---- | --------------------------------------------- | ---- |
