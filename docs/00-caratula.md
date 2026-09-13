@@ -16,7 +16,7 @@
 
   <p>
     NRC<br>
-    <strong>[PENDIENTE - Completar]</strong>
+    <strong>9097</strong>
   </p>
 
   <h3><strong>Informe del Trabajo Final</strong></h3>
@@ -60,8 +60,8 @@
       <td style="border: none; padding: 3px 15px;">Asto Jacome, Jose Gustavo</td>
     </tr>
     <tr style="border: none;">
-      <td style="border: none; padding: 3px 15px;">[CÓDIGO]</td>
-      <td style="border: none; padding: 3px 15px;">[APELLIDOS, Nombres]</td>
+      <td style="border: none; padding: 3px 15px;">U202412316</td>
+      <td style="border: none; padding: 3px 15px;">Diaz Martinez, Alexther Kamil</td>
     </tr>
     <tr style="border: none;">
       <td style="border: none; padding: 3px 15px;">[CÓDIGO]</td>
