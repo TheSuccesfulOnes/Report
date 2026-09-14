@@ -197,17 +197,25 @@ En este apartado se analizan las entrevistas realizadas.
 
 #### Segmento #1
 
-Total de entrevistas registradas: 1
+Total de entrevistas: 3
 
 Datos sobre preguntas:
 
-- El entrevistado describe su ambiente laboral como dinámico y colaborativo, con presión por entregas y dificultades ante prioridades poco claras.
-- Cuenta con Recursos Humanos y distintos canales de comunicación; hablar de asuntos sensibles depende de la confianza y la privacidad.
-- Considera útil una aplicación si permite recibir respuestas y conocer el estado y el siguiente paso de cada reporte.
-- Solicita anonimato opcional, claridad sobre quién accede a la información, adjuntos, notificaciones e indicación de urgencia.
-- Prefiere disponer de acceso móvil y desde una computadora. No precisa una frecuencia de encuestas de clima laboral.
+- El 67% de empleados considera útil el uso de una app para su entorno laboral.
+- Los 3 entrevistados consideran de dificultad media el acceso a la comunicación con RRHH.
+- 2 entrevistados comentan que el ambiente es regular y 1 solo considera que el clima laboral es bueno.
 
-La entrevista muestra que disponer de canales de comunicación no garantiza conocer qué ocurre después de reportar un problema. Para Sebastián, el valor de SafeSpace estaría en centralizar la información y facilitar el seguimiento, manteniendo la privacidad y la sencillez de uso. Sus respuestas también destacan la importancia de comunicar los acuerdos, los cambios de prioridad y las mejoras derivadas de las encuestas. Estos hallazgos corresponden a una entrevista y deben contrastarse con otros empleados antes de generalizarlos al segmento.
+En este gráfico 1 se puede observar que el 67% de los entrevistados considera que el ambiente laboral es regular, mientras que el 33% restante lo percibe como bueno. Esto indica que la mayoría de los empleados entrevistados no están completamente satisfechos con su entorno laboral actual, lo cual podría ser un punto crítico a abordar en el diseño de la aplicación SafeSpace para mejorar el clima organizacional y la satisfacción de los empleados.
+
+![Gráfico 1](../assets/images/cap2/analisis-entrevistas/empleados_graf1.jpg)
+
+En este gráfico 2 se puede observar que el 100% de los empleados entrevistados consideran que la comunicación con RRHH es de dificultad media. Esto indica que existe una percepción generalizada de que la comunicación con el área de Recursos Humanos no es completamente fluida ni accesible, lo cual podría ser un punto crítico a abordar en el diseño de la aplicación SafeSpace para mejorar esta interacción.
+
+![Gráfico 2](../assets/images/cap2/analisis-entrevistas/empleados_graf2.jpg)
+
+En este gráfico 3 se destaca que el 67% de los empleados entrevistados encuentran útil el uso de una aplicación para mejorar su entorno laboral, mientras que el 33% restante no lo considera útil. Esto sugiere que la mayoría de los empleados ven con buenos ojos la idea de implementar una herramienta digital como SafeSpace para facilitar la comunicación y mejorar el clima laboral, aunque también es importante considerar las razones detrás del 33% que no lo encuentra útil para asegurar que la aplicación aborde sus preocupaciones y necesidades específicas.
+
+![Gráfico 3](../assets/images/cap2/analisis-entrevistas/empleados_graf3.jpg)
 
 #### Segmento #2
 
