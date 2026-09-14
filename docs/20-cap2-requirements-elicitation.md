@@ -128,22 +128,11 @@ Esto permitirá diseñar una solución más alineada a necesidades reales y no s
 
 ### 2.2.2. Registro de entrevistas
 
-A continuación se registran las entrevistas por segmento, con sus enlaces de evidencia y resúmenes. El segmento de empleados incorpora la entrevista realizada por Mauricio Pajés a Sebastián Pajés el 13 de septiembre de 2026.
+Por el momento, se registra únicamente la entrevista desarrollada por un integrante del equipo actual. Las entrevistas restantes deberán completarse cuando el equipo cuente con nuevas evidencias válidas para esta entrega.
 
 #### Segmento 1: Empleados
 
-##### Entrevista 1: Sebastián Pajés
-
-- **Edad:** 25 años.
-- **Link:** [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQBt9dRG2hvNRoUHIZSu33drAbFJEyXeEXmkQfBTUPdBuZU?e=WJSVtf).
-- **Inicio:** 00:05.
-- **Duración:** 06:07 (según la transcripción).
-
-![Entrevista 1 Empleados - Sebastián Pajés](../assets/images/cap2/registro-entrevistas/Entrevista1_Empleados_Sebastian.png)
-
-**Resumen de la Entrevista**
-
-Sebastián describe su ambiente laboral como dinámico y colaborativo, con momentos de presión por entregas y problemas que requieren respuestas rápidas. Identifica dificultades cuando las prioridades no están claras o existen expectativas distintas sobre una tarea, y procura resolverlas mediante conversaciones y acuerdos por escrito. Señala que expresar opiniones técnicas le resulta natural, mientras que hablar de carga laboral o incomodidades depende de la confianza y de sentirse escuchado. Dispone de contacto con Recursos Humanos y utiliza Slack, correo, reuniones y conversaciones directas según la sensibilidad del asunto. Menciona encuestas sobre bienestar, carga laboral y comunicación; valora que sean anónimas, aunque no precisa su frecuencia, y considera importante conocer las mejoras derivadas de ellas. Una aplicación le resultaría útil si centraliza los reportes y permite conocer su estado, recibir respuestas y saber cuál es el siguiente paso. Solicita opciones de anonimato, claridad sobre quién puede acceder, adjuntos, conversación con el responsable, notificaciones y señalización de urgencia. Utilizaría una solución sencilla y privada tanto desde el celular como desde el escritorio. Finalmente, relaciona la confianza y las prioridades claras con mayor concentración y menos errores o repetición de trabajo.
+[PENDIENTE - Registrar entrevistas realizadas por el equipo actual.]
 
 #### Segmento 2: Recursos Humanos
 
@@ -193,25 +182,29 @@ Julio es Coordinador de Bienestar y Cultura Organizacional en una empresa manufa
 
 ### 2.2.3. Análisis de entrevistas
 
-En este apartado se presentan los hallazgos de las entrevistas por segmento.
+En este apartado se procederá a analizar las entrevistas realizadas.
 
-#### Segmento #1: Empleados
+#### Segmento #1
 
-**Entrevistas registradas con evidencia en este segmento: 1.** El análisis corresponde a Sebastián Pajés y se basa en su transcripción del 13 de septiembre de 2026. Las referencias remiten a las preguntas de la transcripción proporcionada por el entrevistador.
+Total de entrevistas: 3
 
-| Tema | Hallazgo de la entrevista | Implicación para explorar en SafeSpace | Evidencia |
-| :--- | :--- | :--- | :--- |
-| Prioridades y coordinación | Las expectativas divergentes y los cambios de prioridad pueden generar confusiones; el entrevistado recurre a acuerdos escritos. | Explorar cómo conservar el contexto y los acuerdos asociados a un caso. | Preguntas 1, 2 y 7. |
-| Confianza y privacidad | Hablar de carga laboral o incomodidades es más delicado que discutir temas técnicos. | Permitir elegir entre reporte anónimo o identificado y explicar quién puede acceder a la información. | Preguntas 3, 5, 9 y 10. |
-| Seguimiento | Comunicar por chat no siempre permite saber en qué quedó el asunto. La utilidad de una app depende de recibir respuesta y conocer el siguiente paso. | Explorar estados visibles, conversación con el responsable y notificaciones de respuesta. | Preguntas 5, 8 y 9. |
-| Evidencia y urgencia | Solicita adjuntar información e indicar si un problema requiere atención urgente. | Evaluar adjuntos y señalización de urgencia; falta definir su tratamiento con RRHH. | Pregunta 9. |
-| Encuestas | Valora el anonimato y conocer las acciones posteriores; no especifica frecuencia. | Explorar cómo comunicar mejoras derivadas del feedback. | Pregunta 6. |
-| Acceso y productividad | Prefiere disponibilidad móvil y de escritorio. Asocia confianza y claridad con concentración y menor repetición del trabajo. | Considerar ambos contextos de uso y validar posteriormente el impacto; la entrevista no mide productividad. | Preguntas 10 y 11. |
+Datos sobre preguntas:
 
-La principal oportunidad identificada es mejorar el seguimiento y la confianza en la gestión de los problemas, dado que el entrevistado ya cuenta con canales de comunicación. Su disposición a utilizar una aplicación está condicionada a la privacidad, sencillez y respuesta efectiva. Estos hallazgos orientan nuevas validaciones; no representan a todos los empleados ni confirman por sí solos los requisitos del producto.
+- El 67% de empleados considera útil el uso de una app para su entorno laboral.
+- Los 3 entrevistados consideran de dificultad media el acceso a la comunicación con RRHH.
+- 2 entrevistados comentan que el ambiente es regular y 1 solo considera que el clima laboral es bueno.
 
-**Base del análisis:** [transcripción y lectura por pregunta](entrevistas/2026-09-13-sebastian-pajes.md). No se presentan porcentajes ni gráficos agregados: el registro de este segmento contiene una sola entrevista y no permite sustentar resultados atribuidos a tres empleados. No se asignan escalas de accesibilidad o clima laboral que el entrevistado no utilizó.
+En este gráfico 1 se puede observar que el 67% de los entrevistados considera que el ambiente laboral es regular, mientras que el 33% restante lo percibe como bueno. Esto indica que la mayoría de los empleados entrevistados no están completamente satisfechos con su entorno laboral actual, lo cual podría ser un punto crítico a abordar en el diseño de la aplicación SafeSpace para mejorar el clima organizacional y la satisfacción de los empleados.
 
+![Gráfico 1](../assets/images/cap2/analisis-entrevistas/empleados_graf1.jpg)
+
+En este gráfico 2 se puede observar que el 100% de los empleados entrevistados consideran que la comunicación con RRHH es de dificultad media. Esto indica que existe una percepción generalizada de que la comunicación con el área de Recursos Humanos no es completamente fluida ni accesible, lo cual podría ser un punto crítico a abordar en el diseño de la aplicación SafeSpace para mejorar esta interacción.
+
+![Gráfico 2](../assets/images/cap2/analisis-entrevistas/empleados_graf2.jpg)
+
+En este gráfico 3 se destaca que el 67% de los empleados entrevistados encuentran útil el uso de una aplicación para mejorar su entorno laboral, mientras que el 33% restante no lo considera útil. Esto sugiere que la mayoría de los empleados ven con buenos ojos la idea de implementar una herramienta digital como SafeSpace para facilitar la comunicación y mejorar el clima laboral, aunque también es importante considerar las razones detrás del 33% que no lo encuentra útil para asegurar que la aplicación aborde sus preocupaciones y necesidades específicas.
+
+![Gráfico 3](../assets/images/cap2/analisis-entrevistas/empleados_graf3.jpg)
 
 #### Segmento #2
 
