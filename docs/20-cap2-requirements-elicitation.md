@@ -145,6 +145,16 @@ A continuación se presentan las entrevistas realizadas, organizadas en los segm
 
 Sebastián es ingeniero de software en Blaze. Describe su ambiente laboral como dinámico y colaborativo, aunque existen momentos de presión y dificultades cuando las prioridades o expectativas no están claras. Ante estas situaciones, procura conversar con los responsables y dejar los acuerdos por escrito. Comenta que expresar opiniones técnicas le resulta natural, mientras que hablar de carga laboral o incomodidades depende de la confianza. Cuenta con canales de contacto con Recursos Humanos y utiliza Slack, correo, reuniones y conversaciones directas. Valora las encuestas anónimas y considera importante conocer las mejoras que se realizarán con sus respuestas. Una aplicación le resultaría útil si permite comunicar problemas y darles seguimiento mediante estados, respuestas y notificaciones. También considera importante elegir entre reportes anónimos o identificados, saber quién puede acceder a la información, adjuntar evidencia e indicar urgencia. Utilizaría una solución sencilla y privada desde el celular o la computadora. Finalmente, relaciona la confianza y la claridad de prioridades con mayor concentración y menos errores o repetición de trabajo.
 
+##### Entrevista 2: Alexandra Nardes Díaz Martínez
+
+- **Link:** [Ver entrevista](https://youtu.be/CuKWMbiErt8).
+- **Inicio:** 00:12.
+- **Duración:** 05:37.
+![Entrevista 2 Empleados](../assets/images/cap2/registro-entrevistas/Entrevista2_Empleados_Alexandra.png)
+**Resumen de la Entrevista**
+
+Alexandra describe su ambiente laboral como tranquilo e integrado, sin conflictos relevantes entre compañeros. No identifica incomodidades importantes y comenta que, cuando surge alguna situación relacionada con el trabajo o con clientes externos, procura resolverla mediante una conversación asertiva y una buena actitud. Señala que en su empresa existe un grupo de WhatsApp mediante el cual los empleados pueden comunicarse con Recursos Humanos; sin embargo, para asuntos más sensibles, como remuneraciones o retrasos en los pagos, considera conveniente contar con un canal de contacto directo entre el empleado y la empresa. No ha participado en encuestas de clima laboral, aunque percibe que la comunicación interna es buena porque trabajan pocas personas y todos pueden compartir sus opiniones cuando se encuentran en la oficina. Considera útil una aplicación que incluya preguntas abiertas, ya que cada empleado puede enfrentar situaciones distintas según el rubro de la empresa. También propone incorporar filtros relacionados con el sector o tipo de negocio para que las consultas y soluciones sean más pertinentes. Finalmente, utilizaría la aplicación si fuera accesible desde el celular y muestra una actitud favorable ante su implementación como herramienta de beneficio para los empleados.
+
 #### Segmento 2: Recursos Humanos
 
 ##### Entrevista 1: Jorge Chumpitaz
