@@ -16,7 +16,7 @@ Durante el Avance 1, el equipo trabajó de manera colaborativa en la definición
 | Milenko Ruben Cayanchi Avila | [PENDIENTE - Describir aportes: ej. Entrevistas, Análisis de entrevistas, User Personas] |
 | Diego Andrés Ávalos Cordova | [PENDIENTE - Describir aportes: ej. Needfinding, User Journey Maps, Empathy Maps] |
 | Jose Gustavo Asto Jacome | [PENDIENTE - Describir aportes: ej. Ubiquitous Language, To-Be Scenario Mapping, User Stories] |
-| Alexther Kamil, Diaz Martinez |Soy Alexther Kamil, estudiante de Ingeniería de Software (6to ciclo). Me encanta trabajar en equipo y me considero alguien positivo y resiliente frente a los problemas. Mi base técnica está en C++, Python, Java, HTML, CSS, JS y SQL, siempre listo para adaptarme a lo que el proyecto nesecite. |
+| Alexther Kamil, Diaz Martinez | [PENDIENTE - Describir aportes: ej. Ubiquitous Language, To-Be Scenario Mapping, User Stories] |
 | [Integrante 6] | [PENDIENTE] |
 
 ## Evidencia de colaboración en GitHub - AV1
