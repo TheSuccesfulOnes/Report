@@ -128,11 +128,22 @@ Esto permitirá diseñar una solución más alineada a necesidades reales y no s
 
 ### 2.2.2. Registro de entrevistas
 
-Por el momento, se registra únicamente la entrevista desarrollada por un integrante del equipo actual. Las entrevistas restantes deberán completarse cuando el equipo cuente con nuevas evidencias válidas para esta entrega.
+A continuación se presentan las entrevistas realizadas, organizadas en los segmentos de empleados y Recursos Humanos.
 
 #### Segmento 1: Empleados
 
-[PENDIENTE - Registrar entrevistas realizadas por el equipo actual.]
+##### Entrevista 1: Sebastián Pajés
+
+- **Edad:** 25 años.
+- **Link:** [Ver entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQBt9dRG2hvNRoUHIZSu33drAbFJEyXeEXmkQfBTUPdBuZU?e=WJSVtf).
+- **Inicio:** 00:05.
+- **Duración:** 06:07.
+
+![Entrevista 1 Empleados](../assets/images/cap2/registro-entrevistas/Entrevista1_Empleados_Sebastian.png)
+
+**Resumen de la Entrevista**
+
+Sebastián es ingeniero de software en Blaze. Describe su ambiente laboral como dinámico y colaborativo, aunque existen momentos de presión y dificultades cuando las prioridades o expectativas no están claras. Ante estas situaciones, procura conversar con los responsables y dejar los acuerdos por escrito. Comenta que expresar opiniones técnicas le resulta natural, mientras que hablar de carga laboral o incomodidades depende de la confianza. Cuenta con canales de contacto con Recursos Humanos y utiliza Slack, correo, reuniones y conversaciones directas. Valora las encuestas anónimas y considera importante conocer las mejoras que se realizarán con sus respuestas. Una aplicación le resultaría útil si permite comunicar problemas y darles seguimiento mediante estados, respuestas y notificaciones. También considera importante elegir entre reportes anónimos o identificados, saber quién puede acceder a la información, adjuntar evidencia e indicar urgencia. Utilizaría una solución sencilla y privada desde el celular o la computadora. Finalmente, relaciona la confianza y la claridad de prioridades con mayor concentración y menos errores o repetición de trabajo.
 
 #### Segmento 2: Recursos Humanos
 
@@ -182,29 +193,21 @@ Julio es Coordinador de Bienestar y Cultura Organizacional en una empresa manufa
 
 ### 2.2.3. Análisis de entrevistas
 
-En este apartado se procederá a analizar las entrevistas realizadas.
+En este apartado se analizan las entrevistas realizadas.
 
 #### Segmento #1
 
-Total de entrevistas: 3
+Total de entrevistas registradas: 1
 
 Datos sobre preguntas:
 
-- El 67% de empleados considera útil el uso de una app para su entorno laboral.
-- Los 3 entrevistados consideran de dificultad media el acceso a la comunicación con RRHH.
-- 2 entrevistados comentan que el ambiente es regular y 1 solo considera que el clima laboral es bueno.
+- El entrevistado describe su ambiente laboral como dinámico y colaborativo, con presión por entregas y dificultades ante prioridades poco claras.
+- Cuenta con Recursos Humanos y distintos canales de comunicación; hablar de asuntos sensibles depende de la confianza y la privacidad.
+- Considera útil una aplicación si permite recibir respuestas y conocer el estado y el siguiente paso de cada reporte.
+- Solicita anonimato opcional, claridad sobre quién accede a la información, adjuntos, notificaciones e indicación de urgencia.
+- Prefiere disponer de acceso móvil y desde una computadora. No precisa una frecuencia de encuestas de clima laboral.
 
-En este gráfico 1 se puede observar que el 67% de los entrevistados considera que el ambiente laboral es regular, mientras que el 33% restante lo percibe como bueno. Esto indica que la mayoría de los empleados entrevistados no están completamente satisfechos con su entorno laboral actual, lo cual podría ser un punto crítico a abordar en el diseño de la aplicación SafeSpace para mejorar el clima organizacional y la satisfacción de los empleados.
-
-![Gráfico 1](../assets/images/cap2/analisis-entrevistas/empleados_graf1.jpg)
-
-En este gráfico 2 se puede observar que el 100% de los empleados entrevistados consideran que la comunicación con RRHH es de dificultad media. Esto indica que existe una percepción generalizada de que la comunicación con el área de Recursos Humanos no es completamente fluida ni accesible, lo cual podría ser un punto crítico a abordar en el diseño de la aplicación SafeSpace para mejorar esta interacción.
-
-![Gráfico 2](../assets/images/cap2/analisis-entrevistas/empleados_graf2.jpg)
-
-En este gráfico 3 se destaca que el 67% de los empleados entrevistados encuentran útil el uso de una aplicación para mejorar su entorno laboral, mientras que el 33% restante no lo considera útil. Esto sugiere que la mayoría de los empleados ven con buenos ojos la idea de implementar una herramienta digital como SafeSpace para facilitar la comunicación y mejorar el clima laboral, aunque también es importante considerar las razones detrás del 33% que no lo encuentra útil para asegurar que la aplicación aborde sus preocupaciones y necesidades específicas.
-
-![Gráfico 3](../assets/images/cap2/analisis-entrevistas/empleados_graf3.jpg)
+La entrevista muestra que disponer de canales de comunicación no garantiza conocer qué ocurre después de reportar un problema. Para Sebastián, el valor de SafeSpace estaría en centralizar la información y facilitar el seguimiento, manteniendo la privacidad y la sencillez de uso. Sus respuestas también destacan la importancia de comunicar los acuerdos, los cambios de prioridad y las mejoras derivadas de las encuestas. Estos hallazgos corresponden a una entrevista y deben contrastarse con otros empleados antes de generalizarlos al segmento.
 
 #### Segmento #2
 
@@ -238,7 +241,7 @@ En base a las entrevistas realizadas, se han identificado dos perfiles de usuari
 
 ![User Persona 1](../assets/images/cap2/User1.jpg)
 
-- **Andrés (El Empleado):** Representa a los trabajadores que enfrentan dificultades en su ambiente laboral pero sienten miedo o inseguridad para expresarlo. Busca una forma segura y efectiva de comunicar sus problemas y recibir apoyo.
+- **Andrés (El Empleado):** Representa a los trabajadores que enfrentan dificultades en su ambiente laboral pero sienten miedo o inseguridad para expresarlo. Busca una forma segura y efectiva de comunicar sus problemas, recibir apoyo y conocer el estado y el seguimiento de sus reportes.
 
 ![User Persona 2](../assets/images/cap2/User2.jpg)
 
