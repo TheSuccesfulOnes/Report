@@ -257,11 +257,11 @@ En el gráfico 3 se destaca que el 67% de los entrevistados realizan encuestas d
 
 En base a las entrevistas realizadas, se han identificado dos perfiles de usuario principales que representan a los segmentos clave para el proyecto.
 
-![User Persona 1](../assets/images/cap2/User1.jpg)
+![User Persona 1 - Andrés Pérez](../assets/images/cap2/andres-perez.png)
 
 - **Andrés (El Empleado):** Representa a los trabajadores que enfrentan dificultades en su ambiente laboral pero sienten miedo o inseguridad para expresarlo. Busca una forma segura y efectiva de comunicar sus problemas, recibir apoyo y conocer el estado y el seguimiento de sus reportes.
 
-![User Persona 2](../assets/images/cap2/User2.jpg)
+![User Persona 2 - Beatriz Lugo](../assets/images/cap2/beatriz-lugo.png)
 
 - **Beatriz (La Gerente):** Representa a los profesionales de Recursos Humanos que necesitan herramientas más efectivas para detectar y abordar problemas laborales. Busca soluciones que le permitan actuar de forma proactiva y mejorar el clima organizacional.
 
@@ -298,11 +298,11 @@ Podemos observar que el proceso actual es reactivo, con largos periodos de esper
 
 Esta herramienta permite ir más allá de lo que hacen los usuarios, entendiendo qué los motiva y qué los frena.
 
-![Empathy Map - Andrés](../assets/images/cap2/EmpathyMapAndres.jpg)
+![Empathy Map - Andrés](../assets/images/cap2/empathy-map-andres.png)
 
 Con esta información, se pueden diseñar soluciones que no solo resuelvan el problema funcional, sino que también aborden las emociones y pensamientos subyacentes de los usuarios. Para Andrés, es crucial crear un espacio seguro donde pueda expresar su malestar sin temor a represalias.
 
-![Empathy Map - Beatriz](../assets/images/cap2/EmpathyMapBeatriz.jpg)
+![Empathy Map - Beatriz](../assets/images/cap2/empathy-map-beatriz.png)
 
 Para Beatriz, es fundamental contar con datos actualizados y herramientas de análisis que le permitan detectar patrones de malestar antes de que se conviertan en problemas graves. Esto mejoraría su capacidad de respuesta y le permitiría implementar soluciones más efectivas.
 
