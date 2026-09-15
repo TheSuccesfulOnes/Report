@@ -1254,6 +1254,12 @@ El diseño de clases refleja las entidades, enumeraciones, servicios y repositor
 
 ### 4.9.1. Class Diagrams
 
+#### Vista completa del backend
+
+La vista completa reúne las principales entidades, enumeraciones, servicios, repositorios e interfaces de los doce paquetes funcionales del backend. `shared` aparece únicamente como soporte técnico transversal y no como bounded context de negocio. Las relaciones muestran dependencias del código dentro del monolito, no relaciones físicas entre tablas ni llamadas entre microservicios.
+
+![Diagrama completo de clases del backend](../assets/images/cap4/arquitectura-final/clases/SafeSpace-class-diagram.svg)
+
 #### Identidad y cuentas (`iam`)
 
 User representa la cuenta, su rol y su habilitación; UserPreferences conserva idioma y tema. Los repositorios permiten recuperar y actualizar estas entidades. Este contexto proporciona una identidad consistente para asociar la participación de los empleados y aplicar los permisos correspondientes a empleados, RRHH y administradores.
@@ -1355,7 +1361,7 @@ La distribución por contexto indica responsabilidad funcional sobre los datos, 
 
 La vista general muestra las 16 tablas y sus 22 relaciones. Las vistas siguientes permiten examinar cada contexto con mayor detalle e incluyen las tablas externas necesarias para comprender sus relaciones.
 
-![Diagrama general de base de datos](../assets/images/cap4/arquitectura-final/database/general.png)
+![Diagrama general de base de datos](../assets/images/cap4/arquitectura-final/database/SafeSpace-database.svg)
 
 **Lectura de las capturas:** el editor muestra «NULL» en algunas columnas marcadas como clave primaria. En MySQL una clave primaria no admite nulos; prevalece la restricción PRIMARY KEY del esquema SQL. En particular, user_preferences.user_id es simultáneamente clave primaria y foránea: cada fila de preferencias pertenece exactamente a un usuario, y un usuario puede no tener aún una fila de preferencias. Las restricciones únicas compuestas y las políticas de eliminación se documentan en el SQL, aunque no todas aparezcan como texto en las capturas.
 
@@ -1363,73 +1369,73 @@ La vista general muestra las 16 tablas y sus 22 relaciones. Las vistas siguiente
 
 users centraliza las cuentas y user_preferences guarda una configuración por usuario mediante una clave primaria que también es foránea. Esta relación evita duplicar perfiles de preferencias y permite conservar una experiencia personalizada. Las referencias a users en los demás contextos reutilizan esta identidad; no representan nuevas tablas de usuarios.
 
-![Base de datos de iam](../assets/images/cap4/arquitectura-final/database/iam.png)
+![Base de datos de iam](../assets/images/cap4/arquitectura-final/database/iam.svg)
 
 #### Autenticación y recuperación (`authentication`)
 
 password_reset_tokens se relaciona con users y conserva el hash del token, su vencimiento y el momento de uso. Estas evidencias permiten rechazar tokens vencidos o reutilizados y mantener la continuidad de acceso a la cuenta. Las credenciales permanecen en users, cuya entidad pertenece a iam.
 
-![Base de datos de authentication](../assets/images/cap4/arquitectura-final/database/authentication.png)
+![Base de datos de authentication](../assets/images/cap4/arquitectura-final/database/authentication.svg)
 
 #### Perfil y preferencias (`profile`)
 
 Este contexto no declara tablas propias: sus operaciones consultan y actualizan users y user_preferences. La vista muestra esas dependencias de persistencia. Compartir estas entidades evita inconsistencias entre la identidad utilizada para iniciar sesión y los datos que el usuario ve en su perfil.
 
-![Base de datos de profile](../assets/images/cap4/arquitectura-final/database/profile.png)
+![Base de datos de profile](../assets/images/cap4/arquitectura-final/database/profile.svg)
 
 #### Bienestar diario (`mood`)
 
 mood_entries conserva usuario, estado de ánimo y fecha. La restricción única de user_id y mood_date impide duplicar el registro de un mismo día. Con ello, los resúmenes se apoyan en una participación diaria consistente; la ausencia de una entrada no debe interpretarse como un estado de ánimo negativo.
 
-![Base de datos de mood](../assets/images/cap4/arquitectura-final/database/mood.png)
+![Base de datos de mood](../assets/images/cap4/arquitectura-final/database/mood.svg)
 
 #### Encuestas (`survey`)
 
 surveys almacena la pregunta, el estado, el tipo y el creador; survey_answers relaciona cada respuesta con su encuesta y usuario. La unicidad de survey_id y user_id evita respuestas duplicadas de una misma persona. Esto permite interpretar la participación sin contar varias veces al mismo empleado.
 
-![Base de datos de survey](../assets/images/cap4/arquitectura-final/database/survey.png)
+![Base de datos de survey](../assets/images/cap4/arquitectura-final/database/survey.svg)
 
 #### Comentarios y reacciones (`comment`)
 
 comments vincula contenido, autor y encuesta, y parent_id conserva la jerarquía de respuestas. comment_likes utiliza la clave compuesta comment_id y user_id para impedir repetir la misma reacción. users y surveys aparecen como referencias externas necesarias para contextualizar la conversación.
 
-![Base de datos de comment](../assets/images/cap4/arquitectura-final/database/comment.png)
+![Base de datos de comment](../assets/images/cap4/arquitectura-final/database/comment.svg)
 
 #### Actividades y votación (`activity`)
 
 weekly_activities conserva la iniciativa y su creador; activity_options define sus alternativas y activity_votes registra la elección. La clave compuesta activity_id y user_id permite un voto vigente por empleado y actividad. La pertenencia de la opción a la actividad también se valida en el servicio, pues las claves foráneas por sí solas no garantizan esa correspondencia.
 
-![Base de datos de activity](../assets/images/cap4/arquitectura-final/database/activity.png)
+![Base de datos de activity](../assets/images/cap4/arquitectura-final/database/activity.svg)
 
 #### Reportes laborales (`report`)
 
 reports conserva categoría, título, descripción, prioridad y estado. user_id es opcional y admite reportes sin asociación a una cuenta; el servicio deja esa referencia vacía al crear un reporte anónimo. Esta estructura permite gestionar casos identificados o anónimos dentro del mismo proceso de seguimiento.
 
-![Base de datos de report](../assets/images/cap4/arquitectura-final/database/report.png)
+![Base de datos de report](../assets/images/cap4/arquitectura-final/database/report.svg)
 
 #### Asistencia con inteligencia artificial (`ai`)
 
 ai_conversations relaciona las conversaciones con users y ai_messages conserva emisor, contenido y fecha dentro de cada conversación. La estructura permite recuperar el historial y mantener el contexto de interacción. Los objetos de solicitud al proveedor no se almacenan como tablas independientes.
 
-![Base de datos de ai](../assets/images/cap4/arquitectura-final/database/ai.png)
+![Base de datos de ai](../assets/images/cap4/arquitectura-final/database/ai.svg)
 
 #### Registro de pagos (`payment`)
 
 payment_records guarda el PDF, sus metadatos, el plan y la siguiente fecha de pago. Las referencias al beneficiario y al registrador son opcionales, y los nombres se conservan en columnas propias. Esto permite mantener la evidencia del registro incluso cuando una cuenta asociada deja de existir.
 
-![Base de datos de payment](../assets/images/cap4/arquitectura-final/database/payment.png)
+![Base de datos de payment](../assets/images/cap4/arquitectura-final/database/payment.svg)
 
 #### Administración (`admin`)
 
 admin no declara tablas propias. La vista muestra users, surveys y weekly_activities como recursos que administra, sin duplicar su almacenamiento. Esta reutilización permite que los cambios administrativos se reflejen en los mismos datos utilizados por empleados y RRHH.
 
-![Base de datos de admin](../assets/images/cap4/arquitectura-final/database/admin.png)
+![Base de datos de admin](../assets/images/cap4/arquitectura-final/database/admin.svg)
 
 #### Auditoría (`audit`)
 
 audit_logs conserva acción, tipo e identificador del recurso y fecha. actor_user_id admite un valor vacío para preservar el registro cuando se elimina la cuenta del actor. Esta persistencia respalda la revisión de operaciones sin exigir que la cuenta original continúe activa.
 
-![Base de datos de audit](../assets/images/cap4/arquitectura-final/database/audit.png)
+![Base de datos de audit](../assets/images/cap4/arquitectura-final/database/audit.svg)
 
 Las columnas starts_at y ends_at de encuestas y actividades, así como updated_at de reports, pertenecen al esquema físico aunque las entidades Java actuales no las expongan como atributos. Por ello, las vistas de clases y de persistencia reflejan niveles diferentes del diseño.
 
