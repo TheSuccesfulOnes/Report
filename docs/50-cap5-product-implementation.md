@@ -1,504 +1,304 @@
 # Capítulo V: Product Implementation
 
-Este capítulo presenta la configuración técnica y de gestión utilizada para implementar **SafeSpace**, producto desarrollado por **TheSuccesfulOnesCorp**. Para el Avance 1 se documentan el entorno de desarrollo, la estrategia de control de versiones, las convenciones de código y la estructura de evidencias que será completada con el Sprint Backlog, capturas, enlaces de despliegue, documentación de servicios y video del producto cuando el equipo termine la implementación.
-
----
+Este capítulo documenta la configuración, implementación y evidencia verificable de SafeSpace durante el Avance 1. La trazabilidad se mantiene entre las historias del Product Backlog, las tareas del Sprint, los cambios en los repositorios, las pruebas y la ejecución de cada producto. Las capturas, enlaces y datos de planificación deben corresponder al trabajo realmente realizado por el equipo.
 
 ## 5.1. Software Configuration Management
 
-La gestión de configuración de software define las herramientas, repositorios, flujos de trabajo y convenciones que permiten que el equipo mantenga trazabilidad sobre los cambios realizados durante el ciclo de vida del proyecto. En SafeSpace, estas prácticas se aplican sobre los productos principales de la solución: Landing Page, Web Application, Native Mobile Application y RESTful API Backend.
-
----
+La gestión de configuración de SafeSpace define las herramientas, repositorios, ramas, convenciones y procedimientos de despliegue utilizados por el equipo. Su propósito es mantener una versión reproducible del producto y permitir rastrear cada cambio hasta la historia o tarea que lo motivó.
 
 ### 5.1.1. Software Development Environment Configuration
 
-La siguiente tabla resume las herramientas y tecnologías consideradas para el desarrollo del proyecto. Se registran tanto herramientas de gestión y diseño como lenguajes, frameworks y plataformas de soporte para la implementación.
+La siguiente tabla identifica las herramientas y tecnologías del proyecto. Las versiones se deben contrastar con los archivos de configuración de cada repositorio antes de entregar el informe.
 
-| Actividad | Herramienta / Tecnología | Propósito de uso | Referencia | Versión / Estado |
-|:---|:---|:---|:---|:---:|
-| Project Management | Trello | Organización del Product Backlog, Sprint Backlog y seguimiento de tareas. | [https://trello.com](https://trello.com) | SaaS |
-| Version Control | Git | Control de versiones local mediante ramas, commits y tags. | [https://git-scm.com](https://git-scm.com) | 2.x |
-| Repository Hosting | GitHub | Hospedaje de repositorios, Pull Requests, issues y evidencia colaborativa. | [https://github.com](https://github.com) | SaaS |
-| Report Documentation | Markdown + Pandoc | Redacción del informe y exportación a PDF. | [https://pandoc.org](https://pandoc.org) | Según entorno |
-| UX/UI Design | Figma | Diseño de wireframes, mock-ups, flujos y prototipos navegables. | [https://www.figma.com](https://www.figma.com) | SaaS |
-| API Testing | Postman / Swagger UI | Prueba y documentación de endpoints REST. | [https://www.postman.com](https://www.postman.com) | SaaS |
-| Landing Page | HTML5, CSS3, JavaScript | Implementación de la página informativa del producto y formularios de contacto. | [https://developer.mozilla.org](https://developer.mozilla.org) | HTML5 / ES6 |
-| Frontend Web Application | React + Vite + TypeScript | Implementación de la aplicación web para usuarios de Recursos Humanos. | [https://react.dev](https://react.dev) | React 18 / TS |
-| Web UI Components | PrimeReact / Material UI | Construcción de componentes visuales reutilizables para la Web Application. | [https://primereact.org](https://primereact.org) | Por confirmar |
-| Native Mobile Application | Kotlin + Jetpack Compose | Implementación de la aplicación móvil nativa orientada a empleados. | [https://developer.android.com](https://developer.android.com) | Kotlin 1.9+ |
-| Backend RESTful API | Java + Spring Boot | Implementación de servicios REST, reglas de negocio y endpoints del sistema. | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot) | Spring Boot 3.x |
-| Persistence | Spring Data JPA | Acceso a datos mediante repositorios y entidades persistentes. | [https://spring.io/projects/spring-data-jpa](https://spring.io/projects/spring-data-jpa) | 3.x |
-| Database | MySQL | Base de datos relacional para usuarios, reportes, foros, encuestas y métricas. | [https://www.mysql.com](https://www.mysql.com) | 8.x |
-| Security | Spring Security + JWT | Autenticación, autorización y protección de rutas privadas. | [https://spring.io/projects/spring-security](https://spring.io/projects/spring-security) | 6.x |
-| API Documentation | OpenAPI / Swagger | Documentación interactiva de los endpoints disponibles. | [https://swagger.io/specification](https://swagger.io/specification) | OpenAPI 3 |
-| Testing Backend | JUnit 5 + Mockito | Pruebas unitarias y de integración para servicios backend. | [https://junit.org/junit5](https://junit.org/junit5) | 5.x |
-| Deployment | Por confirmar | Publicación de Landing Page, Web Application, Backend API y base de datos. | Por definir | Pendiente |
+| Actividad             | Herramienta o tecnología                                       | Uso en SafeSpace                                                          | Referencia o evidencia                                                                                 | Versión                                    |
+| :-------------------- | :------------------------------------------------------------- | :------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------- | :----------------------------------------- |
+| Gestión del proyecto  | Jira                                                           | Gestión del Product Backlog, Sprint Backlog, historias, tareas y estados. | [Tablero de SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog) | SaaS                                       |
+| Control de versiones  | Git                                                            | Registro local de cambios, ramas y etiquetas.                             | [Git](https://git-scm.com/)                                                                            | [[COMPLETAR: versión usada]]               |
+| Repositorios          | GitHub                                                         | Hospedaje del informe y del código; Pull Requests, issues y colaboración. | Organización: https://github.com/TheSuccesfulOnes                                                      | SaaS                                       |
+| Diseño UX/UI          | Figma                                                          | Elaboración y revisión de wireframes, mockups, flujos y prototipos.       | https://www.figma.com/design/7CoYj5tfiNTLD8kScA5uTF/Untitled?node-id=0-1&t=8T79jUNWludeTlcC-1          | SaaS                                       |
+| Documentación         | Markdown y Pandoc                                              | Redacción del informe y generación del PDF.                               | Repositorio del informe: https://github.com/TheSuccesfulOnes/Report                                    | [[COMPLETAR: versión de Pandoc]]           |
+| Landing Page          | HTML5, CSS3 y JavaScript                                       | Presentación pública de SafeSpace y acceso a sus acciones de contacto.    | https://github.com/TheSuccesfulOnes/Landing-Page-SafeSpace.git                                         | [[COMPLETAR: versiones verificadas]]       |
+| Aplicación web        | React y Vite; TypeScript si está configurado en el repositorio | Interfaz web para empleados y RR. HH.                                     | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace.git                                         | [[COMPLETAR desde package.json]]           |
+| Aplicación móvil      | Kotlin y Jetpack Compose                                       | Aplicación nativa Android para empleados.                                 | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace.git                                      | [[COMPLETAR desde Gradle]]                 |
+| API REST              | Java y Spring Boot; Spring Data JPA si está configurado        | Reglas de negocio y servicios consumidos por las aplicaciones.            | https://github.com/TheSuccesfulOnes/Backend-SafeSpace.git                                              | [[COMPLETAR desde pom.xml o build.gradle]] |
+| Base de datos         | MySQL y Flyway                                                 | Persistencia relacional y evolución versionada del esquema.               | [[INSERTAR CONFIGURACIÓN/MIGRACIONES DEL REPOSITORIO API]]                                             | [[COMPLETAR desde la configuración real]]  |
+| Pruebas de API        | Postman y Swagger UI                                           | Ejecución manual de requests y consulta de contratos disponibles.         | [[INSERTAR COLECCIÓN POSTMAN Y URL SWAGGER]]                                                           | [[COMPLETAR: versión/URL]]                 |
+| Pruebas automatizadas | JUnit y Mockito, si están configurados en el repositorio       | Validación unitaria y de integración del backend.                         | [[INSERTAR RUTA DE PRUEBAS Y REPORTE]]                                                                 | [[COMPLETAR desde el proyecto]]            |
+| Despliegue            | [[COMPLETAR: proveedor real por producto]]                     | Publicación de la landing, aplicaciones y API.                            | [[INSERTAR URLS DE PRODUCCIÓN O DISTRIBUCIÓN]]                                                         | SaaS / [[COMPLETAR]]                       |
 
-**Consideraciones de entorno**
+**Stack implementado.** El equipo confirma React + Vite para el frontend, Kotlin para la aplicación Android y Java + Spring Boot para el backend. El enunciado del curso especifica Vue/PrimeVue para la aplicación web y ASP.NET Core/C# para la API. Por tanto, el stack implementado no coincide con el stack indicado en el enunciado. Mantener en este informe las tecnologías reales; confirmar con el docente si la desviación está autorizada y documentar esa decisión. No cambiar los nombres de tecnologías para aparentar cumplimiento.
 
-- Cada repositorio debe incluir un archivo `README.md` con instrucciones de instalación, ejecución local y pruebas.
-- Los valores sensibles deben documentarse en `.env.example`, sin exponer credenciales reales.
-- Las variables de entorno de producción deben configurarse únicamente en la plataforma de despliegue seleccionada.
-- Las versiones finales de herramientas y frameworks deben actualizarse cuando el equipo confirme los repositorios reales.
-
----
+Cada repositorio debe incluir un README con requisitos previos, instalación, ejecución local, pruebas y configuración necesaria. Los secretos se mantienen fuera del repositorio; se incluye un archivo de ejemplo con los nombres de las variables, nunca sus valores reales.
 
 ### 5.1.2. Source Code Management
 
-El control de versiones del proyecto se gestionará mediante una organización pública de GitHub asociada a **TheSuccesfulOnesCorp**. Los repositorios deben evidenciar el trabajo colaborativo del equipo a través de commits, ramas, Pull Requests y trazabilidad con User Stories o tareas del Sprint.
+El código y el informe se mantienen en repositorios GitHub públicos. La estructura prevista separa los productos para facilitar su construcción, revisión y despliegue.
 
-#### Relación de repositorios
-
-| Producto / Artefacto | Repositorio | Descripción |
-|:---|:---|:---|
-| Project Report | `[PENDIENTE - URL del repositorio del informe]` | Repositorio Markdown del informe del curso, assets y exportación PDF. |
-| Landing Page | `[PENDIENTE - URL del repositorio de Landing Page]` | Sitio de presentación comercial de SafeSpace. |
-| Frontend Web Application | `[PENDIENTE - URL del repositorio de Web Application]` | Aplicación web orientada a RRHH y administración. |
-| Native Mobile Application | `[PENDIENTE - URL del repositorio de Mobile Application]` | Aplicación móvil nativa para empleados. |
-| RESTful API Backend | `[PENDIENTE - URL del repositorio de Backend API]` | API REST para autenticación, foros, encuestas, reportes y analítica. |
+| Producto                 | URL del repositorio                                               | Contenido                                                                 |
+| :----------------------- | :---------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| Informe                  | https://github.com/TheSuccesfulOnes/Report                        | Capítulos Markdown, assets y configuración de exportación del informe.    |
+| Landing Page             | https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace.git    | Código de la página informativa de SafeSpace.                             |
+| Aplicación web           | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace.git    | Interfaz web para empleados y RR. HH.                                     |
+| Aplicación móvil Android | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace.git | Aplicación nativa y configuración de compilación.                         |
+| API REST                 | https://github.com/TheSuccesfulOnes/Backend-SafeSpace.git         | Servicios, persistencia y pruebas unitarias, de integración y aceptación. |
 
 #### GitFlow Workflow
 
-El equipo utilizará **GitFlow** para organizar el desarrollo incremental:
+El flujo de ramas usado por el equipo es el siguiente. La captura y los enlaces a ramas y Pull Requests deben probar que este flujo se aplicó durante el Sprint.
 
-| Rama | Propósito | Reglas de uso |
-|:---|:---|:---|
-| `main` | Rama estable de producción o entrega validada. | Solo recibe cambios mediante Pull Request aprobado desde `release/*` o `hotfix/*`. |
-| `develop` | Rama de integración del sprint. | Recibe funcionalidades terminadas desde ramas `feature/*`. |
-| `feature/<US-ID>-<description>` | Desarrollo de User Stories o tareas específicas. | Se crea desde `develop` y se integra mediante Pull Request. |
-| `fix/<description>` | Corrección de errores durante el desarrollo. | Se crea desde `develop` cuando el error aún no corresponde a producción. |
-| `release/vX.Y.Z` | Preparación de entrega. | Se usa para estabilizar, corregir detalles menores y etiquetar versión. |
-| `hotfix/vX.Y.Z` | Corrección urgente sobre versión estable. | Se crea desde `main` y luego se sincroniza con `develop`. |
+| Rama                      | Propósito                                                      | Regla                                                                          |
+| :------------------------ | :------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| main                      | Versión estable revisada para entrega o despliegue.            | Recibe cambios mediante Pull Request aprobado desde una rama release o hotfix. |
+| develop                   | Integración del trabajo aceptado para el siguiente incremento. | Recibe ramas feature después de revisión y validación.                         |
+| feature/US-ID-descripcion | Implementación de una historia de usuario o tarea.             | Se crea desde develop y se integra por Pull Request.                           |
+| release/vX.Y.Z            | Preparación de una versión.                                    | Se usa para estabilizar y validar el incremento antes de integrarlo a main.    |
+| hotfix/vX.Y.Z-descripcion | Corrección urgente en una versión estable.                     | Se crea desde main y luego se sincroniza con develop.                          |
+
+Las ramas se nombran en inglés y se relacionan con una historia o tarea cuando corresponde. Cada Pull Request describe el cambio, referencia su historia, identifica pruebas ejecutadas y adjunta evidencia visual cuando modifica una interfaz.
 
 #### Semantic Versioning
 
-Las versiones del software seguirán el formato `v<MAJOR>.<MINOR>.<PATCH>`:
+El equipo identifica las versiones mediante el formato MAJOR.MINOR.PATCH:
 
-| Componente | Uso |
-|:---|:---|
-| `MAJOR` | Cambios incompatibles o reestructuración mayor del producto. |
-| `MINOR` | Nuevas funcionalidades compatibles con la versión anterior. |
-| `PATCH` | Correcciones de errores, ajustes menores o mejoras internas. |
+| Componente | Se incrementa cuando…                                        |
+| :--------- | :----------------------------------------------------------- |
+| MAJOR      | Se introduce un cambio incompatible con la versión anterior. |
+| MINOR      | Se añade funcionalidad compatible.                           |
+| PATCH      | Se corrige un defecto o se realiza una mejora compatible.    |
+
+Versión entregada en AV1: [[COMPLETAR: etiqueta real del repositorio o indicar “sin etiqueta publicada”]].
 
 #### Conventional Commits
 
-Los mensajes de commit deben respetar el formato:
+Los commits usan el formato tipo(scope): descripción breve. Se emplean, entre otros, los tipos feat para funcionalidades, fix para correcciones, docs para documentación, test para pruebas, refactor para cambios internos y chore para mantenimiento.
 
-```text
-<type>(<scope>): <short description>
-```
+Ejemplos de formato:
 
-Ejemplos:
+- feat(web): add employee mood check-in
+- fix(api): reject duplicate daily mood entry
+- test(api): cover anonymous report creation
+- docs(report): document sprint evidence
 
-```text
-feat(landing): add pricing section
-feat(mobile): implement anonymous mode screen
-fix(api): validate duplicate email during registration
-docs(report): update chapter five scm section
-```
-
-Tipos aceptados:
-
-| Tipo | Uso |
-|:---|:---|
-| `feat` | Nueva funcionalidad visible para el usuario. |
-| `fix` | Corrección de errores. |
-| `docs` | Cambios en documentación. |
-| `style` | Formato sin alterar lógica. |
-| `refactor` | Reorganización interna sin cambio funcional. |
-| `test` | Adición o modificación de pruebas. |
-| `chore` | Configuración, dependencias o tareas de mantenimiento. |
+Los ejemplos anteriores describen el formato; reemplázalos por enlaces a commits reales al documentar el Sprint.
 
 #### Pull Requests
 
-Cada Pull Request debe incluir:
-
-- Descripción breve del cambio realizado.
-- User Story, Technical Story o Task relacionada.
-- Evidencia visual cuando aplique a interfaces.
-- Resultado de pruebas locales o validación manual.
-- Revisión de al menos un integrante antes de mergear.
-
----
-
+Cada Pull Request debe identificar las historias o tareas relacionadas, resumir el cambio, incluir el resultado de las pruebas y tener revisión de otro integrante antes de integrarse. 
 ### 5.1.3. Source Code Style Guide & Conventions
 
-Las convenciones de código buscan mantener legibilidad, consistencia y facilidad de mantenimiento en todos los productos de SafeSpace. Como regla general, los nombres de variables, funciones, clases, ramas y archivos de código deben escribirse en inglés.
+Los nombres de clases, funciones, variables, ramas y archivos de código se escriben en inglés. Cada repositorio debe aplicar un formateador y un analizador estático cuando su stack lo permita; sus configuraciones se conservan junto al código.
 
-#### Landing Page: HTML5, CSS3 y JavaScript
+| Producto                      | Convenciones aplicadas                                                                                                                                                                                                                                                                                 |
+| :---------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Landing Page                  | HTML semántico; CSS mobile-first; nombres de clases consistentes; JavaScript separado del HTML; validación de formularios y optimización de imágenes.                                                                                                                                                  |
+| Aplicación web (React + Vite) | Componentes reutilizables; separación entre páginas, componentes, servicios y rutas; nombres PascalCase para componentes y camelCase para funciones; estados de carga, error y vacío. Si el repositorio usa TypeScript, tipar explícitamente modelos, requests y responses; confirmar en package.json. |
+| Aplicación móvil              | Convenciones oficiales de Kotlin; separación entre datos, dominio y presentación; lógica de negocio fuera de las vistas; estados explícitos de carga, éxito, error y vacío; almacenamiento seguro de datos sensibles.                                                                                  |
+| API REST (Java + Spring Boot) | Capas o módulos con responsabilidades claras; DTO para entrada y salida; validación de datos; códigos HTTP consistentes; errores controlados; documentación OpenAPI; secretos fuera del código fuente.                                                                                                 |
+| Base de datos                 | Tablas en snake_case y plural; claves primarias y foráneas explícitas; restricciones únicas e índices según las consultas; migraciones versionadas y revisables.                                                                                                                                       |
+| Pruebas                       | Nombres que expresen el comportamiento esperado; pruebas vinculadas a historias; datos de prueba no sensibles; ejecución reproducible desde el repositorio.                                                                                                                                            |
 
-- Usar estructura semántica con etiquetas como `<header>`, `<nav>`, `<main>`, `<section>` y `<footer>`.
-- Mantener el enfoque **mobile-first** para estilos responsivos.
-- Centralizar colores, tipografías y espaciados mediante variables CSS.
-- Nombrar clases de forma clara y consistente, preferentemente con metodología BEM.
-- Evitar código JavaScript inline dentro del HTML.
-- Validar formularios de contacto antes del envío.
-- Optimizar imágenes para reducir peso de carga.
 
-#### Frontend Web Application: React, Vite y TypeScript
-
-- Utilizar componentes funcionales y React Hooks.
-- Separar componentes, páginas, servicios, rutas y utilidades.
-- Usar **PascalCase** para componentes: `DashboardPage`, `LoginForm`.
-- Usar **camelCase** para variables y funciones: `handleSubmit`, `fetchReports`.
-- Mantener tipado explícito para modelos, requests y responses.
-- Evitar `any` salvo casos justificados.
-- Consumir la API mediante servicios centralizados.
-- Gestionar estados de carga, error y vacío en las vistas principales.
-- Aplicar formateo automático con Prettier y validación con ESLint si el repositorio lo incluye.
-
-#### Native Mobile Application: Kotlin y Jetpack Compose
-
-- Seguir las convenciones oficiales de Kotlin.
-- Organizar el proyecto por capas o features: `data`, `domain`, `presentation`.
-- Usar **PascalCase** para clases, pantallas y composables: `LoginScreen`, `ForumPostCard`.
-- Usar **camelCase** para propiedades, funciones y estados.
-- Mantener la lógica de negocio fuera de los composables.
-- Gestionar estados de UI de forma explícita: loading, success, error y empty.
-- Usar navegación clara entre pantallas.
-- Proteger datos sensibles del usuario mediante almacenamiento seguro cuando corresponda.
-
-#### Backend RESTful API: Java, Spring Boot y MySQL
-
-- Organizar el backend por capas: `domain`, `application`, `infrastructure` o por módulos equivalentes.
-- Usar **PascalCase** para clases e interfaces: `UserController`, `ForumService`.
-- Usar **camelCase** para atributos y métodos: `findUserByEmail`, `createPost`.
-- Exponer endpoints con rutas consistentes, por ejemplo `/api/v1/users`.
-- Validar entradas con DTOs y anotaciones de validación.
-- Evitar exponer entidades de persistencia directamente como respuestas públicas.
-- Manejar errores con respuestas HTTP consistentes.
-- Documentar endpoints mediante OpenAPI/Swagger.
-- Mantener credenciales y secrets fuera del repositorio.
-
-#### Database: MySQL
-
-- Nombrar tablas en `snake_case` y plural: `users`, `forum_posts`, `pulse_surveys`.
-- Usar claves primarias explícitas y relaciones con claves foráneas cuando corresponda.
-- Crear índices para búsquedas frecuentes.
-- Documentar cambios de esquema cuando se incorporen migraciones.
-- Evitar guardar datos sensibles sin protección o justificación.
-
-#### API y pruebas
-
-- Los endpoints deben usar verbos HTTP según la intención: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`.
-- Las respuestas deben mantener una estructura predecible.
-- Las pruebas unitarias deben cubrir reglas de negocio importantes.
-- Las pruebas de integración deben validar flujos críticos de la API.
-- Los escenarios BDD, si se usan, deben relacionarse con User Stories del Product Backlog.
-
----
+Los escenarios de aceptación mantienen una sintaxis uniforme de Gherkin: Feature, Scenario, Given, When, Then y And. Se emplean criterios observables y comprobables; cada escenario se vincula con su historia y con una prueba cuando existe automatización. Referencias de estilo que deben constar también en la bibliografía: [WHATWG HTML Living Standard](https://html.spec.whatwg.org/), [MDN CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide), [Microsoft C# coding conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) y [Gherkin Reference](https://cucumber.io/docs/gherkin/reference/). Usar las guías que correspondan al stack aprobado y realmente implementado.
 
 ### 5.1.4. Software Deployment Configuration
 
-La configuración de despliegue será completada cuando el equipo confirme las plataformas finales y publique los productos. Para Avance 1 se define la estrategia esperada de despliegue y las variables necesarias.
+El despliegue debe poder repetirse desde una rama y un commit identificables. La tabla registra la configuración real de cada artefacto.
 
-#### Landing Page
+| Producto                 | Plataforma                                   | Rama/commit                     | Construcción o distribución                 | Variables de entorno                                                      | URL o artefacto                               |
+| :----------------------- | :------------------------------------------- | :------------------------------ | :------------------------------------------ | :------------------------------------------------------------------------ | :-------------------------------------------- |
+| Landing Page             | [[COMPLETAR: proveedor]]                     | [[COMPLETAR]]                   | [[COMPLETAR: comando o proceso]]            | [[COMPLETAR: nombres; indicar “ninguna” si aplica]]                       | [[INSERTAR URL]]                              |
+| Aplicación web           | [[COMPLETAR: proveedor]]                     | [[COMPLETAR]]                   | [[COMPLETAR desde el repositorio]]          | VITE_API_BASE_URL o equivalente real                                      | [[INSERTAR URL]]                              |
+| Aplicación móvil Android | Android Studio / [[COMPLETAR: distribución]] | [[COMPLETAR]]                   | Compilación Gradle y generación del APK/AAB | URL de API y configuración segura aplicable                               | [[INSERTAR ENLACE AL APK/AAB O DISTRIBUCIÓN]] |
+| API REST                 | [[COMPLETAR: proveedor]]                     | [[COMPLETAR]]                   | [[COMPLETAR desde el repositorio]]          | URL de base de datos, usuario, contraseña, JWT y demás nombres requeridos | [[INSERTAR URL BASE]]                         |
+| Base de datos            | [[COMPLETAR: proveedor o ejecución local]]   | [[COMPLETAR migración/esquema]] | Migraciones del repositorio                 | Variables de conexión                                                     | [[INDICAR ENTORNO; NO PUBLICAR CREDENCIALES]] |
 
-| Elemento | Configuración esperada |
-|:---|:---|
-| Plataforma | `[PENDIENTE - Vercel, Netlify u otra plataforma confirmada]` |
-| Rama de despliegue | `main` |
-| Comando de build | Según repositorio (`npm run build` si aplica) |
-| Variables | `[PENDIENTE - Definir si requiere variables públicas]` |
-| URL de producción | `[PENDIENTE - Agregar URL real]` |
+#### Procedimiento reproducible
 
-#### Frontend Web Application
+1. Clonar el repositorio correspondiente y cambiar al commit documentado.
+2. Instalar las dependencias con el comando definido en su README.
+3. Configurar las variables requeridas usando valores locales o secretos del proveedor.
+4. Ejecutar las pruebas y el comando de compilación del repositorio.
+5. Publicar desde la rama configurada o distribuir el artefacto Android.
+6. Abrir la URL/artefacto y comprobar los flujos descritos en 5.2.
 
-| Elemento | Configuración esperada |
-|:---|:---|
-| Plataforma | `[PENDIENTE - Plataforma confirmada]` |
-| Rama de despliegue | `main` |
-| Comando de instalación | `npm install` |
-| Comando de build | `npm run build` |
-| Variable principal | `VITE_API_BASE_URL=[PENDIENTE]` |
-| URL de producción | `[PENDIENTE - Agregar URL real]` |
-
-#### Native Mobile Application
-
-| Elemento | Configuración esperada |
-|:---|:---|
-| Plataforma de desarrollo | Android Studio |
-| Build de prueba | APK o AAB generado desde Gradle |
-| Distribución interna | `[PENDIENTE - Firebase App Distribution, APK compartido u otra opción]` |
-| Variables/API URL | `[PENDIENTE - Base URL del backend]` |
-| Evidencia | Capturas del emulador o dispositivo físico |
-
-#### RESTful API Backend
-
-| Elemento | Configuración esperada |
-|:---|:---|
-| Plataforma | `[PENDIENTE - Render, Railway, VPS u otra plataforma confirmada]` |
-| Runtime | Java + Spring Boot |
-| Base de datos | MySQL |
-| Variables mínimas | `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`, `JWT_SECRET` |
-| Documentación | Swagger/OpenAPI |
-| URL base | `[PENDIENTE - Agregar URL real]` |
-
----
+Comandos exactos para los entornos de AV1: [[COMPLETAR con los comandos comprobados en cada README]]. Captura del proceso o panel de despliegue: ![Configuración de despliegue de SafeSpace](../assets/images/cap5/deployment/deployment-overview.png)
 
 ## 5.2. Product Implementation & Deployment
 
-Esta sección recopila la evidencia de implementación y despliegue de los productos de SafeSpace. Como el Sprint Backlog aún no está cerrado, se deja la estructura completa solicitada por el enunciado para completarla con información real: tablero, tareas, commits, capturas, endpoints, URLs y métricas de colaboración.
-
----
+Esta sección presenta solo funcionalidades y productos que el equipo pueda ejecutar y verificar. Para cada evidencia se indica el repositorio, la versión, las historias relacionadas y el resultado observado. Los diseños del capítulo IV sirven como referencia, pero no sustituyen capturas de una aplicación en ejecución.
 
 ### 5.2.1. Sprint Backlogs
 
-#### Sprint 1
+Como se mencionó previamente en el planeamiento del sprint número 1, el objetivo del mismo es desarrollar y desplegar una primera versión funcional de la aplicación web y Aplicación Backend. Esto conlleva implementar las funcionalidades clave que permitan a los propietarios de licorerías y proveedores gestionar de manera eficiente sus productos y almacenes de forma simplificada.
 
-##### Sprint Planning 1
+Luego de definir el objetivo del sprint, se identificaron las historias de usuario útiles para este sprint. A continuación, se dividió cada historia de usuario en tareas relacionadas a la implementación y cumplimiento de dicha historia. Para ello, se utilizó la aplicación Jira que nos ayuda a gestionar el progreso del sprint.
 
-| Campo | Descripción |
-|:---|:---|
-| Sprint # | Sprint 1 |
-| Date | `[PENDIENTE - Fecha de planificación]` |
-| Time | `[PENDIENTE - Hora]` |
-| Location | `[PENDIENTE - Modalidad o enlace de reunión]` |
-| Prepared By | `[PENDIENTE - Responsable]` |
-| Attendees | Mauricio Luis Pajés León, Milenko Ruben Cayanchi Avila, Diego Andrés Ávalos Cordova, Jose Gustavo Asto Jacome, [Integrante 5], [Integrante 6] |
-| Sprint 0 / Previous Review Summary | `[PENDIENTE - Resumen de avances previos]` |
-| Sprint 0 / Previous Retrospective Summary | `[PENDIENTE - Resumen de acuerdos de mejora]` |
+[Trello Board - SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog)
 
-##### Sprint Goal & User Stories
 
-| Campo | Descripción |
-|:---|:---|
-| Sprint Goal | `[PENDIENTE - Definir objetivo del Sprint 1 según alcance real]` |
-| Sprint Velocity | `[PENDIENTE - Story Points aceptados]` |
-| Sum of Story Points | `[PENDIENTE - Suma de Story Points seleccionados]` |
+![Product Backlog](../assets/images/cap3/product-backlog.png)
 
-| User Story ID | Título | Story Points | Epic | Estado |
-|:---:|:---|:---:|:---:|:---:|
-| `[PENDIENTE]` | `[PENDIENTE - Historia seleccionada]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-
-##### Leadership & Collaboration Matrix
-
-| Integrante | GitHub Username | Landing Page | Web Application | Mobile Application | Backend API | Documentation |
-|:---|:---|:---:|:---:|:---:|:---:|:---:|
-| Mauricio Luis Pajés León | `[PENDIENTE]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` |
-| Milenko Ruben Cayanchi Avila | `[PENDIENTE]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` |
-| Diego Andrés Ávalos Cordova | `[PENDIENTE]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` |
-| Jose Gustavo Asto Jacome | `[PENDIENTE]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` |
-| [Integrante 5 - Pendiente] | `[PENDIENTE]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` |
-| [Integrante 6 - Pendiente] | `[PENDIENTE]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` | `[L/C]` |
-
-> L = Leader, C = Collaborator.
-
-##### Sprint Backlog 1
-
-**Herramienta de tablero:** `[PENDIENTE - Trello/GitHub Projects]`  
-**URL del tablero:** `[PENDIENTE - Agregar enlace público]`  
-**Captura del tablero:** `[PENDIENTE - Agregar captura real]`
-
-| User Story ID | Task ID | Título de tarea | Descripción | Estimación | Asignado a | Estado |
-|:---:|:---:|:---|:---|:---:|:---|:---:|
-| `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-
-##### Development Evidence for Sprint Review
-
-| Repositorio | Rama | Commit ID | Mensaje de commit | Descripción | Fecha |
-|:---|:---|:---:|:---|:---|:---:|
-| `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-
-##### Testing Suite Evidence for Sprint Review
-
-| Repositorio | Rama | Commit ID | Tipo de prueba | Descripción | Fecha |
-|:---|:---|:---:|:---|:---|:---:|
-| `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-
-##### Execution Evidence for Sprint Review
-
-| Producto | Evidencia requerida | Estado |
-|:---|:---|:---:|
-| Landing Page | Capturas de la página funcionando en desktop y mobile. | `[PENDIENTE]` |
-| Frontend Web Application | Capturas de pantallas implementadas y flujo principal. | `[PENDIENTE]` |
-| Native Mobile Application | Capturas de emulador o dispositivo físico. | `[PENDIENTE]` |
-| RESTful API Backend | Capturas de ejecución local o desplegada, requests exitosos y logs. | `[PENDIENTE]` |
-
-##### Services Documentation Evidence for Sprint Review
-
-| Endpoint | Método HTTP | Descripción | Parámetros / Body | Respuesta esperada | Estado |
-|:---|:---:|:---|:---|:---|:---:|
-| `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-
-**URL Swagger/OpenAPI:** `[PENDIENTE - Agregar URL real o ruta local]`
-
-##### Software Deployment Evidence for Sprint Review
-
-| Producto | Plataforma | URL / Artefacto | Estado | Evidencia |
-|:---|:---|:---|:---:|:---|
-| Landing Page | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Frontend Web Application | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Native Mobile Application | `[PENDIENTE]` | `[PENDIENTE - APK/AAB o distribución interna]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| RESTful API Backend | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Database | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-
-##### Team Collaboration Insights during Sprint
-
-| Integrante | Commits | Pull Requests | Issues / Tasks | Evidencia |
-|:---|:---:|:---:|:---:|:---|
-| Mauricio Luis Pajés León | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Milenko Ruben Cayanchi Avila | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Diego Andrés Ávalos Cordova | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Jose Gustavo Asto Jacome | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| [Integrante 5 - Pendiente] | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-| [Integrante 6 - Pendiente] | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
-
----
+| Jira   | ID   | Historia de usuario                           | Epic |
+| ------ | ---- | --------------------------------------------- | ---- |
+| SSB-1  | US01 | Registro de empleados                         | EP01 |
+| SSB-2  | US02 | Inicio de sesión con credenciales             | EP01 |
+| SSB-3  | US03 | Recuperación de contraseña de empleados       | EP01 |
+| SSB-4  | US04 | Actualización de perfil y preferencias        | EP01 |
+| SSB-5  | US05 | Administración de usuarios                    | EP01 |
+| SSB-6  | US06 | Registro diario de estado de ánimo            | EP02 |
+| SSB-7  | US07 | Resumen administrativo de estado de ánimo     | EP02 |
+| SSB-8  | US08 | Consulta de encuestas publicadas              | EP03 |
+| SSB-9  | US09 | Respuesta única a una encuesta                | EP03 |
+| SSB-10 | US10 | Gestión operativa de encuestas                | EP03 |
+| SSB-11 | US11 | Administración avanzada de encuestas          | EP03 |
+| SSB-12 | US12 | Comentarios anidados en encuestas             | EP03 |
+| SSB-13 | US13 | Like o unlike de comentarios                  | EP03 |
+| SSB-14 | US14 | Consulta de actividades abiertas              | EP04 |
+| SSB-15 | US15 | Votación y cambio de voto                     | EP04 |
+| SSB-16 | US16 | Gestión de actividades semanales              | EP04 |
+| SSB-17 | US17 | Creación de reportes anónimos o identificados | EP05 |
+| SSB-18 | US18 | Consulta de reportes propios                  | EP05 |
+| SSB-19 | US19 | Revisión y actualización de reportes          | EP05 |
+| SSB-20 | US20 | Registro de planes y comprobantes de pago     | EP06 |
+| SSB-21 | US21 | Administración de conversaciones propias      | EP07 |
+| SSB-22 | US22 | Envío de mensajes al asistente                | EP07 |
 
 ### 5.2.2. Implemented Landing Page Evidence
 
-La Landing Page permite presentar la propuesta de valor de SafeSpace, explicar sus funcionalidades principales y dirigir a los visitantes hacia acciones de contacto o solicitud de demostración.
+La landing presenta SafeSpace, explica su propuesta de valor y permite que una organización interesada solicite información o una demostración. La evidencia siguiente debe mostrar la versión realmente publicada y vinculada con sus historias de visitante.
 
-| Evidencia | Detalle |
-|:---|:---|
-| Repositorio | `[PENDIENTE - URL real]` |
-| URL publicada | `[PENDIENTE - URL real]` |
-| Tecnologías | HTML5, CSS3, JavaScript |
-| Captura desktop | `[PENDIENTE - Agregar captura real]` |
-| Captura mobile | `[PENDIENTE - Agregar captura real]` |
-| User Stories relacionadas | `[PENDIENTE - Ej. US01, US02, US03, US04, US05]` |
+| Evidencia                 | Información                                 |
+| :------------------------ | :------------------------------------------ |
+| Repositorio               | https://github.com/TheSuccesfulOnes         |
+| URL publicada             |                                             |
+| Commit/versión            |                                             |
+| Historias implementadas   | US-VISITOR-01, US-VISITOR-02, US-VISITOR-03 |
+| Interacciones verificadas | CTA, formulario y resultado real            |
+| Responsive                | Funciona correctamente en desktop y móvil   |
 
----
+![Landing Page de SafeSpace en escritorio](../assets/images/cap5/landing/landing-desktop.png)
+
+![Landing Page de SafeSpace en móvil](../assets/images/cap5/landing/landing-mobile.png)
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
-La Web Application está orientada principalmente a usuarios de Recursos Humanos, quienes necesitan visualizar información agregada del clima laboral, revisar reportes, gestionar información de la organización y dar seguimiento a indicadores relevantes.
+La aplicación web brinda acceso a las funciones que el repositorio tenga implementadas para empleados y RR. HH. Según el diseño documentado, estas incluyen estado de ánimo, encuestas, actividades, comentarios, reportes y vistas de resumen. Se debe conservar solo lo que funcione en la versión demostrada.
 
-| Evidencia | Detalle |
-|:---|:---|
-| Repositorio | `[PENDIENTE - URL real]` |
-| URL publicada | `[PENDIENTE - URL real]` |
-| Tecnologías | React, Vite, TypeScript |
-| Capturas principales | `[PENDIENTE - Agregar capturas reales]` |
-| User Stories relacionadas | `[PENDIENTE - Completar según alcance implementado]` |
+| Evidencia                     | Información                                                 |
+| :---------------------------- | :---------------------------------------------------------- |
+| Repositorio                   | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSapace |
+| URL publicada o pasos locales |                                                             |
+| Commit/versión                |                                                             |
+| Tecnología implementada       | React y Vite                                                |
+| Historias implementadas       |                                                             |
 
-| Vista / Funcionalidad | Descripción | Estado | Evidencia |
-|:---|:---|:---:|:---|
-| Login / Registro | Acceso de usuarios a la plataforma. | `[PENDIENTE]` | `[PENDIENTE]` |
-| Dashboard RRHH | Visualización de métricas de clima laboral. | `[PENDIENTE]` | `[PENDIENTE]` |
-| Gestión de reportes | Revisión de publicaciones, alertas o reportes internos. | `[PENDIENTE]` | `[PENDIENTE]` |
+| Vista/flujo                       | Estado real | Historia | Evidencia |
+| :-------------------------------- | :---------: | :------- | :-------- |
+| Acceso y perfil                   |             |          |           |
+| Registro de estado de ánimo       |             |          |           |
+| Encuestas y participación         |             |          |           |
+| Reportes y seguimiento de RR. HH. |             |          |           |
+| Resumen de bienestar              |             |          |           |
 
----
+![Aplicación web de SafeSpace: flujo de empleado](../assets/images/cap5/web/web-employee-flow.png)
+
+![Aplicación web de SafeSpace: vista de RR. HH.](../assets/images/cap5/web/web-hr-dashboard.png)
 
 ### 5.2.4. Implemented Native-Mobile Application Evidence
 
-La Native Mobile Application está orientada al empleado. Su propósito es permitir una interacción rápida, privada y accesible con funciones como inicio de sesión, modo anónimo, participación en foro, encuestas de pulso emocional y envío de retroalimentación.
+La aplicación nativa documentada para SafeSpace es Android con Kotlin y Jetpack Compose. Esta sección demuestra su ejecución en un emulador o dispositivo y relaciona cada función mostrada con una historia implementada.
 
-| Evidencia | Detalle |
-|:---|:---|
-| Repositorio | `[PENDIENTE - URL real]` |
-| Artefacto de prueba | `[PENDIENTE - APK/AAB o mecanismo de distribución]` |
-| Tecnologías | Kotlin, Jetpack Compose |
-| Plataforma objetivo | Android |
-| Capturas principales | `[PENDIENTE - Agregar capturas reales]` |
-| User Stories relacionadas | `[PENDIENTE - Completar según alcance implementado]` |
+| Evidencia                | Información                                                   |
+| :----------------------- | :------------------------------------------------------------ |
+| Repositorio              | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace |
+| Plataforma/dispositivo   | Android 15, Emulador Pixel 6a                                 |
+| Versión de la aplicación | [[INSERTAR VERSIÓN/COMMIT]]                                   |
+| Artefacto                | [[INSERTAR ENLACE AL APK/AAB O DISTRIBUCIÓN]]                 |
+| Instalación y ejecución  | [[INSERTAR README O PASOS REPRODUCIBLES]]                     |
+| Historias implementadas  | [[INSERTAR US-ID]]                                            |
 
-| Vista / Funcionalidad | Descripción | Estado | Evidencia |
-|:---|:---|:---:|:---|
-| Inicio de sesión | Acceso seguro del usuario empleado. | `[PENDIENTE]` | `[PENDIENTE]` |
-| Modo anónimo | Publicación o participación sin exponer identidad visible. | `[PENDIENTE]` | `[PENDIENTE]` |
-| Foro | Lectura, creación o interacción con publicaciones. | `[PENDIENTE]` | `[PENDIENTE]` |
-| Encuesta diaria | Registro breve del estado emocional del empleado. | `[PENDIENTE]` | `[PENDIENTE]` |
+| Flujo                                | Estado real | Evidencia         |
+| :----------------------------------- | :---------: | :---------------- |
+| Acceso y perfil                      | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
+| Registro de ánimo                    | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
+| Encuestas, comentarios o actividades | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
+| Creación de reporte anónimo          | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
 
----
+![SafeSpace Android ejecutado en dispositivo o emulador](../assets/images/cap5/mobile/android-running-app.png)
 
 ### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
-El backend de SafeSpace expone servicios REST para soportar los flujos de autenticación, gestión de usuarios, foros, encuestas, reportes y métricas. La evidencia final debe completarse con endpoints reales, capturas de pruebas y URL de despliegue si corresponde.
+La API conecta las aplicaciones con las reglas de negocio y la persistencia de SafeSpace. Esta descripción se limita a módulos y endpoints presentes en el código y comprobados durante el Sprint.
 
-| Evidencia | Detalle |
-|:---|:---|
-| Repositorio | `[PENDIENTE - URL real]` |
-| URL base | `[PENDIENTE - URL local o producción]` |
-| Tecnologías | Java, Spring Boot, Spring Data JPA, Spring Security, JWT |
-| Base de datos | MySQL |
-| Captura de ejecución | `[PENDIENTE - Agregar evidencia real]` |
-| User Stories relacionadas | `[PENDIENTE - Completar según alcance implementado]` |
+| Evidencia                        | Información                                                                            |
+| :------------------------------- | :------------------------------------------------------------------------------------- |
+| Repositorio                      | [[INSERTAR URL]]                                                                       |
+| Stack implementado               | Java y Spring Boot [[COMPLETAR versiones desde el repositorio; indicar JPA si se usa]] |
+| URL base o instrucciones locales | [[INSERTAR URL O README/COMANDO]]                                                      |
+| Base de datos y migración        | [[COMPLETAR: motor, versión y migración ejecutada]]                                    |
+| Commit/versión                   | [[INSERTAR ENLACE]]                                                                    |
+| Historias soportadas             | [[INSERTAR US-ID]]                                                                     |
 
-| Módulo | Endpoint esperado | Estado | Evidencia |
-|:---|:---|:---:|:---|
-| Authentication | `/api/v1/auth/...` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Users | `/api/v1/users/...` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Forum | `/api/v1/forum/...` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Surveys | `/api/v1/surveys/...` | `[PENDIENTE]` | `[PENDIENTE]` |
-| Reports / Analytics | `/api/v1/reports/...` | `[PENDIENTE]` | `[PENDIENTE]` |
+| Módulo                  | Método y ruta reales | Resultado comprobado | Evidencia               |
+| :---------------------- | :------------------- | :------------------- | :---------------------- |
+| Autenticación           | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
+| Estado de ánimo         | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
+| Encuestas y comentarios | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
+| Actividades             | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
+| Reportes                | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
 
----
+![Request y respuesta real de la API SafeSpace](../assets/images/cap5/api/api-request-response.png)
 
 ### 5.2.6. RESTful API Documentation
 
-La documentación de servicios debe describir los endpoints implementados, métodos HTTP, parámetros, cuerpos de solicitud, respuestas esperadas y códigos de error. Cuando el backend se encuentre disponible, esta sección debe complementarse con Swagger UI u OpenAPI.
+La especificación OpenAPI debe coincidir con los endpoints ejecutables. Para cada operación se documentan método, ruta, propósito, rol requerido, parámetros, cuerpo de solicitud, respuestas y errores.
 
-**URL de documentación:** `[PENDIENTE - Swagger UI desplegado o ruta local]`
+URL de Swagger/OpenAPI: [[INSERTAR URL PÚBLICA O RUTA LOCAL Y CÓMO EJECUTARLA]].
 
-| Endpoint | Método | Descripción | Request | Response | Código esperado |
-|:---|:---:|:---|:---|:---|:---:|
-| `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` | `[PENDIENTE]` |
+|  Método  | Ruta          | Descripción   | Parámetros/body  | Respuesta y códigos        | Historia  |
+| :------: | :------------ | :------------ | :--------------- | :------------------------- | :-------- |
+| [[POST]] | [[RUTA REAL]] | [[PROPÓSITO]] | [[ESQUEMA REAL]] | [[CÓDIGOS Y EJEMPLO REAL]] | [[US-ID]] |
 
-Ejemplo de estructura esperada para documentar un endpoint:
+La evidencia debe incluir una operación exitosa y, cuando esté implementado, un caso de validación o autorización denegada. No se deben documentar como disponibles endpoints que solo estén planeados.
 
-```json
-{
-  "endpoint": "/api/v1/auth/login",
-  "method": "POST",
-  "description": "Authenticates a registered user.",
-  "requestBody": {
-    "email": "user@company.com",
-    "password": "********"
-  },
-  "responses": {
-    "200": "Authentication successful.",
-    "401": "Invalid credentials."
-  }
-}
-```
-
----
+![Swagger UI de SafeSpace](../assets/images/cap5/api/swagger-ui.png)
 
 ### 5.2.7. Team Collaboration Insights
 
-Esta sección consolidará la evidencia de colaboración técnica del equipo durante el desarrollo del Avance 1. Debe incluir capturas de GitHub Insights, Pull Requests, commits relevantes, issues cerrados y participación de cada integrante.
+La participación del equipo se reporta para el periodo del Sprint 1 y se contrasta con la actividad visible en GitHub, Jira y los repositorios de producto.
 
-| Fuente de evidencia | Descripción | Estado |
-|:---|:---|:---:|
-| GitHub Insights | Captura de contribuciones por repositorio. | `[PENDIENTE]` |
-| Pull Requests | Relación de PRs creados, revisados y fusionados. | `[PENDIENTE]` |
-| Issues / Tasks | Relación de tareas cerradas durante el sprint. | `[PENDIENTE]` |
-| Commits | Commits relevantes vinculados a User Stories o Tasks. | `[PENDIENTE]` |
+| Integrante                                  | Productos/tareas aportados | Commits/PRs relevantes | Evidencia       |
+| :------------------------------------------ | :------------------------- | :--------------------- | :-------------- |
+| Mauricio Luis Pajés León                    | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
+| Milenko Ruben Cayanchi Avila                | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
+| Diego Andrés Ávalos Cordova                 | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
+| Jose Gustavo Asto Jacome                    | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
+| [[AGREGAR O ELIMINAR SEGÚN LA NÓMINA REAL]] | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
 
-| Integrante | Aporte esperado para AV1 | Evidencia |
-|:---|:---|:---|
-| Mauricio Luis Pajés León | `[PENDIENTE - Describir aporte real]` | `[PENDIENTE]` |
-| Milenko Ruben Cayanchi Avila | `[PENDIENTE - Describir aporte real]` | `[PENDIENTE]` |
-| Diego Andrés Ávalos Cordova | `[PENDIENTE - Describir aporte real]` | `[PENDIENTE]` |
-| Jose Gustavo Asto Jacome | `[PENDIENTE - Describir aporte real]` | `[PENDIENTE]` |
-| [Integrante 5 - Pendiente] | `[PENDIENTE - Describir aporte real]` | `[PENDIENTE]` |
-| [Integrante 6 - Pendiente] | `[PENDIENTE - Describir aporte real]` | `[PENDIENTE]` |
-
----
+La evidencia de esta sección debe ser coherente con la matriz LACX, el registro de versiones y el informe de desempeño individual. Capturas generales de GitHub Insights: ![Colaboración del equipo en GitHub](../assets/images/cap5/collaboration/github-team-insights.png)
 
 ## 5.3. Video About-the-Product
 
-El video About-the-Product debe presentar la propuesta de valor de SafeSpace y mostrar brevemente el funcionamiento de los productos implementados. Para Avance 1 se deja la estructura requerida hasta contar con el enlace final.
+El video presenta el problema de comunicación y bienestar laboral, la propuesta de SafeSpace y una demostración breve de las versiones implementadas. Debe mostrar resultados reales, usar datos ficticios o anonimizados y distinguir las funciones disponibles de las que siguen en desarrollo.
 
-| Campo | Detalle |
-|:---|:---|
-| Título del video | `[PENDIENTE - Definir título final]` |
-| Duración | `[PENDIENTE - Indicar duración]` |
-| URL Microsoft Stream | `[PENDIENTE - Agregar enlace real]` |
-| URL alternativa / respaldo | `[PENDIENTE - Si aplica]` |
-| Screenshot del video | `[PENDIENTE - Agregar captura real]` |
+| Campo                   | Información                                                                                          |
+| :---------------------- | :--------------------------------------------------------------------------------------------------- |
+| Título                  | SafeSpace — bienestar laboral seguro y humano                                                        |
+| Duración                | [[COMPLETAR: duración real; objetivo de 1 a 3 minutos]]                                              |
+| URL Microsoft Stream    | [[INSERTAR ENLACE]]                                                                                  |
+| URL YouTube             | [[INSERTAR ENLACE]]                                                                                  |
+| Captura/miniatura       | ![Video About-the-Product de SafeSpace](../assets/images/cap5/video/about-the-product-thumbnail.png) |
+| Ubicación en la landing | [[INSERTAR URL O SECCIÓN DONDE SE EMBEBE]]                                                           |
 
-**Guion propuesto**
+|   Tiempo    | Contenido                                                         |
+| :---------: | :---------------------------------------------------------------- |
+| 00:00–00:20 | Problema que enfrentan los empleados y RR. HH.                    |
+| 00:20–00:45 | Propuesta de valor de SafeSpace y segmentos a los que sirve.      |
+| 00:45–01:20 | Demostración de la landing y su acción principal.                 |
+| 01:20–02:00 | Flujo implementado de la aplicación web para RR. HH.              |
+| 02:00–02:40 | Flujo implementado de la aplicación móvil Android para empleados. |
+| 02:40–03:00 | Resultado del flujo y cierre.                                     |
 
-| Tiempo | Contenido |
-|:---:|:---|
-| 00:00 - 00:20 | Presentación del problema de clima laboral y comunicación interna. |
-| 00:20 - 00:45 | Presentación de SafeSpace y su propuesta de valor. |
-| 00:45 - 01:20 | Recorrido breve por la Landing Page. |
-| 01:20 - 02:00 | Demostración de la Web Application para RRHH. |
-| 02:00 - 02:40 | Demostración de la Native Mobile Application para empleados. |
-| 02:40 - 03:00 | Cierre, beneficios principales y llamado a la acción. |
+El video incluye al menos una opinión de un representante de cada segmento objetivo. Registrar su autorización para aparecer, utilizar extractos breves y evitar datos personales o información laboral identificable. Si no se cuenta con esas opiniones, no presentar esta fila como cumplida y consultar el criterio de evaluación.
 
 \newpage
