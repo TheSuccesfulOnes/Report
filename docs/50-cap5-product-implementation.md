@@ -13,20 +13,20 @@ La siguiente tabla identifica las herramientas y tecnologías del proyecto. Las 
 | Actividad             | Herramienta o tecnología                                       | Uso en SafeSpace                                                          | Referencia o evidencia                                                                                 | Versión                                    |
 | :-------------------- | :------------------------------------------------------------- | :------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------- | :----------------------------------------- |
 | Gestión del proyecto  | Jira                                                           | Gestión del Product Backlog, Sprint Backlog, historias, tareas y estados. | [Tablero de SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog) | SaaS                                       |
-| Control de versiones  | Git                                                            | Registro local de cambios, ramas y etiquetas.                             | [Git](https://git-scm.com/)                                                                            | [[COMPLETAR: versión usada]]               |
+| Control de versiones  | Git                                                            | Registro local de cambios, ramas y etiquetas.                             | [Git](https://git-scm.com/)                                                                            | 2.49.0                                      |
 | Repositorios          | GitHub                                                         | Hospedaje del informe y del código; Pull Requests, issues y colaboración. | Organización: https://github.com/TheSuccesfulOnes                                                      | SaaS                                       |
 | Diseño UX/UI          | Figma                                                          | Elaboración y revisión de wireframes, mockups, flujos y prototipos.       | https://www.figma.com/design/7CoYj5tfiNTLD8kScA5uTF/Untitled?node-id=0-1&t=8T79jUNWludeTlcC-1          | SaaS                                       |
-| Documentación         | Markdown y Pandoc                                              | Redacción del informe y generación del PDF.                               | Repositorio del informe: https://github.com/TheSuccesfulOnes/Report                                    | [[COMPLETAR: versión de Pandoc]]           |
-| Landing Page          | HTML5, CSS3 y JavaScript                                       | Presentación pública de SafeSpace y acceso a sus acciones de contacto.    | https://github.com/TheSuccesfulOnes/Landing-Page-SafeSpace.git                                         | [[COMPLETAR: versiones verificadas]]       |
-| Aplicación web        | React y Vite; TypeScript si está configurado en el repositorio | Interfaz web para empleados y RR. HH.                                     | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace.git                                         | [[COMPLETAR desde package.json]]           |
-| Aplicación móvil      | Kotlin y Jetpack Compose                                       | Aplicación nativa Android para empleados.                                 | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace.git                                      | [[COMPLETAR desde Gradle]]                 |
-| API REST              | Java y Spring Boot; Spring Data JPA si está configurado        | Reglas de negocio y servicios consumidos por las aplicaciones.            | https://github.com/TheSuccesfulOnes/Backend-SafeSpace.git                                              | [[COMPLETAR desde pom.xml o build.gradle]] |
-| Base de datos         | MySQL y Flyway                                                 | Persistencia relacional y evolución versionada del esquema.               | [[INSERTAR CONFIGURACIÓN/MIGRACIONES DEL REPOSITORIO API]]                                             | [[COMPLETAR desde la configuración real]]  |
-| Pruebas de API        | Postman y Swagger UI                                           | Ejecución manual de requests y consulta de contratos disponibles.         | [[INSERTAR COLECCIÓN POSTMAN Y URL SWAGGER]]                                                           | [[COMPLETAR: versión/URL]]                 |
-| Pruebas automatizadas | JUnit y Mockito, si están configurados en el repositorio       | Validación unitaria y de integración del backend.                         | [[INSERTAR RUTA DE PRUEBAS Y REPORTE]]                                                                 | [[COMPLETAR desde el proyecto]]            |
-| Despliegue            | [[COMPLETAR: proveedor real por producto]]                     | Publicación de la landing, aplicaciones y API.                            | [[INSERTAR URLS DE PRODUCCIÓN O DISTRIBUCIÓN]]                                                         | SaaS / [[COMPLETAR]]                       |
+| Documentación         | Markdown                                                       | Redacción del informe.                                                     | Repositorio del informe: https://github.com/TheSuccesfulOnes/Report                                    | N/A                                          |
+| Landing Page          | HTML5, CSS3 y JavaScript                                       | Presentación pública de SafeSpace y acceso a sus acciones de contacto.    | https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace                                              | 1                                            |
+| Aplicación web        | React y Vite; TypeScript                                       | Interfaz web para empleados y RR. HH.                                     | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace                                  | 1                                            |
+| Aplicación web administrativa | React y Vite; TypeScript                                | Interfaz web para la gestión administrativa de SafeSpace.                  | https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace                            | 1                                            |
+| Aplicación móvil      | Kotlin y Jetpack Compose                                       | Aplicación nativa Android para empleados.                                 | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace                           | 1                                            |
+| API REST              | Java 21 y Spring Boot 3.5.9                                    | Reglas de negocio y servicios consumidos por las aplicaciones.            | https://github.com/TheSuccesfulOnes/Backend-SafeSpace                                 | 1                                            |
+| Base de datos         | Firebase Firestore                                             | Persistencia no relacional de la información de SafeSpace.                | Evidencia: `../assets/images/cap5/database/firestore-console.jpeg`                                      | N/A                                          |
+| Documentación y prueba manual de API | Swagger UI                                  | Consulta de los contratos OpenAPI y ejecución manual de operaciones de la API. | Swagger: https://safespace-backend-q3uv.onrender.com/swagger-ui/index.html | Disponible |
+| Despliegue            | Vercel para frontend y landing; Render para backend             | Publicación de la landing, aplicaciones web y API.                         | Landing: https://landing-page-safe-space.vercel.app/; Web: https://safespace-web-nine.vercel.app/; API: https://safespace-backend-q3uv.onrender.com | Vercel / Render                             |
 
-**Stack implementado.** El equipo confirma React + Vite para el frontend, Kotlin para la aplicación Android y Java + Spring Boot para el backend. El enunciado del curso especifica Vue/PrimeVue para la aplicación web y ASP.NET Core/C# para la API. Por tanto, el stack implementado no coincide con el stack indicado en el enunciado. Mantener en este informe las tecnologías reales; confirmar con el docente si la desviación está autorizada y documentar esa decisión. No cambiar los nombres de tecnologías para aparentar cumplimiento.
+**Stack implementado.** El equipo confirma React + Vite para el frontend, Kotlin para la aplicación Android, Java + Spring Boot para el backend y Firestore como base de datos no relacional. El enunciado del curso especifica Vue/PrimeVue para la aplicación web y ASP.NET Core/C# para la API. Por tanto, el stack implementado no coincide con el stack indicado en el enunciado. Mantener en este informe las tecnologías reales; confirmar con el docente si la desviación está autorizada y documentar esa decisión. No cambiar los nombres de tecnologías para aparentar cumplimiento.
 
 Cada repositorio debe incluir un README con requisitos previos, instalación, ejecución local, pruebas y configuración necesaria. Los secretos se mantienen fuera del repositorio; se incluye un archivo de ejemplo con los nombres de las variables, nunca sus valores reales.
 
@@ -41,6 +41,7 @@ El código y el informe se mantienen en repositorios GitHub públicos. La estruc
 | Aplicación web           | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace.git    | Interfaz web para empleados y RR. HH.                                     |
 | Aplicación móvil Android | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace.git | Aplicación nativa y configuración de compilación.                         |
 | API REST                 | https://github.com/TheSuccesfulOnes/Backend-SafeSpace.git         | Servicios, persistencia y pruebas unitarias, de integración y aceptación. |
+| Aplicación web administrativa | https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace | Interfaz web para la gestión administrativa de SafeSpace.             |
 
 #### GitFlow Workflow
 
@@ -66,7 +67,7 @@ El equipo identifica las versiones mediante el formato MAJOR.MINOR.PATCH:
 | MINOR      | Se añade funcionalidad compatible.                           |
 | PATCH      | Se corrige un defecto o se realiza una mejora compatible.    |
 
-Versión entregada en AV1: [[COMPLETAR: etiqueta real del repositorio o indicar “sin etiqueta publicada”]].
+Versión entregada en AV1: versión 1 para landing, frontend web, frontend administrativo, aplicación móvil y API. El informe se registra como V1.0.0.
 
 #### Conventional Commits
 
@@ -84,6 +85,24 @@ Los ejemplos anteriores describen el formato; reemplázalos por enlaces a commit
 #### Pull Requests
 
 Cada Pull Request debe identificar las historias o tareas relacionadas, resumir el cambio, incluir el resultado de las pruebas y tener revisión de otro integrante antes de integrarse. 
+
+#### Commits de referencia observados en los repositorios
+
+Los siguientes commits fueron obtenidos de los historiales públicos de los repositorios. Se registran como evidencia técnica del estado revisado; la autoría visible corresponde al nombre de GitHub mostrado en cada repositorio.
+
+| Producto | Commit | Autor visible | Fecha | Descripción |
+| :-------- | :----- | :------------ | :---- | :---------- |
+| Backend | [4218059](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/42180596587208ca5ba4650d905e1cb4e8a00515) | diegodev-22 | 16/09/26 | Ajuste del resumen de mood según la zona horaria del negocio. |
+| Backend | [daca205](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/daca205) | diegodev-22 | 15/09/26 | Commit mostrado en la captura del despliegue de Render. |
+| Backend | [277c518](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/277c5187202e7ea34e891fadc19a33ac8e57e5c9) | diegodev-22 | 14/09/26 | Migración de la persistencia a Firestore. |
+| Backend | [dd30a88](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/dd30a88283eec9470f711c95dd90666f2e734b20) | diegodev-22 | 14/09/26 | Configuración del despliegue del backend con Firebase en Render. |
+| Landing Page | [a60e0bc](https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace/commit/a60e0bcc070ceacf8466627ea67dd4e8bd688b87) | diegodev-22 | 17/09/26 | Implementación del menú móvil y mejoras de accesibilidad. |
+| Landing Page | [b68ede7](https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace/commit/b68ede7) | Jose Asto | 15/09/26 | Incorporación de una llamada a la acción de bienestar. |
+| Frontend web | [33b18e6](https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace/commit/33b18e67a856df88fd5d9644e85832c1f8af2848) | diegodev-22 | 17/09/26 | Localización de placeholders de registro. |
+| Frontend web | [1451a2b](https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace/commit/1451a2b) | diegodev-22 | 11/09/26 | Commit mostrado en la captura del despliegue de Vercel. |
+| Frontend móvil | [ebe0602](https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace/commit/ebe0602e05f197a6af5fe80f625c25a615f01db0) | diegodev-22 | 16/09/26 | Retiro temporal de recuperación de contraseña en autenticación móvil. |
+| Frontend administrativo | [b76e3e4](https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace/commit/b76e3e495c76243b8591b29a61d3ee9ca06c49d4) | diegodev-22 | 16/09/26 | Incorporación del control de visibilidad de contraseña. |
+| Frontend administrativo | [9ca1253](https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace/commit/9ca1253) | diegodev-22 | 11/09/26 | Commit mostrado en la captura del despliegue de Vercel. |
 ### 5.1.3. Source Code Style Guide & Conventions
 
 Los nombres de clases, funciones, variables, ramas y archivos de código se escriben en inglés. Cada repositorio debe aplicar un formateador y un analizador estático cuando su stack lo permita; sus configuraciones se conservan junto al código.
@@ -94,7 +113,7 @@ Los nombres de clases, funciones, variables, ramas y archivos de código se escr
 | Aplicación web (React + Vite) | Componentes reutilizables; separación entre páginas, componentes, servicios y rutas; nombres PascalCase para componentes y camelCase para funciones; estados de carga, error y vacío. Si el repositorio usa TypeScript, tipar explícitamente modelos, requests y responses; confirmar en package.json. |
 | Aplicación móvil              | Convenciones oficiales de Kotlin; separación entre datos, dominio y presentación; lógica de negocio fuera de las vistas; estados explícitos de carga, éxito, error y vacío; almacenamiento seguro de datos sensibles.                                                                                  |
 | API REST (Java + Spring Boot) | Capas o módulos con responsabilidades claras; DTO para entrada y salida; validación de datos; códigos HTTP consistentes; errores controlados; documentación OpenAPI; secretos fuera del código fuente.                                                                                                 |
-| Base de datos                 | Tablas en snake_case y plural; claves primarias y foráneas explícitas; restricciones únicas e índices según las consultas; migraciones versionadas y revisables.                                                                                                                                       |
+| Base de datos                 | Colecciones y documentos en Firestore; identificadores y relaciones documentadas; índices y reglas de acceso según las consultas; configuración revisable.                                                                                                                                               |
 | Pruebas                       | Nombres que expresen el comportamiento esperado; pruebas vinculadas a historias; datos de prueba no sensibles; ejecución reproducible desde el repositorio.                                                                                                                                            |
 
 
@@ -106,11 +125,12 @@ El despliegue debe poder repetirse desde una rama y un commit identificables. La
 
 | Producto                 | Plataforma                                   | Rama/commit                     | Construcción o distribución                 | Variables de entorno                                                      | URL o artefacto                               |
 | :----------------------- | :------------------------------------------- | :------------------------------ | :------------------------------------------ | :------------------------------------------------------------------------ | :-------------------------------------------- |
-| Landing Page             | [[COMPLETAR: proveedor]]                     | [[COMPLETAR]]                   | [[COMPLETAR: comando o proceso]]            | [[COMPLETAR: nombres; indicar “ninguna” si aplica]]                       | [[INSERTAR URL]]                              |
-| Aplicación web           | [[COMPLETAR: proveedor]]                     | [[COMPLETAR]]                   | [[COMPLETAR desde el repositorio]]          | VITE_API_BASE_URL o equivalente real                                      | [[INSERTAR URL]]                              |
-| Aplicación móvil Android | Android Studio / [[COMPLETAR: distribución]] | [[COMPLETAR]]                   | Compilación Gradle y generación del APK/AAB | URL de API y configuración segura aplicable                               | [[INSERTAR ENLACE AL APK/AAB O DISTRIBUCIÓN]] |
-| API REST                 | [[COMPLETAR: proveedor]]                     | [[COMPLETAR]]                   | [[COMPLETAR desde el repositorio]]          | URL de base de datos, usuario, contraseña, JWT y demás nombres requeridos | [[INSERTAR URL BASE]]                         |
-| Base de datos            | [[COMPLETAR: proveedor o ejecución local]]   | [[COMPLETAR migración/esquema]] | Migraciones del repositorio                 | Variables de conexión                                                     | [[INDICAR ENTORNO; NO PUBLICAR CREDENCIALES]] |
+| Landing Page             | Vercel                                      | master / [a60e0bc](https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace/commit/a60e0bcc070ceacf8466627ea67dd4e8bd688b87) | Despliegue Vercel                           | No hay variables de entorno de aplicación identificadas en el repositorio | https://landing-page-safe-space.vercel.app/ |
+| Aplicación web           | Vercel                                      | master / [1451a2b](https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace/commit/1451a2b) (captura) | Despliegue Vercel                           | `VITE_API_URL`, documentada en `.env.example` | https://safespace-web-nine.vercel.app/       |
+| Aplicación web administrativa | Vercel                                  | master / [9ca1253](https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace/commit/9ca1253) (captura) | Despliegue Vercel                           | `VITE_API_URL` aparece en `src/config/env.ts`; el repositorio no incluye `.env.example` | https://safespace-admin-alpha.vercel.app/    |
+| Aplicación móvil Android | Android Studio                             | master / [ebe0602](https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace/commit/ebe0602e05f197a6af5fe80f625c25a615f01db0) | Compilación Gradle y generación del APK/AAB | `API_BASE_URL` en `app/build.gradle.kts` para el entorno debug | Pendiente de recibir APK/AAB |
+| API REST                 | Render                                      | master / [daca205](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/daca205) (captura) | Dockerfile y despliegue Render               | `FIREBASE_PROJECT_ID`, `GOOGLE_APPLICATION_CREDENTIALS`, `JWT_SECRET`, `LOCAL_ADMIN_USERNAME`, `LOCAL_ADMIN_PASSWORD`, `CORS_ALLOWED_ORIGINS`, `PASSWORD_RESET_URL_BASE` y `GEMINI_API_KEY` | https://safespace-backend-q3uv.onrender.com |
+| Base de datos            | Firebase Firestore                          | Configuración del backend / [277c518](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/277c5187202e7ea34e891fadc19a33ac8e57e5c9) | Configuración de Firestore                    | `FIREBASE_PROJECT_ID` y credenciales de Firebase; no se publican valores | Proyecto `safespace-dev-f82ac` |
 
 #### Procedimiento reproducible
 
@@ -121,7 +141,19 @@ El despliegue debe poder repetirse desde una rama y un commit identificables. La
 5. Publicar desde la rama configurada o distribuir el artefacto Android.
 6. Abrir la URL/artefacto y comprobar los flujos descritos en 5.2.
 
-Comandos exactos para los entornos de AV1: [[COMPLETAR con los comandos comprobados en cada README]]. Captura del proceso o panel de despliegue: ![Configuración de despliegue de SafeSpace](../assets/images/cap5/deployment/deployment-overview.png)
+Comandos exactos revisados en los repositorios para AV1:
+
+- Landing Page: `npm install`, `npm run dev`, `npm run build`, `npm run lint`.
+- Frontend web: `npm install`, `npm run dev` y `npm run build`.
+- Frontend administrativo: `npm install`, `npm run dev` y `npm run build`.
+- Backend: `mvn spring-boot:run` y `mvn -DskipTests package`.
+- Aplicación móvil: `\.\gradlew.bat clean app:build`.
+
+No se incorpora una ruta de pruebas automatizadas en este capítulo porque no forma parte del requerimiento actual.
+
+Evidencia del despliegue del backend en Render:
+
+![Despliegue del backend de SafeSpace en Render](../assets/images/cap5/deployment/backend-render.jpeg)
 
 ## 5.2. Product Implementation & Deployment
 
@@ -129,11 +161,11 @@ Esta sección presenta solo funcionalidades y productos que el equipo pueda ejec
 
 ### 5.2.1. Sprint Backlogs
 
-Como se mencionó previamente en el planeamiento del sprint número 1, el objetivo del mismo es desarrollar y desplegar una primera versión funcional de la aplicación web y Aplicación Backend. Esto conlleva implementar las funcionalidades clave que permitan a los propietarios de licorerías y proveedores gestionar de manera eficiente sus productos y almacenes de forma simplificada.
+Como se mencionó previamente en el planeamiento del sprint número 1, el objetivo del mismo es desarrollar y desplegar una primera versión funcional de SafeSpace. Esto conlleva implementar las funcionalidades priorizadas para empleados, miembros de RR. HH. y administradores, relacionadas con el bienestar laboral, la comunicación y el seguimiento de situaciones que requieren atención.
 
 Luego de definir el objetivo del sprint, se identificaron las historias de usuario útiles para este sprint. A continuación, se dividió cada historia de usuario en tareas relacionadas a la implementación y cumplimiento de dicha historia. Para ello, se utilizó la aplicación Jira que nos ayuda a gestionar el progreso del sprint.
 
-[Trello Board - SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog)
+[Jira Board - SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog)
 
 
 ![Product Backlog](../assets/images/cap3/product-backlog.png)
@@ -142,7 +174,6 @@ Luego de definir el objetivo del sprint, se identificaron las historias de usuar
 | ------ | ---- | --------------------------------------------- | ---- |
 | SSB-1  | US01 | Registro de empleados                         | EP01 |
 | SSB-2  | US02 | Inicio de sesión con credenciales             | EP01 |
-| SSB-3  | US03 | Recuperación de contraseña de empleados       | EP01 |
 | SSB-4  | US04 | Actualización de perfil y preferencias        | EP01 |
 | SSB-5  | US05 | Administración de usuarios                    | EP01 |
 | SSB-6  | US06 | Registro diario de estado de ánimo            | EP02 |
@@ -152,7 +183,7 @@ Luego de definir el objetivo del sprint, se identificaron las historias de usuar
 | SSB-10 | US10 | Gestión operativa de encuestas                | EP03 |
 | SSB-11 | US11 | Administración avanzada de encuestas          | EP03 |
 | SSB-12 | US12 | Comentarios anidados en encuestas             | EP03 |
-| SSB-13 | US13 | Like o unlike de comentarios                  | EP03 |
+| SSB-13 | US13 | Like de comentarios                           | EP03 |
 | SSB-14 | US14 | Consulta de actividades abiertas              | EP04 |
 | SSB-15 | US15 | Votación y cambio de voto                     | EP04 |
 | SSB-16 | US16 | Gestión de actividades semanales              | EP04 |
@@ -160,7 +191,7 @@ Luego de definir el objetivo del sprint, se identificaron las historias de usuar
 | SSB-18 | US18 | Consulta de reportes propios                  | EP05 |
 | SSB-19 | US19 | Revisión y actualización de reportes          | EP05 |
 | SSB-20 | US20 | Registro de planes y comprobantes de pago     | EP06 |
-| SSB-21 | US21 | Administración de conversaciones propias      | EP07 |
+| SSB-21 | US21 | Conversaciones con la IA                      | EP07 |
 | SSB-22 | US22 | Envío de mensajes al asistente                | EP07 |
 
 ### 5.2.2. Implemented Landing Page Evidence
@@ -169,9 +200,9 @@ La landing presenta SafeSpace, explica su propuesta de valor y permite que una o
 
 | Evidencia                 | Información                                 |
 | :------------------------ | :------------------------------------------ |
-| Repositorio               | https://github.com/TheSuccesfulOnes         |
-| URL publicada             |                                             |
-| Commit/versión            |                                             |
+| Repositorio               | https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace |
+| URL publicada             | https://landing-page-safe-space.vercel.app/                |
+| Commit/versión            | [a60e0bc](https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace/commit/a60e0bcc070ceacf8466627ea67dd4e8bd688b87) / versión 1 |
 | Historias implementadas   | US-VISITOR-01, US-VISITOR-02, US-VISITOR-03 |
 | Interacciones verificadas | CTA, formulario y resultado real            |
 | Responsive                | Funciona correctamente en desktop y móvil   |
@@ -186,23 +217,61 @@ La aplicación web brinda acceso a las funciones que el repositorio tenga implem
 
 | Evidencia                     | Información                                                 |
 | :---------------------------- | :---------------------------------------------------------- |
-| Repositorio                   | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSapace |
-| URL publicada o pasos locales |                                                             |
-| Commit/versión                |                                                             |
-| Tecnología implementada       | React y Vite                                                |
-| Historias implementadas       |                                                             |
+| Repositorio                   | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace |
+| URL publicada o pasos locales | https://safespace-web-nine.vercel.app/                    |
+| Commit/versión                | [33b18e6](https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace/commit/33b18e67a856df88fd5d9644e85832c1f8af2848) / versión 1 |
+| Tecnología implementada       | React, Vite y TypeScript                                    |
+| Historias evidenciadas mediante capturas | US01, US02, US04, US06, US07, US08, US09, US10, US12, US13, US14, US15, US16, US17, US18, US19, US21 y US22 |
 
-| Vista/flujo                       | Estado real | Historia | Evidencia |
-| :-------------------------------- | :---------: | :------- | :-------- |
-| Acceso y perfil                   |             |          |           |
-| Registro de estado de ánimo       |             |          |           |
-| Encuestas y participación         |             |          |           |
-| Reportes y seguimiento de RR. HH. |             |          |           |
-| Resumen de bienestar              |             |          |           |
+Las historias anteriores se identificaron revisando las páginas y servicios del repositorio. Las capturas visuales correspondientes se presentan a continuación, agrupadas por tipo de usuario y flujo.
 
-![Aplicación web de SafeSpace: flujo de empleado](../assets/images/cap5/web/web-employee-flow.png)
+US05, US11 y US20 se documentan en los contextos administrativos correspondientes del backend y/o del frontend administrativo.
 
-![Aplicación web de SafeSpace: vista de RR. HH.](../assets/images/cap5/web/web-hr-dashboard.png)
+#### Evidencias visuales del frontend web
+
+##### Empleado: mood, encuestas, actividades, reportes y preferencias
+
+![Inicio de sesión](../assets/images/cap5/web/frontend-web-login.png)
+
+![Registro de usuario](../assets/images/cap5/web/frontend-web-register.png)
+
+![Estado de ánimo del empleado](../assets/images/cap5/web/frontend-web-mood.png)
+
+![Encuestas del empleado](../assets/images/cap5/web/frontend-web-surveys.png)
+
+![Actividades semanales del empleado](../assets/images/cap5/web/frontend-web-activities.png)
+
+![Formulario de reporte anónimo](../assets/images/cap5/web/frontend-web-report-form.png)
+
+![Mis reportes](../assets/images/cap5/web/frontend-web-my-reports.png)
+
+![Preferencias y cuenta](../assets/images/cap5/web/frontend-web-settings.png)
+
+![Chat con IA](../assets/images/cap5/web/frontend-web-ai-chat.png)
+
+##### RR. HH.: resumen, encuestas, comentarios, actividades y reportes
+
+![Resumen de bienestar de RR. HH.](../assets/images/cap5/web/frontend-hr-home.png)
+
+![Gestión de encuestas de RR. HH.](../assets/images/cap5/web/frontend-hr-management-surveys.png)
+
+![Comentarios de una encuesta](../assets/images/cap5/web/frontend-hr-management-comments.png)
+
+![Gestión de actividades de RR. HH.](../assets/images/cap5/web/frontend-hr-management-activities.png)
+
+![Seguimiento de reportes de RR. HH.](../assets/images/cap5/web/frontend-hr-reports.png)
+
+![Despliegue de la aplicación web de SafeSpace en Vercel](../assets/images/cap5/deployment/frontend-vercel.jpeg)
+
+La aplicación administrativa cuenta con un repositorio y despliegue independientes:
+
+| Evidencia                     | Información                                                  |
+| :---------------------------- | :----------------------------------------------------------- |
+| Repositorio                   | https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace |
+| URL publicada                 | https://safespace-admin-alpha.vercel.app/                    |
+| Commit/versión                | [b76e3e4](https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace/commit/b76e3e495c76243b8591b29a61d3ee9ca06c49d4) / versión 1 |
+
+![Despliegue de la aplicación administrativa de SafeSpace en Vercel](../assets/images/cap5/deployment/admin-vercel.jpeg)
 
 ### 5.2.4. Implemented Native-Mobile Application Evidence
 
@@ -211,20 +280,20 @@ La aplicación nativa documentada para SafeSpace es Android con Kotlin y Jetpack
 | Evidencia                | Información                                                   |
 | :----------------------- | :------------------------------------------------------------ |
 | Repositorio              | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace |
-| Plataforma/dispositivo   | Android 15, Emulador Pixel 6a                                 |
-| Versión de la aplicación | [[INSERTAR VERSIÓN/COMMIT]]                                   |
-| Artefacto                | [[INSERTAR ENLACE AL APK/AAB O DISTRIBUCIÓN]]                 |
-| Instalación y ejecución  | [[INSERTAR README O PASOS REPRODUCIBLES]]                     |
-| Historias implementadas  | [[INSERTAR US-ID]]                                            |
+| Plataforma/dispositivo   | Android; SDK 36 y Java 21                                    |
+| Versión de la aplicación | [ebe0602](https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace/commit/ebe0602e05f197a6af5fe80f625c25a615f01db0) / versión 1 |
+| Artefacto                | Pendiente de recibir el APK/AAB                              |
+| Instalación y ejecución  | Abrir en Android Studio con SDK 36 y Java 21; ejecutar `.\gradlew.bat clean app:build`. |
+| Historias declaradas en el README del repositorio | US01, US02, US04, US06, US07, US08, US09, US12, US13, US14, US15, US17, US18, US21 y US22; la evidencia visual queda pendiente del APK. |
 
 | Flujo                                | Estado real | Evidencia         |
 | :----------------------------------- | :---------: | :---------------- |
-| Acceso y perfil                      | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
-| Registro de ánimo                    | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
-| Encuestas, comentarios o actividades | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
-| Creación de reporte anónimo          | [[ESTADO]]  | [[CAPTURA/VIDEO]] |
+| Acceso y perfil                      | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
+| Registro de ánimo                    | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
+| Encuestas, comentarios o actividades | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
+| Creación de reporte anónimo          | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
 
-![SafeSpace Android ejecutado en dispositivo o emulador](../assets/images/cap5/mobile/android-running-app.png)
+Evidencia visual de la aplicación Android: pendiente de recibir el APK y sus capturas.
 
 ### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
@@ -232,50 +301,127 @@ La API conecta las aplicaciones con las reglas de negocio y la persistencia de S
 
 | Evidencia                        | Información                                                                            |
 | :------------------------------- | :------------------------------------------------------------------------------------- |
-| Repositorio                      | [[INSERTAR URL]]                                                                       |
-| Stack implementado               | Java y Spring Boot [[COMPLETAR versiones desde el repositorio; indicar JPA si se usa]] |
-| URL base o instrucciones locales | [[INSERTAR URL O README/COMANDO]]                                                      |
-| Base de datos y migración        | [[COMPLETAR: motor, versión y migración ejecutada]]                                    |
-| Commit/versión                   | [[INSERTAR ENLACE]]                                                                    |
-| Historias soportadas             | [[INSERTAR US-ID]]                                                                     |
+| Repositorio                      | https://github.com/TheSuccesfulOnes/Backend-SafeSpace |
+| Stack implementado               | Java 21 y Spring Boot 3.5.9 |
+| URL base o instrucciones locales | https://safespace-backend-q3uv.onrender.com |
+| Base de datos                   | Firebase Firestore |
+| Commit/versión                   | [4218059](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/42180596587208ca5ba4650d905e1cb4e8a00515) / versión 1 |
+| Historias soportadas             | US01, US02, US04, US05, US06, US07, US08, US09, US10, US11, US12, US13, US14, US15, US16, US17, US18, US19, US20, US21 y US22 |
 
-| Módulo                  | Método y ruta reales | Resultado comprobado | Evidencia               |
-| :---------------------- | :------------------- | :------------------- | :---------------------- |
-| Autenticación           | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
-| Estado de ánimo         | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
-| Encuestas y comentarios | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
-| Actividades             | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
-| Reportes                | [[MÉTODO + RUTA]]    | [[RESULTADO]]        | [[POSTMAN/LOG/CAPTURA]] |
+| Módulo                  | Método y ruta reales |
+| :---------------------- | :------------------- |
+| Autenticación           | `POST /api/v1/auth/login` |
+| Estado de ánimo         | `GET /api/v1/mood/today` |
+| Encuestas y comentarios | `GET /api/v1/surveys`; `GET /api/v1/surveys/1/comments` |
+| Actividades             | `GET /api/v1/activities` |
+| Reportes                | `GET /api/v1/reports` |
 
-![Request y respuesta real de la API SafeSpace](../assets/images/cap5/api/api-request-response.png)
+#### Evidencias adicionales de bounded contexts
+
+| Contexto | Método y ruta reales |
+| :------- | :------------------- |
+| Perfil | `GET /api/v1/profile` |
+| IA | `GET /api/v1/ai/conversations` |
+| Administración de encuestas | `GET /api/v1/admin/surveys` |
+| Administración de actividades | `GET /api/v1/admin/activities` |
+| Administración de usuarios | `GET /api/v1/admin/users` |
+| Pagos | `GET /api/v1/admin/payments/plans` |
+
+#### Historias soportadas por los controladores del backend
+
+La siguiente relación se obtuvo revisando los controladores y las rutas del repositorio `Backend-SafeSpace`.
+
+| Contexto del backend | Controladores/rutas revisados | Historias relacionadas |
+| :------------------- | :---------------------------- | :--------------------- |
+| Autenticación | `/api/v1/auth/register`, `/api/v1/auth/login` y recuperación de contraseña | US01, US02 |
+| Perfil | `/api/v1/profile`, `/account` y `/preferences` | US04 |
+| Administración de usuarios | `/api/v1/admin/users` y `/hr-members` | US05 |
+| Estado de ánimo | `/api/v1/mood/today` y `/summary` | US06, US07 |
+| Encuestas | `/api/v1/surveys` y `/api/v1/admin/surveys` | US08, US09, US10, US11 |
+| Comentarios | `/api/v1/surveys/{surveyId}/comments` y `/{commentId}/like` | US12, US13 |
+| Actividades | `/api/v1/activities` y `/api/v1/admin/activities` | US14, US15, US16 |
+| Reportes | `/api/v1/reports`, `/mine` y `/{id}/status` | US17, US18, US19 |
+| Pagos | `/api/v1/admin/payments/plans` y `/api/v1/admin/payments` | US20 |
+| IA | `/api/v1/ai/conversations` y `/messages` | US21, US22 |
+
+Nota de consistencia: la indicación del equipo para este informe es Spring Boot 3.5.9; el `pom.xml` del clon revisado declara 3.5.5. Conviene sincronizar esa versión en el repositorio o confirmar cuál debe figurar como versión oficial antes de la entrega.
+
+![Evidencia de la base de datos Firebase Firestore](../assets/images/cap5/database/firestore-console.jpeg)
+
+Las capturas siguientes presentan la documentación y las operaciones de los bounded contexts disponibles en Swagger UI.
+
+##### Autenticación
+
+![Login en Swagger](../assets/images/cap5/api/auth-login.png)
+
+##### Perfil y estado de ánimo
+
+![Perfil en Swagger](../assets/images/cap5/api/profile-401.png)
+
+![Mood en Swagger](../assets/images/cap5/api/mood-today-401.png)
+
+##### Encuestas, comentarios y actividades
+
+![Encuestas en Swagger](../assets/images/cap5/api/surveys-401.png)
+
+![Comentarios en Swagger](../assets/images/cap5/api/comments-401.png)
+
+![Actividades en Swagger](../assets/images/cap5/api/activities-401.png)
+
+##### Reportes, IA, administración y pagos
+
+![Reportes en Swagger](../assets/images/cap5/api/reports-401.png)
+
+![Conversaciones con IA en Swagger](../assets/images/cap5/api/ai-conversations-401.png)
+
+![Encuestas administrativas en Swagger](../assets/images/cap5/api/admin-surveys-401.png)
+
+![Actividades administrativas en Swagger](../assets/images/cap5/api/admin-activities-401.png)
+
+![Usuarios administrativos en Swagger](../assets/images/cap5/api/admin-users-401.png)
+
+![Planes de pago en Swagger](../assets/images/cap5/api/payment-plans-401.png)
 
 ### 5.2.6. RESTful API Documentation
 
 La especificación OpenAPI debe coincidir con los endpoints ejecutables. Para cada operación se documentan método, ruta, propósito, rol requerido, parámetros, cuerpo de solicitud, respuestas y errores.
 
-URL de Swagger/OpenAPI: [[INSERTAR URL PÚBLICA O RUTA LOCAL Y CÓMO EJECUTARLA]].
+URL de Swagger/OpenAPI: [https://safespace-backend-q3uv.onrender.com/swagger-ui/index.html](https://safespace-backend-q3uv.onrender.com/swagger-ui/index.html).
 
-|  Método  | Ruta          | Descripción   | Parámetros/body  | Respuesta y códigos        | Historia  |
-| :------: | :------------ | :------------ | :--------------- | :------------------------- | :-------- |
-| [[POST]] | [[RUTA REAL]] | [[PROPÓSITO]] | [[ESQUEMA REAL]] | [[CÓDIGOS Y EJEMPLO REAL]] | [[US-ID]] |
+| Método | Ruta | Propósito | Parámetros/body | Rol requerido | Historia |
+| :-----: | :--- | :-------- | :-------------- | :------------ | :------- |
+| `POST` | `/api/v1/auth/register` | Registrar una cuenta de empleado | JSON de registro | Público | US01 |
+| `POST` | `/api/v1/auth/login` | Autenticar al usuario | JSON con identificador y contraseña | Público | US02 |
+| `GET` | `/api/v1/profile` | Consultar el perfil actual | Sin body | Usuario autenticado | US04 |
+| `PUT` | `/api/v1/profile/preferences` | Actualizar preferencias | Idioma y tema en JSON | Usuario autenticado | US04 |
+| `GET` | `/api/v1/mood/today` | Consultar el estado de ánimo del día | Sin body | Usuario autenticado | US06 |
+| `GET` | `/api/v1/mood/summary` | Consultar el resumen agregado de mood | Sin body | RR. HH. o administrador | US07 |
+| `GET` | `/api/v1/surveys` | Consultar encuestas publicadas | Sin body | Usuario autenticado | US08 |
+| `POST` | `/api/v1/surveys/{id}/answers` | Registrar una respuesta | `id` de encuesta y respuesta en JSON | Usuario autenticado | US09 |
+| `GET` | `/api/v1/surveys/{surveyId}/comments` | Consultar comentarios de una encuesta | `surveyId` en la ruta | Usuario autenticado | US12 |
+| `POST` | `/api/v1/surveys/{surveyId}/comments/{commentId}/like` | Registrar un like | `surveyId` y `commentId` en la ruta | Usuario autenticado | US13 |
+| `GET` | `/api/v1/activities` | Consultar actividades abiertas | Sin body | Usuario autenticado | US14 |
+| `POST` | `/api/v1/activities/{id}/votes` | Registrar o cambiar un voto | `id` y `option_id` en JSON | Usuario autenticado | US15 |
+| `GET` | `/api/v1/reports/mine` | Consultar reportes propios | Sin body | Usuario autenticado | US18 |
+| `GET` | `/api/v1/reports` | Consultar reportes para seguimiento | Sin body | RR. HH. o administrador | US19 |
+| `GET` | `/api/v1/ai/conversations` | Listar conversaciones con la IA | Sin body | Empleado | US21 |
+| `POST` | `/api/v1/ai/conversations/{id}/messages` | Enviar un mensaje al asistente | `id` y contenido en JSON | Empleado | US22 |
+| `GET` | `/api/v1/admin/users` | Listar usuarios | Sin body | Administrador | US05 |
+| `GET` | `/api/v1/admin/surveys` | Consultar encuestas en administración | Sin body | Administrador | US10, US11 |
+| `GET` | `/api/v1/admin/activities` | Consultar actividades en administración | Sin body | Administrador | US16 |
+| `GET` | `/api/v1/admin/payments/plans` | Consultar planes disponibles | Sin body | Administrador | US20 |
 
-La evidencia debe incluir una operación exitosa y, cuando esté implementado, un caso de validación o autorización denegada. No se deben documentar como disponibles endpoints que solo estén planeados.
+La tabla resume las operaciones documentadas en OpenAPI y las capturas visuales asociadas a los bounded contexts del backend.
 
 ![Swagger UI de SafeSpace](../assets/images/cap5/api/swagger-ui.png)
 
 ### 5.2.7. Team Collaboration Insights
 
-La participación del equipo se reporta para el periodo del Sprint 1 y se contrasta con la actividad visible en GitHub, Jira y los repositorios de producto.
+La participación del equipo durante el AV1 se presenta mediante la captura general de GitHub Insights. La tabla de commits de referencia de la sección 5.1.2 conserva el historial técnico observado en los repositorios.
 
-| Integrante                                  | Productos/tareas aportados | Commits/PRs relevantes | Evidencia       |
-| :------------------------------------------ | :------------------------- | :--------------------- | :-------------- |
-| Mauricio Luis Pajés León                    | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
-| Milenko Ruben Cayanchi Avila                | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
-| Diego Andrés Ávalos Cordova                 | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
-| Jose Gustavo Asto Jacome                    | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
-| [[AGREGAR O ELIMINAR SEGÚN LA NÓMINA REAL]] | [[DESCRIBIR APORTE REAL]]  | [[ENLACES]]            | [[CAPTURA/URL]] |
+Captura general de GitHub Insights para AV1:
 
-La evidencia de esta sección debe ser coherente con la matriz LACX, el registro de versiones y el informe de desempeño individual. Capturas generales de GitHub Insights: ![Colaboración del equipo en GitHub](../assets/images/cap5/collaboration/github-team-insights.png)
+![Colaboración del equipo en GitHub](../assets/images/shared/evidence-av1.png)
 
 ## 5.3. Video About-the-Product
 
@@ -287,7 +433,7 @@ El video presenta el problema de comunicación y bienestar laboral, la propuesta
 | Duración                | [[COMPLETAR: duración real; objetivo de 1 a 3 minutos]]                                              |
 | URL Microsoft Stream    | [[INSERTAR ENLACE]]                                                                                  |
 | URL YouTube             | [[INSERTAR ENLACE]]                                                                                  |
-| Captura/miniatura       | ![Video About-the-Product de SafeSpace](../assets/images/cap5/video/about-the-product-thumbnail.png) |
+| Captura/miniatura       | Pendiente de proporcionar |
 | Ubicación en la landing | [[INSERTAR URL O SECCIÓN DONDE SE EMBEBE]]                                                           |
 
 |   Tiempo    | Contenido                                                         |

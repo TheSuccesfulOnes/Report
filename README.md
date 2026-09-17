@@ -1,7 +1,7 @@
 # Informe de Trabajo Final - 1ASI0732 Diseño de Experimentos de Ingeniería de Software
 
-**Ciclo Académico:** 2026-20  
-**NRC:** [PENDIENTE - Completar]  
+**Ciclo Académico:** 2026-20<br>
+**NRC:** 9097<br>
 **Profesor:** Julio Manuel Noriega Melendez  
 **Startup:** TheSuccesfulOnesCorp  
 **Producto:** SafeSpace
@@ -10,12 +10,11 @@
 
 | # | Nombre Completo | Código | Rol |
 |---|-----------------|--------|-----|
-| 1 | Mauricio Luis Pajés León | u202410093 | [PENDIENTE - Definir rol] |
-| 2 | Milenko Ruben Cayanchi Avila | U202312566 | [PENDIENTE - Definir rol] |
-| 3 | Diego Andrés Ávalos Cordova | U202313922 | [PENDIENTE - Definir rol] |
-| 4 | Jose Gustavo Asto Jacome | U20241C630 | [PENDIENTE - Definir rol] |
-| 5 | [Integrante 5 - Pendiente] | [Código - Pendiente] | [PENDIENTE] |
-| 6 | [Integrante 6 - Pendiente] | [Código - Pendiente] | [PENDIENTE] |
+| 1 | Mauricio Luis Pajés León | u202410093 | Software Engineer |
+| 2 | Milenko Ruben Cayanchi Avila | U202312566 | Software Engineer |
+| 3 | Diego Andrés Ávalos Cordova | U202313922 | Software Engineer |
+| 4 | Jose Gustavo Asto Jacome | U20241C630 | Software Engineer |
+| 5 | Diaz Martinez, Alexther Kamil | U202412316 | Software Engineer |
 
 ## Estructura del Repositorio
 
@@ -43,7 +42,7 @@
 │   ├── 90-conclusiones.md
 │   ├── bibliografia.md
 │   └── anexos.md
-└── config/                   # Configuración de build (Pandoc, LaTeX, etc.)
+└── config/                   # Configuración del informe
 ```
 
 ## Entregas del Curso
@@ -57,18 +56,9 @@
 
 ## Repositorio del Informe (GitHub)
 
-**Organización:** [PENDIENTE - Crear org en GitHub: `the-succesful-ones-corp`]  
-**Repositorio:** [PENDIENTE - Crear repo público: `docs`]  
+**Organización:** `TheSuccesfulOnes`<br>
+**Repositorio:** [Report](https://github.com/TheSuccesfulOnes/Report)<br>
 **Workflow:** GitFlow + Conventional Commits + Semantic Versioning
-
-## Build del PDF
-
-```bash
-# Desde la raíz del proyecto
-make pdf
-# o
-pandoc --from markdown --to pdf --template=config/template.tex --output=report.pdf docs/*.md
-```
 
 ---
 

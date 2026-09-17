@@ -128,31 +128,6 @@ Tabla de contenidos con hipervínculos de Markdown (4 niveles de esquema). Actua
 
 ---
 
-## Parte III: Experiment-Driven Lifecycle (Entregas posteriores - Avance 2, TB2)
-
-### [Capítulo VI: Product Verification & Validation](#capítulo-vi-product-verification--validation)
-
-* [6.1. Testing Suites & Validation](#61-testing-suites--validation)
-* [6.2. Static Testing & Verification](#62-static-testing--verification)
-* [6.3. Validation Interviews](#63-validation-interviews)
-* [6.4. Auditoría de Experiencias de Usuario](#64-auditoría-de-experiencias-de-usuario)
-
-### [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
-
-* [7.1. Continuous Integration](#71-continuous-integration)
-* [7.2. Continuous Delivery](#72-continuous-delivery)
-* [7.3. Continuous Deployment](#73-continuous-deployment)
-* [7.4. Continuous Monitoring](#74-continuous-monitoring)
-
-### [Capítulo VIII: Experiment-Driven Development](#capítulo-viii-experiment-driven-development)
-
-* [8.1. Experiment Planning](#81-experiment-planning)
-* [8.2. Experiment Design](#82-experiment-design)
-* [8.3. Experimentation](#83-experimentation)
-* [8.4. Experiment Aftermath & Analysis](#84-experiment-aftermath--analysis)
-* [8.5. Continuous Learning](#85-continuous-learning)
-* [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
-
 ---
 
 ## [Conclusiones](#conclusiones)
