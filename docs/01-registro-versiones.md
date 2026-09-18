@@ -19,7 +19,8 @@
       - Cayanchi Avila, Milenko Ruben<br>
       - Ávalos Cordova, Diego Andrés<br>
       - Asto Jacome, Jose Gustavo<br>
-      - Diaz Martinez, Alexther Kamil
+      - Diaz Martinez, Alexther Kamil<br>
+      - Arizabal Condori, Jean Niels
     </td>
     <td>
       Entrega AV1: elaboración de los cinco capítulos del informe, del Capítulo I al Capítulo V.

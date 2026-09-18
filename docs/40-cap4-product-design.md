@@ -1224,7 +1224,7 @@ Video: [Link del video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231
 
 ## 4.8. Domain-Driven Software Architecture
 
-SafeSpace se implementa como un monolito modular: las aplicaciones web y Android consumen una API que concentra los casos de uso y comparte una base de datos MySQL. La organización del diseño sigue los paquetes del backend: iam, authentication, profile, mood, survey, comment, activity, report, ai, payment, admin y audit. Esta separación documenta sus responsabilidades funcionales y sus dependencias; no implica que sean microservicios independientes.
+SafeSpace se implementa como un monolito modular: las aplicaciones web y Android consumen una API que concentra los casos de uso y persiste la información en Firebase Firestore. La organización del diseño sigue los paquetes del backend: iam, authentication, profile, mood, survey, comment, activity, report, ai, payment, admin y audit. Esta separación documenta sus responsabilidades funcionales y sus dependencias; no implica que sean microservicios independientes.
 
 El paquete `shared` reúne infraestructura técnica reutilizada, como JWT, acceso al usuario autenticado, configuración CORS y manejo de excepciones. Se representa en la arquitectura por sus dependencias, pero **no se considera un bounded context de negocio** y no tiene una sección propia de clases ni de base de datos. Administración y auditoría proporcionan capacidades de soporte al negocio.
 
@@ -1236,7 +1236,7 @@ El empleado registra su bienestar y participa en encuestas, comentarios y activi
 
 ### 4.8.2. Software Architecture Container Diagrams
 
-La aplicación web utiliza React y TypeScript; la aplicación Android utiliza Kotlin y Jetpack Compose. Ambas se comunican con el backend Java y Spring Boot mediante servicios REST y autenticación Bearer JWT. La API ejecuta las reglas de negocio, utiliza JPA para persistir en MySQL e integra Gemini cuando está configurado. Flyway administra la evolución del esquema de datos.
+La aplicación web utiliza React y TypeScript; la aplicación Android utiliza Kotlin y Jetpack Compose. Ambas se comunican con el backend Java y Spring Boot mediante servicios REST y autenticación Bearer JWT. La API ejecuta las reglas de negocio, utiliza Firebase Firestore como persistencia no relacional e integra Gemini cuando está configurado.
 
 ![Contenedores de SafeSpace](../assets/images/cap4/arquitectura-final/c4/contenedores.png)
 
@@ -1292,7 +1292,7 @@ Survey controla el ciclo de publicación y cierre, mientras SurveyAnswer conserv
 
 #### Comentarios y reacciones (`comment`)
 
-Comment representa un aporte a una encuesta y puede referenciar un comentario padre para formar conversaciones. CommentLikeEntity registra la reacción de un usuario mediante una clave compuesta. Este contexto complementa las respuestas estructuradas con explicaciones y diálogo que ayudan a comprender las opiniones del equipo.
+Comment representa un aporte a una encuesta y puede referenciar un comentario padre para formar conversaciones. CommentLikeEntity registra la reacción de un usuario mediante un identificador lógico compuesto. Este contexto complementa las respuestas estructuradas con explicaciones y diálogo que ayudan a comprender las opiniones del equipo.
 
 ![Diagrama de clases de comment](../assets/images/cap4/arquitectura-final/clases/comment.png)
 
@@ -1351,89 +1351,89 @@ AuditLog conserva el actor, la acción y el recurso afectado; AuditService regis
 
 ## 4.10. Database Design
 
-SafeSpace utiliza un esquema relacional compartido con 16 tablas de aplicación. Las claves foráneas conectan la identidad de los usuarios con su participación, sus reportes y sus conversaciones; las restricciones únicas evitan registros duplicados en operaciones como responder encuestas o registrar el ánimo diario. Esta integridad permite que la información consultada por RRHH y los usuarios corresponda a registros coherentes.
+SafeSpace utiliza un modelo de persistencia no relacional en Firebase Firestore. Las colecciones y documentos representan la identidad de los usuarios, sus preferencias, la participación en encuestas y actividades, los reportes y las conversaciones. Las validaciones de la API y los identificadores de los documentos evitan registros duplicados en operaciones como responder encuestas o registrar el ánimo diario. Esta organización permite que la información consultada por RRHH y los usuarios corresponda a registros coherentes.
 
-La distribución por contexto indica responsabilidad funcional sobre los datos, no bases de datos separadas. profile y admin reutilizan tablas de otros contextos. shared no define almacenamiento de negocio. El esquema se contrastó con las migraciones Flyway V1–V16; la tabla técnica de historial de migraciones no forma parte de estas vistas.
+La distribución por contexto indica responsabilidad funcional sobre los datos, no bases de datos separadas. profile y admin reutilizan información asociada a la identidad del usuario. shared no define almacenamiento de negocio. Las vistas se presentan como un modelo lógico para relacionar los conceptos del dominio con las colecciones y documentos de Firestore; no representan tablas SQL ni migraciones físicas.
 
 ### 4.10.1. Relational/Non-Relational Database Diagram
 
 #### Vista general
 
-La vista general muestra las 16 tablas y sus 22 relaciones. Las vistas siguientes permiten examinar cada contexto con mayor detalle e incluyen las tablas externas necesarias para comprender sus relaciones.
+La vista general presenta las principales entidades y relaciones lógicas del dominio. Las vistas siguientes permiten examinar cada contexto con mayor detalle e incluyen las entidades externas necesarias para comprender sus relaciones. Estas relaciones son conceptuales y no implican claves foráneas propias de una base de datos relacional.
 
 ![Diagrama general de base de datos](../assets/images/cap4/arquitectura-final/database/SafeSpace-database.svg)
 
-**Lectura de las capturas:** el editor muestra «NULL» en algunas columnas marcadas como clave primaria. En MySQL una clave primaria no admite nulos; prevalece la restricción PRIMARY KEY del esquema SQL. En particular, user_preferences.user_id es simultáneamente clave primaria y foránea: cada fila de preferencias pertenece exactamente a un usuario, y un usuario puede no tener aún una fila de preferencias. Las restricciones únicas compuestas y las políticas de eliminación se documentan en el SQL, aunque no todas aparezcan como texto en las capturas.
+**Lectura de las capturas:** los diagramas se conservan como una representación lógica de las entidades, identificadores y dependencias del dominio. En la implementación real, Firestore organiza la información mediante colecciones y documentos; por ello, las relaciones mostradas no deben interpretarse como tablas, claves primarias, claves foráneas o restricciones SQL físicas. Las validaciones de consistencia se aplican desde la API y las reglas de acceso de la aplicación.
 
 #### Identidad y cuentas (`iam`)
 
-users centraliza las cuentas y user_preferences guarda una configuración por usuario mediante una clave primaria que también es foránea. Esta relación evita duplicar perfiles de preferencias y permite conservar una experiencia personalizada. Las referencias a users en los demás contextos reutilizan esta identidad; no representan nuevas tablas de usuarios.
+users centraliza las cuentas y user_preferences representa la configuración asociada a cada usuario mediante su identificador lógico. Esta relación evita duplicar perfiles de preferencias y permite conservar una experiencia personalizada. Las referencias a users en los demás contextos reutilizan esta identidad; no representan nuevas colecciones de usuarios.
 
 ![Base de datos de iam](../assets/images/cap4/arquitectura-final/database/iam.svg)
 
 #### Autenticación y recuperación (`authentication`)
 
-password_reset_tokens se relaciona con users y conserva el hash del token, su vencimiento y el momento de uso. Estas evidencias permiten rechazar tokens vencidos o reutilizados y mantener la continuidad de acceso a la cuenta. Las credenciales permanecen en users, cuya entidad pertenece a iam.
+password_reset_tokens representa los registros de recuperación asociados a users y conserva el hash del token, su vencimiento y el momento de uso. Estas evidencias permiten rechazar tokens vencidos o reutilizados y mantener la continuidad de acceso a la cuenta. Las credenciales permanecen en users, cuya entidad pertenece a iam.
 
 ![Base de datos de authentication](../assets/images/cap4/arquitectura-final/database/authentication.svg)
 
 #### Perfil y preferencias (`profile`)
 
-Este contexto no declara tablas propias: sus operaciones consultan y actualizan users y user_preferences. La vista muestra esas dependencias de persistencia. Compartir estas entidades evita inconsistencias entre la identidad utilizada para iniciar sesión y los datos que el usuario ve en su perfil.
+Este contexto no define una colección de negocio independiente: sus operaciones consultan y actualizan users y user_preferences. La vista muestra esas dependencias de persistencia. Compartir estas entidades evita inconsistencias entre la identidad utilizada para iniciar sesión y los datos que el usuario ve en su perfil.
 
 ![Base de datos de profile](../assets/images/cap4/arquitectura-final/database/profile.svg)
 
 #### Bienestar diario (`mood`)
 
-mood_entries conserva usuario, estado de ánimo y fecha. La restricción única de user_id y mood_date impide duplicar el registro de un mismo día. Con ello, los resúmenes se apoyan en una participación diaria consistente; la ausencia de una entrada no debe interpretarse como un estado de ánimo negativo.
+mood_entries conserva usuario, estado de ánimo y fecha. El servicio verifica la combinación user_id y mood_date para evitar duplicar el registro de un mismo día. Con ello, los resúmenes se apoyan en una participación diaria consistente; la ausencia de una entrada no debe interpretarse como un estado de ánimo negativo.
 
 ![Base de datos de mood](../assets/images/cap4/arquitectura-final/database/mood.svg)
 
 #### Encuestas (`survey`)
 
-surveys almacena la pregunta, el estado, el tipo y el creador; survey_answers relaciona cada respuesta con su encuesta y usuario. La unicidad de survey_id y user_id evita respuestas duplicadas de una misma persona. Esto permite interpretar la participación sin contar varias veces al mismo empleado.
+surveys almacena la pregunta, el estado, el tipo y el creador; survey_answers relaciona cada respuesta con su encuesta y usuario. El servicio verifica la combinación survey_id y user_id para evitar respuestas duplicadas de una misma persona. Esto permite interpretar la participación sin contar varias veces al mismo empleado.
 
 ![Base de datos de survey](../assets/images/cap4/arquitectura-final/database/survey.svg)
 
 #### Comentarios y reacciones (`comment`)
 
-comments vincula contenido, autor y encuesta, y parent_id conserva la jerarquía de respuestas. comment_likes utiliza la clave compuesta comment_id y user_id para impedir repetir la misma reacción. users y surveys aparecen como referencias externas necesarias para contextualizar la conversación.
+comments vincula contenido, autor y encuesta, y parent_id conserva la jerarquía de respuestas. comment_likes utiliza los identificadores comment_id y user_id para impedir repetir la misma reacción mediante validaciones del servicio. users y surveys aparecen como referencias lógicas necesarias para contextualizar la conversación.
 
 ![Base de datos de comment](../assets/images/cap4/arquitectura-final/database/comment.svg)
 
 #### Actividades y votación (`activity`)
 
-weekly_activities conserva la iniciativa y su creador; activity_options define sus alternativas y activity_votes registra la elección. La clave compuesta activity_id y user_id permite un voto vigente por empleado y actividad. La pertenencia de la opción a la actividad también se valida en el servicio, pues las claves foráneas por sí solas no garantizan esa correspondencia.
+weekly_activities conserva la iniciativa y su creador; activity_options define sus alternativas y activity_votes registra la elección. El servicio verifica activity_id y user_id para mantener un voto vigente por empleado y actividad. La pertenencia de la opción a la actividad también se valida en el servicio.
 
 ![Base de datos de activity](../assets/images/cap4/arquitectura-final/database/activity.svg)
 
 #### Reportes laborales (`report`)
 
-reports conserva categoría, título, descripción, prioridad y estado. user_id es opcional y admite reportes sin asociación a una cuenta; el servicio deja esa referencia vacía al crear un reporte anónimo. Esta estructura permite gestionar casos identificados o anónimos dentro del mismo proceso de seguimiento.
+reports conserva categoría, título, descripción, prioridad y estado. user_id es opcional y admite reportes sin asociación a una cuenta; el servicio omite esa referencia al crear un reporte anónimo. Esta estructura permite gestionar casos identificados o anónimos dentro del mismo proceso de seguimiento.
 
 ![Base de datos de report](../assets/images/cap4/arquitectura-final/database/report.svg)
 
 #### Asistencia con inteligencia artificial (`ai`)
 
-ai_conversations relaciona las conversaciones con users y ai_messages conserva emisor, contenido y fecha dentro de cada conversación. La estructura permite recuperar el historial y mantener el contexto de interacción. Los objetos de solicitud al proveedor no se almacenan como tablas independientes.
+ai_conversations relaciona las conversaciones con users y ai_messages conserva emisor, contenido y fecha dentro de cada conversación. La estructura permite recuperar el historial y mantener el contexto de interacción. Los objetos de solicitud al proveedor no se almacenan como colecciones independientes.
 
 ![Base de datos de ai](../assets/images/cap4/arquitectura-final/database/ai.svg)
 
 #### Registro de pagos (`payment`)
 
-payment_records guarda el PDF, sus metadatos, el plan y la siguiente fecha de pago. Las referencias al beneficiario y al registrador son opcionales, y los nombres se conservan en columnas propias. Esto permite mantener la evidencia del registro incluso cuando una cuenta asociada deja de existir.
+payment_records guarda el PDF, sus metadatos, el plan y la siguiente fecha de pago. Las referencias al beneficiario y al registrador son opcionales, y los nombres se conservan como campos del documento. Esto permite mantener la evidencia del registro incluso cuando una cuenta asociada deja de existir.
 
 ![Base de datos de payment](../assets/images/cap4/arquitectura-final/database/payment.svg)
 
 #### Administración (`admin`)
 
-admin no declara tablas propias. La vista muestra users, surveys y weekly_activities como recursos que administra, sin duplicar su almacenamiento. Esta reutilización permite que los cambios administrativos se reflejen en los mismos datos utilizados por empleados y RRHH.
+admin no define colecciones de negocio propias. La vista muestra users, surveys y weekly_activities como recursos que administra, sin duplicar su almacenamiento. Esta reutilización permite que los cambios administrativos se reflejen en los mismos datos utilizados por empleados y RRHH.
 
 ![Base de datos de admin](../assets/images/cap4/arquitectura-final/database/admin.svg)
 
 #### Auditoría (`audit`)
 
-audit_logs conserva acción, tipo e identificador del recurso y fecha. actor_user_id admite un valor vacío para preservar el registro cuando se elimina la cuenta del actor. Esta persistencia respalda la revisión de operaciones sin exigir que la cuenta original continúe activa.
+audit_logs conserva acción, tipo e identificador del recurso y fecha. actor_user_id puede omitirse para preservar el registro cuando no existe una cuenta de actor disponible. Esta persistencia respalda la revisión de operaciones sin exigir que la cuenta original continúe activa.
 
 ![Base de datos de audit](../assets/images/cap4/arquitectura-final/database/audit.svg)
 

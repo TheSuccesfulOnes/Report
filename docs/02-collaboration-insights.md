@@ -8,15 +8,7 @@ En esta sección el equipo indica el URL del repositorio para el Project Report 
 
 ## Desarrollo de las actividades de elaboración del informe - AV1
 
-Durante el Avance 1, el equipo trabajó de manera colaborativa en la definición del problema, investigación de usuarios, especificación de requisitos y diseño inicial de la solución. La participación se organizó por responsabilidades complementarias:
-
-| Integrante | Participación en AV1 |
-| :---- | :---- |
-| Mauricio Luis Pajés León | Elaboración del planteamiento del problema, perfil del producto y revisión del Capítulo I. |
-| Milenko Ruben Cayanchi Avila | Análisis de necesidades, usuarios y requisitos del Capítulo II. |
-| Diego Andrés Ávalos Cordova | Organización de historias de usuario, tareas técnicas y backlog del Capítulo III. |
-| Jose Gustavo Asto Jacome | Revisión de la propuesta de diseño, arquitectura y flujo de uso del Capítulo IV. |
-| Diaz Martinez, Alexther Kamil | Integración y revisión de la documentación correspondiente al Capítulo V. |
+Durante el Avance 1, los seis integrantes trabajaron de manera colaborativa en la definición del problema, la investigación de usuarios, la especificación de requisitos, el diseño inicial de la solución y la integración de la evidencia de implementación. La coordinación del trabajo permitió consolidar los cinco capítulos del informe y mantener una presentación común para la versión AV1.
 
 ## Evidencia de colaboración en GitHub - AV1
 
@@ -28,6 +20,6 @@ A continuación se presentan las evidencias de colaboración registradas en GitH
 
 ## Participación total en AV1
 
-La imagen adjunta corresponde a la evidencia de colaboración del avance AV1 en el repositorio del informe. Los aportes específicos de cada integrante deben mantenerse alineados con los registros reales del repositorio.
+La imagen adjunta resume la evidencia de colaboración del avance AV1 en el repositorio del informe y acompaña la descripción grupal del trabajo realizado.
 
 \newpage

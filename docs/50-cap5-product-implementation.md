@@ -21,7 +21,7 @@ La siguiente tabla identifica las herramientas y tecnologías del proyecto. Las 
 | Aplicación web        | React y Vite; TypeScript                                       | Interfaz web para empleados y RR. HH.                                     | https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace                                  | 1                                            |
 | Aplicación web administrativa | React y Vite; TypeScript                                | Interfaz web para la gestión administrativa de SafeSpace.                  | https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace                            | 1                                            |
 | Aplicación móvil      | Kotlin y Jetpack Compose                                       | Aplicación nativa Android para empleados.                                 | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace                           | 1                                            |
-| API REST              | Java 21 y Spring Boot 3.5.9                                    | Reglas de negocio y servicios consumidos por las aplicaciones.            | https://github.com/TheSuccesfulOnes/Backend-SafeSpace                                 | 1                                            |
+| API REST              | Java 21 y Spring Boot 3.5.5                                    | Reglas de negocio y servicios consumidos por las aplicaciones.            | https://github.com/TheSuccesfulOnes/Backend-SafeSpace                                 | 1                                            |
 | Base de datos         | Firebase Firestore                                             | Persistencia no relacional de la información de SafeSpace.                | Evidencia: `../assets/images/cap5/database/firestore-console.jpeg`                                      | N/A                                          |
 | Documentación y prueba manual de API | Swagger UI                                  | Consulta de los contratos OpenAPI y ejecución manual de operaciones de la API. | Swagger: https://safespace-backend-q3uv.onrender.com/swagger-ui/index.html | Disponible |
 | Despliegue            | Vercel para frontend y landing; Render para backend             | Publicación de la landing, aplicaciones web y API.                         | Landing: https://landing-page-safe-space.vercel.app/; Web: https://safespace-web-nine.vercel.app/; API: https://safespace-backend-q3uv.onrender.com | Vercel / Render                             |
@@ -128,7 +128,7 @@ El despliegue debe poder repetirse desde una rama y un commit identificables. La
 | Landing Page             | Vercel                                      | master / [a60e0bc](https://github.com/TheSuccesfulOnes/Landing-page-SafeSpace/commit/a60e0bcc070ceacf8466627ea67dd4e8bd688b87) | Despliegue Vercel                           | No hay variables de entorno de aplicación identificadas en el repositorio | https://landing-page-safe-space.vercel.app/ |
 | Aplicación web           | Vercel                                      | master / [1451a2b](https://github.com/TheSuccesfulOnes/Frontend-Web-SafeSpace/commit/1451a2b) (captura) | Despliegue Vercel                           | `VITE_API_URL`, documentada en `.env.example` | https://safespace-web-nine.vercel.app/       |
 | Aplicación web administrativa | Vercel                                  | master / [9ca1253](https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace/commit/9ca1253) (captura) | Despliegue Vercel                           | `VITE_API_URL` aparece en `src/config/env.ts`; el repositorio no incluye `.env.example` | https://safespace-admin-alpha.vercel.app/    |
-| Aplicación móvil Android | Android Studio                             | master / [ebe0602](https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace/commit/ebe0602e05f197a6af5fe80f625c25a615f01db0) | Compilación Gradle y generación del APK/AAB | `API_BASE_URL` en `app/build.gradle.kts` para el entorno debug | Pendiente de recibir APK/AAB |
+| Aplicación móvil Android | Android Studio                             | master / [ebe0602](https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace/commit/ebe0602e05f197a6af5fe80f625c25a615f01db0) | Compilación Gradle y generación del APK/AAB | `API_BASE_URL` en `app/build.gradle.kts` para el entorno debug | [Distribución APK](https://upcedupe-my.sharepoint.com/personal/u202313922_upc_edu_pe/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fu202313922%5Fupc%5Fedu%5Fpe%2FDocuments%2FSafeSpace%2DMovil&ga=1) |
 | API REST                 | Render                                      | master / [daca205](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/daca205) (captura) | Dockerfile y despliegue Render               | `FIREBASE_PROJECT_ID`, `GOOGLE_APPLICATION_CREDENTIALS`, `JWT_SECRET`, `LOCAL_ADMIN_USERNAME`, `LOCAL_ADMIN_PASSWORD`, `CORS_ALLOWED_ORIGINS`, `PASSWORD_RESET_URL_BASE` y `GEMINI_API_KEY` | https://safespace-backend-q3uv.onrender.com |
 | Base de datos            | Firebase Firestore                          | Configuración del backend / [277c518](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/277c5187202e7ea34e891fadc19a33ac8e57e5c9) | Configuración de Firestore                    | `FIREBASE_PROJECT_ID` y credenciales de Firebase; no se publican valores | Proyecto `safespace-dev-f82ac` |
 
@@ -147,9 +147,7 @@ Comandos exactos revisados en los repositorios para AV1:
 - Frontend web: `npm install`, `npm run dev` y `npm run build`.
 - Frontend administrativo: `npm install`, `npm run dev` y `npm run build`.
 - Backend: `mvn spring-boot:run` y `mvn -DskipTests package`.
-- Aplicación móvil: `\.\gradlew.bat clean app:build`.
-
-No se incorpora una ruta de pruebas automatizadas en este capítulo porque no forma parte del requerimiento actual.
+- Aplicación móvil: `.\gradlew.bat clean app:build`.
 
 Evidencia del despliegue del backend en Render:
 
@@ -157,7 +155,7 @@ Evidencia del despliegue del backend en Render:
 
 ## 5.2. Product Implementation & Deployment
 
-Esta sección presenta solo funcionalidades y productos que el equipo pueda ejecutar y verificar. Para cada evidencia se indica el repositorio, la versión, las historias relacionadas y el resultado observado. Los diseños del capítulo IV sirven como referencia, pero no sustituyen capturas de una aplicación en ejecución.
+Esta sección presenta las funcionalidades y productos desarrollados por el equipo. Para cada evidencia se indica el repositorio, la versión, las historias relacionadas y las capturas correspondientes. Los diseños del capítulo IV sirven como referencia y las imágenes siguientes muestran la implementación alcanzada.
 
 ### 5.2.1. Sprint Backlogs
 
@@ -225,7 +223,7 @@ La aplicación web brinda acceso a las funciones que el repositorio tenga implem
 
 Las historias anteriores se identificaron revisando las páginas y servicios del repositorio. Las capturas visuales correspondientes se presentan a continuación, agrupadas por tipo de usuario y flujo.
 
-US05, US11 y US20 se documentan en los contextos administrativos correspondientes del backend y/o del frontend administrativo.
+Las historias administrativas US05, US11, US16, US19 y US20 se complementan con las capturas de la consola administrativa incluidas después de la evidencia del frontend web.
 
 #### Evidencias visuales del frontend web
 
@@ -271,6 +269,24 @@ La aplicación administrativa cuenta con un repositorio y despliegue independien
 | URL publicada                 | https://safespace-admin-alpha.vercel.app/                    |
 | Commit/versión                | [b76e3e4](https://github.com/TheSuccesfulOnes/Frontend-Admin-SafeSpace/commit/b76e3e495c76243b8591b29a61d3ee9ca06c49d4) / versión 1 |
 
+##### Evidencias visuales de la consola administrativa
+
+![Resumen de la consola administrativa](../assets/images/cap5/admin/admin-summary.png)
+
+![Gestión de administradores](../assets/images/cap5/admin/admin-administrators.png)
+
+![Gestión de empleados](../assets/images/cap5/admin/admin-employees.png)
+
+![Gestión de miembros de RR. HH.](../assets/images/cap5/admin/admin-hr-members.png)
+
+![Gestión de encuestas administrativas](../assets/images/cap5/admin/admin-surveys.png)
+
+![Gestión de actividades administrativas](../assets/images/cap5/admin/admin-activities.png)
+
+![Gestión de reportes administrativos](../assets/images/cap5/admin/admin-reports.png)
+
+![Gestión de pagos y planes](../assets/images/cap5/admin/admin-payments.png)
+
 ![Despliegue de la aplicación administrativa de SafeSpace en Vercel](../assets/images/cap5/deployment/admin-vercel.jpeg)
 
 ### 5.2.4. Implemented Native-Mobile Application Evidence
@@ -282,18 +298,50 @@ La aplicación nativa documentada para SafeSpace es Android con Kotlin y Jetpack
 | Repositorio              | https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace |
 | Plataforma/dispositivo   | Android; SDK 36 y Java 21                                    |
 | Versión de la aplicación | [ebe0602](https://github.com/TheSuccesfulOnes/Frontend-Movil-SafeSapace/commit/ebe0602e05f197a6af5fe80f625c25a615f01db0) / versión 1 |
-| Artefacto                | Pendiente de recibir el APK/AAB                              |
+| Artefacto                | [APK/AAB y carpeta de distribución](https://upcedupe-my.sharepoint.com/personal/u202313922_upc_edu_pe/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fu202313922%5Fupc%5Fedu%5Fpe%2FDocuments%2FSafeSpace%2DMovil&ga=1) |
 | Instalación y ejecución  | Abrir en Android Studio con SDK 36 y Java 21; ejecutar `.\gradlew.bat clean app:build`. |
-| Historias declaradas en el README del repositorio | US01, US02, US04, US06, US07, US08, US09, US12, US13, US14, US15, US17, US18, US21 y US22; la evidencia visual queda pendiente del APK. |
+| Historias declaradas en el README del repositorio | US01, US02, US04, US06, US07, US08, US09, US12, US13, US14, US15, US17, US18, US21 y US22. |
 
 | Flujo                                | Estado real | Evidencia         |
 | :----------------------------------- | :---------: | :---------------- |
-| Acceso y perfil                      | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
-| Registro de ánimo                    | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
-| Encuestas, comentarios o actividades | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
-| Creación de reporte anónimo          | Declarado en el README; falta evidencia visual | Pendiente de APK/capturas |
+| Inicio y registro de ánimo           | Implementado | `mobile-home.png` muestra el estado “Muy bien” registrado. |
+| Perfil y configuración               | Implementado | Perfil, cambio de idioma, tema oscuro y confirmación de actualización. |
+| Encuestas y respuestas               | Implementado | Estados pendiente, respuesta escrita, respuesta enviada y respuesta registrada. |
+| Comentarios anónimos                 | Implementado | Visualización, likes, respuestas y eliminación de comentarios propios. |
+| Actividad semanal                    | Implementado | Voto registrado y posibilidad de cambiarlo. |
+| Chat AI                              | Implementado | Conversación nueva con respuesta de orientación inicial. |
 
-Evidencia visual de la aplicación Android: pendiente de recibir el APK y sus capturas.
+#### Evidencias visuales de la aplicación Android
+
+![Inicio y registro de ánimo en Android](../assets/images/cap5/mobile/mobile-home.png)
+
+![Centro de encuestas en Android](../assets/images/cap5/mobile/mobile-surveys-overview.png)
+
+![Encuesta pendiente sin respuesta](../assets/images/cap5/mobile/mobile-survey-empty.png)
+
+![Encuesta con respuesta escrita](../assets/images/cap5/mobile/mobile-survey-filled.png)
+
+![Respuesta enviada correctamente](../assets/images/cap5/mobile/mobile-survey-submitted.png)
+
+![Encuesta con respuesta registrada](../assets/images/cap5/mobile/mobile-survey-response.png)
+
+![Comentarios anónimos de una encuesta](../assets/images/cap5/mobile/mobile-survey-comments.png)
+
+![Respuestas y acciones sobre comentarios](../assets/images/cap5/mobile/mobile-survey-replies.png)
+
+![Actividad semanal con voto registrado](../assets/images/cap5/mobile/mobile-activity-vote.png)
+
+![Conversación con Chat AI en Android](../assets/images/cap5/mobile/mobile-ai-chat.png)
+
+![Perfil del empleado en Android](../assets/images/cap5/mobile/mobile-profile.png)
+
+![Configuración de cuenta en español](../assets/images/cap5/mobile/mobile-settings-es.png)
+
+![Confirmación de actualización de cuenta](../assets/images/cap5/mobile/mobile-settings-es-success.png)
+
+![Configuración en inglés y tema oscuro](../assets/images/cap5/mobile/mobile-settings-en-dark.png)
+
+Las capturas recibidas documentan los flujos móviles incluidos en esta entrega y el APK/AAB se encuentra disponible en la carpeta de distribución compartida.
 
 ### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
@@ -302,7 +350,7 @@ La API conecta las aplicaciones con las reglas de negocio y la persistencia de S
 | Evidencia                        | Información                                                                            |
 | :------------------------------- | :------------------------------------------------------------------------------------- |
 | Repositorio                      | https://github.com/TheSuccesfulOnes/Backend-SafeSpace |
-| Stack implementado               | Java 21 y Spring Boot 3.5.9 |
+| Stack implementado               | Java 21 y Spring Boot 3.5.5 |
 | URL base o instrucciones locales | https://safespace-backend-q3uv.onrender.com |
 | Base de datos                   | Firebase Firestore |
 | Commit/versión                   | [4218059](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/42180596587208ca5ba4650d905e1cb4e8a00515) / versión 1 |
@@ -344,7 +392,7 @@ La siguiente relación se obtuvo revisando los controladores y las rutas del rep
 | Pagos | `/api/v1/admin/payments/plans` y `/api/v1/admin/payments` | US20 |
 | IA | `/api/v1/ai/conversations` y `/messages` | US21, US22 |
 
-Nota de consistencia: la indicación del equipo para este informe es Spring Boot 3.5.9; el `pom.xml` del clon revisado declara 3.5.5. Conviene sincronizar esa versión en el repositorio o confirmar cuál debe figurar como versión oficial antes de la entrega.
+La versión del backend se registra como Spring Boot 3.5.5, de acuerdo con la versión declarada en el `pom.xml` del repositorio Backend-SafeSpace.
 
 ![Evidencia de la base de datos Firebase Firestore](../assets/images/cap5/database/firestore-console.jpeg)
 
@@ -430,11 +478,11 @@ El video presenta el problema de comunicación y bienestar laboral, la propuesta
 | Campo                   | Información                                                                                          |
 | :---------------------- | :--------------------------------------------------------------------------------------------------- |
 | Título                  | SafeSpace — bienestar laboral seguro y humano                                                        |
-| Duración                | [[COMPLETAR: duración real; objetivo de 1 a 3 minutos]]                                              |
-| URL Microsoft Stream    | [[INSERTAR ENLACE]]                                                                                  |
-| URL YouTube             | [[INSERTAR ENLACE]]                                                                                  |
-| Captura/miniatura       | Pendiente de proporcionar |
-| Ubicación en la landing | [[INSERTAR URL O SECCIÓN DONDE SE EMBEBE]]                                                           |
+| Duración                | Pendiente de registrar al publicar el video.                                              |
+| URL Microsoft Stream    | Pendiente de publicación para AV1.                                                         |
+| URL YouTube             | Pendiente de publicación para AV1.                                                         |
+| Captura/miniatura       | Pendiente de proporcionar junto con el video.                                             |
+| Ubicación en la landing | Se incorporará en la sección de presentación del producto cuando el video esté publicado. |
 
 |   Tiempo    | Contenido                                                         |
 | :---------: | :---------------------------------------------------------------- |

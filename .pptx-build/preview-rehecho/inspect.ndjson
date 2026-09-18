@@ -1,0 +1,188 @@
+{"kind":"slide","id":"sl/g3k1iw","slide":1,"title":"AVANCE 1 · 2026-20","textShapes":12}
+{"kind":"textbox","id":"sh/redoj6p4","slide":1,"text":"AVANCE 1 · 2026-20","textPreview":"AVANCE 1 · 2026-20","textChars":18,"textLines":1,"bbox":[62,58,480,24]}
+{"kind":"textbox","id":"sh/6d47q18j","slide":1,"text":"SafeSpace","textPreview":"SafeSpace","textChars":9,"textLines":1,"bbox":[60,112,700,72]}
+{"kind":"textbox","id":"sh/g36pwvq1","slide":1,"text":"Bienestar laboral y comunicación segura","textPreview":"Bienestar laboral y comunicación segura","textChars":39,"textLines":1,"bbox":[62,230,660,76]}
+{"kind":"textbox","id":"sh/fidonqpg","slide":1,"text":"Diseño de Experimentos de Ingeniería de Software\nIngeniería de Software · UPC · NRC 9097","textPreview":"Diseño de Experimentos de Ingeniería de Software | Ingeniería de Software · UPC · NRC 9097","textChars":88,"textLines":2,"bbox":[62,332,560,62]}
+{"kind":"textbox","id":"sh/eh47ul8v","slide":1,"text":"The Successful Ones Corp","textPreview":"The Successful Ones Corp","textChars":24,"textLines":1,"bbox":[62,430,500,28]}
+{"kind":"textbox","id":"sh/w725krqh","slide":1,"text":"Una experiencia para empleados y RR. HH.","textPreview":"Una experiencia para empleados y RR. HH.","textChars":40,"textLines":1,"bbox":[860,552,330,46]}
+{"kind":"textbox","id":"sh/n6tozyto","slide":1,"text":"Mauricio\nPajés León","textPreview":"Mauricio | Pajés León","textChars":19,"textLines":2,"bbox":[46,583,88,40]}
+{"kind":"textbox","id":"sh/98v61obu","slide":1,"text":"Milenko\nCayanchi Avila","textPreview":"Milenko | Cayanchi Avila","textChars":22,"textLines":2,"bbox":[168,583,88,40]}
+{"kind":"textbox","id":"sh/bado3ytk","slide":1,"text":"Diego\nÁvalos Cordova","textPreview":"Diego | Ávalos Cordova","textChars":20,"textLines":2,"bbox":[290,583,88,40]}
+{"kind":"textbox","id":"sh/xcv658bq","slide":1,"text":"Jose\nAsto Jacome","textPreview":"Jose | Asto Jacome","textChars":16,"textLines":2,"bbox":[412,583,88,40]}
+{"kind":"textbox","id":"sh/jedo7itw","slide":1,"text":"Alexther\nDiaz Martinez","textPreview":"Alexther | Diaz Martinez","textChars":22,"textLines":2,"bbox":[534,583,88,40]}
+{"kind":"textbox","id":"sh/uhonmd8j","slide":1,"text":"Jean Niels\nArizabal Condori","textPreview":"Jean Niels | Arizabal Condori","textChars":27,"textLines":2,"bbox":[656,583,88,40]}
+{"kind":"image","id":"im/0r69gr2d","slide":1,"name":"","geometry":"roundRect","alt":"Inicio de SafeSpace en Android","bbox":[888,72,210,456]}
+{"kind":"image","id":"im/xw3qpcfy","slide":1,"name":"","geometry":"ellipse","alt":"Mauricio","bbox":[62,520,56,56]}
+{"kind":"image","id":"im/bul8nmxs","slide":1,"name":"","geometry":"ellipse","alt":"Milenko","bbox":[184,520,56,56]}
+{"kind":"image","id":"im/ps3qlcfm","slide":1,"name":"","geometry":"ellipse","alt":"Diego","bbox":[306,520,56,56]}
+{"kind":"image","id":"im/n618j2xg","slide":1,"name":"","geometry":"ellipse","alt":"Jose","bbox":[428,520,56,56]}
+{"kind":"image","id":"im/14jqhsfq","slide":1,"name":"","geometry":"ellipse","alt":"Alexther","bbox":[550,520,56,56]}
+{"kind":"image","id":"im/s7e94761","slide":1,"name":"","geometry":"ellipse","alt":"Jean Niels","bbox":[672,520,56,56]}
+{"kind":"slide","id":"sl/wivf2t","slide":2,"title":"01 · CONTEXTO","textShapes":11}
+{"kind":"textbox","id":"sh/ojmhkrqx","slide":2,"text":"01 · CONTEXTO","textPreview":"01 · CONTEXTO","textChars":13,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/nyt0rm9s","slide":2,"text":"Un problema de confianza y seguimiento","textPreview":"Un problema de confianza y seguimiento","textChars":38,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/xovixwru","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/wnmhorq9","slide":2,"text":"Los empleados necesitan un canal seguro para comunicar situaciones sensibles. RR. HH. necesita información ordenada para responder a tiempo.","textPreview":"Los empleados necesitan un canal seguro para comunicar situaciones sensibles. RR. HH. necesita información ordenada para responder a tiempo.","textChars":140,"textLines":1,"bbox":[56,152,760,56]}
+{"kind":"textbox","id":"sh/al4zm183","slide":2,"text":"Problema","textPreview":"Problema","textChars":8,"textLines":1,"bbox":[82,270,260,30]}
+{"kind":"textbox","id":"sh/dsbilcra","slide":2,"text":"La información se dispersa y comunicar un problema puede generar desconfianza.","textPreview":"La información se dispersa y comunicar un problema puede generar desconfianza.","textChars":78,"textLines":1,"bbox":[82,312,290,66]}
+{"kind":"textbox","id":"sh/idszu50z","slide":2,"text":"Propuesta","textPreview":"Propuesta","textChars":9,"textLines":1,"bbox":[460,270,260,30]}
+{"kind":"textbox","id":"sh/je1gnqhk","slide":2,"text":"SafeSpace centraliza bienestar, encuestas, reportes y orientación con privacidad.","textPreview":"SafeSpace centraliza bienestar, encuestas, reportes y orientación con privacidad.","textChars":81,"textLines":1,"bbox":[460,312,290,66]}
+{"kind":"textbox","id":"sh/61szy50b","slide":2,"text":"Empleados","textPreview":"Empleados","textChars":9,"textLines":1,"bbox":[844,648,220,20]}
+{"kind":"textbox","id":"sh/721grahg","slide":2,"text":"RR. HH.","textPreview":"RR. HH.","textChars":7,"textLines":1,"bbox":[840,392,320,22]}
+{"kind":"textbox","id":"sh/s3ah0fi1","slide":2,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/byp4butg","slide":2,"name":"","geometry":"roundRect","alt":"Resumen de bienestar de RR. HH.","bbox":[820,176,382,210]}
+{"kind":"image","id":"im/axgn2psb","slide":2,"name":"","geometry":"roundRect","alt":"Registro de ánimo en Android","bbox":[886,430,138,240]}
+{"kind":"slide","id":"sl/nwm82l","slide":3,"title":"02 · INVESTIGACIÓN","textShapes":15}
+{"kind":"textbox","id":"sh/2d4behsj","slide":3,"text":"02 · INVESTIGACIÓN","textPreview":"02 · INVESTIGACIÓN","textChars":18,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/pgva9wba","slide":3,"text":"Dos usuarios, una necesidad de confianza","textPreview":"Dos usuarios, una necesidad de confianza","textChars":40,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/fats3mt8","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/u9krahsn","slide":3,"text":"Las entrevistas y el análisis de necesidades orientan la solución hacia dos experiencias complementarias.","textPreview":"Las entrevistas y el análisis de necesidades orientan la solución hacia dos experiencias complementarias.","textChars":105,"textLines":1,"bbox":[56,150,980,34]}
+{"kind":"textbox","id":"sh/gb29crat","slide":3,"text":"Andrés · empleado","textPreview":"Andrés · empleado","textChars":17,"textLines":1,"bbox":[58,408,190,26]}
+{"kind":"textbox","id":"sh/z6xsf6tc","slide":3,"text":"Necesita privacidad, una forma sencilla de reportar situaciones y seguimiento sin exponerse.","textPreview":"Necesita privacidad, una forma sencilla de reportar situaciones y seguimiento sin exponerse.","textChars":92,"textLines":1,"bbox":[270,236,340,92]}
+{"kind":"textbox","id":"sh/e5obm1sr","slide":3,"text":"Privacidad","textPreview":"Privacidad","textChars":10,"textLines":1,"bbox":[270,354,120,28]}
+{"kind":"textbox","id":"sh/knyhw3ud","slide":3,"text":"Seguimiento","textPreview":"Seguimiento","textChars":11,"textLines":1,"bbox":[402,354,130,28]}
+{"kind":"textbox","id":"sh/ylgzudcn","slide":3,"text":"Beatriz · RR. HH.","textPreview":"Beatriz · RR. HH.","textChars":17,"textLines":1,"bbox":[650,408,194,26]}
+{"kind":"textbox","id":"sh/jmp0nid8","slide":3,"text":"Necesita una vista clara del clima laboral, encuestas accionables y gestión de casos.","textPreview":"Necesita una vista clara del clima laboral, encuestas accionables y gestión de casos.","textChars":85,"textLines":1,"bbox":[864,236,340,92]}
+{"kind":"textbox","id":"sh/wjyhs3uh","slide":3,"text":"Resumen","textPreview":"Resumen","textChars":7,"textLines":1,"bbox":[864,354,112,28]}
+{"kind":"textbox","id":"sh/xk7il8v2","slide":3,"text":"Acción","textPreview":"Acción","textChars":6,"textLines":1,"bbox":[988,354,96,28]}
+{"kind":"textbox","id":"sh/bi50jydw","slide":3,"text":"Hipótesis Lean UX","textPreview":"Hipótesis Lean UX","textChars":17,"textLines":1,"bbox":[84,532,220,24]}
+{"kind":"textbox","id":"sh/ofehojul","slide":3,"text":"Un canal confidencial con seguimiento facilita que los empleados comuniquen sus inquietudes y que RR. HH. actúe con evidencia.","textPreview":"Un canal confidencial con seguimiento facilita que los empleados comuniquen sus inquietudes y que RR. HH. actúe con evidencia.","textChars":126,"textLines":1,"bbox":[310,528,820,40]}
+{"kind":"textbox","id":"sh/9gnihovq","slide":3,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/4bq9c7y1","slide":3,"name":"","geometry":"ellipse","alt":"Persona empleada","bbox":[72,230,160,160]}
+{"kind":"image","id":"im/eh0zydwv","slide":3,"name":"","geometry":"ellipse","alt":"Persona de RR. HH.","bbox":[666,230,160,160]}
+{"kind":"slide","id":"sl/uchubt","slide":4,"title":"03 · SOLUCIÓN","textShapes":14}
+{"kind":"textbox","id":"sh/hsj2pora","slide":4,"text":"03 · SOLUCIÓN","textPreview":"03 · SOLUCIÓN","textChars":13,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/ups3e98z","slide":4,"text":"Un flujo que acompaña al usuario","textPreview":"Un flujo que acompaña al usuario","textChars":32,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/4vulkjq1","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/5w3mto7m","slide":4,"text":"SafeSpace conecta el registro diario, la participación y la orientación en una sola experiencia.","textPreview":"SafeSpace conecta el registro diario, la participación y la orientación en una sola experiencia.","textChars":96,"textLines":1,"bbox":[56,150,900,34]}
+{"kind":"textbox","id":"sh/its3i98v","slide":4,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[56,232,52,42]}
+{"kind":"textbox","id":"sh/ju14repg","slide":4,"text":"Registrar","textPreview":"Registrar","textChars":9,"textLines":1,"bbox":[118,238,245,28]}
+{"kind":"textbox","id":"sh/kzql8zqh","slide":4,"text":"El empleado expresa cómo se siente hoy.","textPreview":"El empleado expresa cómo se siente hoy.","textChars":39,"textLines":1,"bbox":[118,280,270,48]}
+{"kind":"textbox","id":"sh/k3y18nat","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[448,232,52,42]}
+{"kind":"textbox","id":"sh/z2p0fi98","slide":4,"text":"Participar","textPreview":"Participar","textChars":10,"textLines":1,"bbox":[510,238,245,28]}
+{"kind":"textbox","id":"sh/y1gj6ds3","slide":4,"text":"Responde encuestas y vota en actividades.","textPreview":"Responde encuestas y vota en actividades.","textChars":41,"textLines":1,"bbox":[510,280,270,48]}
+{"kind":"textbox","id":"sh/7q90j29k","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[840,232,52,42]}
+{"kind":"textbox","id":"sh/mpgjaxsz","slide":4,"text":"Orientarse","textPreview":"Orientarse","textChars":10,"textLines":1,"bbox":[902,238,245,28]}
+{"kind":"textbox","id":"sh/hwr2pcrm","slide":4,"text":"Recibe apoyo conversacional privado.","textPreview":"Recibe apoyo conversacional privado.","textChars":36,"textLines":1,"bbox":[902,280,270,48]}
+{"kind":"textbox","id":"sh/gzqlcbid","slide":4,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/svahsjap","slide":4,"name":"","geometry":"roundRect","alt":"Registrar","bbox":[118,346,250,260]}
+{"kind":"image","id":"im/6h8rmpwj","slide":4,"name":"","geometry":"roundRect","alt":"Participar","bbox":[510,346,250,260]}
+{"kind":"image","id":"im/nmd8jqd0","slide":4,"name":"","geometry":"roundRect","alt":"Orientarse","bbox":[902,346,250,260]}
+{"kind":"slide","id":"sl/pdf2b5","slide":5,"title":"04 · PRODUCTO MÓVIL","textShapes":8}
+{"kind":"textbox","id":"sh/hsfa943a","slide":5,"text":"04 · PRODUCTO MÓVIL","textPreview":"04 · PRODUCTO MÓVIL","textChars":19,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/up4bepkj","slide":5,"text":"La experiencia del empleado ya está en marcha","textPreview":"La experiencia del empleado ya está en marcha","textChars":45,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/4v6tkz2l","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/pwfud4j6","slide":5,"text":"La aplicación Android reúne bienestar diario, encuestas, comentarios, actividades, perfil y Chat AI.","textPreview":"La aplicación Android reúne bienestar diario, encuestas, comentarios, actividades, perfil y Chat AI.","textChars":100,"textLines":1,"bbox":[56,150,900,34]}
+{"kind":"textbox","id":"sh/9wvu5obu","slide":5,"text":"Flujos visibles","textPreview":"Flujos visibles","textChars":15,"textLines":1,"bbox":[842,270,280,28]}
+{"kind":"textbox","id":"sh/8vmdw3ap","slide":5,"text":"• Registro de ánimo\n• Encuestas y respuesta registrada\n• Comentarios, likes y respuestas\n• Actividad semanal y cambio de voto\n• Perfil, idioma y tema oscuro\n• Conversación privada con IA","textPreview":"• Registro de ánimo | • Encuestas y respuesta registrada | • Comentarios, likes y respuestas | • Actividad semanal y cambio de voto | • P...","textChars":186,"textLines":6,"bbox":[842,326,296,220]}
+{"kind":"textbox","id":"sh/7udc3yt4","slide":5,"text":"Kotlin · Jetpack Compose · SDK 36","textPreview":"Kotlin · Jetpack Compose · SDK 36","textChars":33,"textLines":1,"bbox":[842,578,296,24]}
+{"kind":"textbox","id":"sh/mtkvutsj","slide":5,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/faxkji5o","slide":5,"name":"","geometry":"roundRect","alt":"Inicio móvil","bbox":[72,230,200,432]}
+{"kind":"image","id":"im/e9o3qd43","slide":5,"name":"","geometry":"roundRect","alt":"Comentarios anónimos","bbox":[310,230,200,432]}
+{"kind":"image","id":"im/hgv29onq","slide":5,"name":"","geometry":"roundRect","alt":"Configuración y tema oscuro","bbox":[548,230,200,432]}
+{"kind":"slide","id":"sl/sbk508","slide":6,"title":"05 · FRONTEND WEB","textShapes":9}
+{"kind":"textbox","id":"sh/t0ji1kna","slide":6,"text":"05 · FRONTEND WEB","textPreview":"05 · FRONTEND WEB","textChars":17,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/6xsz65oz","slide":6,"text":"Participación y seguimiento desde la web","textPreview":"Participación y seguimiento desde la web","textChars":40,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/kvah4v6t","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/5wjix0ne","slide":6,"text":"El frontend web permite que los empleados respondan, reporten y consulten su actividad en un espacio único.","textPreview":"El frontend web permite que los empleados respondan, reporten y consulten su actividad en un espacio único.","textChars":107,"textLines":1,"bbox":[56,150,1000,34]}
+{"kind":"textbox","id":"sh/wrqh0v6h","slide":6,"text":"Estado de ánimo","textPreview":"Estado de ánimo","textChars":15,"textLines":1,"bbox":[56,572,150,28]}
+{"kind":"textbox","id":"sh/xszyt0n2","slide":6,"text":"Reporte confidencial","textPreview":"Reporte confidencial","textChars":20,"textLines":1,"bbox":[664,572,168,28]}
+{"kind":"textbox","id":"sh/xw3q1o3u","slide":6,"text":"React · Vite · TypeScript · Vercel","textPreview":"React · Vite · TypeScript · Vercel","textChars":34,"textLines":1,"bbox":[56,624,520,22]}
+{"kind":"textbox","id":"sh/cvu9sj29","slide":6,"text":"La vista de reportes permite conservar el carácter anónimo cuando el usuario lo elige.","textPreview":"La vista de reportes permite conservar el carácter anónimo cuando el usuario lo elige.","textChars":86,"textLines":1,"bbox":[664,624,520,22]}
+{"kind":"textbox","id":"sh/bul8zelo","slide":6,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/ra1ofutc","slide":6,"name":"","geometry":"roundRect","alt":"Estado de ánimo en frontend web","bbox":[56,226,560,316]}
+{"kind":"image","id":"im/q9snmpcr","slide":6,"name":"","geometry":"roundRect","alt":"Formulario de reporte","bbox":[664,226,560,316]}
+{"kind":"slide","id":"sl/q4vei1","slide":7,"title":"06 · GESTIÓN","textShapes":9}
+{"kind":"textbox","id":"sh/sjutsbyd","slide":7,"text":"06 · GESTIÓN","textPreview":"06 · GESTIÓN","textChars":12,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/rilcz6xs","slide":7,"text":"RR. HH. y administración trabajan con evidencia","textPreview":"RR. HH. y administración trabajan con evidencia","textChars":47,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/5g3uxwfm","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/4futory1","slide":7,"text":"Las vistas de gestión concentran encuestas, actividades, reportes, cuentas y planes en función del rol.","textPreview":"Las vistas de gestión concentran encuestas, actividades, reportes, cuentas y planes en función del rol.","textChars":103,"textLines":1,"bbox":[56,150,1000,34]}
+{"kind":"textbox","id":"sh/obyd0vyl","slide":7,"text":"Encuestas y comentarios","textPreview":"Encuestas y comentarios","textChars":23,"textLines":1,"bbox":[56,520,372,26]}
+{"kind":"textbox","id":"sh/qxcvyxw7","slide":7,"text":"Resumen de cuentas y actividad","textPreview":"Resumen de cuentas y actividad","textChars":30,"textLines":1,"bbox":[454,520,372,26]}
+{"kind":"textbox","id":"sh/bylwr2ds","slide":7,"text":"Seguimiento de situaciones","textPreview":"Seguimiento de situaciones","textChars":26,"textLines":1,"bbox":[852,520,372,26]}
+{"kind":"textbox","id":"sh/czud07ex","slide":7,"text":"Spring Boot · roles EMPLOYEE, HR_MEMBER y SYSTEM_ADMIN","textPreview":"Spring Boot · roles EMPLOYEE, HR_MEMBER y SYSTEM_ADMIN","textChars":54,"textLines":1,"bbox":[56,600,1100,26]}
+{"kind":"textbox","id":"sh/d03etcvi","slide":7,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/m14b254b","slide":7,"name":"","geometry":"roundRect","alt":"Gestión de encuestas de RR. HH.","bbox":[56,226,372,268]}
+{"kind":"image","id":"im/72dcva5w","slide":7,"name":"","geometry":"roundRect","alt":"Resumen administrativo","bbox":[454,226,372,268]}
+{"kind":"image","id":"im/o7itsvmx","slide":7,"name":"","geometry":"roundRect","alt":"Reportes administrativos","bbox":[852,226,372,268]}
+{"kind":"slide","id":"sl/19o73n","slide":8,"title":"07 · ARQUITECTURA","textShapes":11}
+{"kind":"textbox","id":"sh/543qh4ne","slide":8,"text":"07 · ARQUITECTURA","textPreview":"07 · ARQUITECTURA","textChars":17,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/ihc76po3","slide":8,"text":"Una API compartida con persistencia en Firestore","textPreview":"Una API compartida con persistencia en Firestore","textChars":48,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/wfup4z6x","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/xg3qd4ni","slide":8,"text":"Web y Android consumen una API REST en Spring Boot. La API centraliza reglas, permisos y conexión con Firestore.","textPreview":"Web y Android consumen una API REST en Spring Boot. La API centraliza reglas, permisos y conexión con Firestore.","textChars":112,"textLines":1,"bbox":[56,150,560,70]}
+{"kind":"textbox","id":"sh/adc72por","slide":8,"text":"Java 21","textPreview":"Java 21","textChars":7,"textLines":1,"bbox":[56,268,100,28]}
+{"kind":"textbox","id":"sh/vel8bu5c","slide":8,"text":"Spring Boot 3.5.5","textPreview":"Spring Boot 3.5.5","textChars":17,"textLines":1,"bbox":[168,268,164,28]}
+{"kind":"textbox","id":"sh/gbe9gjm1","slide":8,"text":"Firestore","textPreview":"Firestore","textChars":9,"textLines":1,"bbox":[344,268,106,28]}
+{"kind":"textbox","id":"sh/hc7qponm","slide":8,"text":"La arquitectura mantiene separados los contextos de autenticación, perfil, mood, encuestas, comentarios, actividades, reportes, IA, pagos y administración.","textPreview":"La arquitectura mantiene separados los contextos de autenticación, perfil, mood, encuestas, comentarios, actividades, reportes, IA, pagos...","textChars":155,"textLines":1,"bbox":[56,336,520,118]}
+{"kind":"textbox","id":"sh/1svilkre","slide":8,"text":"Persistencia actual","textPreview":"Persistencia actual","textChars":19,"textLines":1,"bbox":[56,510,260,26]}
+{"kind":"textbox","id":"sh/0rm1sfat","slide":8,"text":"Firebase Firestore\nAPI REST + Bearer JWT\nGemini opcional para Chat AI","textPreview":"Firebase Firestore | API REST + Bearer JWT | Gemini opcional para Chat AI","textChars":69,"textLines":3,"bbox":[56,548,320,82]}
+{"kind":"textbox","id":"sh/e5kzq5sn","slide":8,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/on25g36h","slide":8,"name":"","geometry":"roundRect","alt":"Diagrama de contexto de SafeSpace","bbox":[622,176,602,444]}
+{"kind":"slide","id":"sl/tg5i2y","slide":9,"title":"08 · IMPLEMENTACIÓN","textShapes":20}
+{"kind":"textbox","id":"sh/oj25cbyx","slide":9,"text":"08 · IMPLEMENTACIÓN","textPreview":"08 · IMPLEMENTACIÓN","textChars":19,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/nit4j6hc","slide":9,"text":"Un producto distribuido por capas","textPreview":"Un producto distribuido por capas","textChars":33,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/1gbmhwz6","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/ze94fmh0","slide":9,"text":"Landing","textPreview":"Landing","textChars":7,"textLines":1,"bbox":[78,192,145,22]}
+{"kind":"textbox","id":"sh/ed0n6h0v","slide":9,"text":"Vercel","textPreview":"Vercel","textChars":6,"textLines":1,"bbox":[236,193,100,20]}
+{"kind":"textbox","id":"sh/dcrmdcza","slide":9,"text":"Presenta la propuesta y el valor de SafeSpace.","textPreview":"Presenta la propuesta y el valor de SafeSpace.","textChars":46,"textLines":1,"bbox":[340,192,200,36]}
+{"kind":"textbox","id":"sh/m1sz2dof","slide":9,"text":"Frontend web","textPreview":"Frontend web","textChars":12,"textLines":1,"bbox":[78,268,145,22]}
+{"kind":"textbox","id":"sh/n210bi50","slide":9,"text":"Vercel","textPreview":"Vercel","textChars":6,"textLines":1,"bbox":[236,269,100,20]}
+{"kind":"textbox","id":"sh/83ah436l","slide":9,"text":"Participación, reportes y preferencias.","textPreview":"Participación, reportes y preferencias.","textChars":39,"textLines":1,"bbox":[340,268,200,36]}
+{"kind":"textbox","id":"sh/yxszytoj","slide":9,"text":"Admin","textPreview":"Admin","textChars":5,"textLines":1,"bbox":[78,344,145,22]}
+{"kind":"textbox","id":"sh/zy107y54","slide":9,"text":"Vercel","textPreview":"Vercel","textChars":6,"textLines":1,"bbox":[236,345,100,20]}
+{"kind":"textbox","id":"sh/0zah036p","slide":9,"text":"Cuentas, encuestas, actividades y pagos.","textPreview":"Cuentas, encuestas, actividades y pagos.","textChars":40,"textLines":1,"bbox":[340,344,200,36]}
+{"kind":"textbox","id":"sh/q98zuto7","slide":9,"text":"Android","textPreview":"Android","textChars":7,"textLines":1,"bbox":[78,420,145,22]}
+{"kind":"textbox","id":"sh/bah03y5s","slide":9,"text":"APK/AAB","textPreview":"APK/AAB","textChars":7,"textLines":1,"bbox":[236,421,100,20]}
+{"kind":"textbox","id":"sh/fexwbulk","slide":9,"text":"Experiencia móvil del empleado.","textPreview":"Experiencia móvil del empleado.","textChars":31,"textLines":1,"bbox":[340,420,200,36]}
+{"kind":"textbox","id":"sh/1gfedk3q","slide":9,"text":"Backend","textPreview":"Backend","textChars":7,"textLines":1,"bbox":[78,496,145,22]}
+{"kind":"textbox","id":"sh/gf6x4zm5","slide":9,"text":"Render","textPreview":"Render","textChars":6,"textLines":1,"bbox":[236,497,100,20]}
+{"kind":"textbox","id":"sh/32xgfulw","slide":9,"text":"Reglas de negocio y API REST.","textPreview":"Reglas de negocio y API REST.","textChars":29,"textLines":1,"bbox":[340,496,200,36]}
+{"kind":"textbox","id":"sh/p4fyh43m","slide":9,"text":"La distribución móvil se documenta con el APK/AAB compartido y el repositorio Android.","textPreview":"La distribución móvil se documenta con el APK/AAB compartido y el repositorio Android.","textChars":86,"textLines":1,"bbox":[640,548,540,48]}
+{"kind":"textbox","id":"sh/o36x8zmh","slide":9,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/x432pcb6","slide":9,"name":"","geometry":"roundRect","alt":"Gestión de pagos y planes","bbox":[640,190,550,312]}
+{"kind":"slide","id":"sl/ulbagf","slide":10,"title":"09 · EVIDENCIA","textShapes":8}
+{"kind":"textbox","id":"sh/98f2l4b6","slide":10,"text":"09 · EVIDENCIA","textPreview":"09 · EVIDENCIA","textChars":14,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/m5ojapcf","slide":10,"text":"El avance se puede revisar en artefactos reales","textPreview":"El avance se puede revisar en artefactos reales","textChars":47,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/03m18fup","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/l4v2hkbu","slide":10,"text":"La evidencia combina interfaces ejecutables, repositorios, despliegues y colaboración del equipo.","textPreview":"La evidencia combina interfaces ejecutables, repositorios, despliegues y colaboración del equipo.","textChars":97,"textLines":1,"bbox":[56,150,900,34]}
+{"kind":"textbox","id":"sh/cfm14fud","slide":10,"text":"Colaboración en GitHub","textPreview":"Colaboración en GitHub","textChars":22,"textLines":1,"bbox":[56,574,184,28]}
+{"kind":"textbox","id":"sh/d0v2dkby","slide":10,"text":"Persistencia verificada","textPreview":"Persistencia verificada","textChars":23,"textLines":1,"bbox":[664,574,166,28]}
+{"kind":"textbox","id":"sh/hcnyl8ni","slide":10,"text":"La documentación mantiene la trazabilidad entre historias, versiones y evidencias visuales.","textPreview":"La documentación mantiene la trazabilidad entre historias, versiones y evidencias visuales.","textChars":91,"textLines":1,"bbox":[56,626,1120,22]}
+{"kind":"textbox","id":"sh/wbexs3mx","slide":10,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"image","id":"im/zqtczipc","slide":10,"name":"","geometry":"roundRect","alt":"GitHub Insights del equipo","bbox":[56,226,560,316]}
+{"kind":"image","id":"im/epkvqd8r","slide":10,"name":"","geometry":"roundRect","alt":"Consola de Firebase Firestore","bbox":[664,226,560,316]}
+{"kind":"slide","id":"sl/ovawpu","slide":11,"title":"CIERRE DEL AVANCE","textShapes":7}
+{"kind":"textbox","id":"sh/szmd83qt","slide":11,"text":"CIERRE DEL AVANCE","textPreview":"CIERRE DEL AVANCE","textChars":17,"textLines":1,"bbox":[64,62,560,24]}
+{"kind":"textbox","id":"sh/rydwfy98","slide":11,"text":"SafeSpace convierte una necesidad sensible en una experiencia concreta.","textPreview":"SafeSpace convierte una necesidad sensible en una experiencia concreta.","textChars":71,"textLines":1,"bbox":[64,122,760,112]}
+{"kind":"textbox","id":"sh/14fel8ra","slide":11,"text":"El producto integra bienestar diario, participación, reportes y acompañamiento con una arquitectura web, móvil y backend coherente.","textPreview":"El producto integra bienestar diario, participación, reportes y acompañamiento con una arquitectura web, móvil y backend coherente.","textChars":131,"textLines":1,"bbox":[64,310,650,84]}
+{"kind":"textbox","id":"sh/f2dwji9k","slide":11,"text":"Siguiente foco","textPreview":"Siguiente foco","textChars":14,"textLines":1,"bbox":[92,494,180,24]}
+{"kind":"textbox","id":"sh/e14vad8z","slide":11,"text":"Consolidar el video About the Product y continuar la validación con usuarios.","textPreview":"Consolidar el video About the Product y continuar la validación con usuarios.","textChars":77,"textLines":1,"bbox":[92,530,440,30]}
+{"kind":"textbox","id":"sh/or6xgnq1","slide":11,"text":"SafeSpace","textPreview":"SafeSpace","textChars":9,"textLines":1,"bbox":[920,600,170,30]}
+{"kind":"textbox","id":"sh/a9w76lgr","slide":11,"text":"Avance 1 · 2026-20","textPreview":"Avance 1 · 2026-20","textChars":18,"textLines":1,"bbox":[64,682,300,18]}
+{"kind":"image","id":"im/cjip83ex","slide":11,"name":"","geometry":"roundRect","alt":"Chat AI de SafeSpace","bbox":[900,104,210,456]}
+{"kind":"slide","id":"sl/wf7zbz","slide":12,"title":"10 · PRODUCT BACKLOG","textShapes":5}
+{"kind":"textbox","id":"sh/ip0jmd0j","slide":12,"text":"10 · PRODUCT BACKLOG","textPreview":"10 · PRODUCT BACKLOG","textChars":20,"textLines":1,"bbox":[72,84,520,28]}
+{"kind":"textbox","id":"sh/5cb2h8ju","slide":12,"text":"22 historias\n7 épicas","textPreview":"22 historias | 7 épicas","textChars":21,"textLines":2,"bbox":[72,180,520,150]}
+{"kind":"textbox","id":"sh/4r21o3ip","slide":12,"text":"El backlog queda al final para cerrar la presentación con el alcance funcional del producto.","textPreview":"El backlog queda al final para cerrar la presentación con el alcance funcional del producto.","textChars":92,"textLines":1,"bbox":[72,414,540,54]}
+{"kind":"textbox","id":"sh/ul0jit07","slide":12,"text":"US01\nUS02\nUS04\n…\nUS22","textPreview":"US01 | US02 | US04 | … | US22","textChars":21,"textLines":5,"bbox":[855,180,190,250]}
+{"kind":"textbox","id":"sh/horid8jy","slide":12,"text":"SafeSpace · Avance 1","textPreview":"SafeSpace · Avance 1","textChars":20,"textLines":1,"bbox":[72,682,300,18]}
+{"kind":"slide","id":"sl/ntzzpl","slide":13,"title":"10 · PRODUCT BACKLOG","textShapes":5}
+{"kind":"textbox","id":"sh/4vqdo7eh","slide":13,"text":"10 · PRODUCT BACKLOG","textPreview":"10 · PRODUCT BACKLOG","textChars":20,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/3uhcv2dw","slide":13,"text":"Épicas y cobertura funcional","textPreview":"Épicas y cobertura funcional","textChars":28,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/hszutsv6","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/grqtknel","slide":13,"text":"El backlog organiza la solución desde el acceso hasta el acompañamiento con IA.","textPreview":"El backlog organiza la solución desde el acceso hasta el acompañamiento con IA.","textChars":79,"textLines":1,"bbox":[56,150,980,34]}
+{"kind":"textbox","id":"sh/upobixwf","slide":13,"text":"SafeSpace · Product Backlog","textPreview":"SafeSpace · Product Backlog","textChars":27,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"table","id":"tb/a1w7a5s3","slide":13,"name":"","rows":8,"cols":3,"preview":"Épica | Objetivo | Historias","bbox":[56,226,1168,390]}
+{"kind":"slide","id":"sl/poor05","slide":14,"title":"10 · PRODUCT BACKLOG","textShapes":4}
+{"kind":"textbox","id":"sh/byxcfa98","slide":14,"text":"10 · PRODUCT BACKLOG","textPreview":"10 · PRODUCT BACKLOG","textChars":20,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/cz6t8fat","slide":14,"text":"Historias de usuario · EP01–EP03","textPreview":"Historias de usuario · EP01–EP03","textChars":32,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/2t4b25sb","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/ov6t4fah","slide":14,"text":"SafeSpace · Product Backlog","textPreview":"SafeSpace · Product Backlog","textChars":27,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"table","id":"tb/6pg3el47","slide":14,"name":"","rows":13,"cols":3,"preview":"ID | Historia de usuario | Épica","bbox":[56,158,1168,500]}
+{"kind":"slide","id":"sl/66pf7q","slide":15,"title":"10 · PRODUCT BACKLOG","textShapes":5}
+{"kind":"textbox","id":"sh/o7e9c7al","slide":15,"text":"10 · PRODUCT BACKLOG","textPreview":"10 · PRODUCT BACKLOG","textChars":20,"textLines":1,"bbox":[56,30,900,24]}
+{"kind":"textbox","id":"sh/365sj2tg","slide":15,"text":"Historias de usuario · EP04–EP07","textPreview":"Historias de usuario · EP04–EP07","textChars":32,"textLines":1,"bbox":[56,58,1080,58]}
+{"kind":"textbox","id":"sh/dwnapwbi","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,34,54,24]}
+{"kind":"textbox","id":"sh/bu5snmtc","slide":15,"text":"Las historias técnicas se gestionan fuera de este resumen funcional y se mantienen en el Capítulo III.","textPreview":"Las historias técnicas se gestionan fuera de este resumen funcional y se mantienen en el Capítulo III.","textChars":102,"textLines":1,"bbox":[56,602,1120,28]}
+{"kind":"textbox","id":"sh/qtwrehsr","slide":15,"text":"SafeSpace · Product Backlog","textPreview":"SafeSpace · Product Backlog","textChars":27,"textLines":1,"bbox":[56,686,500,18]}
+{"kind":"table","id":"tb/tkvu5076","slide":15,"name":"","rows":10,"cols":3,"preview":"ID | Historia de usuario | Épica","bbox":[56,180,1168,380]}

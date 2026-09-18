@@ -15,6 +15,7 @@
 | 3 | Diego Andrés Ávalos Cordova | U202313922 | Software Engineer |
 | 4 | Jose Gustavo Asto Jacome | U20241C630 | Software Engineer |
 | 5 | Diaz Martinez, Alexther Kamil | U202412316 | Software Engineer |
+| 6 | Arizabal Condori, Jean Niels | U201919096 | Software Engineer |
 
 ## Estructura del Repositorio
 

@@ -39,6 +39,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <strong>Diaz Martinez, Alexther Kamil</strong><br>
     <strong>AV1</strong><br>
     Integró y revisó la documentación del Capítulo V, considerando la responsabilidad profesional de mantener consistencia entre la solución y el informe.<br><br>
+    <strong>Arizabal Condori, Jean Niels</strong><br>
+    <strong>AV1</strong><br>
+    Apoyó la revisión transversal de los artefactos del proyecto y la integración de la evidencia técnica, considerando la claridad y trazabilidad de la información presentada.<br><br>
   </td>
 
   <td valign="top">
@@ -67,6 +70,10 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <strong>Diaz Martinez, Alexther Kamil</strong><br>
     <strong>AV1</strong><br>
     Revisó en el Capítulo V la viabilidad de la implementación documentada y su posible impacto en los usuarios de la plataforma.
+    <br><br>
+    <strong>Arizabal Condori, Jean Niels</strong><br>
+    <strong>AV1</strong><br>
+    Participó en la revisión de la solución y de sus evidencias, considerando aspectos de accesibilidad, privacidad y utilidad para los usuarios.
   </td>
 
   <td valign="top">
