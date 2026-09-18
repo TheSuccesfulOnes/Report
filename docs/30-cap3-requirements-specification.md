@@ -97,40 +97,6 @@ En esta sección se presentan los Epics definidos para organizar y agrupar las f
 | US22 | Envío de mensajes al asistente | Como empleado, quiero enviar mensajes al asistente y recibir una respuesta considerando parte del historial, para obtener orientación breve de bienestar emocional. | Escenario 1: un mensaje no vacío dentro del límite guarda el mensaje y la respuesta. Escenario 2: si Gemini está configurado, se envían instrucciones de seguridad, idioma e historial reciente. Escenario 3: sin Gemini se devuelve una respuesta local en español o inglés. Escenario 4: los mensajes que superan el límite no se persisten. Escenario 5: los errores del proveedor se convierten en indisponibilidad controlada. Escenario 6: el rol requerido es `EMPLOYEE`. | EP07 |
 
 
-### Historias Técnicas
-
-En esta sección se detallan las historias técnicas necesarias para implementar las funcionalidades descritas en los User Stories. Estas historias técnicas se enfocan en la arquitectura, la infraestructura, la seguridad y otros aspectos técnicos que son fundamentales para el correcto funcionamiento de la aplicación.
-
-| ID de Historia Técnica | Título                                     | Descripción                                                                                                                                                  | Relacionado con (US ID)                    |
-| ---------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| TS01                   | Aplicación base con Spring Boot            | Como equipo de desarrollo, quiero implementar una API modular con Java 21 y Spring Boot, para exponer las funcionalidades de SafeSpace mediante una arquitectura organizada. | Todas                                      |
-| TS02                   | Persistencia no relacional con Firestore  | Como equipo de desarrollo, quiero persistir la información de SafeSpace en Firestore, para almacenar y consultar los datos de la plataforma de forma centralizada. | Todas                                      |
-| TS03                   | Modelo de identidad y roles                | Como equipo de desarrollo, quiero modelar usuarios con username, email, contraseña codificada, nombre visible, rol, estado habilitado y marca de propietario, para gestionar la identidad y los permisos de la plataforma. | US01, US02, US05                           |
-| TS04                   | Autenticación JWT sin sesión de servidor   | Como usuario autenticado, quiero utilizar un JWT validado en cada petición protegida, para acceder a las funcionalidades autorizadas sin mantener una sesión en el servidor. | US02, US04, US05, US06, US22               |
-| TS05                   | Hash seguro de contraseñas                 | Como equipo de desarrollo, quiero codificar las contraseñas con BCrypt, para proteger las credenciales de las cuentas registradas y administrativas. | US01, US02, US05                           |
-| TS06                   | Autorización RBAC                          | Como equipo de desarrollo, quiero diferenciar las capacidades de EMPLOYEE, HR_MEMBER y SYSTEM_ADMIN mediante autorización por rutas y métodos, para controlar el acceso a cada operación. | US01-US22                                  |
-| TS07                   | Protección de la cuenta propietaria        | Como administrador del sistema, quiero proteger la cuenta propietaria y el último administrador, para evitar la pérdida de control de la plataforma. | US05                                       |
-| TS09                   | Configuración por propiedades y perfiles   | Como equipo de desarrollo, quiero externalizar secretos, límites, URLs y configuraciones por entorno, para configurar la plataforma sin exponer credenciales en el código. | US02, US20, US22                           |
-| TS10                   | Gestión de perfil y preferencias           | Como usuario autenticado, quiero guardar mi idioma y tema en mis preferencias, para personalizar la experiencia de uso desde la API. | US04                                       |
-| TS11                   | Registro diario de mood                   | Como usuario autenticado, quiero registrar un estado de ánimo por día, para mantener un registro diario consistente de mi bienestar. | US06                                       |
-| TS12                   | Consulta agregada de mood                  | Como miembro de RRHH, quiero consultar un resumen agregado del estado de ánimo, para conocer la participación y el pulso general de los empleados. | US07                                       |
-| TS13                   | Ciclo de vida de encuestas                 | Como miembro autorizado de RRHH o administrador del sistema, quiero gestionar el ciclo de vida de las encuestas, para publicar y mantener actualizadas las preguntas de bienestar. | US08, US09, US10, US11                     |
-| TS14                   | Respuestas únicas de encuestas             | Como usuario autenticado, quiero registrar una sola respuesta por encuesta, para aportar mi opinión sin duplicar mi participación. | US09                                       |
-| TS15                   | Comentarios jerárquicos                    | Como usuario autenticado, quiero publicar comentarios y respuestas anidadas en una encuesta, para aportar contexto y participar en la conversación. | US12                                       |
-| TS16                   | Likes únicos por usuario                   | Como usuario autenticado, quiero registrar un like único en un comentario, para expresar que considero útil su contenido. | US13                                       |
-| TS17                   | Actividades con opciones y votación       | Como usuario autenticado, quiero votar por una opción de una actividad y cambiar mi voto, para participar en las decisiones semanales del equipo. | US14, US15, US16                           |
-| TS18                   | Protección de opciones después de votar    | Como miembro autorizado de RRHH o administrador del sistema, quiero proteger las opciones después de un voto, para preservar la integridad de la participación. | US16                                       |
-| TS19                   | Reportes anónimos e identificados          | Como usuario autenticado, quiero enviar reportes anónimos o identificados con sus datos de seguimiento, para comunicar situaciones que requieren atención. | US17, US18                                 |
-| TS20                   | Seguimiento administrativo de reportes     | Como miembro de RRHH o administrador del sistema, quiero consultar reportes y cambiar su estado, para realizar el seguimiento administrativo de los casos. | US19                                       |
-| TS21                   | Auditoría de operaciones administrativas   | Como administrador del sistema, quiero registrar las operaciones administrativas relevantes, para mantener trazabilidad sobre los cambios realizados en la plataforma. | US05, US10, US11, US16, US20               |
-| TS23                   | Cálculo de siguiente fecha de pago         | Como administrador del sistema, quiero calcular la siguiente fecha de pago según el plan seleccionado, para mantener actualizado el registro administrativo. | US20                                       |
-| TS24                   | Conversaciones del empleado con la IA      | Como empleado, quiero asociar mis conversaciones y mensajes con la IA a mi cuenta, para conservar mis espacios privados de apoyo emocional. | US21, US22                                 |
-| TS25                   | Integración con Gemini                    | Como empleado, quiero enviar mensajes a la IA integrada con Gemini, para recibir orientación breve de bienestar emocional. | US22                                       |
-| TS26                   | Respuesta de contingencia para IA          | Como usuario empleado, quiero mantener disponible el chat cuando no haya una clave externa, para poder utilizar y probar el flujo de asistencia. | US22                                       |
-| TS27                   | Manejo común de errores HTTP               | Como usuario de SafeSpace, quiero recibir errores HTTP claros y consistentes, para comprender qué ocurrió y saber cómo continuar. | US01-US22                                  |
-| TS28                   | CORS y API stateless                       | Como usuario de SafeSpace, quiero que la API gestione orígenes autorizados y solicitudes sin estado, para acceder de forma segura a las funcionalidades. | US02, US04-US22                            |
-
-
 
 
 ## 3.3. Product Backlog
@@ -164,37 +130,6 @@ En esta sección se detallan las historias técnicas necesarias para implementar
 | SSB-21 | US21 | Conversaciones con la IA                      | EP07 |
 | SSB-22 | US22 | Envío de mensajes al asistente                | EP07 |
 
-
-## Tareas técnicas
-
-| Jira   | ID   | Tarea técnica                              | Historias relacionadas                     |
-| ------ | ---- | ------------------------------------------ | ------------------------------------------ |
-| SSB-23 | TS01 | Aplicación base con Spring Boot            | Todas                                      |
-| SSB-24 | TS02 | Persistencia no relacional con Firestore  | Todas                                      |
-| SSB-25 | TS03 | Modelo de identidad y roles                | US01, US02, US05                           |
-| SSB-26 | TS04 | Autenticación JWT sin sesión de servidor   | US02, US04, US05, US06, US22               |
-| SSB-27 | TS05 | Hash seguro de contraseñas                 | US01, US02, US05                           |
-| SSB-28 | TS06 | Autorización RBAC                          | US01–US22                                  |
-| SSB-29 | TS07 | Protección de la cuenta propietaria        | US05                                       |
-| SSB-31 | TS09 | Configuración por propiedades y perfiles   | US02, US20, US22                            |
-| SSB-32 | TS10 | Gestión de perfil y preferencias           | US04                                       |
-| SSB-33 | TS11 | Registro diario de mood con unicidad       | US06                                       |
-| SSB-34 | TS12 | Consulta agregada de mood                  | US07                                       |
-| SSB-35 | TS13 | Ciclo de vida de encuestas                 | US08, US09, US10, US11                     |
-| SSB-36 | TS14 | Respuestas únicas de encuestas             | US09                                       |
-| SSB-37 | TS15 | Comentarios jerárquicos                    | US12                                       |
-| SSB-38 | TS16 | Likes únicos por usuario                   | US13                                       |
-| SSB-39 | TS17 | Actividades con opciones y votación única  | US14, US15, US16                           |
-| SSB-40 | TS18 | Protección de opciones después de votar    | US16                                       |
-| SSB-41 | TS19 | Reportes anónimos e identificados          | US17, US18                                 |
-| SSB-42 | TS20 | Seguimiento administrativo de reportes     | US19                                       |
-| SSB-43 | TS21 | Auditoría de operaciones administrativas   | US05, US10, US11, US16, US20               |
-| SSB-45 | TS23 | Cálculo de siguiente fecha de pago         | US20                                       |
-| SSB-46 | TS24 | Conversaciones del empleado con la IA      | US21, US22                                 |
-| SSB-47 | TS25 | Integración con Gemini                     | US22                                       |
-| SSB-48 | TS26 | Respuesta de contingencia para IA          | US22                                       |
-| SSB-49 | TS27 | Manejo común de errores HTTP               | US01–US22                                  |
-| SSB-50 | TS28 | CORS y API stateless                       | US02, US04–US22                            |
 
 
 ## 3.4. Impact Mapping
