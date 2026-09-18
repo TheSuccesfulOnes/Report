@@ -41,9 +41,9 @@ El Performance Report del AV1 se entrega como documento independiente en formato
 | Needfinding Interviews | Entrevistas y análisis de necesidades de empleados y RR. HH. | Evidencia documentada en el Capítulo II; no se exige un video independiente para AV1. |
 | Prototypes/Product Navigation | Navegación por la landing, frontend web y prototipos. | Flujos documentados en los Capítulos III y IV. |
 | Validation Interviews | Interacción de usuarios con la solución. | Se realizará en una siguiente actividad de validación. |
-| About the Product | Modelo de negocio, características y beneficios de SafeSpace. | Pendiente de grabación y publicación. |
+| About the Product | Modelo de negocio, características y beneficios de SafeSpace. | [Video publicado](https://upcedupe-my.sharepoint.com/personal/u202412316_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202412316%5Fupc%5Fedu%5Fpe%2FDocuments%2Fabout%20the%20product%2FAbout%20the%20Product%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0%3D&ga=1) |
 | About the Team | Proceso de trabajo y aportes de los seis integrantes. | No requerido para AV1; corresponde a una entrega posterior si se solicita. |
-| Exposición AV1 | Presentación del informe y de los artefactos del avance. | Se incorporará al cargar el video de exposición. |
+| Exposición AV1 | Presentación del informe y de los artefactos del avance. | [Video publicado](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQCMrgPbZR7qQqwR238OZomZAecNXBTj96MNbKUz5qdsMOM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiJ9fQ%3D&e=kFGtG3) |
 
 ---
 
@@ -98,7 +98,7 @@ La matriz ética y de impacto completa corresponde a la entrega final según el 
 
 | Entrega | Título Video | URL Microsoft Stream | Duración | Fecha |
 | :---- | :---- | :---- | :----: | :---- |
-| AV1 | SafeSpace: exposición del informe y artefactos | Enlace por incorporar al recibir el video | Por registrar | 18/09/26 |
+| AV1 | SafeSpace: exposición del informe y artefactos | [Ver video de exposición](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQCMrgPbZR7qQqwR238OZomZAecNXBTj96MNbKUz5qdsMOM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiJ9fQ%3D&e=kFGtG3) | Compartida | 18/09/26 |
 
 ---
 
@@ -140,8 +140,8 @@ La matriz ética y de impacto completa corresponde a la entrega final según el 
 ### Videos (subidos a Microsoft Stream + YouTube donde corresponda)
 - [ ] Needfinding Interviews
 - [ ] Prototypes Navigation
-- [ ] About the Product
-- [ ] Exposición AV1
+- [x] About the Product
+- [x] Exposición AV1
 
 ### Repositorio GitHub
 - [ ] Organización pública creada
