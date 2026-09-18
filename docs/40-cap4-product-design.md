@@ -10,6 +10,10 @@ Las guías de estilo permiten mantener una identidad común entre web y Android,
 
 ### 4.1.1. General Style Guidelines
 
+![Logo de SafeSpace](../assets/images/cap4/revision-20260911/style-guidelines/SafeSpace-logo.png)
+
+El logo de SafeSpace representa la identidad visual del producto y se emplea como referencia en las pantallas de acceso, navegación y materiales de presentación.
+
 #### Branding
 
 La marca visible es **SafeSpace**. Se utiliza el recurso gráfico incluido en los frontends, acompañado del nombre del producto en el acceso y la navegación. Los wireframes usan un placeholder para el logo y las imágenes; los mockups conservan el logo original incrustado.
