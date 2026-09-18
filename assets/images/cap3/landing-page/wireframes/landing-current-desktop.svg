@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000">
+  <rect width="1440" height="1000" fill="#f7f8f4"/>
+  <style>
+    .label{font-family:Arial,sans-serif;fill:#777d78;letter-spacing:2px;font-size:13px;font-weight:700}
+    .body{font-family:Arial,sans-serif;fill:#505753;font-size:18px}
+    .nav{font-family:Arial,sans-serif;fill:#4e5651;font-size:16px;font-weight:700}
+    .title{font-family:Arial,sans-serif;fill:#4a504d;font-size:68px;font-weight:800}
+  </style>
+  <rect x="0" y="0" width="1440" height="90" fill="#f7f8f4" stroke="#c8cdc8"/>
+  <rect x="28" y="18" width="50" height="50" rx="14" fill="#e2e5e0" stroke="#9aa19b"/>
+  <path d="M42 54c4-17 19-23 25-27-2 17-10 28-25 27Z" fill="#8b928d"/>
+  <text x="94" y="45" class="nav" font-size="24">SafeSpace</text>
+  <text x="94" y="64" class="label" font-size="10">BIENESTAR LABORAL</text>
+  <text x="596" y="52" class="nav">Inicio</text>
+  <text x="672" y="52" class="nav">Producto</text>
+  <text x="770" y="52" class="nav">Para empleados y RR. HH.</text>
+  <text x="1030" y="52" class="nav">Planes</text>
+  <text x="1100" y="52" class="nav">Contacto</text>
+  <text x="1195" y="52" class="nav">Conócenos</text>
+  <rect x="1300" y="22" width="82" height="42" rx="3" fill="#8a908b"/>
+  <text x="1341" y="48" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">Empieza</text>
+  <rect x="0" y="90" width="1440" height="390" fill="#dfe2de"/>
+  <path d="M0 380 170 260 310 330 480 170 650 350 840 190 1040 330 1190 220 1440 350V480H0Z" fill="#bfc5bf"/>
+  <path d="M0 420 250 300 420 390 620 245 790 385 1010 250 1220 390 1440 280V480H0Z" fill="#9ca39d" opacity=".55"/>
+  <rect x="0" y="90" width="1440" height="390" fill="#f7f8f4" opacity=".35"/>
+  <rect x="50" y="118" width="170" height="26" rx="4" fill="#c3c8c3"/>
+  <text x="62" y="136" class="label">HERO / IMAGEN + OVERLAY</text>
+  <text x="720" y="242" text-anchor="middle" class="title">Un espacio seguro</text>
+  <text x="720" y="316" text-anchor="middle" class="title">para estar mejor.</text>
+  <rect x="492" y="350" width="456" height="22" rx="4" fill="#adb4ae"/>
+  <rect x="535" y="382" width="370" height="22" rx="4" fill="#adb4ae"/>
+  <text x="720" y="450" text-anchor="middle" class="label">ACOMPAÑAMIENTO Y BIENESTAR LABORAL</text>
+  <rect x="0" y="480" width="1440" height="520" fill="#f7f8f4"/>
+  <line x1="72" y1="520" x2="1368" y2="520" stroke="#d0d5d0"/>
+  <text x="112" y="602" class="label">EL PRODUCTO</text>
+  <text x="112" y="668" class="title" font-size="54">Un ecosistema</text>
+  <text x="112" y="730" class="title" font-size="54">para escuchar.</text>
+  <rect x="112" y="770" width="430" height="22" rx="4" fill="#c3c8c3"/>
+  <rect x="112" y="810" width="360" height="22" rx="4" fill="#c3c8c3"/>
+  <text x="112" y="892" class="label">SECCIÓN DE PRODUCTO / COPY + DASHBOARD</text>
+  <rect x="770" y="590" width="545" height="290" rx="18" fill="#e1e4df" stroke="#858c86" stroke-width="3" transform="rotate(-3 1040 735)"/>
+  <rect x="810" y="642" width="210" height="180" rx="10" fill="#b9c0ba"/>
+  <rect x="1050" y="642" width="210" height="28" rx="4" fill="#b9c0ba"/>
+  <rect x="1050" y="690" width="170" height="16" rx="3" fill="#b9c0ba"/>
+  <rect x="1050" y="730" width="170" height="16" rx="3" fill="#b9c0ba"/>
+  <text x="1040" y="920" text-anchor="middle" class="label">DASHBOARD / MOCKUP DE PRODUCTO</text>
+</svg>

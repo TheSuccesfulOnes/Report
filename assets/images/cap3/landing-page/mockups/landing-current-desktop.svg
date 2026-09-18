@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#334842"/><stop offset="1" stop-color="#182e2b"/></linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#405b5a"/><stop offset="1" stop-color="#243c39"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#132a27" flood-opacity=".20"/></filter>
+  </defs>
+  <style>
+    .sans{font-family:Arial,sans-serif}.nav{font-family:Arial,sans-serif;fill:#6a7772;font-size:16px;font-weight:700}.small{font-family:Arial,sans-serif;fill:#f47f70;letter-spacing:2px;font-size:13px;font-weight:700}.copy{font-family:Arial,sans-serif;fill:#fff;font-size:22px}.dark{font-family:Arial,sans-serif;fill:#203936}.muted{font-family:Arial,sans-serif;fill:#73817b;font-size:18px}
+  </style>
+  <rect width="1440" height="1000" fill="#f7f8f4"/>
+  <rect width="1440" height="92" fill="#f7f8f4" stroke="#d5ded9"/>
+  <rect x="28" y="18" width="50" height="50" rx="15" fill="#f7f8f4" stroke="#cad4ce"/><image href="../../../shared/safespace-logo.jpeg" x="30" y="20" width="46" height="46" preserveAspectRatio="xMidYMid meet"/>
+  <text x="94" y="46" class="nav" font-size="24" fill="#213c37">SafeSpace</text><text x="94" y="66" font-family="Arial" font-size="11" letter-spacing="2" fill="#708078">BIENESTAR LABORAL</text>
+  <text x="596" y="53" class="nav" fill="#213c37">Inicio</text><rect x="596" y="73" width="42" height="3" fill="#f47f70"/>
+  <text x="672" y="53" class="nav">Producto</text><text x="770" y="53" class="nav">Para empleados y Recursos Humanos</text><text x="1030" y="53" class="nav">Planes</text><text x="1100" y="53" class="nav">Contacto</text><text x="1195" y="53" class="nav">Conócenos</text>
+  <rect x="1300" y="23" width="100" height="43" rx="2" fill="#213936"/><text x="1350" y="50" text-anchor="middle" class="sans" font-size="15" font-weight="700" fill="#fff">Empieza</text>
+  <rect x="1410" y="23" width="22" height="43" fill="#f7f8f4" stroke="#bdc9c2"/><text x="1421" y="49" text-anchor="middle" class="sans" font-size="12" fill="#213936">ES</text>
+  <rect x="0" y="92" width="1440" height="400" fill="url(#sky)"/>
+  <path d="M0 390 135 286 260 324 420 180 596 350 770 220 942 345 1102 242 1250 314 1440 220V492H0Z" fill="#1e3935" opacity=".90"/>
+  <path d="M0 418 205 330 342 374 520 278 700 388 920 300 1100 385 1260 310 1440 370V492H0Z" fill="#122b29" opacity=".62"/>
+  <text x="720" y="248" text-anchor="middle" class="sans" font-size="78" font-weight="800" fill="#f47f70">Un espacio seguro</text>
+  <text x="720" y="338" text-anchor="middle" class="sans" font-size="78" font-weight="800" fill="#f47f70">para estar mejor.</text>
+  <text x="720" y="398" text-anchor="middle" class="copy">Acompañamos a las personas y sus equipos</text><text x="720" y="430" text-anchor="middle" class="copy">con herramientas para el bienestar laboral.</text>
+  <rect x="0" y="492" width="1440" height="508" fill="#f7f8f4"/>
+  <text x="112" y="590" class="small">○  EL PRODUCTO</text><text x="112" y="660" class="dark" font-size="68" font-weight="800">Un ecosistema</text><text x="112" y="728" class="dark" font-size="68" font-weight="800">para escuchar.</text>
+  <text x="112" y="790" class="muted">Desde el registro diario del estado de ánimo y las encuestas</text><text x="112" y="820" class="muted">hasta los reportes, el chat de orientación general y la visión de RR. HH.</text>
+  <g transform="translate(780 610) rotate(-3)" filter="url(#shadow)"><rect width="512" height="285" rx="18" fill="#183732"/><rect x="16" y="18" width="480" height="251" rx="8" fill="#f7f8f4"/><rect x="16" y="18" width="98" height="251" rx="8" fill="#214640"/><circle cx="35" cy="36" r="8" fill="#f47f70"/><text x="53" y="41" class="sans" font-size="8" fill="#fff">SafeSpace</text><rect x="30" y="73" width="64" height="8" rx="4" fill="#f47f70"/><rect x="30" y="98" width="55" height="7" rx="3" fill="#94bca0"/><rect x="30" y="125" width="60" height="7" rx="3" fill="#94bca0"/><text x="135" y="50" class="sans" font-size="12" fill="#28423d">Inicio</text><text x="135" y="82" class="sans" font-size="24" font-weight="700" fill="#203936">Bienvenida, Ana.</text><rect x="135" y="110" width="335" height="52" rx="7" fill="#eef4ee" stroke="#a9c9ae"/><text x="153" y="135" class="sans" font-size="10" fill="#627671">Resumen de bienestar</text><rect x="135" y="182" width="155" height="54" rx="7" fill="#fde4de"/><rect x="310" y="182" width="160" height="54" rx="7" fill="#e6f0e6"/></g>
+</svg>

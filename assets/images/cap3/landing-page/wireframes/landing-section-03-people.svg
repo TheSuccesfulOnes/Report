@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <style>
+    .text{font-family:Arial,sans-serif;fill:#424242}.tiny{font:700 13px Arial;letter-spacing:2px;fill:#777}.muted{font:20px Arial;fill:#707070}.card{fill:#ededed;stroke:#999;stroke-width:2}.line{stroke:#aaa;stroke-width:2}
+  </style>
+  <rect width="1440" height="900" fill="#f8f8f8"/>
+  <rect width="1440" height="88" fill="#ededed" stroke="#b9b9b9"/><text x="48" y="53" class="text" font-size="20" font-weight="800">SafeSpace</text><text x="1158" y="53" class="tiny">PERSONAS / 03</text>
+  <text x="118" y="180" class="tiny">PARA EMPLEADOS Y RECURSOS HUMANOS</text><text x="118" y="262" class="text" font-size="60" font-weight="800">Una misma conversación,</text><text x="118" y="330" class="text" font-size="60" font-weight="800">dos formas de acompañar.</text>
+  <text x="118" y="386" class="muted">Cada perfil encuentra herramientas claras para participar,</text><text x="118" y="418" class="muted">escuchar y tomar decisiones con mayor contexto.</text>
+  <rect x="118" y="502" width="548" height="230" class="card"/><rect x="696" y="502" width="626" height="230" class="card"/>
+  <circle cx="170" cy="552" r="24" fill="#c7c7c7"/><text x="214" y="560" class="text" font-size="26" font-weight="700">Para empleados</text><text x="150" y="622" class="muted">• Registrar el estado de ánimo</text><text x="150" y="655" class="muted">• Responder encuestas y votar actividades</text><text x="150" y="688" class="muted">• Reportar situaciones de forma segura</text>
+  <circle cx="748" cy="552" r="24" fill="#c7c7c7"/><text x="792" y="560" class="text" font-size="26" font-weight="700">Para Recursos Humanos</text><text x="728" y="622" class="muted">• Revisar el pulso general del equipo</text><text x="728" y="655" class="muted">• Gestionar encuestas y actividades</text><text x="728" y="688" class="muted">• Dar seguimiento a reportes</text>
+  <line x1="118" y1="800" x2="1322" y2="800" class="line"/><text x="720" y="844" text-anchor="middle" class="tiny">BLOQUE DE VALOR PARA CADA PERFIL</text>
+</svg>

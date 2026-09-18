@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <style>
+    .text{font-family:Arial,sans-serif;fill:#424242}.tiny{font:700 13px Arial;letter-spacing:2px;fill:#777}.muted{font:19px Arial;fill:#707070}.field{fill:#ededed;stroke:#999;stroke-width:2}.line{stroke:#aaa;stroke-width:2}
+  </style>
+  <rect width="1440" height="900" fill="#f8f8f8"/><rect width="1440" height="88" fill="#ededed" stroke="#b9b9b9"/><text x="48" y="53" class="text" font-size="20" font-weight="800">SafeSpace</text><text x="1245" y="53" class="tiny">CONTACTO / 05</text>
+  <rect x="106" y="146" width="1228" height="594" fill="#eee" stroke="#aaa" stroke-dasharray="10 8"/>
+  <text x="162" y="230" class="tiny">CONTACTO</text><text x="162" y="310" class="text" font-size="61" font-weight="800">Hablemos de bienestar</text><text x="162" y="376" class="text" font-size="61" font-weight="800">laboral.</text><text x="162" y="438" class="muted">Cuéntanos sobre tu organización y te mostraremos cómo</text><text x="162" y="470" class="muted">SafeSpace puede acompañar a tus equipos.</text>
+  <rect x="808" y="214" width="416" height="76" class="field"/><text x="836" y="260" class="muted">Nombre</text><rect x="808" y="314" width="416" height="76" class="field"/><text x="836" y="360" class="muted">Correo electrónico</text><rect x="808" y="414" width="416" height="128" class="field"/><text x="836" y="460" class="muted">Cuéntanos cómo podemos ayudarte</text><rect x="808" y="586" width="182" height="46" fill="#555"/><text x="899" y="615" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">Enviar mensaje</text>
+  <line x1="106" y1="812" x2="1334" y2="812" class="line"/><text x="720" y="852" text-anchor="middle" class="tiny">FORMULARIO DE CONTACTO / LLAMADA A LA ACCIÓN</text>
+</svg>

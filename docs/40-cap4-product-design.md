@@ -6,17 +6,19 @@ En este capítulo se presenta la propuesta integral de diseño del producto **Sa
 
 ## 4.1. Style Guidelines
 
-Las guías de estilo permiten mantener una identidad común entre web y Android, respetando sus patrones de interacción. Esta versión documenta los estilos identificados en los frontends y deja pendiente su conciliación con la landing page cuando se reciba su diseño.
+Las guías de estilo permiten mantener una identidad común entre la landing page, la web y Android, respetando sus patrones de interacción. Esta versión integra la identidad visual observada en los frontends y en la landing page publicada.
 
 ### 4.1.1. General Style Guidelines
 
-![Logo de SafeSpace](../assets/images/cap4/revision-20260911/style-guidelines/SafeSpace-logo.png)
+
 
 El logo de SafeSpace representa la identidad visual del producto y se emplea como referencia en las pantallas de acceso, navegación y materiales de presentación.
 
 #### Branding
 
-La marca visible es **SafeSpace**. Se utiliza el recurso gráfico incluido en los frontends, acompañado del nombre del producto en el acceso y la navegación. Los wireframes usan un placeholder para el logo y las imágenes; los mockups conservan el logo original incrustado.
+La marca visible es **SafeSpace**. El logotipo oficial combina el isotipo coral y verde oscuro con el nombre de la marca y el descriptor **BIENESTAR LABORAL**. Se utiliza en la navegación de la landing page, en el footer y como referencia común para los accesos y las interfaces web y Android. Los mockups de la landing incorporan el recurso gráfico oficial; los wireframes mantienen una representación estructural del logo para priorizar la distribución del contenido.
+
+![Logo oficial de SafeSpace](../assets/images/shared/safespace-logo.jpeg)
 
 #### Tipografía
 
@@ -142,47 +144,67 @@ La Landing Page es el primer punto de contacto para visitantes y potenciales cli
 
 ### 4.3.1. Landing Page Wireframe
 
-Primera vista: Hero principal con propuesta de valor, CTA principal y mockup del flujo móvil.
+Los wireframes se separan según las secciones visibles de la landing page publicada. Se conserva la retícula, la jerarquía de títulos y el orden de navegación, representando con bloques estructurales las imágenes y componentes visuales.
 
-![Landing Page Wireframe 1](../assets/images/cap3/landing-page/wireframes/landing-wireframe-1.png)
+**Sección 01 — Hero.** Navegación principal, selector de idioma, CTA «Empieza» y propuesta de valor.
 
-Segunda vista: Sección de valor y beneficios, enfocada en privacidad, comunicación y seguimiento.
+![Landing Page Wireframe — Hero](../assets/images/cap3/landing-page/wireframes/landing-section-01-hero.svg)
 
-![Landing Page Wireframe 2](../assets/images/cap3/landing-page/wireframes/landing-wireframe-2.png)
+**Sección 02 — Producto.** Presentación del ecosistema SafeSpace y composición de vistas de computadora y celular.
 
-Tercera vista: Insights y métricas para reforzar la visibilidad que obtiene Recursos Humanos.
+![Landing Page Wireframe — Producto](../assets/images/cap3/landing-page/wireframes/landing-section-02-product.svg)
 
-![Landing Page Wireframe 3](../assets/images/cap3/landing-page/wireframes/landing-wireframe-3.png)
+**Sección 03 — Empleados y Recursos Humanos.** Dos formas de acompañar dentro de una misma plataforma.
 
-Cuarta vista: Conversación asistida y soporte digital para empleados.
+![Landing Page Wireframe — Empleados y RR. HH.](../assets/images/cap3/landing-page/wireframes/landing-section-03-people.svg)
 
-![Landing Page Wireframe 4](../assets/images/cap3/landing-page/wireframes/landing-wireframe-4.png)
+**Sección 04 — Planes.** Modalidades mensual y anual, con el selector de moneda y las acciones de elección.
 
-Quinta vista: Cierre comercial con llamada a la acción y formulario de contacto.
+![Landing Page Wireframe — Planes](../assets/images/cap3/landing-page/wireframes/landing-section-04-plans.svg)
 
-![Landing Page Wireframe 5](../assets/images/cap3/landing-page/wireframes/landing-wireframe-5.png)
+**Sección 05 — Contacto.** Mensaje de contacto y formulario para iniciar la conversación con la organización.
+
+![Landing Page Wireframe — Contacto](../assets/images/cap3/landing-page/wireframes/landing-section-05-contact.svg)
+
+**Sección 06 — Conócenos.** Visión, misión y carrusel de perfiles del equipo de SafeSpace.
+
+![Landing Page Wireframe — Conócenos](../assets/images/cap3/landing-page/wireframes/landing-section-06-about.svg)
+
+**Sección 07 — CTA y footer.** Llamada final hacia los planes, enlaces legales, soporte y derechos reservados.
+
+![Landing Page Wireframe — CTA y footer](../assets/images/cap3/landing-page/wireframes/landing-section-07-join-footer.svg)
 
 ### 4.3.2. Landing Page Mock-up
 
-Primera vista: Hero visual con CTA destacado.
+Los mockups incorporan el logotipo oficial y reproducen la composición visual actual de la landing: fondo claro, tipografía de alto contraste, acentos coral, verde oscuro, tarjetas divididas, collage de pantallas, planes, formulario de contacto, perfil del equipo y CTA final.
 
-![Landing Page Mock-up 1](../assets/images/cap3/landing-page/mockups/landing-mockup-1.png)
+**Sección 01 — Hero.**
 
-Segunda vista: Beneficios y comunicación segura.
+![Landing Page Mock-up — Hero](../assets/images/cap3/landing-page/mockups/landing-section-01-hero.svg)
 
-![Landing Page Mock-up 2](../assets/images/cap3/landing-page/mockups/landing-mockup-2.png)
+**Sección 02 — Producto.**
 
-Tercera vista: Panel de métricas.
+![Landing Page Mock-up — Producto](../assets/images/cap3/landing-page/mockups/landing-section-02-product.svg)
 
-![Landing Page Mock-up 3](../assets/images/cap3/landing-page/mockups/landing-mockup-3.png)
+**Sección 03 — Empleados y Recursos Humanos.**
 
-Cuarta vista: Asistente y soporte.
+![Landing Page Mock-up — Empleados y RR. HH.](../assets/images/cap3/landing-page/mockups/landing-section-03-people.svg)
 
-![Landing Page Mock-up 4](../assets/images/cap3/landing-page/mockups/landing-mockup-4.png)
+**Sección 04 — Planes.**
 
-Quinta vista: Cierre de conversión y contacto.
+![Landing Page Mock-up — Planes](../assets/images/cap3/landing-page/mockups/landing-section-04-plans.svg)
 
-![Landing Page Mock-up 5](../assets/images/cap3/landing-page/mockups/landing-mockup-5.png)
+**Sección 05 — Contacto.**
+
+![Landing Page Mock-up — Contacto](../assets/images/cap3/landing-page/mockups/landing-section-05-contact.svg)
+
+**Sección 06 — Conócenos.**
+
+![Landing Page Mock-up — Conócenos](../assets/images/cap3/landing-page/mockups/landing-section-06-about.svg)
+
+**Sección 07 — CTA y footer.**
+
+![Landing Page Mock-up — CTA y footer](../assets/images/cap3/landing-page/mockups/landing-section-07-join-footer.svg)
 
 ---
 

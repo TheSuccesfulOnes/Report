@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <style>
+    .text{font-family:Arial,sans-serif;fill:#424242}.tiny{font:700 13px Arial;letter-spacing:2px;fill:#777}.muted{font:20px Arial;fill:#707070}.line{stroke:#aaa;stroke-width:2}.card{fill:#ededed;stroke:#aaa;stroke-width:2}
+  </style>
+  <rect width="1440" height="900" fill="#f8f8f8"/>
+  <rect width="1440" height="88" fill="#ededed" stroke="#b9b9b9"/><text x="48" y="53" class="text" font-size="20" font-weight="800">SafeSpace</text><text x="1215" y="53" class="tiny">PRODUCTO / 02</text>
+  <rect x="94" y="145" width="1252" height="610" fill="#f8f8f8" stroke="#aaa" stroke-dasharray="10 8"/>
+  <line x1="720" y1="195" x2="720" y2="710" class="line"/>
+  <text x="145" y="228" class="tiny">○  EL PRODUCTO</text>
+  <text x="145" y="324" class="text" font-size="66" font-weight="800">Un ecosistema</text><text x="145" y="394" class="text" font-size="66" font-weight="800">para escuchar.</text>
+  <text x="145" y="464" class="muted">SafeSpace reúne en un solo espacio las herramientas</text><text x="145" y="496" class="muted">necesarias para cuidar el bienestar laboral.</text>
+  <rect x="145" y="560" width="452" height="90" class="card"/><text x="168" y="596" class="text" font-size="18" font-weight="700">Registro diario, encuestas y reportes</text><text x="168" y="625" class="muted" font-size="16">Contenido de apoyo para la sección.</text>
+  <g transform="translate(790 253)"><rect width="448" height="322" rx="18" class="card"/><rect x="18" y="18" width="100" height="286" fill="#c9c9c9"/><rect x="138" y="38" width="260" height="18" fill="#b2b2b2"/><rect x="138" y="80" width="180" height="28" fill="#d0d0d0"/><rect x="138" y="135" width="260" height="58" fill="#e2e2e2" stroke="#aaa"/><rect x="138" y="218" width="120" height="55" fill="#d5d5d5"/><rect x="278" y="218" width="120" height="55" fill="#d5d5d5"/><text x="224" y="145" text-anchor="middle" class="tiny">IMAGEN / MOCKUP DEL PRODUCTO</text></g>
+  <text x="720" y="830" text-anchor="middle" class="tiny">SISTEMA CONECTADO PARA EMPLEADOS Y RECURSOS HUMANOS</text>
+</svg>

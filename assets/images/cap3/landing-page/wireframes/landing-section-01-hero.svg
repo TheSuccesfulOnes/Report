@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <style>
+    .line{stroke:#9a9a9a;stroke-width:2}.fill{fill:#ededed}.dark{fill:#353535}.text{font-family:Arial,sans-serif;fill:#454545}.tiny{font:700 13px Arial;letter-spacing:2px;fill:#777}.nav{font:700 16px Arial;fill:#555}.title{font:800 74px Arial;fill:#fff}.copy{font:22px Arial;fill:#fff}
+  </style>
+  <rect width="1440" height="900" fill="#f8f8f8"/>
+  <rect width="1440" height="104" class="fill" stroke="#b9b9b9"/>
+  <rect x="28" y="22" width="58" height="58" rx="18" fill="#dadada" stroke="#999"/>
+  <text x="102" y="52" class="text" font-size="25" font-weight="800">SafeSpace</text>
+  <text x="102" y="73" class="tiny">BIENESTAR LABORAL</text>
+  <text x="586" y="61" class="nav">Inicio</text><line x1="586" y1="82" x2="628" y2="82" stroke="#888" stroke-width="4"/>
+  <text x="662" y="61" class="nav">Producto</text><text x="760" y="61" class="nav">Para empleados y RR. HH.</text><text x="1018" y="61" class="nav">Planes</text><text x="1087" y="61" class="nav">Contacto</text><text x="1183" y="61" class="nav">Conócenos</text>
+  <rect x="1300" y="25" width="100" height="48" fill="#555"/><text x="1350" y="56" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">Empieza</text>
+  <rect x="1415" y="25" width="25" height="48" fill="#f8f8f8" stroke="#999"/><text x="1428" y="55" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">ES</text>
+  <rect y="104" width="1440" height="520" fill="#d0d0d0"/>
+  <rect x="0" y="104" width="1440" height="520" fill="#555" opacity=".42"/>
+  <text x="720" y="238" text-anchor="middle" class="tiny" fill="#fff">IMAGEN DE MONTAÑA / HERO</text>
+  <rect x="128" y="172" width="1184" height="388" fill="none" stroke="#cfcfcf" stroke-dasharray="9 8"/>
+  <text x="720" y="348" text-anchor="middle" class="title">Un espacio seguro</text><text x="720" y="430" text-anchor="middle" class="title">para estar mejor.</text>
+  <text x="720" y="500" text-anchor="middle" class="copy">Acompañamos a las personas y sus equipos</text><text x="720" y="533" text-anchor="middle" class="copy">con herramientas para el bienestar laboral.</text>
+  <rect y="624" width="1440" height="276" fill="#f8f8f8"/>
+  <text x="112" y="696" class="tiny">SECCIÓN SIGUIENTE</text><text x="112" y="760" class="text" font-size="58" font-weight="800">Un ecosistema para escuchar.</text>
+  <rect x="1060" y="680" width="242" height="132" fill="#e0e0e0" stroke="#a0a0a0"/><text x="1181" y="750" text-anchor="middle" class="tiny">DASHBOARD</text>
+</svg>
