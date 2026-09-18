@@ -41,7 +41,7 @@ El Performance Report del AV1 se entrega como documento independiente en formato
 | Needfinding Interviews | Entrevistas y análisis de necesidades de empleados y RR. HH. | Evidencia documentada en el Capítulo II; no se exige un video independiente para AV1. |
 | Prototypes/Product Navigation | Navegación por la landing, frontend web y prototipos. | Flujos documentados en los Capítulos III y IV. |
 | Validation Interviews | Interacción de usuarios con la solución. | Se realizará en una siguiente actividad de validación. |
-| About the Product | Modelo de negocio, características y beneficios de SafeSpace. | Pendiente de grabación y publicación. |
+| About the Product | Modelo de negocio, características y beneficios de SafeSpace. | Publicado en [YouTube](https://youtu.be/LQMtdRskbRs) y [Microsoft 365](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQCGpIJb9aonTLG1yEctvKw2ASu2vkNiDx2fEkP3M_4wXiA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g11Gr9); duración: 02:06. |
 | About the Team | Proceso de trabajo y aportes de los seis integrantes. | No requerido para AV1; corresponde a una entrega posterior si se solicita. |
 | Exposición AV1 | Presentación del informe y de los artefactos del avance. | Se incorporará al cargar el video de exposición. |
 
