@@ -473,24 +473,30 @@ Captura general de GitHub Insights para AV1:
 
 ## 5.3. Video About-the-Product
 
-El video presenta el problema de comunicación y bienestar laboral, la propuesta de SafeSpace y una demostración breve de las versiones implementadas. Debe mostrar resultados reales, usar datos ficticios o anonimizados y distinguir las funciones disponibles de las que siguen en desarrollo.
+El video **About the Product-SafeSpace** presenta el problema de comunicación y bienestar laboral, la propuesta de valor de SafeSpace, su modelo de suscripción y un recorrido promocional por la Landing Page y la aplicación web. Durante la demostración se muestran el registro del estado de ánimo, las encuestas, los reportes confidenciales, el asistente de IA y las herramientas de gestión disponibles para Recursos Humanos.
 
-| Campo                | Información                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| :------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Título               | SafeSpace — bienestar laboral seguro y humano                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Video                | [Ver About the Product](https://upcedupe-my.sharepoint.com/personal/u202412316_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202412316%5Fupc%5Fedu%5Fpe%2FDocuments%2Fabout%20the%20product%2FAbout%20the%20Product%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0%3D&ga=1) |
-| Alcance            | Presenta el problema, la propuesta de valor y una demostración de SafeSpace para el AV1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Fecha de entrega   | 18/09/2026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Campo | Información |
+| :---- | :---------- |
+| Título | About the Product-SafeSpace |
+| Duración | 02:06 |
+| URL Microsoft Stream / OneDrive | [Ver video en Microsoft 365](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQCGpIJb9aonTLG1yEctvKw2ASu2vkNiDx2fEkP3M_4wXiA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g11Gr9) |
+| Archivo compartido | [Abrir enlace compartido por el equipo](<https://upcedupe-my.sharepoint.com/personal/u202412316_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202412316%5Fupc%5Fedu%5Fpe%2FDocuments%2Fabout%20the%20product%2FAbout%20the%20Product%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1>) |
+| URL YouTube | [Ver video en YouTube](https://youtu.be/LQMtdRskbRs) |
+| Captura/miniatura |![Captura del video About the Product-SafeSpace](../assets/images/cap5/landing/landing-desktop.png)  |
+| Ubicación en la landing | El enlace de YouTube queda disponible para su incorporación en la sección de presentación del producto. |
 
-|   Tiempo    | Contenido                                                         |
-| :---------: | :---------------------------------------------------------------- |
-| 00:00–00:20 | Problema que enfrentan los empleados y RR. HH.                    |
-| 00:20–00:45 | Propuesta de valor de SafeSpace y segmentos a los que sirve.      |
-| 00:45–01:20 | Demostración de la landing y su acción principal.                 |
-| 01:20–02:00 | Flujo implementado de la aplicación web para RR. HH.              |
-| 02:00–02:40 | Flujo implementado de la aplicación móvil Android para empleados. |
-| 02:40–03:00 | Resultado del flujo y cierre.                                     |
+| Tiempo | Contenido |
+| :----: | :-------- |
+| 00:00–00:15 | Presentación del problema de bienestar y comunicación dentro del entorno laboral. |
+| 00:15–00:22 | Identidad de SafeSpace y presentación inicial del modelo de suscripción en la Landing Page. |
+| 00:22–00:38 | Recorrido del empleado por la aplicación web: historial del asistente, registro del estado de ánimo y participación en encuestas. |
+| 00:38–00:47 | Contexto organizacional y necesidad de contar con información para la gestión de Recursos Humanos. |
+| 00:47–01:08 | Creación de un reporte confidencial y revisión administrativa de reportes y estados. |
+| 01:08–01:23 | Demostración del historial y de una conversación con el asistente de IA. |
+| 01:23–01:38 | Gestión de actividades semanales y encuestas desde el espacio de Recursos Humanos. |
+| 01:38–01:53 | Recorrido por los planes de suscripción y el formulario de contacto de la Landing Page. |
+| 01:53–02:02 | Síntesis de los beneficios y presentación del ecosistema web y móvil de SafeSpace. |
+| 02:02–02:06 | Cierre con la identidad visual del producto. |
 
-El video incluye al menos una opinión de un representante de cada segmento objetivo. Registrar su autorización para aparecer, utilizar extractos breves y evitar datos personales o información laboral identificable. Si no se cuenta con esas opiniones, no presentar esta fila como cumplida y consultar el criterio de evaluación.
 
 \newpage
