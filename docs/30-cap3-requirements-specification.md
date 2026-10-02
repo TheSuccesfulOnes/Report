@@ -1,56 +1,42 @@
 ﻿# Capítulo III: Requirements Specification
 
-En este capítulo se detallan los requisitos funcionales y no funcionales del sistema SafeSpace, así como las historias de usuario que guiarán el desarrollo de la aplicación móvil. Se presentan los escenarios To-Be que describen la experiencia ideal para los usuarios finales, segmentados por tipo de usuario (empleados y RRHH). Además, se organizan los requisitos en Epics y User Stories con criterios de aceptación claros para asegurar una implementación alineada con las necesidades del negocio y las expectativas de los usuarios.
+En este capítulo se detallan los requisitos funcionales de SafeSpace y las User Stories que trazan las capacidades disponibles para empleados, miembros de RRHH y administradores. Se presentan escenarios To-Be, épicas, criterios de aceptación y el Product Backlog para mantener coherencia entre las necesidades del negocio, la implementación y las evidencias del Trabajo Parcial.
 
 ## 3.1. To-Be Scenario Mapping
 
-En esta sección se describen los escenarios To-Be para los principales segmentos de usuarios de SafeSpace, enfocándose en las acciones, pensamientos y emociones que experimentan a lo largo de su interacción con la aplicación. Estos escenarios ayudan a visualizar la experiencia ideal y a identificar oportunidades clave para mejorar el bienestar laboral mediante la tecnología.
+SafeSpace propone flujos trazables para empleados, miembros de RRHH y administradores. Los escenarios se centran en funciones implementadas y documentadas: acceso seguro, registro de bienestar, encuestas, actividades, reportes, gestión de cuentas y asistencia conversacional.
 
-### 1. Segmento: Empleados de la empresa
+### Escenario To-Be: Empleado
 
-**Objetivo:** Brindar una experiencia proactiva, personalizada y continua que permita al empleado identificar, entender y mejorar su bienestar y desempeño laboral con apoyo tecnológico y acompañamiento estructurado.
+Un empleado crea una cuenta o inicia sesión. Si pierde el acceso, solicita la recuperación de contraseña. Ya autenticado, actualiza sus preferencias, registra su estado de ánimo diario y consulta las encuestas y actividades disponibles. Puede responder una encuesta una sola vez, participar mediante comentarios y votos, reportar una situación de forma identificada o anónima y utilizar el asistente conversacional en un espacio privado.
 
-| Fase                         | Acciones (Doing)                                                                                               | Pensamientos (Thinking)                                                                | Emociones (Feeling)     |
-| :--------------------------- | :------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- | :---------------------- |
-| Descubrimiento               | Recibe alertas inteligentes o recomendaciones basadas en su comportamiento laboral (estrés, desempeño, clima). | "Esto refleja exactamente lo que estoy sintiendo, no lo había identificado tan claro." | Sorpresa, interés       |
-| Acceso y diagnóstico         | Ingresa a la aplicación y completa un diagnóstico guiado e interactivo.                                        | "El proceso es claro y parece adaptado a mi situación."                                | Confianza, curiosidad   |
-| Visualización de resultados  | Recibe un análisis personalizado con indicadores claros, riesgos y oportunidades de mejora.                    | "Ahora entiendo qué está pasando y por qué."                                           | Claridad, tranquilidad  |
-| Plan de acción personalizado | Accede a recomendaciones específicas: micro-hábitos, recursos, sesiones o rutas de mejora.                     | "Tengo pasos concretos que puedo seguir para mejorar."                                 | Motivación, seguridad   |
-| Acompañamiento continuo      | Recibe seguimiento automatizado, recordatorios y retroalimentación adaptativa.                                 | "No estoy solo en este proceso, hay un seguimiento real."                              | Apoyo, compromiso       |
-| Evolución y mejora           | Observa su progreso mediante métricas y ajustes dinámicos en su plan.                                          | "Estoy mejorando y puedo ver resultados reales."                                       | Satisfacción, confianza |
+| Momento | Resultado esperado | User Stories relacionadas |
+| :--- | :--- | :--- |
+| Acceso y recuperación | El empleado obtiene o recupera acceso mediante credenciales protegidas. | US01, US02, US03, US04 |
+| Bienestar y participación | Registra su mood, responde encuestas, comenta y vota en actividades abiertas. | US06, US08, US09, US12, US13, US14, US15 |
+| Comunicación y apoyo | Envía reportes con el nivel de identificación que elija y usa conversaciones privadas de asistencia. | US17, US18, US21, US22 |
 
+### Escenario To-Be: Miembro de RRHH
 
-### 2. Segmento: Área de Recursos Humanos (RRHH)
+Un miembro de RRHH inicia sesión y consulta el resumen diario de estados de ánimo para conocer el nivel de participación. Gestiona encuestas y actividades, y revisa los reportes recibidos para darles seguimiento según su estado. Las acciones disponibles se restringen de acuerdo con su rol.
 
-**Objetivo:** Optimizar la toma de decisiones mediante datos en tiempo real, automatización de procesos y herramientas de análisis que permitan intervenciones más efectivas y personalizadas.
+| Momento | Resultado esperado | User Stories relacionadas |
+| :--- | :--- | :--- |
+| Consulta de bienestar | Accede a la distribución diaria de moods y a la tasa de respuesta. | US07 |
+| Gestión de participación | Crea, publica, cierra o reabre encuestas y actividades. | US10, US16 |
+| Seguimiento de casos | Consulta y actualiza el estado de los reportes registrados. | US19 |
 
-| Fase                        | Acciones (Doing)                                                                                     | Pensamientos (Thinking)                                        | Emociones (Feeling)      |
-| :-------------------------- | :--------------------------------------------------------------------------------------------------- | :------------------------------------------------------------- | :----------------------- |
-| Monitoreo inteligente       | Accede a dashboards con indicadores en tiempo real sobre clima, desempeño y bienestar.               | "Ahora tengo visibilidad clara y actualizada de la situación." | Control, seguridad       |
-| Detección predictiva        | El sistema identifica riesgos y patrones antes de que escalen (burnout, rotación, bajo rendimiento). | "Puedo anticiparme en lugar de reaccionar tarde."              | Confianza, proactividad  |
-| Segmentación y priorización | Clasifica empleados según niveles de riesgo o necesidad de intervención.                             | "Sé exactamente dónde enfocar mis esfuerzos."                  | Claridad, eficiencia     |
-| Diseño de intervenciones    | Genera planes de acción personalizados o grupales basados en datos reales.                           | "Las decisiones que tomo están respaldadas por evidencia."     | Seguridad, determinación |
-| Implementación automatizada | Ejecuta programas, seguimiento y comunicación mediante la aplicación.                                | "Esto reduce mi carga operativa significativamente."           | Alivio, productividad    |
-| Evaluación de impacto       | Mide resultados con métricas claras y ajusta estrategias en tiempo real.                             | "Puedo demostrar el impacto real de las acciones."             | Satisfacción, logro      |
+### Escenario To-Be: Administrador del sistema
 
----
+El administrador mantiene las cuentas, controla las operaciones administrativas de encuestas y actividades y registra planes y comprobantes de pago. Las reglas de autorización protegen la cuenta propietaria y evitan que el sistema quede sin una cuenta administrativa activa.
 
-### Diferenciales clave del escenario To-Be
+| Momento | Resultado esperado | User Stories relacionadas |
+| :--- | :--- | :--- |
+| Administración de cuentas | Gestiona usuarios, roles, estados y restablecimientos de contraseña. | US05 |
+| Administración avanzada | Edita, elimina o reabre encuestas y administra actividades según las reglas del sistema. | US11, US16 |
+| Gestión de pagos | Consulta planes y registra comprobantes de pago válidos. | US20 |
 
-- Enfoque proactivo y predictivo en lugar de reactivo.
-- Personalización basada en datos individuales y patrones colectivos.
-- Integración de tecnología para diagnóstico, seguimiento y análisis.
-- Mejora continua con retroalimentación en tiempo real.
-- Reducción de fricción en la comunicación entre empleados y RRHH.
-
----
-
-### Insight estratégico
-
-El sistema transforma la relación entre empleados y RRHH en un modelo basado en datos, prevención y acompañamiento continuo, donde:
-
-- El empleado pasa de la incertidumbre a la autogestión guiada.
-- RRHH pasa de la reacción a la toma de decisiones estratégica basada en evidencia.
+Estos escenarios permiten relacionar las necesidades de cada rol con las 22 User Stories y con las evidencias de implementación y prueba del Trabajo Parcial.
 
 ## 3.2. User Stories
 
@@ -62,7 +48,7 @@ En esta sección se presentan los Epics definidos para organizar y agrupar las f
 
 | Epic / ID | Nombre | Objetivo | Historias relacionadas |
 | :-------- | :----- | :------- | :--------------------- |
-| EP01 | Acceso, identidad y administración de usuarios | Permitir el registro, autenticación, configuración de perfiles y administración de cuentas según el rol. | US01, US02, US04, US05 |
+| EP01 | Acceso, identidad y administración de usuarios | Permitir el registro, autenticación, recuperación de acceso, configuración de perfiles y administración de cuentas según el rol. | US01, US02, US03, US04, US05 |
 | EP02 | Bienestar y estado de ánimo | Registrar el estado de ánimo de los empleados y ofrecer a RR. HH. un resumen del bienestar del equipo. | US06, US07 |
 | EP03 | Encuestas y participación | Publicar y responder encuestas, gestionar sus estados y facilitar comentarios, respuestas y reacciones. | US08, US09, US10, US11, US12, US13 |
 | EP04 | Actividades y votaciones semanales | Proponer actividades grupales y permitir que los empleados voten y cambien su elección. | US14, US15, US16 |
@@ -76,6 +62,7 @@ En esta sección se presentan los Epics definidos para organizar y agrupar las f
 | :--------------- | :----------------- | :----------- | :---------------------- | :---- |
 | US01 | Registro de empleados | Como empleado de una organización, quiero registrar una cuenta con username, email, nombre visible y contraseña, para acceder de forma segura a las funcionalidades de bienestar. | Escenario 1: con username y email disponibles, una contraseña de al menos 8 caracteres y confirmación correcta, se crea un usuario `EMPLOYEE`. Escenario 2: un registro válido devuelve un JWT y los datos básicos. Escenario 3: un username o email repetido se rechaza. | EP01 |
 | US02 | Inicio de sesión con credenciales | Como usuario registrado, quiero iniciar sesión usando mi username o email y mi contraseña, para obtener acceso autenticado al backend. | Escenario 1: un usuario habilitado con credenciales correctas recibe un JWT con su identidad y rol. Escenario 2: un identificador o contraseña incorrectos rechazan el acceso. Escenario 3: un usuario deshabilitado no puede iniciar sesión. | EP01 |
+| US03 | Recuperación de contraseña de empleados | Como empleado habilitado que olvidó su contraseña, quiero solicitar un enlace temporal y definir una contraseña nueva, para recuperar el acceso a mi cuenta. | Escenario 1: al solicitar recuperación para una cuenta habilitada se genera un token temporal protegido. Escenario 2: un token válido, no usado y no expirado permite actualizar la contraseña. Escenario 3: una cuenta desconocida recibe el mismo mensaje genérico que una cuenta válida. Escenario 4: las solicitudes se limitan por identificador. | EP01 |
 | US04 | Actualización de perfil y preferencias | Como usuario autenticado, quiero actualizar mi username, email, nombre visible, idioma y tema, para mantener configurada mi cuenta según mis necesidades. | Escenario 1: un username disponible permite guardar los cambios y renovar el JWT si corresponde. Escenario 2: un email utilizado por otra cuenta se rechaza. Escenario 3: un empleado no puede eliminar su email. Escenario 4: un idioma y tema válidos se almacenan en preferencias. | EP01 |
 | US05 | Administración de usuarios | Como administrador del sistema, quiero listar, crear, actualizar, habilitar, deshabilitar, eliminar usuarios y restablecer contraseñas, para controlar las cuentas y permisos de la plataforma. | Escenario 1: un administrador autenticado consulta datos básicos, rol, estado y propietario. Escenario 2: las contraseñas nuevas se codifican con BCrypt. Escenario 3: no se elimina ni deshabilita al último administrador. Escenario 4: la cuenta propietaria no puede ser modificada por otro administrador. Escenario 5: un usuario con encuestas o actividades se deshabilita en vez de eliminarse. | EP01 |
 | US06 | Registro diario de estado de ánimo | Como usuario autenticado, quiero registrar mi estado de ánimo del día, para dejar constancia de mi percepción diaria de bienestar. | Escenario 1: si no existe una entrada para la fecha actual, se guarda un mood válido. Escenario 2: un segundo registro del mismo día se rechaza. Escenario 3: la consulta devuelve el valor y la fecha. Escenario 4: los valores permitidos son `VERY_BAD`, `BAD`, `GOOD` y `VERY_GOOD`. | EP02 |
@@ -85,7 +72,7 @@ En esta sección se presentan los Epics definidos para organizar y agrupar las f
 | US10 | Gestión operativa de encuestas | Como miembro de RRHH o administrador del sistema, quiero crear, consultar, publicar y cerrar encuestas, para administrar las preguntas de bienestar. | Escenario 1: un título, pregunta y tipo válidos crean una encuesta en `DRAFT`. Escenario 2: una encuesta pasa a `PUBLISHED` o `CLOSED`. Escenario 3: el listado gestionado incluye todos los estados. Escenario 4: los roles permitidos son `HR_MEMBER` y `SYSTEM_ADMIN`. | EP03 |
 | US11 | Administración avanzada de encuestas | Como administrador del sistema, quiero editar, reabrir, eliminar encuestas y consultar sus respuestas detalladas, para realizar la gestión administrativa completa. | Escenario 1: se actualizan título, pregunta, tipo y comentarios. Escenario 2: una encuesta puede reabrirse y volver a `DRAFT`. Escenario 3: al eliminarla, se eliminan sus respuestas y comentarios. Escenario 4: las respuestas incluyen usuario, email, nombre, texto y fecha. Escenario 5: el rol requerido es `SYSTEM_ADMIN`. | EP03 |
 | US12 | Comentarios anidados en encuestas | Como usuario autenticado, quiero publicar comentarios y respuestas sobre una encuesta que permita comentarios, para participar en una conversación relacionada con la pregunta. | Escenario 1: un contenido no vacío crea un comentario asociado al usuario. Escenario 2: un `parentId` existente crea una respuesta anidada. Escenario 3: una encuesta con comentarios deshabilitados no acepta comentarios. Escenario 4: el listado devuelve comentarios raíz, respuestas, fecha y likes. | EP03 |
-| US13 | Like de comentarios | Como usuario autenticado, quiero marcar un comentario con un like, para expresar que considero útil su contenido. | Escenario 1: al pulsar like sobre un comentario sin like propio, se crea una interacción única. Escenario 2: un comentario inexistente no acepta el like. | EP03 |
+| US13 | Like o unlike de comentarios | Como usuario autenticado, quiero marcar o desmarcar un comentario con un like, para expresar si considero útil su contenido. | Escenario 1: al pulsar like sobre un comentario sin like propio, se crea una interacción única. Escenario 2: al pulsar nuevamente sobre un comentario ya marcado, se elimina la interacción. Escenario 3: un comentario inexistente no acepta la operación. | EP03 |
 | US14 | Consulta de actividades abiertas | Como usuario autenticado, quiero consultar las actividades semanales abiertas y sus opciones, para elegir en cuál participar. | Escenario 1: una actividad `OPEN` devuelve título, descripción, estado, opciones y estadísticas. Escenario 2: las actividades cerradas no aparecen en el listado público. Escenario 3: una actividad sin votos devuelve porcentajes en 0. | EP04 |
 | US15 | Votación y cambio de voto | Como usuario autenticado, quiero votar por una opción de una actividad abierta y poder cambiar mi voto, para participar en la decisión semanal. | Escenario 1: un voto sobre una opción de una actividad abierta se registra. Escenario 2: un nuevo voto reemplaza el anterior. Escenario 3: no se vota en actividades cerradas ni con opciones de otra actividad. | EP04 |
 | US16 | Gestión de actividades semanales | Como miembro de RRHH o administrador del sistema, quiero crear, consultar, cerrar y reabrir actividades semanales, para administrar las dinámicas participativas. | Escenario 1: un título y opciones válidos crean una actividad abierta. Escenario 2: una actividad puede cerrarse y dejar de aceptar votos. Escenario 3: una actividad cerrada puede reabrirse. Escenario 4: si ya tiene votos, sus opciones no cambian. Escenario 5: las rutas `/admin` requieren `SYSTEM_ADMIN`. | EP04 |
@@ -110,6 +97,7 @@ En esta sección se presentan los Epics definidos para organizar y agrupar las f
 | ------ | ---- | --------------------------------------------- | ---- |
 | SSB-1  | US01 | Registro de empleados                         | EP01 |
 | SSB-2  | US02 | Inicio de sesión con credenciales             | EP01 |
+| SSB-3  | US03 | Recuperación de contraseña de empleados       | EP01 |
 | SSB-4  | US04 | Actualización de perfil y preferencias        | EP01 |
 | SSB-5  | US05 | Administración de usuarios                    | EP01 |
 | SSB-6  | US06 | Registro diario de estado de ánimo            | EP02 |
@@ -119,7 +107,7 @@ En esta sección se presentan los Epics definidos para organizar y agrupar las f
 | SSB-10 | US10 | Gestión operativa de encuestas                | EP03 |
 | SSB-11 | US11 | Administración avanzada de encuestas          | EP03 |
 | SSB-12 | US12 | Comentarios anidados en encuestas             | EP03 |
-| SSB-13 | US13 | Like de comentarios                           | EP03 |
+| SSB-13 | US13 | Like o unlike de comentarios                  | EP03 |
 | SSB-14 | US14 | Consulta de actividades abiertas              | EP04 |
 | SSB-15 | US15 | Votación y cambio de voto                     | EP04 |
 | SSB-16 | US16 | Gestión de actividades semanales              | EP04 |

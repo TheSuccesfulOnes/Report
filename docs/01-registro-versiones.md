@@ -26,6 +26,14 @@
       Entrega AV1: elaboración de los cinco capítulos del informe, del Capítulo I al Capítulo V.
     </td>
   </tr>
+  <tr>
+    <td align="center">V1.1.0</td>
+    <td align="center">01/10/26</td>
+    <td>Cayanchi Avila, Milenko Ruben</td>
+    <td>
+      Trabajo Parcial: actualización del Student Outcome y ampliación del Capítulo III con el escenario To-Be, las 22 User Stories y el Product Backlog alineado con las funcionalidades documentadas.
+    </td>
+  </tr>
 
 </tbody>
 </table>
