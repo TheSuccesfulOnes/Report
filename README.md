@@ -40,6 +40,8 @@
 │   ├── 30-cap3-requirements-specification.md
 │   ├── 40-cap4-product-design.md
 │   ├── 50-cap5-product-implementation.md
+│   ├── 60-cap6-product-verification-validation.md
+│   ├── 70-cap7-devops-practices.md
 │   ├── 90-conclusiones.md
 │   ├── bibliografia.md
 │   └── anexos.md

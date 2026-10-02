@@ -122,6 +122,14 @@ Referencias en formato **APA 7ma edición** (https://normas-apa.org/).
 
 55. GDPR. (2016). *General Data Protection Regulation (EU) 2016/679*. https://eur-lex.europa.eu/eli/reg/2016/679/oj
 
+56. JUnit Team. (2026). *JUnit 5 User Guide*. https://docs.junit.org/current/user-guide/
+
+57. Mockito. (2026). *Mockito documentation*. https://site.mockito.org/
+
+58. Cucumber. (2026). *Cucumber reference*. https://cucumber.io/docs/cucumber/
+
+59. Apache Maven. (2026). *Maven Surefire Plugin*. https://maven.apache.org/surefire/maven-surefire-plugin/
+
 ---
 
 > **Nota:** Actualizar esta lista en cada entrega agregando nuevas referencias utilizadas. Verificar formato APA 7ma edición para cada entrada.

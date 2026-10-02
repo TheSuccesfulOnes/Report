@@ -1,6 +1,6 @@
 # Capítulo V: Product Implementation
 
-Este capítulo documenta la configuración, implementación y evidencia verificable de SafeSpace durante el Avance 1. La trazabilidad se mantiene entre las historias del Product Backlog, las tareas del Sprint, los cambios en los repositorios, las pruebas y la ejecución de cada producto. Las capturas, enlaces y datos de planificación deben corresponder al trabajo realmente realizado por el equipo.
+Este capítulo documenta la configuración, implementación y evidencia verificable de SafeSpace para el Trabajo Parcial. Mantiene como línea base las evidencias presentadas en AV1 y las actualiza cuando existe una modificación comprobable en repositorios, despliegues, enlaces o capturas. La trazabilidad se mantiene entre las historias del Product Backlog, las tareas del Sprint, los cambios en los repositorios, las pruebas y la ejecución de cada producto.
 
 ## 5.1. Software Configuration Management
 
@@ -67,7 +67,7 @@ El equipo identifica las versiones mediante el formato MAJOR.MINOR.PATCH:
 | MINOR      | Se añade funcionalidad compatible.                           |
 | PATCH      | Se corrige un defecto o se realiza una mejora compatible.    |
 
-Versión entregada en AV1: versión 1 para landing, frontend web, frontend administrativo, aplicación móvil y API. El informe se registra como V1.0.0.
+Para el Trabajo Parcial se conserva como base técnica la versión 1 de la landing, frontend web, frontend administrativo, aplicación móvil y API documentada en AV1. El informe se registra como V1.1.0; los commits y URLs siguientes se mantienen hasta contar con una actualización verificable.
 
 #### Conventional Commits
 
@@ -141,7 +141,7 @@ El despliegue debe poder repetirse desde una rama y un commit identificables. La
 5. Publicar desde la rama configurada o distribuir el artefacto Android.
 6. Abrir la URL/artefacto y comprobar los flujos descritos en 5.2.
 
-Comandos exactos revisados en los repositorios para AV1:
+Comandos de referencia verificados para la base técnica de TB1:
 
 - Landing Page: `npm install`, `npm run dev`, `npm run build`, `npm run lint`.
 - Frontend web: `npm install`, `npm run dev` y `npm run build`.
@@ -159,9 +159,7 @@ Esta sección presenta las funcionalidades y productos desarrollados por el equi
 
 ### 5.2.1. Sprint Backlogs
 
-Como se mencionó previamente en el planeamiento del sprint número 1, el objetivo del mismo es desarrollar y desplegar una primera versión funcional de SafeSpace. Esto conlleva implementar las funcionalidades priorizadas para empleados, miembros de RR. HH. y administradores, relacionadas con el bienestar laboral, la comunicación y el seguimiento de situaciones que requieren atención.
-
-Luego de definir el objetivo del sprint, se identificaron las historias de usuario útiles para este sprint. A continuación, se dividió cada historia de usuario en tareas relacionadas a la implementación y cumplimiento de dicha historia. Para ello, se utilizó la aplicación Jira que nos ayuda a gestionar el progreso del sprint.
+El Sprint Backlog consolida las User Stories priorizadas para SafeSpace. Mantiene la misma nomenclatura y las mismas épicas del Product Backlog del Capítulo III; el detalle de tareas y el progreso del sprint se registran en Jira.
 
 [Jira Board - SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog)
 
@@ -172,6 +170,7 @@ Luego de definir el objetivo del sprint, se identificaron las historias de usuar
 | ------ | ---- | --------------------------------------------- | ---- |
 | SSB-1  | US01 | Registro de empleados                         | EP01 |
 | SSB-2  | US02 | Inicio de sesión con credenciales             | EP01 |
+| SSB-3  | US03 | Recuperación de contraseña de empleados       | EP01 |
 | SSB-4  | US04 | Actualización de perfil y preferencias        | EP01 |
 | SSB-5  | US05 | Administración de usuarios                    | EP01 |
 | SSB-6  | US06 | Registro diario de estado de ánimo            | EP02 |
@@ -181,7 +180,7 @@ Luego de definir el objetivo del sprint, se identificaron las historias de usuar
 | SSB-10 | US10 | Gestión operativa de encuestas                | EP03 |
 | SSB-11 | US11 | Administración avanzada de encuestas          | EP03 |
 | SSB-12 | US12 | Comentarios anidados en encuestas             | EP03 |
-| SSB-13 | US13 | Like de comentarios                           | EP03 |
+| SSB-13 | US13 | Like o unlike de comentarios                  | EP03 |
 | SSB-14 | US14 | Consulta de actividades abiertas              | EP04 |
 | SSB-15 | US15 | Votación y cambio de voto                     | EP04 |
 | SSB-16 | US16 | Gestión de actividades semanales              | EP04 |
