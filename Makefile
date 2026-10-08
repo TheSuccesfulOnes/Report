@@ -24,7 +24,7 @@ PDF_TB2 = $(OUTPUT_DIR)/report-tb2.pdf
 
 PANDOC = pandoc
 PANDOC_FLAGS = \
-	--from markdown+pipe_tables+table_captions+yaml_metadata_block+implicit_figures+footnotes+fenced_code_blocks+fenced_code_attributes+header_attributes+raw_tex \
+	--from markdown+pipe_tables+table_captions+yaml_metadata_block+implicit_figures+footnotes+fenced_code_blocks+fenced_code_attributes+header_attributes+link_attributes+raw_tex \
 	--to pdf \
 	--template=config/template.tex \
 	--lua-filter=config/condicionales.lua \
