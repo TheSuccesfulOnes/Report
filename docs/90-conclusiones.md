@@ -2,130 +2,41 @@
 
 ## Conclusiones y recomendaciones
 
-### Conclusiones Generales
+### Conclusiones generales
 
-Durante el AV1, SafeSpace pasó de una propuesta centrada en el bienestar laboral a una solución documentada con requisitos, diseño y evidencia de implementación. La revisión de los repositorios y de las interfaces publicadas permitió comprobar que el producto cuenta con una landing page, una aplicación web para empleados, una interfaz web para Recursos Humanos, una API REST desplegada y persistencia en Firebase Firestore.
+El Trabajo Parcial documenta SafeSpace como una solución web y móvil de bienestar laboral, respaldada por una Landing Page, aplicaciones web para empleados y Recursos Humanos, una aplicación Android y una API REST. Los capítulos de requisitos y diseño se conectan con las funciones implementadas y con las evidencias visuales incluidas en el informe.
 
-La solución atiende dos necesidades principales: ofrecer a los empleados canales seguros para expresar su estado y comunicar situaciones laborales, y brindar a Recursos Humanos información organizada para revisar encuestas, actividades y reportes. La efectividad de estas funciones con usuarios reales todavía requiere una validación formal en una entrega posterior.
+La revisión del backend permitió precisar la configuración técnica: Java 21, Spring Boot 3.5.5 y Firebase Firestore como persistencia documental. El backend organiza sus datos en colecciones mediante adaptadores de repositorio; MySQL, JPA y Flyway no forman parte de la configuración de ejecución. Los repositorios y capturas muestran componentes publicados en Vercel y Render.
 
-#### Problem Statements vs. Realidad
+Los artefactos de verificación incluyen pruebas de backend, escenarios BDD y pruebas de la aplicación web. Los conteos backend disponibles (958, 960 y 966) corresponden a registros distintos y aún requieren una corrida limpia y sincronización. El workflow Backend CI ejecuta pruebas del backend en push y pull request a master; no se encontró un workflow equivalente para el frontend.
 
-| Problem Statement | Hipótesis Inicial | Resultado Validado | Conclusión |
-| :---- | :---- | :---- | :---- |
-| Los colaboradores no siempre cuentan con un canal seguro para expresar problemas laborales. | El anonimato y la confidencialidad facilitarán la comunicación de situaciones sensibles. | La aplicación web incluye reportes anónimos, encuestas con comentarios y un canal privado de orientación mediante IA. | El problema está atendido a nivel de producto; falta medir la disposición real de los usuarios a utilizarlo. |
-| Recursos Humanos recibe información tardía o fragmentada sobre el clima laboral. | Un panel con encuestas, actividades y reportes facilitará el seguimiento. | La interfaz de RR. HH. muestra el resumen de bienestar, resultados de encuestas, actividades, comentarios y detalle de reportes. | La hipótesis está respaldada por la implementación visual; falta validar su utilidad mediante sesiones con usuarios de RR. HH. |
+### Relación entre necesidades y solución
 
-#### Assumptions Validados / Invalidados
+| Necesidad del usuario | Respuesta de SafeSpace | Evidencia documentada |
+| :--- | :--- | :--- |
+| Compartir experiencias laborales en un entorno confidencial. | Encuestas, comentarios y reportes con alternativa de envío anónimo. | Interfaces de empleado y flujo de reportes en el Capítulo V. |
+| Dar seguimiento al bienestar individual y del equipo. | Registro de ánimo y vistas de resumen para Recursos Humanos. | Capturas web y móvil de bienestar y resumen administrativo. |
+| Promover la participación del equipo. | Actividades semanales con opciones de votación y resultados. | Interfaces web y Android de actividades semanales. |
+| Acceder a orientación general de manera privada. | Chat de asistencia con IA y aviso de alcance informativo. | Capturas de conversación web y Android. |
 
-| Assumption | Tipo | Validación | Resultado | Acción |
-| :---- | :---- | :---- | :---- | :---- |
-| Los empleados necesitan expresar situaciones sensibles sin exponer su identidad. | Usuario | Entrevistas, requisitos y formulario de reportes. | Parcialmente validado: el producto incorpora el anonimato, pero no se midió su adopción. | Mantener el modo anónimo y validarlo con usuarios. |
-| Recursos Humanos necesita una vista consolidada del bienestar del equipo. | Usuario | Requisitos, diseño y pantalla de resumen de RR. HH. | Validado a nivel de solución documentada e implementada. | Evaluar facilidad de uso y priorizar filtros o métricas adicionales. |
-| El modelo SaaS puede sostenerse mediante planes para organizaciones. | Negocio | Modelo de negocio del Capítulo I y endpoints de planes de pago. | Parcialmente validado: existen planes y registro de pagos, pero no hay pasarela ni renovación automática. | Presentar el pago como alcance inicial y definir el modelo comercial en siguientes entregas. |
-| La arquitectura web, móvil y API puede desplegarse con persistencia no relacional. | Técnica | Repositorios, despliegues en Vercel/Render, configuración de Firestore y distribución Android. | Validado para el alcance técnico revisado en AV1. | Mantener actualizados los enlaces de distribución y las versiones documentadas. |
+### Lecciones aprendidas
 
-#### Hypothesis Statements - Resultados
+**Requisitos y diseño.** Vincular las historias de usuario, criterios de aceptación y pantallas permite mantener un hilo claro entre la necesidad, el comportamiento esperado y la solución presentada.
 
-| Hipótesis | Métrica | Target | Actual | Veredicto |
-| :---- | :---- | :----: | :----: | :---- |
-| El canal anónimo aumentará la disposición a comunicar situaciones laborales. | Porcentaje de usuarios que eligen el modo anónimo y completan un reporte. | Definir en validación | No medido | En proceso |
-| El panel de RR. HH. facilitará la revisión del clima laboral. | Tiempo y facilidad percibida para encontrar encuestas, actividades y reportes. | Definir en validación | No medido | En proceso |
-| La orientación inicial mediante IA ayudará a los usuarios a iniciar una acción de autocuidado. | Comprensión y utilidad percibida de la respuesta recibida. | Definir en validación | No medido | En proceso |
+**Implementación.** Separar la Landing Page, las interfaces web, la aplicación Android y el backend facilita organizar los despliegues y documentar las responsabilidades de cada componente. El backend centraliza las reglas de negocio y conserva los datos en documentos y colecciones Firestore.
 
-#### Lean UX - Criterios de Éxito
+**Verificación.** Las pruebas unitarias de servicios permiten cubrir reglas de negocio con escenarios controlados. Los escenarios Given–When–Then y la matriz de aceptación complementan esta cobertura con el comportamiento que percibe el usuario.
 
-| Criterio | Target | Alcanzado | % | Comentario |
-| :---- | :----: | :----: | :----: | :---- |
-| Acceso a los flujos principales | Evidencia de login, registro y navegación por rol | Evidenciado | N/A | Se cuenta con capturas del trabajador y de RR. HH. |
-| Comunicación segura de situaciones | Evidencia de reporte anónimo y consulta de reportes | Evidenciado | N/A | La interfaz permite seleccionar el modo anónimo y revisar el estado del reporte. |
-| Seguimiento del bienestar laboral | Evidencia de encuestas, actividades, comentarios y resumen de RR. HH. | Evidenciado | N/A | Los flujos aparecen en las capturas del frontend web. |
-| Validación con usuarios reales | Sesiones, métricas comparables y hallazgos | Pendiente de una siguiente entrega | N/A | AV1 documenta la solución y su implementación, no una medición concluyente. |
+**Entrega.** La integración continua del backend y las versiones publicadas permiten revisar el producto. Las capturas disponibles muestran publicación manual de Render y no prueban despliegue automático de Vercel; el proceso de entrega requiere mayor automatización.
 
----
+### Recomendaciones para la evolución del producto
 
-### Lecciones Aprendidas (Por Área)
+1. Ampliar la automatización BDD a partir de los escenarios priorizados y vincular sus resultados al workflow de CI.
+2. Ejecutar una corrida backend limpia y sincronizar el inventario, la documentación y la captura de CI; ampliar la validación de persistencia con Firestore Emulator o el mecanismo local definido por el equipo, sin usar la base de producción.
+3. Mantener sincronizados el inventario de endpoints, las historias soportadas y la documentación OpenAPI con cada actualización del backend.
+4. Continuar evaluando con empleados y personal de Recursos Humanos la claridad, confianza y utilidad de los flujos de bienestar y reportes.
+5. Revisar periódicamente los textos de privacidad, condiciones del servicio y orientación asistida por IA conforme evolucione el producto.
 
-#### Investigación y Descubrimiento
-
-Las entrevistas y el análisis de necesidades mostraron que la confianza, el anonimato y la posibilidad de recibir orientación son elementos centrales para abordar situaciones sensibles en el trabajo. Esto se reflejó en la priorización de reportes, encuestas y asistencia inicial.
-
-#### Diseño y UX
-
-La separación de experiencias para empleados y Recursos Humanos ayudó a ordenar las tareas de cada perfil. Las capturas del frontend muestran una navegación diferenciada, formularios directos y estados visibles para encuestas, actividades y reportes.
-
-#### Arquitectura y Desarrollo
-
-La división entre frontend, frontend administrativo, aplicación móvil y API facilita la evolución independiente de cada producto. La persistencia en Firestore y la exposición de bounded contexts mediante rutas REST permiten mantener una organización clara de las funcionalidades.
-
-#### DevOps y Despliegue
-
-El uso de Vercel para las interfaces y Render para el backend permitió disponer de versiones publicadas para revisión. La configuración por variables de entorno mantiene separados los secretos y las URLs específicas de cada ambiente.
-
-#### Experimentación (Para entregas posteriores)
-
-El AV1 deja definidos los flujos y criterios que deberán medirse en las siguientes entregas. La validación experimental requiere sesiones planificadas, usuarios representativos y métricas comparables.
-
----
-
-### Recomendaciones - Roadmap Futuro
-
-Las siguientes recomendaciones corresponden a la evolución posterior del producto y no se presentan como funcionalidades completadas en AV1.
-
-#### Corto Plazo
-| # | Iniciativa | Justificación | Esfuerzo | Impacto |
-| :---- | :---- | :---- | :----: | :----: |
-| 1 | Completar la evidencia y distribución de la aplicación Android. | Permite cerrar la trazabilidad entre historias, aplicación móvil y despliegue. | M | Alto |
-| 2 | Incorporar validación formal con empleados y RR. HH. | Permite medir confianza, facilidad de uso y utilidad del producto. | M | Alto |
-| 3 | Mejorar la documentación de respuestas y seguridad de la API. | Facilita la revisión técnica y el consumo de los bounded contexts. | M | Medio |
-
-#### Mediano Plazo (3-6 meses)
-| # | Iniciativa | Justificación | Esfuerzo | Impacto |
-| :---- | :---- | :---- | :----: | :----: |
-| 1 | Añadir filtros y métricas comparables en el panel de RR. HH. | Ayuda a identificar tendencias por periodo y área. | M | Alto |
-| 2 | Incorporar notificaciones para cambios en reportes y encuestas. | Reduce el tiempo de respuesta de los responsables. | M | Medio |
-| 3 | Fortalecer el control de acceso, auditoría y gestión de sesiones. | Protege información sensible de bienestar laboral. | L | Alto |
-
-#### Largo Plazo (6-12 meses)
-| # | Iniciativa | Justificación | Esfuerzo | Impacto |
-| :---- | :---- | :---- | :----: | :----: |
-| 1 | Extender la solución a organizaciones de distintos países. | Permite adaptar la plataforma a nuevos contextos laborales. | L | Alto |
-| 2 | Integrar herramientas corporativas de Recursos Humanos. | Evita duplicar información y mejora la continuidad operativa. | L | Alto |
-| 3 | Consolidar un modelo comercial con suscripciones y facturación. | Convierte el modelo SaaS en una operación sostenible. | L | Alto |
-
----
-
-### Deuda Técnica Identificada
-
-| Área | Descripción | Riesgo | Plan de Mitigación |
-| :---- | :---- | :---- | :---- |
-| Aplicación móvil | El APK/AAB, el enlace de distribución y la evidencia visual ya están documentados. | Bajo | Mantener disponible el enlace compartido y actualizarlo si cambia la versión distribuida. |
-| API y seguridad | Las operaciones protegidas requieren autenticación y la evidencia de Swagger debe mostrar flujos autenticados. | Alto | Documentar el esquema Bearer, usar un token de prueba seguro y registrar respuestas representativas. |
-| Pagos | El alcance actual registra planes y comprobantes, pero no incluye una pasarela ni renovación automática. | Medio | Mantener la limitación explícita y evaluar una integración posterior. |
-| Documentación | Los repositorios de productos tienen configuraciones y niveles de evidencia diferentes. | Medio | Unificar README, variables de entorno, comandos y versiones por repositorio. |
-
----
-
-## Video App Validation
-
-Para este corte AV1 se documentan los flujos y las interfaces disponibles, pero no se incorpora todavía un video de validación con usuarios. Esta evidencia se añadirá cuando se realicen las sesiones correspondientes.
-
----
-
-## Video About-The-Team
-
-El video About-The-Team no forma parte de los artefactos disponibles para este corte AV1. Cuando se produzca, deberá incluir la participación de los seis integrantes: Mauricio Luis Pajés León, Milenko Ruben Cayanchi Avila, Diego Andrés Ávalos Cordova, Jose Gustavo Asto Jacome, Diaz Martinez, Alexther Kamil y Arizabal Condori, Jean Niels.
-
-### Pauta de Secuencias para una Entrega Posterior
-
-| Sección | Contenido |
-| :---- | :---- |
-| Presentación del equipo | Nombre, código y rol de cada integrante. |
-| Proceso de trabajo | Revisión de reuniones, planificación y coordinación del informe. |
-| Testimonios | Actividades realizadas, aprendizaje y aporte al proyecto de cada integrante. |
-| Cierre | Reflexión grupal sobre el resultado del AV1. |
-
----
-
-> **Nota:** Este documento se mantiene enfocado en el alcance y la evidencia disponible del AV1.
+Estas recomendaciones plantean una ruta de mejora continua para las siguientes versiones y complementan las capacidades y artefactos presentados en este hito.
 
 \newpage

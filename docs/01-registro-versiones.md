@@ -1,6 +1,12 @@
 # Registro de versiones del informe
 
-<table border="1" cellspacing="0" cellpadding="5">
+<table border="1" cellspacing="0" cellpadding="5" style="width:100%; table-layout:fixed;">
+<colgroup>
+  <col style="width:12%">
+  <col style="width:13%">
+  <col style="width:25%">
+  <col style="width:50%">
+</colgroup>
 <thead>
   <tr>
     <th>Versión</th>
@@ -28,10 +34,10 @@
   </tr>
   <tr>
     <td align="center">V1.1.0</td>
-    <td align="center">01/10/26</td>
+    <td align="center">06/10/26</td>
     <td>Cayanchi Avila, Milenko Ruben</td>
     <td>
-      Trabajo Parcial: actualización del Student Outcome y ampliación del Capítulo III con el escenario To-Be, las 22 User Stories y el Product Backlog alineado con las funcionalidades documentadas.
+      Trabajo Parcial: actualización integral del informe; revisión de Requirements Specification; integración de evidencias web, administrativas y móviles; documentación del acuerdo SaaS, API, pruebas, CI/CD y Student Outcome.
     </td>
   </tr>
 

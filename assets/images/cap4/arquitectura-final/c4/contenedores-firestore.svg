@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="780" viewBox="0 0 1560 780" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitectura de contenedores de SafeSpace con Firestore</title>
+  <desc id="desc">Las aplicaciones web y Android consumen una API Java Spring Boot alojada en Render. El backend usa Firebase Firestore y puede conectarse opcionalmente con Google Gemini.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 30px Arial,sans-serif;fill:#0f172a}.sub{font:16px Arial,sans-serif;fill:#475569}
+      .card{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:16}.client{fill:#fff7ed;stroke:#fb923c}.api{fill:#eff6ff;stroke:#3b82f6}.db{fill:#ecfdf5;stroke:#10b981}.ext{fill:#f5f3ff;stroke:#8b5cf6}
+      .head{font:700 21px Arial,sans-serif;fill:#0f172a}.body{font:16px Arial,sans-serif;fill:#334155}.small{font:14px Arial,sans-serif;fill:#64748b}.arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1560" height="780"/>
+  <text class="title" x="55" y="58">Arquitectura de SafeSpace</text>
+  <text class="sub" x="55" y="88">Vista lógica de clientes, API, persistencia documental y proveedor externo</text>
+
+  <rect class="card client" x="55" y="160" width="390" height="400"/>
+  <text class="head" x="85" y="205">Aplicaciones cliente</text>
+  <text class="body" x="85" y="250">• Landing, web de empleados y consola HR/admin</text>
+  <text class="body" x="85" y="285">• Aplicaciones web: React, TypeScript y Vite</text>
+  <text class="body" x="85" y="320">• Android: Kotlin y Jetpack Compose</text>
+  <text class="body" x="85" y="370">• Autenticación: Bearer JWT</text>
+  <text class="body" x="85" y="415">Publicación observada</text>
+  <text class="small" x="105" y="445">Web en Vercel · APK distribuido manualmente</text>
+  <text class="small" x="105" y="475">Las capturas no prueban despliegue automático</text>
+
+  <rect class="card api" x="585" y="160" width="390" height="400"/>
+  <text class="head" x="615" y="205">Backend API · Render</text>
+  <text class="body" x="615" y="250">Java 21 · Spring Boot 3.5.5</text>
+  <text class="body" x="615" y="285">API REST/JSON y reglas de negocio</text>
+  <text class="body" x="615" y="320">Módulos: IAM, mood, surveys, comments,</text>
+  <text class="body" x="615" y="345">activities, reports, payments, AI y audit</text>
+  <text class="body" x="615" y="390">Adaptadores de repositorio Firestore</text>
+  <text class="body" x="615" y="435">JWT, validación y autorización por roles</text>
+  <text class="small" x="615" y="490">El workflow CI actual ejecuta pruebas;</text>
+  <text class="small" x="615" y="515">la captura de Render registra publicación manual</text>
+
+  <rect class="card db" x="1115" y="160" width="390" height="400"/>
+  <text class="head" x="1145" y="205">Firebase Firestore</text>
+  <text class="body" x="1145" y="250">Base de datos NoSQL documental</text>
+  <text class="body" x="1145" y="295">Colecciones del backend:</text>
+  <text class="small" x="1165" y="330">users · user_preferences · mood_entries</text>
+  <text class="small" x="1165" y="360">surveys · survey_answers · comments</text>
+  <text class="small" x="1165" y="390">weekly_activities · activity_votes</text>
+  <text class="small" x="1165" y="420">reports · payments · ai_* · audit_logs</text>
+  <text class="body" x="1145" y="470">Sin MySQL, JPA ni migraciones Flyway</text>
+  <text class="small" x="1145" y="510">Configuración y credenciales se inyectan</text>
+  <text class="small" x="1145" y="535">en el entorno del backend</text>
+
+  <rect class="card ext" x="585" y="625" width="390" height="105"/>
+  <text class="head" x="615" y="668">Google Gemini (opcional)</text>
+  <text class="small" x="615" y="700">Proveedor de respuestas de IA; existe respuesta local</text>
+  <path class="arrow" d="M445 355 L585 355"/>
+  <text class="small" x="465" y="340">HTTPS / JSON</text>
+  <path class="arrow" d="M975 355 L1115 355"/>
+  <text class="small" x="994" y="340">Documentos</text>
+  <path class="arrow" d="M780 560 L780 625"/>
+  <text class="small" x="797" y="600">HTTPS cuando está configurado</text>
+</svg>

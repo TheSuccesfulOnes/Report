@@ -1,10 +1,8 @@
 # Project Report Collaboration Insights
 
-En esta sección el equipo indica el URL del repositorio para el Project Report en la organización de GitHub del equipo. Adicionalmente, para cada entrega explica cómo se han desarrollado las actividades de elaboración del informe y se presenta capturas en imagen de los analíticos de colaboración y commits en GitHub para el repositorio del informe, realizados por los miembros del equipo. Todos los miembros del equipo deben tener participación en la elaboración del informe. Esta sección debe ir expandiéndose con descripciones y evidencias en cada entrega. Lo descrito y evidenciado debe tener coherencia con el *Registro de Versiones del Informe*.
-
 ## Repositorio del Project Report
 
-**URL:** `https://github.com/TheSuccesfulOnes/Report`
+**URL:** [Report - TheSuccesfulOnes](https://github.com/TheSuccesfulOnes/Report)
 
 ## Desarrollo de las actividades de elaboración del informe - AV1
 
@@ -12,14 +10,16 @@ Durante el Avance 1, los seis integrantes trabajaron de manera colaborativa en l
 
 ## Evidencia de colaboración en GitHub - AV1
 
-A continuación se presentan las evidencias de colaboración registradas en GitHub, donde se observa la participación distribuida de los integrantes en commits, revisiones y actualizaciones del informe.
+La siguiente imagen presenta de forma agregada la actividad del equipo en el repositorio del informe durante el AV1.
 
-**Repositorio utilizado para el informe:** `https://github.com/TheSuccesfulOnes/Report`
+![Evidencia agregada de colaboración en GitHub - AV1](../assets/images/shared/evidence-av1.png){width=70%}
 
-![Evidencia de colaboración en GitHub - AV1](../assets/images/shared/evidence-av1.png){width=70%}
+## Desarrollo de las actividades de elaboración del informe - Trabajo Parcial
 
-## Participación total en AV1
+[Completar con una síntesis de cómo se organizaron, elaboraron y revisaron en equipo los artefactos del informe parcial.]
 
-La imagen adjunta resume la evidencia de colaboración del avance AV1 en el repositorio del informe y acompaña la descripción grupal del trabajo realizado.
+## Evidencia de colaboración en GitHub - Trabajo Parcial
+
+[Agregar aquí la captura agregada de la colaboración del repositorio del informe correspondiente al Trabajo Parcial.]
 
 \newpage

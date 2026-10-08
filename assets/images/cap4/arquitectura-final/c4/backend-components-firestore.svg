@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="920" viewBox="0 0 1560 920" role="img" aria-labelledby="title desc">
+  <title id="title">Componentes del backend SafeSpace y persistencia Firestore</title>
+  <desc id="desc">Los módulos del monolito modular usan adaptadores para leer y escribir colecciones de Firestore. El módulo de IA puede llamar a Gemini.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#475569"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 30px Arial,sans-serif;fill:#0f172a}.sub{font:16px Arial,sans-serif;fill:#475569}
+      .frame{fill:#eff6ff;stroke:#3b82f6;stroke-width:2;rx:18}.mod{fill:#fff;stroke:#94a3b8;stroke-width:2;rx:12}.store{fill:#ecfdf5;stroke:#10b981;stroke-width:2;rx:12}.provider{fill:#f5f3ff;stroke:#8b5cf6;stroke-width:2;rx:12}
+      .head{font:700 19px Arial,sans-serif;fill:#0f172a}.body{font:15px Arial,sans-serif;fill:#334155}.small{font:13px Arial,sans-serif;fill:#64748b}.arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1560" height="920"/>
+  <text class="title" x="55" y="58">Componentes del backend y colecciones Firestore</text>
+  <text class="sub" x="55" y="88">Monolito modular · las cajas representan responsabilidades lógicas, no microservicios</text>
+  <rect class="frame" x="50" y="125" width="970" height="700"/>
+  <text class="head" x="80" y="165">Backend API · Spring Boot</text>
+
+  <rect class="mod" x="85" y="205" width="420" height="145"/>
+  <text class="head" x="110" y="240">Identidad y configuración</text>
+  <text class="body" x="110" y="275">IAM · autenticación · perfil</text>
+  <text class="small" x="110" y="310">Usuarios, preferencias y recuperación de acceso</text>
+
+  <rect class="mod" x="555" y="205" width="420" height="145"/>
+  <text class="head" x="580" y="240">Bienestar y participación</text>
+  <text class="body" x="580" y="275">Mood · encuestas · comentarios · actividades</text>
+  <text class="small" x="580" y="310">Reglas de registro diario, respuestas y votos</text>
+
+  <rect class="mod" x="85" y="405" width="420" height="145"/>
+  <text class="head" x="110" y="440">Reportes y operaciones</text>
+  <text class="body" x="110" y="475">Reportes · pagos · administración · auditoría</text>
+  <text class="small" x="110" y="510">Privacidad, comprobantes y trazabilidad</text>
+
+  <rect class="mod" x="555" y="405" width="420" height="145"/>
+  <text class="head" x="580" y="440">Asistencia con IA</text>
+  <text class="body" x="580" y="475">Conversaciones · mensajes · respuesta local</text>
+  <text class="small" x="580" y="510">Adaptador externo Gemini opcional</text>
+
+  <rect class="mod" x="85" y="610" width="890" height="150"/>
+  <text class="head" x="110" y="650">Infraestructura transversal</text>
+  <text class="body" x="110" y="690">Repositorios Firestore · autenticación JWT · CORS · validación HTTP · OpenAPI</text>
+  <text class="small" x="110" y="725">La API aplica validaciones de negocio; las colecciones y sus IDs se configuran en los adaptadores.</text>
+
+  <rect class="store" x="1100" y="200" width="405" height="520"/>
+  <text class="head" x="1130" y="240">Firebase Firestore</text>
+  <text class="body" x="1130" y="285">iam/auth</text>
+  <text class="small" x="1150" y="312">users · user_preferences</text>
+  <text class="small" x="1150" y="336">password_reset_tokens</text>
+  <text class="body" x="1130" y="380">Bienestar</text>
+  <text class="small" x="1150" y="407">mood_entries · surveys · survey_answers</text>
+  <text class="small" x="1150" y="431">comments · comment_likes</text>
+  <text class="small" x="1150" y="455">weekly_activities · activity_votes</text>
+  <text class="body" x="1130" y="500">Operaciones y asistencia</text>
+  <text class="small" x="1150" y="527">reports · payments · audit_logs</text>
+  <text class="small" x="1150" y="551">ai_conversations · ai_messages</text>
+  <text class="body" x="1130" y="600">Documentos y referencias</text>
+  <text class="small" x="1150" y="627">IDs y referencias lógicas; no foreign keys SQL</text>
+  <text class="small" x="1150" y="660">activity options are stored in weekly_activities</text>
+  <text class="small" x="1150" y="685">payment voucher bytes are size-limited</text>
+
+  <rect class="provider" x="1110" y="770" width="390" height="95"/>
+  <text class="head" x="1140" y="810">Google Gemini · opcional</text>
+  <text class="small" x="1140" y="840">Llamada saliente desde el adaptador de IA</text>
+  <path class="arrow" d="M1020 470 L1100 470"/>
+  <path class="arrow" d="M975 480 C1030 480 1045 817 1110 817"/>
+</svg>

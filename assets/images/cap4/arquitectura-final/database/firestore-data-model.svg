@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1080" viewBox="0 0 1560 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Modelo lógico de documentos Firestore de SafeSpace</title>
+  <desc id="desc">Colecciones Firestore usadas por los agregados de negocio, con las relaciones lógicas entre documentos.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 30px Arial,sans-serif;fill:#0f172a}.sub{font:16px Arial,sans-serif;fill:#475569}
+      .card{fill:#fff;stroke:#10b981;stroke-width:2;rx:16}.head{font:700 19px Arial,sans-serif;fill:#064e3b}.body{font:16px Arial,sans-serif;fill:#334155}.small{font:14px Arial,sans-serif;fill:#64748b}.note{fill:#eff6ff;stroke:#3b82f6;stroke-width:2;rx:14}
+    </style>
+  </defs>
+  <rect class="bg" width="1560" height="1080"/>
+  <text class="title" x="55" y="58">SafeSpace · modelo lógico de Firestore</text>
+  <text class="sub" x="55" y="88">El código organiza agregados como documentos en colecciones; los nombres siguientes provienen de los adaptadores del backend.</text>
+  <rect class="card" x="55" y="145" width="450" height="150"/>
+  <text class="head" x="85" y="185">Identidad y acceso</text>
+  <text class="body" x="85" y="225">users · user_preferences</text>
+  <text class="body" x="85" y="260">password_reset_tokens</text>
+  <rect class="card" x="555" y="145" width="450" height="150"/>
+  <text class="head" x="585" y="185">Bienestar diario</text>
+  <text class="body" x="585" y="225">mood_entries</text>
+  <text class="small" x="585" y="260">El servicio valida usuario y fecha de negocio.</text>
+  <rect class="card" x="1055" y="145" width="450" height="150"/>
+  <text class="head" x="1085" y="185">Encuestas y conversación</text>
+  <text class="body" x="1085" y="225">surveys · survey_answers · comments</text>
+  <text class="body" x="1085" y="260">comment_likes</text>
+  <rect class="card" x="55" y="345" width="450" height="150"/>
+  <text class="head" x="85" y="385">Actividades</text>
+  <text class="body" x="85" y="425">weekly_activities · activity_votes</text>
+  <text class="small" x="85" y="460">Las opciones pertenecen al documento de actividad.</text>
+  <rect class="card" x="555" y="345" width="450" height="150"/>
+  <text class="head" x="585" y="385">Reportes laborales</text>
+  <text class="body" x="585" y="425">reports</text>
+  <text class="small" x="585" y="460">Un reporte anónimo omite la referencia al usuario.</text>
+  <rect class="card" x="1055" y="345" width="450" height="150"/>
+  <text class="head" x="1085" y="385">Asistencia con IA</text>
+  <text class="body" x="1085" y="425">ai_conversations · ai_messages</text>
+  <text class="small" x="1085" y="460">Los mensajes se asocian a su conversación.</text>
+  <rect class="card" x="305" y="545" width="450" height="150"/>
+  <text class="head" x="335" y="585">Pagos</text>
+  <text class="body" x="335" y="625">payments</text>
+  <text class="small" x="335" y="660">El comprobante se codifica en el documento y se limita a 700 000 bytes.</text>
+  <rect class="card" x="805" y="545" width="450" height="150"/>
+  <text class="head" x="835" y="585">Auditoría</text>
+  <text class="body" x="835" y="625">audit_logs</text>
+  <text class="small" x="835" y="660">Registros de acciones administrativas y de pagos.</text>
+  <rect class="note" x="55" y="755" width="1450" height="245"/>
+  <text class="head" x="85" y="800">Cómo interpretar el modelo</text>
+  <text class="body" x="85" y="845">• Las referencias entre agregados son campos/IDs de documento o snapshots, según el adaptador Firestore.</text>
+  <text class="body" x="85" y="885">• Los likes y votos usan IDs determinísticos compuestos para representar una interacción por usuario.</text>
+  <text class="body" x="85" y="925">• La unicidad de mood y respuestas a encuestas se valida en la lógica del backend; no se declara una restricción SQL.</text>
+  <text class="body" x="85" y="965">• El modelo describe colecciones/documentos de ejecución; no representa MySQL, tablas JPA ni migraciones Flyway.</text>
+</svg>

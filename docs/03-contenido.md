@@ -1,9 +1,5 @@
 # Contenido
 
-Tabla de contenidos con hipervínculos de Markdown (4 niveles de esquema). Actualizar y verificar antes de cada entrega.
-
----
-
 ## [Carátula](#carátula)
 
 ## [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
@@ -14,7 +10,7 @@ Tabla de contenidos con hipervínculos de Markdown (4 niveles de esquema). Actua
 
 ---
 
-## Parte I: As-Is Software Project
+## Parte I: Software Project
 
 ### [Capítulo I: Introducción](#capítulo-i-introducción)
 
@@ -101,7 +97,7 @@ Tabla de contenidos con hipervínculos de Markdown (4 niveles de esquema). Actua
     - [4.9.1. Class Diagrams](#491-class-diagrams)
     - [4.9.2. Class Dictionary](#492-class-dictionary)
 * [4.10. Database Design](#410-database-design)
-    - [4.10.1. Relational/Non-Relational Database Diagram](#4101-relationalnon-relational-database-diagram)
+    - [4.10.1. Firestore Collections and Logical Document Model](#4101-firestore-collections-and-logical-document-model)
 
 ---
 
@@ -116,10 +112,11 @@ Tabla de contenidos con hipervínculos de Markdown (4 niveles de esquema). Actua
     - [5.2.1. Sprint Backlogs](#521-sprint-backlogs)
     - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
     - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
-    - [5.2.4. Implemented Native-Mobile Application Evidence*](#524-implemented-native-mobile-application-evidence)
-    - [5.2.5. Implemented RESTful API and/or Serverless Backend Evidence](#525-implemented-restful-api-andor-serverless-backend-evidence)
-    - [5.2.6. RESTful API Documentation](#526-restful-api-documentation)
-    - [5.2.7. Team Collaboration Insights](#527-team-collaboration-insights)
+    - [5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)
+    - [5.2.5. Implemented Native-Mobile Application Evidence](#525-implemented-native-mobile-application-evidence)
+    - [5.2.6. Implemented RESTful API and/or Serverless Backend Evidence](#526-implemented-restful-api-andor-serverless-backend-evidence)
+    - [5.2.7. RESTful API Documentation](#527-restful-api-documentation)
+    - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
 * [5.3. Video About-the-Product](#53-video-about-the-product)
 
 ---
@@ -148,17 +145,9 @@ Tabla de contenidos con hipervínculos de Markdown (4 niveles de esquema). Actua
 
 ---
 
-### [Avance de Conclusiones, Bibliografía y Anexos](#avance-de-conclusiones-bibliografía-y-anexos)
-
----
-
----
-
 ## [Conclusiones](#conclusiones)
 
 * [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-* [Video App Validation](#video-app-validation)
-* [Video About-The-Team](#video-about-the-team)
 
 ---
 
@@ -168,8 +157,6 @@ Tabla de contenidos con hipervínculos de Markdown (4 niveles de esquema). Actua
 
 ---
 
-> **Leyenda:** Las secciones marcadas con * son opcionales para Avance 1 (Semana 4). Se completan en entregas posteriores.
-> 
 > **Niveles de esquema:** Capítulo (1), Sección (2), Subsección (3), Ítem (4)
 
 \newpage

@@ -19,7 +19,7 @@
     <strong>9097</strong>
   </p>
 
-  <h3><strong>Informe del Trabajo Final</strong></h3>
+  <h3><strong>Informe del Trabajo Parcial — Stage Review</strong></h3>
 
   <p>
     Docente<br>
