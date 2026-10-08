@@ -39,4 +39,44 @@ Los artefactos de verificación incluyen pruebas de backend, escenarios BDD y pr
 
 Estas recomendaciones plantean una ruta de mejora continua para las siguientes versiones y complementan las capacidades y artefactos presentados en este hito.
 
+---
+
+## Conclusiones del Trabajo Parcial (TB1)
+
+### Conclusiones generales
+
+El Trabajo Parcial consolida SafeSpace como una solución de bienestar laboral con verificación documentada y prácticas de integración continua en funcionamiento. Los Capítulos VI y VII incorporados en este hito presentan la suite de pruebas del backend —960 casos en 60 suites, con variantes unitarias, de integración y BDD—, seis pruebas de sistema Playwright para la aplicación web y el workflow `Backend CI` en GitHub Actions que ejecuta `mvn -B test` ante cada cambio en la rama `master`.
+
+La organización de las pruebas por bounded context (autenticación, bienestar, encuestas, actividades, reportes e IA) permite relacionar los escenarios de verificación con las historias de usuario y con las reglas de negocio implementadas en el backend. Los escenarios BDD (`survey-answer.feature`, `mood-check-in.feature`, `activity-voting.feature`, `report-privacy.feature`) expresan en lenguaje Gherkin los comportamientos esperados del producto y constituyen criterios ejecutables alineados con los requisitos del Capítulo III.
+
+El pipeline de entrega del backend cubre integración continua (GitHub Actions), empaquetado (Docker) y publicación (Render), con el health check configurado en `/v3/api-docs`. El frontend web y la consola administrativa están publicados en Vercel; la conexión automática con Git no quedó confirmada en las evidencias disponibles y representa una brecha a resolver en la siguiente etapa.
+
+### Relación necesidades–evidencia de calidad
+
+| Necesidad | Verificación documentada en TB1 |
+| :--- | :--- |
+| Que el producto funcione conforme a los requisitos. | Suite de 960+ pruebas de backend; 6 pruebas de sistema Playwright; 8 escenarios BDD aprobados. |
+| Que los datos personales y anónimos se traten correctamente. | `ReportServiceTest` y `report-privacy.feature` validan que la identidad se oculte o se muestre según la elección del usuario. |
+| Que las encuestas no acumulen respuestas duplicadas. | `SurveyServiceTest` y `SurveyServiceValidationTest` rechazan respuestas repetidas con `IllegalArgumentException`. |
+| Que el producto esté disponible de forma reproducible. | CI con GitHub Actions; despliegue backend en Render; aplicaciones web en Vercel; APK Android distribuido. |
+
+### Lecciones aprendidas del TB1
+
+**Verificación.** Clasificar las pruebas por tipo (unitaria, integración local, BDD, sistema) y por bounded context facilita la revisión de la cobertura y permite identificar vacíos concretos: pruebas de sistema para la aplicación móvil y un smoke test post-despliegue para el backend.
+
+**BDD.** Expresar criterios en Gherkin como pruebas dinámicas de JUnit 5 conecta el lenguaje del dominio con la ejecución automatizada, sin necesidad de infraestructura adicional para la corrida local.
+
+**CI/CD.** La separación entre el job de CI (pruebas) y el despliegue (Render manual, Vercel) deja visible la brecha de automatización. Documentarla honestamente permite planificar su cierre con evidencia concreta en el siguiente hito.
+
+**Trazabilidad.** Mantener la correspondencia entre historias, bounded contexts, pruebas y evidencias visuales a lo largo del informe facilita la revisión externa y reduce el riesgo de presentar funcionalidades sin respaldo verificable.
+
+### Recomendaciones para el Trabajo Final
+
+1. Ejecutar una corrida limpia del backend, regenerar el inventario `validation-inventory.json` y actualizar la captura de CI para que las cifras de pruebas sean consistentes entre sí.
+2. Incorporar las pruebas Vitest y Playwright del frontend web a un workflow de GitHub Actions, convirtiendo esas verificaciones en una puerta de calidad antes de cada despliegue.
+3. Conectar los repositorios web y administrativo a Vercel mediante la integración Git y documentar el despliegue automático con capturas verificables.
+4. Añadir una prueba smoke post-despliegue en Render que valide al menos un endpoint funcional del backend tras cada publicación.
+5. Incorporar el testimonio de usuario pendiente con fuente y autorización verificables, y actualizar la sección de retroalimentación del Capítulo V.
+6. Completar los campos de planificación de sprint (fechas, responsables y velocidad acordada) para los cuatro sprints, de modo que la trazabilidad entre Jira y los commits sea completa y auditables.
+
 \newpage

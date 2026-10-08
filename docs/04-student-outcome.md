@@ -54,11 +54,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     Apoyó la revisión transversal de los artefactos del proyecto y la integración de la evidencia técnica, considerando la claridad y trazabilidad de la información presentada.<br><br>
     <strong>Trabajo Parcial</strong><br>
     Participó en la revisión de la trazabilidad entre requisitos, evidencias técnicas y documentación, verificando que los cambios reportados mantengan una presentación responsable y comprensible.<br><br>
+    <strong>TB1</strong><br>
+    Contribuyó en la revisión transversal del Capítulo VI (verificación y validación), comprobando que las suites de prueba documentadas sean coherentes con los criterios de aceptación de las historias y con las responsabilidades éticas del equipo sobre la calidad del producto entregado.<br><br>
   </td>
 
   <td valign="top">
     Durante AV1, el equipo reconoció responsabilidades éticas y profesionales relacionadas con la privacidad, la confidencialidad y el tratamiento responsable de la información del bienestar laboral al elaborar los cinco capítulos del informe.<br><br>
-    <strong>Trabajo Parcial:</strong> El equipo reforzó esta responsabilidad al mantener trazabilidad entre requisitos, implementación, pruebas, despliegues y evidencias presentadas en el informe.
+    <strong>Trabajo Parcial:</strong> El equipo reforzó esta responsabilidad al mantener trazabilidad entre requisitos, implementación, pruebas, despliegues y evidencias presentadas en el informe.<br><br>
+    <strong>TB1:</strong> El equipo consolidó la responsabilidad ética documentando la verificación del producto con pruebas unitarias, de integración, BDD y sistema, asegurando que las funcionalidades entregadas respondan a los criterios declarados y no expongan información sensible de los usuarios.
   </td>
 </tr>
 
@@ -99,11 +102,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     Participó en la revisión de la solución y de sus evidencias, considerando aspectos de accesibilidad, privacidad y utilidad para los usuarios.<br><br>
     <strong>Trabajo Parcial</strong><br>
     Revisó la relación entre los escenarios To-Be y las funcionalidades documentadas, considerando que las expectativas de los usuarios deben sustentarse en evidencia verificable.<br><br>
+    <strong>TB1</strong><br>
+    Revisó el Capítulo VII de prácticas DevOps, evaluando el impacto de las decisiones de CI/CD en la calidad, disponibilidad y mantenibilidad del servicio para los usuarios de SafeSpace.<br><br>
   </td>
 
   <td valign="top">
     Durante AV1, el equipo consideró principalmente el impacto social y profesional de SafeSpace como solución para mejorar la comunicación laboral. La evaluación de impactos globales, económicos y ambientales requiere evidencia adicional en entregas posteriores.<br><br>
-    <strong>Trabajo Parcial:</strong> El equipo amplió el análisis al relacionar la calidad, disponibilidad, privacidad y mantenibilidad de la solución con sus efectos sociales, económicos y profesionales sobre los usuarios y la organización.
+    <strong>Trabajo Parcial:</strong> El equipo amplió el análisis al relacionar la calidad, disponibilidad, privacidad y mantenibilidad de la solución con sus efectos sociales, económicos y profesionales sobre los usuarios y la organización.<br><br>
+    <strong>TB1:</strong> El equipo emitió juicios informados sobre el impacto de las decisiones de ingeniería al documentar las prácticas CI/CD, los resultados de prueba y las recomendaciones de evolución del producto, considerando su efecto en la confianza del usuario, la sostenibilidad del servicio y la reducción de riesgos operativos.
   </td>
 </tr>
 
