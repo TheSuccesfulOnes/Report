@@ -40,6 +40,21 @@
       Trabajo Parcial: actualización integral del informe; revisión de Requirements Specification; integración de evidencias web, administrativas y móviles; documentación del acuerdo SaaS, API, pruebas, CI/CD y Student Outcome.
     </td>
   </tr>
+  <tr>
+    <td align="center">V1.2.0</td>
+    <td align="center">08/10/26</td>
+    <td>
+      - Pajés León, Mauricio Luis<br>
+      - Cayanchi Avila, Milenko Ruben<br>
+      - Ávalos Cordova, Diego Andrés<br>
+      - Asto Jacome, Jose Gustavo<br>
+      - Diaz Martinez, Alexther Kamil<br>
+      - Arizabal Condori, Jean Niels
+    </td>
+    <td>
+      Trabajo Parcial (TB1): incorporación de Capítulos VI y VII; suite de pruebas unitarias, de integración, BDD y sistema con Playwright; prácticas de CI/CD con GitHub Actions, Docker y Render; conclusiones y recomendaciones de la entrega; actualización de Student Outcome con acciones de la presente entrega.
+    </td>
+  </tr>
 
 </tbody>
 </table>
