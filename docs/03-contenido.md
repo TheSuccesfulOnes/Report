@@ -128,6 +128,19 @@
     - [6.1.2. Core Integration Tests](#612-core-integration-tests)
     - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
     - [6.1.4. Core System Tests](#614-core-system-tests)
+* [6.2. Static Testing & Verification](#62-static-testing--verification)
+    - [6.2.1. Static Code Analysis](#621-static-code-analysis)
+        - [6.2.1.1. Coding Standards and Conventions](#6211-coding-standards-and-conventions)
+        - [6.2.1.2. Software Quality and Security](#6212-software-quality-and-security)
+    - [6.2.2. Reviews](#622-reviews)
+* [6.3. Validation Interviews](#63-validation-interviews)
+    - [6.3.1. Interview Design](#631-interview-design)
+    - [6.3.2. Interview Records](#632-interview-records)
+    - [6.3.3. Heuristic Evaluations](#633-heuristic-evaluations)
+* [6.4. UX Audits](#64-ux-audits)
+    - Auditoría realizada por el equipo
+    - Auditoría recibida de otro equipo
+    - Síntesis de correcciones
 
 ---
 
@@ -142,6 +155,33 @@
 * [7.3. Continuous Deployment](#73-continuous-deployment)
     - [7.3.1. Tools and Practices](#731-tools-and-practices)
     - [7.3.2. Production Deployment Pipeline Components](#732-production-deployment-pipeline-components)
+* [7.4. Continuous Monitoring](#74-continuous-monitoring)
+    - [7.4.1. Tools and Practices](#741-tools-and-practices)
+    - [7.4.2. Monitoring Pipeline Components](#742-monitoring-pipeline-components)
+    - [7.4.3. Alerting Pipeline Components](#743-alerting-pipeline-components)
+    - [7.4.4. Notification Pipeline Components](#744-notification-pipeline-components)
+
+---
+
+### [Capítulo VIII: Experiment-Driven Development](#capítulo-viii-experiment-driven-development)
+
+* [8.1. Experiment Planning](#81-experiment-planning)
+    - [8.1.1. As-Is Summary](#811-as-is-summary)
+    - [8.1.2. Raw Material](#812-raw-material)
+    - [8.1.3. Experiment-Ready Questions](#813-experiment-ready-questions)
+    - [8.1.4. Question Backlog](#814-question-backlog)
+    - [8.1.5. Experiment Cards](#815-experiment-cards)
+* [8.2. Experiment Design](#82-experiment-design)
+    - [8.2.1. Hypotheses](#821-hypotheses)
+    - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
+    - [8.2.3. Measures and Conditions](#823-measures-and-conditions)
+    - [8.2.4. Scale Calculations and Decisions](#824-scale-calculations-and-decisions)
+    - [8.2.5. Method Selection](#825-method-selection)
+    - [8.2.6. Analytics Goals, KPIs and Metrics](#826-analytics-goals-kpis-and-metrics)
+    - [8.2.7. Web and Mobile Tracking Plan](#827-web-and-mobile-tracking-plan)
+* [8.3. Experimentation](#83-experimentation)
+    - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
+    - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
 
 ---
 

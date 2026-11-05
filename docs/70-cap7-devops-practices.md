@@ -184,5 +184,61 @@ Gradle construye el APK que se distribuye por separado. No se identificó un wor
 
 SafeSpace dispone de integración continua para el backend y de servicios publicados en Render y Vercel. Para completar el despliegue continuo, falta enlazar las comprobaciones de cada repositorio con la publicación, validar la versión en producción y definir su recuperación.
 
+## 7.4. Continuous Monitoring
+
+La monitorización continua reúne señales de disponibilidad, errores y comportamiento de los servicios después de desplegar una versión. En SafeSpace se han identificado los paneles de despliegue y logs de Render y los paneles de observabilidad de Vercel. Estas consolas permiten observar actividad del proveedor, pero la evidencia disponible no confirma una política de alertas, notificaciones ni objetivos de servicio configurados por el equipo.
+
+### 7.4.1. Tools and Practices
+
+| Componente | Señales disponibles según la configuración/evidencia revisada | Alcance y límite |
+| :--- | :--- | :--- |
+| Render (API) | Estado de despliegue, duración, fecha, origen y logs de arranque; `render.yaml` declara un health check en `/v3/api-docs`. | El estado “Live” y la respuesta del health check no prueban por sí solos el funcionamiento de cada operación ni la conexión a Firestore. |
+| Vercel (web y consola administrativa) | Paneles del proveedor con solicitudes de borde, invocaciones de funciones y tasa de error; las capturas revisadas muestran publicaciones en estado “Ready”. | Las métricas visibles no demuestran que existan umbrales propios o notificaciones al equipo. |
+| Cloud Firestore | Consola de datos y configuración del servicio administrado. | No se identificó en la evidencia adjunta una regla de alerta de Firestore ni un monitor de latencia/errores conectado a un canal del equipo. |
+
+Las prácticas recomendadas para operar estas señales son revisar errores después de una publicación, buscar correlación con el commit desplegado, comprobar una operación funcional de cada rol y evitar registrar tokens, contraseñas, contenido sensible de reportes o mensajes de orientación en logs. La frecuencia de revisión y las personas responsables deben acordarse en el equipo.
+
+### 7.4.2. Monitoring Pipeline Components
+
+El flujo de monitorización documentado con la evidencia actual es el siguiente:
+
+1. **Identificación de versión:** relacionar la publicación con su commit y proveedor. La captura de Render presenta el commit de origen y los logs de arranque; Vercel muestra la fuente de cada publicación.
+2. **Señal de salud de API:** Render consulta la ruta `/v3/api-docs` declarada en `render.yaml`. Esta señal comprueba que la ruta responde, pero no sustituye una prueba de autenticación, autorización, operación de negocio o acceso a Firestore.
+3. **Observabilidad de frontend:** revisar las métricas expuestas por Vercel para las aplicaciones web y administrativas, incluidos errores e invocaciones visibles en el periodo seleccionado.
+4. **Verificación funcional:** tras un cambio, ejecutar una comprobación controlada con una cuenta de prueba para una ruta de empleado y otra de RR. HH., sin usar reportes ni datos personales reales. Esta práctica debe registrarse por despliegue; no se afirma que forme parte hoy de un pipeline automático.
+5. **Registro y seguimiento:** anotar fecha, versión, señal revisada, incidente y acción tomada en el registro operativo que el equipo defina.
+
+| Componente | Estado observado | Paso operativo pendiente |
+| :--- | :--- | :--- |
+| Logs de arranque y estado en Render | Evidenciados en la captura de despliegue | Definir revisión posterior al despliegue y conservación/acceso |
+| Health check `/v3/api-docs` | Declarado en la configuración de Render | Añadir una comprobación funcional independiente si el equipo lo aprueba |
+| Métricas de Vercel | Visibles en los paneles capturados | Definir qué indicadores revisa el equipo y con qué frecuencia |
+| Monitorización de Firestore | No acreditada por la evidencia disponible | Confirmar si se configura en consola y adjuntar la vista o regla vigente |
+
+### 7.4.3. Alerting Pipeline Components
+
+No se encontró evidencia suficiente para afirmar que SafeSpace tenga umbrales de alerta configurados para errores, indisponibilidad, latencia, consumo o problemas de acceso a Firestore. Por tanto, este apartado describe las decisiones que deben tomarse antes de declarar una alerta operativa.
+
+| Señal candidata | Umbral/ventana | Severidad | Responsable/canal | Estado |
+| :--- | :--- | :--- | :--- | :--- |
+| Fallo repetido del health check de la API | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de configuración y evidencia |
+| Aumento de respuestas HTTP 5xx | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de configuración y evidencia |
+| Incremento de tasa de error o fallo de despliegue en Vercel | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de configuración y evidencia |
+| Fallo de acceso a Firestore | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de confirmar instrumentación |
+
+Los valores no se fijan en el informe porque no se cuenta con una línea base de tráfico ni con objetivos de disponibilidad acordados. Antes de activar alertas se deben validar el umbral, la ventana, el mecanismo contra notificaciones repetidas y el procedimiento de respuesta. Cada alerta real debe apuntar a una señal observable y a una acción responsable.
+
+### 7.4.4. Notification Pipeline Components
+
+La ruta de notificación debe conectar una alerta confirmada con la persona responsable, incluir servicio, entorno, hora, versión y enlace al panel/log pertinente, y permitir registrar reconocimiento y resolución. No se identificó en la evidencia revisada un canal ya conectado (correo, chat u otro) ni un rol de guardia acordado; ambos quedan por definir.
+
+| Evento | Destinatario/canal | Acuse y escalamiento | Evidencia requerida |
+| :--- | :--- | :--- | :--- |
+| Indisponibilidad o degradación de API | [Definir] | [Definir] | Regla activa y notificación de prueba sin datos sensibles |
+| Fallos de interfaz o incremento de errores | [Definir] | [Definir] | Regla activa y notificación de prueba |
+| Problema de acceso a Firestore | [Definir] | [Definir] | Monitor, alerta y responsable documentados |
+
+Cuando se configuren, se anexarán capturas de la regla y una notificación de prueba con secretos y datos personales ocultos. Hasta entonces, la monitorización se apoya en la consulta de los paneles del proveedor y no se presenta como un pipeline automático de alertas y notificaciones.
+
 
 \newpage

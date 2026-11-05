@@ -55,6 +55,14 @@
       Trabajo Parcial (TB1): incorporación de Capítulos VI y VII; suite de pruebas unitarias, de integración, BDD y sistema con Playwright; prácticas de CI/CD con GitHub Actions, Docker y Render; conclusiones y recomendaciones de la entrega; actualización de Student Outcome con acciones de la presente entrega.
     </td>
   </tr>
+  <tr>
+    <td align="center">V1.3.0</td>
+    <td align="center">04/11/26</td>
+    <td>Autores del equipo por validar</td>
+    <td>
+      Borrador para Avance 2 / Hito 3: ampliación de verificación y validación, diseño de entrevistas y auditorías UX, monitorización DevOps y planificación/diseño inicial de experimentos en los Capítulos VI–VIII. Las sesiones, auditorías, análisis, decisiones de backlog y resultados permanecen pendientes de evidencia del equipo.
+    </td>
+  </tr>
 
 </tbody>
 </table>

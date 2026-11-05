@@ -351,4 +351,187 @@ La siguiente matriz relaciona escenarios de aceptación con capturas de las pant
 
 Los escenarios enlazan las historias del Capítulo III con las funciones mostradas en el Capítulo V. La suite automatizada aporta cobertura de reglas de negocio, mientras que las capturas sirven como evidencia complementaria de las interfaces.
 
+## 6.2. Static Testing & Verification
+
+Esta sección distingue las comprobaciones estáticas configuradas en los repositorios de los resultados de ejecución. Un script disponible no constituye por sí mismo evidencia de que haya sido ejecutado sobre la versión entregada; los resultados, fecha y commit deben registrarse cuando el equipo realice la revisión.
+
+### 6.2.1. Static Code Analysis
+
+#### 6.2.1.1. Coding Standards and Conventions
+
+En el frontend web, `package.json` define los comandos `typecheck` (TypeScript), `lint` (oxlint) y `format:check` (Prettier) para revisar tipos, patrones de código y formato. En el backend se mantiene el workflow de Maven para ejecutar pruebas, pero en la configuración revisada no se identificó un analizador estático dedicado equivalente a Checkstyle, SpotBugs, PMD o Sonar. Las pruebas de Maven no se presentan como análisis estático.
+
+| Componente | Herramienta o práctica identificada | Evidencia de configuración | Resultado de una corrida para este informe |
+| :--- | :--- | :--- | :--- |
+| Frontend web | TypeScript (`typecheck`) | Script definido en `package.json` | Pendiente de registrar |
+| Frontend web | oxlint (`lint`) | Script definido en `package.json` | Pendiente de registrar |
+| Frontend web | Prettier (`format:check`) | Script definido en `package.json` | Pendiente de registrar |
+| Backend | Convenciones del lenguaje y revisión de cambios | No se identificó una regla automática dedicada en el workflow consultado | Pendiente de registrar; confirmar si existe configuración local adicional |
+
+Para que el control sea reproducible, el equipo debe indicar rama y commit analizados, versión de las herramientas, comando ejecutado, fecha, resultado y excepciones aceptadas. Las advertencias no deben marcarse como resueltas sin revisar el código correspondiente.
+
+#### 6.2.1.2. Software Quality and Security
+
+El análisis de calidad debe revisar, como mínimo, tipado y errores estáticos del frontend, problemas de formato y lint, manejo de excepciones, validación de entradas, controles de autorización, exposición de secretos y tratamiento de datos personales. Para SafeSpace, la revisión de seguridad debe prestar atención especial a reportes anónimos, roles de empleado y RR. HH., datos de bienestar, registros de auditoría y credenciales de los servicios.
+
+No se cuenta en esta sección con un informe de escaneo de vulnerabilidades ni con una medición nueva de cobertura. Por eso, esos resultados permanecen pendientes y no se infiere que una herramienta haya aprobado el proyecto. Se recomienda conservar una tabla por corrida:
+
+| Fecha y commit | Componente | Herramienta/comando | Hallazgos por severidad | Decisión o enlace a evidencia |
+| :--- | :--- | :--- | :--- | :--- |
+| [Completar tras ejecutar] | [Backend/frontend] | [Completar] | [Completar] | [Completar] |
+
+### 6.2.2. Reviews
+
+La revisión por pares debe verificar la correspondencia entre el cambio, la historia de usuario y sus criterios de aceptación; legibilidad y mantenibilidad; pruebas pertinentes; autorización y privacidad; y efectos en la documentación o despliegue. La revisión se registra únicamente cuando exista una pull request o revisión verificable.
+
+| Cambio o pull request | Revisor | Criterios revisados | Hallazgos y resolución | Evidencia |
+| :--- | :--- | :--- | :--- | :--- |
+| [Completar con una revisión real] | [Integrante] | [Completar] | [Completar] | [Enlace/ID] |
+
+No se atribuyen revisiones ni aprobaciones individuales sin su registro correspondiente.
+
+## 6.3. Validation Interviews
+
+Las entrevistas de validación observarán a personas de los dos segmentos objetivo mientras interactúan con SafeSpace. El propósito es evaluar si comprenden los flujos y si pueden completar tareas representativas; no se busca que confirmen las hipótesis del equipo. La guía siguiente está preparada para aplicar, pero las sesiones, respuestas y conclusiones deben añadirse después de realizarlas.
+
+### 6.3.1. Interview Design
+
+#### Propósito y protocolo común
+
+Se validarán la comprensión del anonimato y el envío de reportes desde el segmento de empleados, y la utilidad percibida del resumen y el seguimiento desde el segmento de Recursos Humanos. También se observarán facilidad, claridad, confianza y puntos de fricción en los flujos disponibles en la versión web o móvil.
+
+Antes de iniciar, el moderador explicará que se evalúa el producto, no a la persona; que puede omitir cualquier pregunta o detener la sesión; que se usarán cuentas y datos ficticios; y que no se deben compartir incidentes laborales reales ni información sensible. Las notas se identificarán con un código y se evitarán nombres de personas, empresas, correos y detalles que permitan reconocer un caso. La grabación de audio o video requerirá autorización separada y explícita; si no se obtiene, se tomarán notas sin grabar.
+
+**Introducción sugerida:** «Gracias por participar. Queremos observar cómo se entienden algunas funciones de SafeSpace. No estamos evaluándote a ti; nos interesa saber qué resulta claro o confuso. Usaremos información ficticia. Puedes saltarte una pregunta o terminar cuando quieras. ¿Tienes alguna duda antes de empezar? ¿Aceptas participar? ¿Aceptas por separado que grabemos la sesión?»
+
+La cantidad de participantes, fechas, modalidad, criterios de reclutamiento y persona moderadora se definirán con el equipo antes de convocar. No se fija aquí una muestra ni se reportan sesiones inexistentes.
+
+#### Segmento 1: empleados de una organización
+
+**Preguntas de introducción**
+
+1. Sin mencionar la empresa ni nombres, ¿qué tipo de trabajo realizas y qué herramientas digitales utilizas normalmente durante la jornada?
+2. Cuando una organización quiere conocer cómo se sienten sus colaboradores, ¿qué medios suelen utilizarse? Puedes responder en términos generales.
+3. ¿Qué esperarías que ocurra después de compartir una opinión o enviar un reporte a un canal interno?
+4. ¿Qué información necesitarías para decidir si un canal digital es suficientemente privado y confiable?
+
+**Tareas con cuenta y datos de prueba**
+
+1. Registra un estado de ánimo del día y explica qué confirmación esperas ver.
+2. Responde una encuesta publicada o participa en una actividad abierta.
+3. Envía un reporte ficticio y elige la opción anónima. Antes de enviarlo, explica qué entiendes que verá Recursos Humanos y qué datos crees que quedarán asociados a tu cuenta.
+4. Si el flujo está disponible, inicia una consulta de orientación con un ejemplo neutral y no personal.
+
+**Preguntas posteriores y sondeos**
+
+- ¿Qué te resultó más claro y qué tuviste que interpretar por tu cuenta?
+- ¿En qué momento dudaste o buscaste ayuda? ¿Qué esperabas que pasara?
+- Después de revisar la pantalla, ¿cómo explicarías con tus propias palabras qué significa «anónimo» en este flujo? ¿Qué señal te permitiría confiar más?
+- ¿Qué confirmación o seguimiento esperarías luego de enviar el reporte?
+- En una escala de 1 a 5, ¿qué tan fácil fue completar la tarea? ¿Qué explica tu calificación?
+- En una escala de 1 a 5, ¿qué tanta confianza te dio el flujo respecto a la privacidad? ¿Qué cambiaría esa respuesta?
+- ¿En qué contexto usarías esta función y qué podría impedirte usarla?
+
+#### Segmento 2: profesionales de Recursos Humanos
+
+**Preguntas de introducción**
+
+1. Sin indicar el nombre de la organización, ¿qué responsabilidades generales tienes relacionadas con bienestar, clima laboral o comunicación interna?
+2. ¿Qué tipos de información suelen revisar para decidir si es necesario dar seguimiento a una situación?
+3. En términos generales, ¿cómo se organiza actualmente el seguimiento de comentarios, encuestas o reportes?
+4. ¿Qué información considerarías necesaria para interpretar un indicador de participación o estado de ánimo?
+
+**Tareas con cuenta y datos de prueba**
+
+1. Revisa el resumen de ánimo y describe qué conclusiones permitirían y cuáles no permitirían esos datos.
+2. Crea una encuesta de prueba en borrador y publícala si el entorno de validación lo permite.
+3. Abre un reporte ficticio y cambia su estado siguiendo el flujo disponible.
+
+**Preguntas posteriores y sondeos**
+
+- ¿Qué decisión podrías tomar a partir del resumen y qué dato adicional necesitarías?
+- ¿Cómo interpretas el periodo, el número de respuestas y la tasa de participación? ¿Qué ambigüedad encontraste?
+- ¿Qué pasos o trabajo manual esperabas realizar antes de completar la tarea?
+- ¿Qué controles de acceso o privacidad esperarías al consultar reportes y resúmenes?
+- En una escala de 1 a 5, ¿qué tan fácil fue completar la tarea? ¿Qué explica tu calificación?
+- En una escala de 1 a 5, ¿qué tan útil te resultó la información para decidir un siguiente paso? ¿Qué faltó?
+- ¿Qué cambio sería más importante antes de utilizar esta vista en un proceso real?
+
+**Cierre común:** «¿Qué no te pregunté y debería considerar? Si pudieras cambiar una sola cosa de lo que acabas de usar, ¿cuál sería?» Las respuestas de intención o utilidad percibida se reportarán como opinión declarada, no como adopción real ni mejora demostrada del proceso.
+
+#### Registro de observación
+
+Para cada tarea se anotará si se completó sin ayuda, con ayuda o no se completó; duración aproximada; errores, retrocesos y dudas observables; comentarios textuales anonimizados; y valoración del participante. Se registrará el dispositivo/plataforma (web o Android) y la versión usada. Las tareas deben realizarse con datos sintéticos y el moderador no debe sugerir una respuesta esperada.
+
+### 6.3.2. Interview Records
+
+No se incorporan respuestas de participantes porque las entrevistas de validación aún deben realizarse. Se utilizará una ficha por sesión, sin datos identificables:
+
+| Campo | Registro |
+| :--- | :--- |
+| Código de sesión | [E-01 / RH-01 u otro código no identificable] |
+| Segmento | [Empleado / Recursos Humanos] |
+| Fecha y modalidad | [Completar] |
+| Producto, plataforma y versión | [Completar] |
+| Consentimiento para participar | [Sí/No; si no, no iniciar] |
+| Consentimiento separado para grabar | [Sí/No; medio y ubicación restringida si aplica] |
+| Tareas y resultado observado | [Completar] |
+| Dudas, errores y citas anonimizadas | [Completar] |
+| Valoraciones y explicación | [Completar] |
+| Hallazgos preliminares | [Completar sin atribuir causalidad] |
+| Evidencia asociada | [Enlace interno con acceso restringido o “sin grabación”] |
+
+Los hallazgos se resumirán por segmento y tema. Las citas se anonimizarán y no se adjuntarán grabaciones con información personal al informe público. La síntesis y las decisiones derivadas se completarán después de las sesiones.
+
+### 6.3.3. Heuristic Evaluations
+
+La evaluación heurística complementará las entrevistas mediante una revisión estructurada de los flujos de registro de ánimo, participación, reporte anónimo y gestión de RR. HH. Cada evaluador registrará pantalla, dispositivo, paso, problema observado, principio afectado, severidad de 0 a 4 y recomendación. La severidad y los hallazgos quedan pendientes de revisión real.
+
+| Principio de revisión | Pregunta de evaluación |
+| :--- | :--- |
+| Visibilidad del estado | ¿La interfaz confirma el envío, guardado, publicación o cambio de estado? |
+| Correspondencia con el lenguaje del usuario | ¿Las etiquetas y estados se entienden sin conocer términos internos del sistema? |
+| Reconocimiento y claridad | ¿Las acciones, opciones y requisitos están visibles cuando se necesitan? |
+| Control y reversibilidad | ¿Se puede corregir o cancelar una acción antes de que tenga consecuencias? |
+| Prevención y recuperación de errores | ¿Se explican los errores y el camino para resolverlos sin perder información? |
+| Privacidad y confianza | ¿La interfaz explica qué se comparte y con quién, especialmente al elegir anonimato? |
+
+| Evaluador/fecha | Flujo y pantalla | Problema y principio | Severidad (0–4) | Recomendación/estado |
+| :--- | :--- | :--- | :--- | :--- |
+| [Pendiente] | [Pendiente] | [Pendiente] | [Pendiente] | [Pendiente] |
+
+## 6.4. UX Audits
+
+La auditoría UX debe documentar tanto la revisión realizada por el equipo como la retroalimentación recibida de otro equipo, de acuerdo con el intercambio que se coordine para el curso. Este apartado define el registro y los criterios; no afirma que se haya efectuado una auditoría ni atribuye resultados antes de contar con evidencia.
+
+### Auditoría realizada por el equipo
+
+| Campo | Información por completar |
+| :--- | :--- |
+| Equipo evaluador e integrantes | [Completar] |
+| Producto, versión y plataforma | [Completar] |
+| Fecha y duración | [Completar] |
+| Flujos incluidos | Estado de ánimo, encuesta/actividad, reporte, resumen y seguimiento de RR. HH. según disponibilidad |
+| Método y criterios | Lista heurística de 6.3.3 y tareas de validación de 6.3.1 |
+| Hallazgos y severidad | [Completar con observaciones reales] |
+| Cambios propuestos/realizados | [Completar y vincular con issue o commit] |
+| Evidencia | [Enlace a acta, capturas sin datos sensibles o backlog] |
+
+### Auditoría recibida de otro equipo
+
+| Campo | Información por completar |
+| :--- | :--- |
+| Equipo que realizó la revisión | [Completar] |
+| Integrantes/contacto académico | [Completar según autorización] |
+| Fecha y modalidad | [Completar] |
+| Material y versión revisados | [Completar] |
+| Comentarios recibidos | [Completar sin alterar el sentido de la observación] |
+| Respuesta del equipo SafeSpace | [Aceptar, ajustar o justificar; completar] |
+| Correcciones y trazabilidad | [Vincular cada hallazgo con cambio, decisión o pendiente] |
+| Evidencia | [Acta o registro de intercambio] |
+
+### Síntesis de correcciones
+
+Después de ambas revisiones, consolidar los hallazgos repetidos y priorizarlos por impacto en la tarea, privacidad y frecuencia observada. Registrar estado (pendiente, en curso, resuelto o descartado con justificación) y enlace a la evidencia. Hasta recibir las auditorías, el resumen y el calendario de correcciones permanecen pendientes.
+
 \newpage

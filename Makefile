@@ -16,6 +16,16 @@ DOCS_AV1 = \
 	docs/bibliografia.md \
 	docs/anexos.md
 
+# Versión del informe para Avance 2 / Hito 3: incluye el material AV1 y los capítulos VI–VIII.
+DOCS_AV2 = \
+	$(filter-out docs/90-conclusiones.md docs/bibliografia.md docs/anexos.md,$(DOCS_AV1)) \
+	docs/60-cap6-product-verification-validation.md \
+	docs/70-cap7-devops-practices.md \
+	docs/80-cap8-experiment-driven-development.md \
+	docs/90-conclusiones.md \
+	docs/bibliografia.md \
+	docs/anexos.md
+
 OUTPUT_DIR = output
 PDF_AV1 = $(OUTPUT_DIR)/report-av1.pdf
 PDF_TB1 = $(OUTPUT_DIR)/report-tb1.pdf
@@ -45,7 +55,7 @@ export STARTUP = "[PENDIENTE]"
 export PRODUCTO = "[PENDIENTE]"
 
 # Targets principales
-.PHONY: all clean pdf-av1 pdf-tb1 pdf-av2 pdf-tb2 html-av1 check-deps optimize-images init-repo
+.PHONY: all clean pdf-av1 pdf-tb1 pdf-av2 pdf-tb2 html-av1 html-av2 check-deps optimize-images init-repo validate
 
 all: pdf-av1
 
@@ -64,6 +74,9 @@ $(OUTPUT_DIR):
 # Build PDF AV1
 pdf-av1: check-deps $(OUTPUT_DIR) $(PDF_AV1)
 
+# Build PDF Avance 2 / Hito 3
+pdf-av2: check-deps $(OUTPUT_DIR) $(PDF_AV2)
+
 $(PDF_AV1): $(DOCS_AV1) config/template.tex config/condicionales.lua config/build.yaml
 	@echo "=== Generando PDF Avance 1 ==="
 	$(PANDOC) $(PANDOC_FLAGS) \
@@ -74,6 +87,18 @@ $(PDF_AV1): $(DOCS_AV1) config/template.tex config/condicionales.lua config/buil
 		--metadata=startup:"$(STARTUP)" \
 		--metadata=producto:"$(PRODUCTO)" \
 		-o $@ $(DOCS_AV1)
+	@echo "=== PDF generado: $@ ==="
+
+$(PDF_AV2): $(DOCS_AV2) config/template.tex config/condicionales.lua config/build.yaml
+	@echo "=== Generando PDF Avance 2 / Hito 3 ==="
+	$(PANDOC) $(PANDOC_FLAGS) \
+		--metadata=curso:"$(CURSO)" \
+		--metadata=nrc:"$(NRC)" \
+		--metadata=profesor:"$(PROFESOR)" \
+		--metadata=ciclo:"$(CICLO)" \
+		--metadata=startup:"$(STARTUP)" \
+		--metadata=producto:"$(PRODUCTO)" \
+		-o $@ $(DOCS_AV2)
 	@echo "=== PDF generado: $@ ==="
 
 # Build HTML AV1 (para revisión rápida)
@@ -89,6 +114,20 @@ html-av1: check-deps $(OUTPUT_DIR)
 		--metadata=curso:"$(CURSO)" \
 		-o $(OUTPUT_DIR)/report-av1.html $(DOCS_AV1)
 	@echo "=== HTML generado: $(OUTPUT_DIR)/report-av1.html ==="
+
+# Build HTML Avance 2 / Hito 3 (para revisión rápida)
+html-av2: check-deps $(OUTPUT_DIR)
+	@echo "=== Generando HTML Avance 2 / Hito 3 ==="
+	$(PANDOC) \
+		--from markdown+pipe_tables+table_captions+yaml_metadata_block+implicit_figures+footnotes+fenced_code_blocks \
+		--to html5 \
+		--template=config/template.html \
+		--toc --toc-depth=4 --number-sections --self-contained \
+		--css=config/style.css \
+		--resource-path=.:assets \
+		--metadata=curso:"$(CURSO)" \
+		-o $(OUTPUT_DIR)/report-av2.html $(DOCS_AV2)
+	@echo "=== HTML generado: $(OUTPUT_DIR)/report-av2.html ==="
 
 # Optimizar imágenes
 optimize-images:
@@ -123,8 +162,8 @@ init-repo:
 
 # Validar estructura de archivos requeridos
 validate:
-	@echo "=== Validando estructura AV1 ==="
-	@for f in $(DOCS_AV1); do \
+	@echo "=== Validando estructura Avance 2 / Hito 3 ==="
+	@for f in $(DOCS_AV2); do \
 		if [ ! -f $$f ]; then echo "FALTA: $$f"; else echo "OK: $$f"; fi; \
 	done
 	@echo "=== Validación completa ==="
@@ -140,7 +179,9 @@ help:
 	@echo ""
 	@echo "Targets:"
 	@echo "  make pdf-av1        - Genera PDF para Avance 1 (Semana 4)"
-	@echo "  make html-av1       - Genera HTML para revisión rápida"
+	@echo "  make pdf-av2        - Genera PDF para Avance 2 / Hito 3"
+	@echo "  make html-av1       - Genera HTML AV1 para revisión rápida"
+	@echo "  make html-av2       - Genera HTML AV2 para revisión rápida"
 	@echo "  make optimize-images - Optimiza imágenes a WebP"
 	@echo "  make validate       - Verifica que todos los .md existan"
 	@echo "  make check-images   - Busca imágenes muy pesadas"

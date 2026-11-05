@@ -42,6 +42,7 @@
 │   ├── 50-cap5-product-implementation.md
 │   ├── 60-cap6-product-verification-validation.md
 │   ├── 70-cap7-devops-practices.md
+│   ├── 80-cap8-experiment-driven-development.md
 │   ├── 90-conclusiones.md
 │   ├── bibliografia.md
 │   └── anexos.md
@@ -54,7 +55,7 @@
 |------|-------|-------------|
 | **Avance 1** | Semana 4 | Informe Parcial, Keynote, Performance Report, .zip artefactos, Video exposición |
 | **Trabajo Parcial** | Semana 7 | Versión actualizada + Cap. III, V, VI, VII |
-| **Avance 2** | Semana 12 | Versión actualizada + Cap. VI, VII, VIII (parcial) |
+| **Avance 2** | Semana 12 | Versión actualizada + Cap. VI, VII y VIII (parcial; planificación y diseño preliminares, ejecución pendiente de evidencia) |
 | **Trabajo Final (TB2)** | Semana 15 | Informe completo + todos los capítulos |
 
 ## Repositorio del Informe (GitHub)
