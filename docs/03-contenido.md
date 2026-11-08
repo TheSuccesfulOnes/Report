@@ -138,9 +138,15 @@
     - [6.3.2. Interview Records](#632-interview-records)
     - [6.3.3. Heuristic Evaluations](#633-heuristic-evaluations)
 * [6.4. UX Audits](#64-ux-audits)
-    - Auditoría realizada por el equipo
-    - Auditoría recibida de otro equipo
-    - Síntesis de correcciones
+    - [6.4.1. Auditoría realizada](#641-auditoría-realizada)
+        - [6.4.1.1. Información del grupo auditado](#6411-información-del-grupo-auditado)
+        - [6.4.1.2. Cronograma de auditoría realizada](#6412-cronograma-de-auditoría-realizada)
+        - [6.4.1.3. Contenido de auditoría realizada](#6413-contenido-de-auditoría-realizada)
+    - [6.4.2. Auditoría recibida](#642-auditoría-recibida)
+        - [6.4.2.1. Información del grupo auditor](#6421-información-del-grupo-auditor)
+        - [6.4.2.2. Cronograma de auditoría recibida](#6422-cronograma-de-auditoría-recibida)
+        - [6.4.2.3. Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
+        - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 
 ---
 
@@ -174,11 +180,12 @@
 * [8.2. Experiment Design](#82-experiment-design)
     - [8.2.1. Hypotheses](#821-hypotheses)
     - [8.2.2. Domain Business Metrics](#822-domain-business-metrics)
-    - [8.2.3. Measures and Conditions](#823-measures-and-conditions)
-    - [8.2.4. Scale Calculations and Decisions](#824-scale-calculations-and-decisions)
-    - [8.2.5. Method Selection](#825-method-selection)
-    - [8.2.6. Analytics Goals, KPIs and Metrics](#826-analytics-goals-kpis-and-metrics)
-    - [8.2.7. Web and Mobile Tracking Plan](#827-web-and-mobile-tracking-plan)
+    - [8.2.3. Measures](#823-measures)
+    - [8.2.4. Conditions](#824-conditions)
+    - [8.2.5. Scale Calculations and Decisions](#825-scale-calculations-and-decisions)
+    - [8.2.6. Methods Selection](#826-methods-selection)
+    - [8.2.7. Data Analytics: Goals, KPIs and Metrics Selection](#827-data-analytics-goals-kpis-and-metrics-selection)
+    - [8.2.8. Web and Mobile Tracking Plan](#828-web-and-mobile-tracking-plan)
 * [8.3. Experimentation](#83-experimentation)
     - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
     - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)

@@ -59,101 +59,121 @@ Estas observaciones permitirían evaluar claridad y utilidad percibida en una se
 
 ### 8.1.3. Experiment-Ready Questions
 
-1. ¿Puede un empleado completar un reporte ficticio y explicar correctamente qué significa la opción anónima en SafeSpace?
-2. ¿Qué señales de la interfaz aumentan o reducen la confianza declarada del empleado al participar?
-3. ¿Puede un profesional de Recursos Humanos interpretar el resumen de estado de ánimo sin confundir el número de respuestas con la población total?
-4. ¿Qué información adicional necesita Recursos Humanos para decidir un siguiente paso a partir del resumen?
-5. ¿Puede Recursos Humanos crear/publicar una encuesta de prueba y actualizar el estado de un reporte ficticio sin ayuda?
-6. ¿Qué diferencias observables aparecen entre completar las tareas en web y en Android?
+Las preguntas se clasifican en dos tipos: **impulsadas por creencias** (belief-led), que ponen a prueba una premisa o hipótesis ya formulada, y **exploratorias**, que recopilan conocimiento donde el equipo no tiene una creencia previa (corresponden a las brechas de conocimiento de 8.1.2).
+
+| # | Pregunta | Tipo | Origen |
+| :--- | :--- | :--- | :--- |
+| 1 | ¿Puede un empleado completar un reporte ficticio y explicar correctamente qué significa la opción anónima en SafeSpace? | Impulsada por creencias | H1 |
+| 2 | ¿Qué señales de la interfaz aumentan o reducen la confianza declarada del empleado al participar? | Exploratoria | Brecha de conocimiento sobre anonimato y confianza |
+| 3 | ¿Puede un profesional de Recursos Humanos interpretar el resumen de estado de ánimo sin confundir el número de respuestas con la población total? | Impulsada por creencias | H2 |
+| 4 | ¿Qué información adicional necesita Recursos Humanos para decidir un siguiente paso a partir del resumen? | Exploratoria | Brecha de conocimiento sobre indicadores del resumen |
+| 5 | ¿Puede Recursos Humanos crear/publicar una encuesta de prueba y actualizar el estado de un reporte ficticio sin ayuda? | Impulsada por creencias | H4 |
+| 6 | ¿Qué diferencias observables aparecen entre completar las tareas en web y en Android? | Exploratoria | Brecha de conocimiento sobre dispositivos y momentos de uso |
 
 ### 8.1.4. Question Backlog
 
-La prioridad de esta tabla es un orden inicial propuesto según el riesgo de confianza, interpretación y operación. No es una priorización obtenida de participantes. Tras el análisis de las sesiones, el equipo debe volver a puntuar alcance, impacto, incertidumbre y esfuerzo, y registrar el backlog actualizado.
+La prioridad de esta tabla es un orden inicial propuesto según el riesgo de confianza, interpretación y operación. No es una priorización obtenida de participantes. Cada pregunta se justifica con su motivación (columna «Por qué») y se puntúa con cuatro criterios: **Confianza**, **Riesgo**, **Impacto** e **Interés**. En caso de empate se prioriza la pregunta con mayor Riesgo. Las puntuaciones están pendientes: el equipo debe acordarlas y, tras el análisis de las sesiones, volver a puntuar y registrar el backlog actualizado.
 
-| Orden inicial | Pregunta | Segmento | Riesgo asociado | Evidencia esperada | Estado |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | ¿Se comprende qué datos se asocian a un reporte anónimo? | Empleados | Pérdida de confianza o expectativas incorrectas de privacidad. | Explicación en palabras propias, dudas observadas y valoración razonada. | Por validar |
-| 2 | ¿Se interpretan correctamente la distribución y la participación del resumen? | Recursos Humanos | Decisiones basadas en una lectura incorrecta o incompleta. | Interpretación de datos sintéticos y datos adicionales solicitados. | Por validar |
-| 3 | ¿Se completan sin ayuda las tareas principales de participación y reporte? | Empleados | Abandono por fricción o falta de claridad. | Éxito por tarea, necesidad de ayuda, errores y tiempo observado. | Por validar |
-| 4 | ¿El flujo de seguimiento coincide con el trabajo esperado por Recursos Humanos? | Recursos Humanos | Duplicación de pasos o estados poco útiles. | Tarea completada, comentarios sobre estados y pasos externos. | Por validar |
-| 5 | ¿Qué diferencias de comprensión y facilidad hay entre web y Android? | Ambos | Experiencia desigual según dispositivo. | Resultados segmentados por plataforma, cuando la muestra permita describirlos. | Por validar |
+Esta versión es un backlog amplio (*broad*): reúne preguntas de distintos temas y de ambos segmentos sin profundizar en una sola. Tras la primera ronda, el equipo podrá profundizar en las preguntas con mayor puntuación.
+
+| Orden inicial | Pregunta | Segmento | Por qué (riesgo asociado) | Confianza | Riesgo | Impacto | Interés | Evidencia esperada | Estado |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | ¿Se comprende qué datos se asocian a un reporte anónimo? | Empleados | Pérdida de confianza o expectativas incorrectas de privacidad. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Explicación en palabras propias, dudas observadas y valoración razonada. | Por validar |
+| 2 | ¿Se interpretan correctamente la distribución y la participación del resumen? | Recursos Humanos | Decisiones basadas en una lectura incorrecta o incompleta. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Interpretación de datos sintéticos y datos adicionales solicitados. | Por validar |
+| 3 | ¿Se completan sin ayuda las tareas principales de participación y reporte? | Empleados | Abandono por fricción o falta de claridad. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Éxito por tarea, necesidad de ayuda, errores y tiempo observado. | Por validar |
+| 4 | ¿El flujo de seguimiento coincide con el trabajo esperado por Recursos Humanos? | Recursos Humanos | Duplicación de pasos o estados poco útiles. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Tarea completada, comentarios sobre estados y pasos externos. | Por validar |
+| 5 | ¿Qué diferencias de comprensión y facilidad hay entre web y Android? | Ambos | Experiencia desigual según dispositivo. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Resultados segmentados por plataforma, cuando la muestra permita describirlos. | Por validar |
 
 ### 8.1.5. Experiment Cards
 
 Las tarjetas siguientes describen experimentos candidatos de bajo riesgo con cuentas de prueba y datos sintéticos. Antes de reclutar, el equipo debe confirmar hipótesis, versión del producto, criterios de éxito, tamaño de muestra, fechas y responsables. Los campos entre corchetes quedan pendientes de esa decisión.
+
+Cada tarjeta reúne en su frente la pregunta, el por qué, la hipótesis y el qué (la *Simplest Useful Thing*, la cosa más simple y útil para obtener la respuesta); en su reverso, las medidas, las condiciones y la escala. Las medidas solo pueden referirse a las métricas definidas en 8.2.2.
 
 #### Tarjeta A — Comprensión del reporte anónimo
 
 | Elemento | Diseño preliminar |
 | :--- | :--- |
 | Pregunta | ¿Puede un empleado completar el flujo y explicar correctamente el alcance del anonimato? |
+| Por qué | Pregunta 1 del Question Backlog: riesgo de pérdida de confianza o de expectativas incorrectas de privacidad. |
 | Hipótesis | Una explicación visible de privacidad, junto a la opción anónima, facilita una comprensión correcta y aumenta la confianza declarada. |
+| Qué (*Simplest Useful Thing*) | Observar el flujo de reporte existente con cuenta y datos sintéticos, sin desarrollo adicional. |
 | Segmento | Empleados de una organización. |
 | Método | Prueba moderada de tarea con escenario ficticio; entrevista breve posterior. No se solicita narrar experiencias laborales reales. |
-| Medidas | Finalización sin ayuda; errores/retrocesos; tiempo; interpretación correcta de qué se muestra y qué se conserva; valoración de confianza de 1 a 5 y su explicación. |
+| Medidas | Finalización sin ayuda; errores/retrocesos; tiempo; interpretación correcta de qué se muestra y qué se conserva; valoración de confianza de 1 a 5 y su explicación. Métricas de 8.2.2: M2 y M5. |
 | Condiciones | Entorno de prueba, cuenta sintética, reporte neutral; dispositivo/plataforma y versión registrados; guion y aviso de consentimiento iguales para cada sesión. |
 | Criterio de decisión | Definir antes de las sesiones el mínimo aceptable de comprensión y finalización: [acordar]. Revisar cualquier interpretación incorrecta de privacidad como hallazgo prioritario. |
-| Tamaño y fechas | [Definir con el equipo según disponibilidad y propósito formativo]. |
+| Escala (tamaño y fechas) | [Definir con el equipo según disponibilidad y propósito formativo]. Parámetros generales en 8.2.5. |
 
 #### Tarjeta B — Interpretación del resumen de Recursos Humanos
 
 | Elemento | Diseño preliminar |
 | :--- | :--- |
 | Pregunta | ¿Puede RR. HH. interpretar el resumen y distinguir lo que los datos permiten concluir de lo que no? |
+| Por qué | Pregunta 2 del Question Backlog: riesgo de tomar decisiones a partir de una lectura incorrecta o incompleta del resumen. |
 | Hipótesis | Presentar periodo, cantidad de respuestas, población de referencia y distribución con etiquetas claras facilita interpretar los datos y decidir qué información falta. |
+| Qué (*Simplest Useful Thing*) | Tarea de interpretación sobre el resumen existente con un conjunto de datos sintéticos, sin desarrollo adicional. |
 | Segmento | Profesionales de Recursos Humanos. |
 | Método | Prueba moderada con datos sintéticos, tarea de interpretación y entrevista posterior. No se usan datos de una organización real. |
-| Medidas | Respuestas correctas a preguntas preparadas; tiempo y ayudas; métricas o etiquetas malinterpretadas; valoración de utilidad de 1 a 5 y explicación. |
+| Medidas | Respuestas correctas a preguntas preparadas; tiempo y ayudas; métricas o etiquetas malinterpretadas; valoración de utilidad de 1 a 5 y explicación. Métricas de 8.2.2: M3 y M5. |
 | Condiciones | Mismo conjunto de datos ficticios y mismas preguntas para cada participante; registrar versión y plataforma. |
 | Criterio de decisión | Definir antes de las sesiones qué preguntas se consideran esenciales y cuántas deben interpretarse correctamente: [acordar]. Documentar conclusiones que no pueden extraerse de la vista actual. |
-| Tamaño y fechas | [Definir con el equipo]. |
+| Escala (tamaño y fechas) | [Definir con el equipo]. Parámetros generales en 8.2.5. |
 
 #### Tarjeta C — Flujo de participación y seguimiento
 
 | Elemento | Diseño preliminar |
 | :--- | :--- |
 | Pregunta | ¿Pueden empleados y RR. HH. completar las tareas representativas de participación y seguimiento con el producto disponible? |
+| Por qué | Preguntas 3 y 4 del Question Backlog: riesgo de abandono por fricción o falta de claridad, y de duplicación de pasos o estados poco útiles para Recursos Humanos. |
 | Hipótesis | Los flujos actuales permiten completar tareas básicas sin asistencia frecuente y con comprensión suficiente de sus confirmaciones y estados. |
+| Qué (*Simplest Useful Thing*) | Tareas representativas sobre los flujos existentes con cuentas y datos sintéticos, sin desarrollo adicional. |
 | Segmento | Empleados y profesionales de Recursos Humanos, analizados por separado. |
 | Método | Prueba moderada de tareas: empleado responde una encuesta o participa en una actividad; RR. HH. crea/publica una encuesta de prueba o actualiza el estado de un reporte ficticio. |
-| Medidas | Éxito por tarea, ayuda requerida, errores, retrocesos, tiempo, comprensión de confirmaciones/estados y facilidad percibida de 1 a 5. |
+| Medidas | Éxito por tarea, ayuda requerida, errores, retrocesos, tiempo, comprensión de confirmaciones/estados y facilidad percibida de 1 a 5. Métricas de 8.2.2: M5, y M4 en las tareas de Recursos Humanos. La comprensión de confirmaciones y estados se registra como observación cualitativa, porque no tiene una métrica definida en 8.2.2. |
 | Condiciones | Cuentas de prueba, tareas neutrales, datos sintéticos, sin acciones sobre producción ni información laboral real. |
 | Criterio de decisión | Acordar antes de la prueba umbrales de finalización y facilidad para cada tarea: [definir]. Separar resultados por segmento y plataforma. |
-| Tamaño y fechas | [Definir con el equipo]. |
+| Escala (tamaño y fechas) | [Definir con el equipo]. Parámetros generales en 8.2.5. |
 
 ## 8.2. Experiment Design
 
 ### 8.2.1. Hypotheses
 
-Se retoman las cinco hipótesis Lean UX del Capítulo I; la columna de verificación las convierte en afirmaciones observables para esta ronda, sin cambiar su condición de hipótesis.
+Se retoman las cinco hipótesis Lean UX del Capítulo I; la columna de verificación las convierte en afirmaciones observables para esta ronda, sin cambiar su condición de hipótesis. Cada hipótesis de trabajo se empareja con una hipótesis nula (H0), que afirma que no ocurrirá nada como resultado del cambio o que cualquier diferencia se debe al azar. Las hipótesis se ponen a prueba frente a su H0; no se pretende demostrarlas como «verdaderas».
 
-| Código de trabajo | Hipótesis Lean UX | Evidencia observable en el experimento |
-| :--- | :--- | :--- |
-| H1 | Un canal de reportes anónimos y con seguimiento aumentará la disposición de empleados a comunicar inquietudes. | Comprensión de anonimato, confianza declarada y finalización de un reporte ficticio. La disposición declarada no equivale a uso real. |
-| H2 | Un dashboard consolidado ayudará a RR. HH. a identificar patrones y priorizar acciones. | Interpretación correcta de datos sintéticos, límites reconocidos y siguiente información/acción solicitada. |
-| H3 | La asistencia digital y los flujos guiados reducirán la fricción para iniciar una solicitud de apoyo. | Finalización, ayudas, dudas y facilidad percibida en un ejemplo neutral. No se solicita información emocional real. |
-| H4 | Centralizar reportes y estados mejorará la eficiencia del seguimiento de RR. HH. | Pasos observados y percepción de ajuste del flujo. La eficiencia real requiere comparar con una línea base del proceso, aún no disponible. |
-| H5 | Una experiencia simple, anónima y orientada al usuario aumentará la participación. | Finalización y comprensión en tareas de prueba. La adopción organizacional requiere un piloto y métricas longitudinales posteriores. |
+| Código de trabajo | Hipótesis Lean UX | Hipótesis nula (H0) | Evidencia observable en el experimento |
+| :--- | :--- | :--- | :--- |
+| H1 | Un canal de reportes anónimos y con seguimiento aumentará la disposición de empleados a comunicar inquietudes. | Un canal de reportes anónimos y con seguimiento no modifica la disposición de empleados a comunicar inquietudes; cualquier diferencia observada se debe al azar. | Comprensión de anonimato, confianza declarada y finalización de un reporte ficticio. La disposición declarada no equivale a uso real. |
+| H2 | Un dashboard consolidado ayudará a RR. HH. a identificar patrones y priorizar acciones. | Un dashboard consolidado no ayuda a RR. HH. a identificar patrones ni a priorizar acciones; cualquier diferencia observada se debe al azar. | Interpretación correcta de datos sintéticos, límites reconocidos y siguiente información/acción solicitada. |
+| H3 | La asistencia digital y los flujos guiados reducirán la fricción para iniciar una solicitud de apoyo. | La asistencia digital y los flujos guiados no reducen la fricción para iniciar una solicitud de apoyo; cualquier diferencia observada se debe al azar. | Finalización, ayudas, dudas y facilidad percibida en un ejemplo neutral. No se solicita información emocional real. |
+| H4 | Centralizar reportes y estados mejorará la eficiencia del seguimiento de RR. HH. | Centralizar reportes y estados no mejora la eficiencia del seguimiento de RR. HH.; cualquier diferencia observada se debe al azar. | Pasos observados y percepción de ajuste del flujo. La eficiencia real requiere comparar con una línea base del proceso, aún no disponible. |
+| H5 | Una experiencia simple, anónima y orientada al usuario aumentará la participación. | Una experiencia simple, anónima y orientada al usuario no aumenta la participación; cualquier diferencia observada se debe al azar. | Finalización y comprensión en tareas de prueba. La adopción organizacional requiere un piloto y métricas longitudinales posteriores. |
 
 ### 8.2.2. Domain Business Metrics
 
-| Resultado de negocio que se desea observar | Métrica potencial | Unidad/interpretación | Disponibilidad actual |
-| :--- | :--- | :--- | :--- |
-| Participación de empleados | Proporción de empleados elegibles que completan una actividad en un periodo | Respuestas válidas / empleados elegibles; requiere definir población y ventana | No hay línea base organizacional documentada |
-| Claridad y confianza en reportes | Comprensión de privacidad y confianza declarada | Respuestas correctas a sondeo de comprensión; escala 1–5 acompañada de explicación | Se medirá en las entrevistas propuestas |
-| Interpretación de señales por RR. HH. | Exactitud en preguntas de lectura del resumen | Interpretaciones correctas / preguntas definidas antes de la sesión | Se medirá con datos sintéticos |
-| Organización del seguimiento | Tiempo y pasos por tarea administrativa | Duración y pasos observados; comparación con proceso actual solo si se documenta la línea base | Línea base pendiente |
-| Facilidad de los flujos | Finalización sin ayuda y errores | Tareas completadas sin asistencia / tareas intentadas; recuento por tarea | Se medirá en sesiones moderadas |
+Cada métrica se describe con su fórmula de cálculo, su técnica de recolección y su meta deseada. Las Experiment Cards (8.1.5) solo se refieren a las métricas definidas en esta sección, mediante su código. Las fórmulas de tareas coinciden con las reglas de cálculo de 8.2.5.
 
-Estas métricas son candidatas para vincular resultados de producto con historias To-Be. No deben confundirse con resultados organizacionales (por ejemplo, reducción de problemas laborales), que requieren un piloto, contexto y periodo de observación apropiados.
+| Código | Resultado de negocio que se desea observar | Métrica | Fórmula / unidad | Técnica de recolección | Meta deseada | Disponibilidad actual |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| M1 | Participación de empleados | Proporción de empleados elegibles que completan una actividad en un periodo | Respuestas válidas / empleados elegibles; requiere definir población y ventana | [Definir; requiere un piloto en una organización] | [Definir con el equipo] | No hay línea base organizacional documentada |
+| M2 | Claridad y confianza en reportes | Comprensión de privacidad y confianza declarada | Comprensión de anonimato (%) = participantes que identifican correctamente los datos visibles y la relación con la cuenta / participantes que respondieron × 100; confianza: distribución de la escala 1–5, mediana y explicación | Entrevista con tarea y sondeo de comprensión; escala 1–5 con explicación (6.3.1) | [Definir con el equipo] | Se medirá en las entrevistas propuestas |
+| M3 | Interpretación de señales por RR. HH. | Exactitud en preguntas de lectura del resumen | Interpretaciones correctas / preguntas definidas antes de la sesión; utilidad percibida: distribución de la escala 1–5, mediana y explicación | Tarea de interpretación sobre datos sintéticos con preguntas preparadas | [Definir con el equipo] | Se medirá con datos sintéticos |
+| M4 | Organización del seguimiento | Tiempo y pasos por tarea administrativa | Duración (mediana y rango) y número de pasos observados; comparación con el proceso actual solo si se documenta la línea base | Observación de la tarea con cronometraje y registro de pasos | [Definir con el equipo] | Línea base pendiente |
+| M5 | Facilidad de los flujos | Finalización sin ayuda, tasa de ayuda, errores y tiempo por tarea | Finalización sin ayuda (%) = tareas completadas sin ayuda / tareas intentadas × 100; tasa de ayuda (%); recuento de errores por tarea; tiempo por tarea (mediana y rango) | Observación de tareas en sesiones moderadas | [Definir con el equipo] | Se medirá en sesiones moderadas |
 
-### 8.2.3. Measures and Conditions
+Estas métricas son candidatas para vincular resultados de producto con historias To-Be. No deben confundirse con resultados organizacionales (por ejemplo, reducción de problemas laborales), que requieren un piloto, contexto y periodo de observación apropiados. Las metas permanecen pendientes: no se fija un objetivo numérico hasta revisar una primera ronda y acordar criterios de decisión con el equipo (8.2.7).
 
-Para cada sesión se registrará el código anónimo, segmento, dispositivo, versión del producto, tarea, resultado (sin ayuda / con ayuda / no completada), tiempo aproximado, errores, retrocesos, valoración y comentario anonimizado. Los sondeos de 1 a 5 se acompañarán de una pregunta abierta; al analizar respuestas ordinales se mostrarán su distribución y mediana junto con los comentarios, evitando atribuir significado causal a cambios pequeños.
+### 8.2.3. Measures
+
+Para cada sesión se registrará el código anónimo, segmento, dispositivo, versión del producto, tarea, resultado (sin ayuda / con ayuda / no completada), tiempo aproximado, errores, retrocesos, valoración y comentario anonimizado. Los sondeos de 1 a 5 se acompañarán de una pregunta abierta; al analizar respuestas ordinales se mostrarán su distribución y mediana junto con los comentarios, evitando atribuir significado causal a cambios pequeños. Solo se registran las medidas necesarias para responder cada pregunta, durante el tiempo estrictamente necesario, y todas se vinculan con las métricas de 8.2.2.
+
+### 8.2.4. Conditions
+
+Para las preguntas impulsadas por creencias (1, 3 y 5 de 8.1.3), las condiciones comprenden una **condición experimental**, que busca evidencia a favor de la hipótesis alternativa, y una **condición de control**, que parte de la suposición de que la hipótesis nula es correcta. En esta versión del diseño la condición de control no está definida: [Definir con el equipo]. Para las preguntas exploratorias (2, 4 y 6), las condiciones delimitan las características del grupo que se estudia: segmento, plataforma y versión del producto, según se registra en cada tarjeta.
 
 Las condiciones deben mantenerse comparables: mismos datos ficticios, instrucciones, permisos y criterio de finalización por tarea. Si se comparan web y Android, registrar la plataforma y evitar atribuir diferencias al dispositivo cuando también haya cambiado la tarea, el contenido o la versión. El moderador no completará la tarea por el participante; si necesita intervenir, anotará cuándo y por qué.
 
-### 8.2.4. Scale Calculations and Decisions
+### 8.2.5. Scale Calculations and Decisions
 
 Las métricas de tareas se calcularán con reglas fijadas antes de analizar los datos:
 
@@ -163,9 +183,20 @@ Las métricas de tareas se calcularán con reglas fijadas antes de analizar los 
 - **Tiempo por tarea** = tiempo entre la instrucción y la finalización; reportar mediana y rango, además de las incidencias observadas.
 - **Valoración de facilidad/confianza** = distribución de respuestas de 1 a 5, mediana y explicación textual anonimizada.
 
-Si el objetivo fuera estimar una proporción poblacional, una referencia de tamaño muestral para población grande sería `n₀ = Z² p(1 − p) / e²`, con corrección por población finita `n = n₀ / (1 + (n₀ − 1) / N)`. En este proyecto no se calcula un valor todavía porque no se ha definido población elegible `N`, precisión `e`, nivel de confianza `Z` ni proporción base `p`. Esta fórmula no se debe usar para afirmar representatividad en una prueba cualitativa de usabilidad. El tamaño de las sesiones formativas y el alcance de sus conclusiones se acordarán con el equipo y se reportarán explícitamente.
+La escala de cada experimento se determina a partir de la **certeza** (probabilidad de error aceptable) y la **precisión** (tamaño del cambio que se desea detectar):
 
-### 8.2.5. Method Selection
+| Parámetro | Qué controla | Valor o decisión |
+| :--- | :--- | :--- |
+| Nivel de significancia (α) | Error Tipo I: concluir que hay un efecto cuando se debe al azar. | 5 % |
+| Potencia estadística (1 − β) | Error Tipo II: no detectar un efecto real. | Entre 80 % y 95 % [fijar el valor con el equipo] |
+| Efecto mínimo detectable (MDE) | Magnitud mínima de diferencia que vale la pena detectar. | [Definir con el equipo para cada métrica de 8.2.2] |
+| Representatividad de los datos | Aplicabilidad de los hallazgos al grupo de interés. | Participantes de los dos segmentos objetivo: empleados y profesionales de Recursos Humanos |
+
+Para comparar dos proporciones (condición experimental frente a condición de control), el tamaño por grupo es `n = (Z₁₋α/₂ · √(2·p̄·(1 − p̄)) + Z₁₋β · √(p₁(1 − p₁) + p₂(1 − p₂)))² / (p₂ − p₁)²`, con `p̄ = (p₁ + p₂) / 2` y `p₂ − p₁` igual al MDE.
+
+Si el objetivo fuera estimar una proporción poblacional, una referencia de tamaño muestral para población grande sería `n₀ = Z² p(1 − p) / e²`, con corrección por población finita `n = n₀ / (1 + (n₀ − 1) / N)`. En este proyecto no se calcula un valor todavía porque no se han definido la población elegible `N`, la precisión `e`, el nivel de confianza `Z`, la proporción base `p` (`p₁` en la comparación) ni el MDE. Esta fórmula no se debe usar para afirmar representatividad en una prueba cualitativa de usabilidad. El tamaño de las sesiones formativas y el alcance de sus conclusiones se acordarán con el equipo y se reportarán explícitamente.
+
+### 8.2.6. Methods Selection
 
 Se propone una combinación de métodos cualitativos y cuantitativos ligeros:
 
@@ -176,7 +207,9 @@ Se propone una combinación de métodos cualitativos y cuantitativos ligeros:
 | Escala breve 1–5 | Recoger facilidad/confianza percibidas junto con explicación. | Permite comparar descripciones dentro de las sesiones sin reemplazar comentarios. | Es autorreporte ordinal y no una medida de conducta real. |
 | Revisión heurística | Inspeccionar sistemáticamente visibilidad, lenguaje, control, errores y privacidad. | Identifica problemas de interfaz que pueden pasar inadvertidos en una tarea breve. | No sustituye la evaluación con usuarios. |
 
-### 8.2.6. Analytics Goals, KPIs and Metrics
+El método elegido para cada pregunta debe ser la cosa más simple y útil (*Simplest Useful Thing*) para reunir las condiciones y la evidencia necesarias; la pregunta o hipótesis es el objeto de la investigación y el método es la técnica empleada para responderla. No se ejecutarán simultáneamente dos o más experimentos sobre el mismo tema que expongan a una misma persona a ambos, y ningún método debe causar daño a los participantes: por eso se emplean cuentas y datos sintéticos y no se solicita información laboral ni emocional real.
+
+### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
 Los objetivos analíticos de esta ronda son: (1) detectar confusiones de privacidad en el flujo anónimo; (2) determinar si RR. HH. entiende el periodo y denominador de los indicadores; y (3) identificar tareas con ayuda, error o abandono. Los indicadores de sesión son exploratorios; no son KPI operativos ni compromisos de servicio.
 
@@ -189,7 +222,7 @@ Los objetivos analíticos de esta ronda son: (1) detectar confusiones de privaci
 
 No se establece un objetivo numérico de mejora hasta revisar una primera ronda y acordar criterios de decisión con el equipo. Después de la ronda, se deberá actualizar la Question Backlog y justificar cambios de prioridad con evidencia registrada.
 
-### 8.2.7. Web and Mobile Tracking Plan
+### 8.2.8. Web and Mobile Tracking Plan
 
 Para las pruebas moderadas se propone una hoja de observación local y un código aleatorio de sesión. Si el equipo decide añadir instrumentación de producto, deberá aprobar primero eventos mínimos, consentimiento, retención y acceso. No se registrarán nombres, correos, texto libre de reportes, estados de ánimo individuales, mensajes de orientación, tokens ni identificadores que permitan reconstruir la identidad.
 
