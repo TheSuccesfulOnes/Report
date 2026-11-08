@@ -2,19 +2,23 @@
 
 ## Anexo A. Student Outcome
 
-El cuadro resume la aplicación de los criterios del Student Outcome 4 al Trabajo Parcial. La evidencia ampliada y su relación con el proyecto se presentan en [Student Outcome](04-student-outcome.md).
+El cuadro resume la aplicación de los criterios del Student Outcome 4 hasta el Avance 2. La evidencia ampliada y su relación con el proyecto se presentan en [Student Outcome](04-student-outcome.md).
 
 | Criterio específico | Aplicación en SafeSpace | Evidencia en el informe |
 | :--- | :--- | :--- |
-| **4.c.1. Responsabilidad ética y profesional** | El diseño considera la privacidad, la confidencialidad, el anonimato en los reportes y el alcance informativo de la orientación con IA. | Capítulos I, III, IV y V. |
-| **4.c.2. Juicios informados sobre impactos** | El equipo analiza el impacto de los canales de bienestar y comunicación en empleados y Recursos Humanos, así como las decisiones técnicas y de servicio asociadas al producto. | Capítulos I, III, V y conclusiones. |
+| **4.c.1. Responsabilidad ética y profesional** | El diseño considera la privacidad, la confidencialidad, el anonimato en los reportes y el alcance informativo de la orientación con IA. | Capítulos I, III, IV, V, VI, VII y VIII. |
+| **4.c.2. Juicios informados sobre impactos** | El equipo analiza el impacto de los canales de bienestar y comunicación en empleados y Recursos Humanos, así como las decisiones técnicas y de servicio asociadas al producto. | Capítulos I, III, V, VII, VIII y conclusiones. |
 
-## Anexo B. Evidencias audiovisuales del AV1
+## Anexo B. Videos de Exposiciones
 
-| Material | Enlace |
-| :--- | :--- |
-| About the Product — video de presentación de SafeSpace | [Ver en YouTube](https://youtu.be/LQMtdRskbRs) · [Microsoft 365](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQCGpIJb9aonTLG1yEctvKw2ASu2vkNiDx2fEkP3M_4wXiA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g11Gr9) |
-| Exposición AV1 | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQCMrgPbZR7qQqwR238OZomZAecNXBTj96MNbKUz5qdsMOM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiJ9fQ%3D&e=kFGtG3) |
+La relación se amplía con cada entrega del proyecto. Cada video indica la entrega a la que corresponde.
+
+| Entrega | Material | Enlace |
+| :--- | :--- | :--- |
+| AV1 | About the Product — video de presentación de SafeSpace | [Ver en YouTube](https://youtu.be/LQMtdRskbRs) · [Microsoft 365](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQCGpIJb9aonTLG1yEctvKw2ASu2vkNiDx2fEkP3M_4wXiA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g11Gr9) |
+| AV1 | Exposición AV1 | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQCMrgPbZR7qQqwR238OZomZAecNXBTj96MNbKUz5qdsMOM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiJ9fQ%3D&e=kFGtG3) |
+| Trabajo Parcial | Exposición del Trabajo Parcial | [Completar con el enlace del video en Microsoft Stream] |
+| AV2 | Exposición AV2 | [Completar con el enlace del video en Microsoft Stream una vez grabado y subido] |
 
 ## Anexo C. Repositorios y servicios publicados
 

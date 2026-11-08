@@ -502,36 +502,62 @@ La evaluación heurística complementará las entrevistas mediante una revisión
 
 ## 6.4. UX Audits
 
-La auditoría UX debe documentar tanto la revisión realizada por el equipo como la retroalimentación recibida de otro equipo, de acuerdo con el intercambio que se coordine para el curso. Este apartado define el registro y los criterios; no afirma que se haya efectuado una auditoría ni atribuye resultados antes de contar con evidencia.
+La auditoría UX documenta dos actividades, de acuerdo con el intercambio que se coordine para el curso: la **auditoría realizada**, en la que el equipo SafeSpace evalúa la experiencia de otro grupo, y la **auditoría recibida**, en la que otro equipo evalúa la experiencia de SafeSpace. Este apartado define el registro y los criterios; no afirma que se haya efectuado una auditoría ni atribuye resultados antes de contar con evidencia.
 
-### Auditoría realizada por el equipo
+### 6.4.1. Auditoría realizada
+
+#### 6.4.1.1. Información del grupo auditado
 
 | Campo | Información por completar |
 | :--- | :--- |
-| Equipo evaluador e integrantes | [Completar] |
-| Producto, versión y plataforma | [Completar] |
+| Grupo auditado e integrantes | [Completar] |
+| Producto, versión y plataforma auditados | [Completar] |
+
+#### 6.4.1.2. Cronograma de auditoría realizada
+
+| Campo | Información por completar |
+| :--- | :--- |
 | Fecha y duración | [Completar] |
-| Flujos incluidos | Estado de ánimo, encuesta/actividad, reporte, resumen y seguimiento de RR. HH. según disponibilidad |
+
+#### 6.4.1.3. Contenido de auditoría realizada
+
+| Campo | Información por completar |
+| :--- | :--- |
+| Flujos incluidos | [Completar con los flujos del producto auditado] |
 | Método y criterios | Lista heurística de 6.3.3 y tareas de validación de 6.3.1 |
 | Hallazgos y severidad | [Completar con observaciones reales] |
-| Cambios propuestos/realizados | [Completar y vincular con issue o commit] |
 | Evidencia | [Enlace a acta, capturas sin datos sensibles o backlog] |
 
-### Auditoría recibida de otro equipo
+### 6.4.2. Auditoría recibida
+
+#### 6.4.2.1. Información del grupo auditor
 
 | Campo | Información por completar |
 | :--- | :--- |
 | Equipo que realizó la revisión | [Completar] |
 | Integrantes/contacto académico | [Completar según autorización] |
+
+#### 6.4.2.2. Cronograma de auditoría recibida
+
+| Campo | Información por completar |
+| :--- | :--- |
 | Fecha y modalidad | [Completar] |
+
+#### 6.4.2.3. Contenido de auditoría recibida
+
+| Campo | Información por completar |
+| :--- | :--- |
 | Material y versión revisados | [Completar] |
 | Comentarios recibidos | [Completar sin alterar el sentido de la observación] |
 | Respuesta del equipo SafeSpace | [Aceptar, ajustar o justificar; completar] |
-| Correcciones y trazabilidad | [Vincular cada hallazgo con cambio, decisión o pendiente] |
 | Evidencia | [Acta o registro de intercambio] |
 
-### Síntesis de correcciones
+#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
 
-Después de ambas revisiones, consolidar los hallazgos repetidos y priorizarlos por impacto en la tarea, privacidad y frecuencia observada. Registrar estado (pendiente, en curso, resuelto o descartado con justificación) y enlace a la evidencia. Hasta recibir las auditorías, el resumen y el calendario de correcciones permanecen pendientes.
+Después de recibir la auditoría, consolidar los hallazgos repetidos y priorizarlos por impacto en la tarea, privacidad y frecuencia observada. Registrar para cada hallazgo el cambio, la decisión o el pendiente, con su estado (pendiente, en curso, resuelto o descartado con justificación) y el enlace a la evidencia, ya sea un issue o un commit. Hasta recibir la auditoría, el resumen y el calendario de correcciones permanecen pendientes.
+
+| Hallazgo | Cambio, decisión o pendiente | Estado | Evidencia |
+| :--- | :--- | :--- | :--- |
+| [Completar con un hallazgo real] | [Vincular con issue o commit] | [Pendiente / en curso / resuelto / descartado] | [Enlace] |
 
 \newpage

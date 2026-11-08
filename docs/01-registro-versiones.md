@@ -58,9 +58,17 @@
   <tr>
     <td align="center">V1.3.0</td>
     <td align="center">04/11/26</td>
-    <td>Autores del equipo por validar</td>
+    <td>Asto Jacome, Jose Gustavo</td>
     <td>
       Borrador para Avance 2 / Hito 3: ampliación de verificación y validación, diseño de entrevistas y auditorías UX, monitorización DevOps y planificación/diseño inicial de experimentos en los Capítulos VI–VIII. Las sesiones, auditorías, análisis, decisiones de backlog y resultados permanecen pendientes de evidencia del equipo.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">V1.4.0</td>
+    <td align="center">08/11/26</td>
+    <td>Cayanchi Avila, Milenko Ruben</td>
+    <td>
+      Avance 2 / Hito 3 (correcciones sobre V1.3.0): alineación con el enunciado de la estructura de 6.4 (auditorías realizada y recibida) y de 8.1–8.2 (clasificación de preguntas, criterios de puntuación del Question Backlog, hipótesis nulas, métricas M1–M5 con fórmula y técnica de recolección, separación de Measures y Conditions, parámetros de escala y selección de métodos); actualización de Student Outcome, Collaboration Insights y del anexo de videos. Las puntuaciones, metas, resultados de sesiones y auditorías, y las entradas individuales marcadas como pendientes continúan por completar con evidencia del equipo.
     </td>
   </tr>
 
