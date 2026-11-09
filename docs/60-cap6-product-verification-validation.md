@@ -469,14 +469,22 @@ Para cada tarea se anotará si se completó sin ayuda, con ayuda o no se complet
 
 ##### Entrevista 1: Rodrigo Vasquez
 
-- **Link:** [Ver entrevista en Microsoft Stream](https://upcedupe-my.sharepoint.com/personal/u202410093_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202410093%5Fupc%5Fedu%5Fpe%2FDocuments%2FEntrevista%20Rodrigo%20Vasquez%20%2D%20comprimido%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E43501a40%2D9a41%2D494b%2Dbf46%2Dccdddd32fc29).
-- **Duración del video:** 11:44.
+- **Fecha:** 08/11/2026.
+- **Modalidad:** Entrevista remota por Discord con demostración de los flujos web de SafeSpace.
+- **Ocupación:** Asistente de operaciones.
+- **Link:** [Ver entrevista](https://upcedupe-my.sharepoint.com/personal/u202410093_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202410093%5Fupc%5Fedu%5Fpe%2FDocuments%2FEntrevista%20Rodrigo%20Vasquez%20%2D%20comprimido%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E43501a40%2D9a41%2D494b%2Dbf46%2Dccdddd32fc29).
+- **Inicio:** 00:00.
+- **Duración:** 11:44.
 
-La revisión de las respuestas y la síntesis de hallazgos de esta grabación quedan pendientes.
+![Entrevista 1 Empleados - Rodrigo Vasquez](../assets/images/cap6/registro-entrevistas/Entrevista1_Empleados_Rodrigo.png)
 
-#### Ficha de registro de sesiones
+**Resumen de la Entrevista**
 
-Se utilizará una ficha por sesión, sin datos identificables:
+Rodrigo señala que trabaja como asistente de operaciones y utiliza una computadora para organizar pendientes, revisar documentos y coordinar actividades con su equipo. Normalmente responde encuestas desde su laptop y, a veces, desde el celular si son cortas. Valora que las preguntas sean claras, que responder tome poco tiempo y que se explique para qué se utilizarán las respuestas y quién podrá verlas. Durante la revisión de los flujos de SafeSpace reconoce las confirmaciones del registro de ánimo, la respuesta a la encuesta y el voto en la actividad semanal, y distingue estas dos últimas acciones. Considera que el registro de ánimo es el flujo más fácil de comprender. En el reporte, la etiqueta «Puesto de trabajo» le genera dudas, porque las opciones parecían corresponder a áreas, y solicita una explicación más clara sobre el envío anónimo, los datos de su cuenta que se conservan y quién puede consultar la información. La visibilidad de la opción anónima le genera confianza, aunque desea entender mejor cómo se protege su identidad. Espera ver su reporte guardado en un historial, saber cuándo empieza a revisarse, recibir una notificación cuando cambie su estado y, al finalizar, una explicación sobre cómo se atendió. Sobre la orientación, entiende que la respuesta propone reunir ejemplos, ordenar prioridades y buscar un momento adecuado para conversar sobre la carga de trabajo, y la considera útil como punto de partida para organizar sus ideas. Califica con 5 de 5 la facilidad percibida del funcionamiento, porque los pasos le parecieron claros, y con 4 de 5 la confianza que le dio la opción de privacidad. Utilizaría SafeSpace para responder encuestas, comunicar inquietudes y buscar orientación; ante una necesidad inmediata o falta de seguimiento, preferiría un contacto directo.
+
+#### Ficha para próximas sesiones
+
+Para las próximas entrevistas se utilizará una ficha por sesión, sin datos identificables:
 
 | Campo | Registro |
 | :--- | :--- |
