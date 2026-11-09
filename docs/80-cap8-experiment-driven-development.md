@@ -2,7 +2,7 @@
 
 Este capítulo organiza el aprendizaje que el equipo debe obtener de SafeSpace y sus dos segmentos objetivo: empleados de una organización y profesionales de Recursos Humanos. El punto de partida son las hipótesis Lean UX, las funcionalidades y criterios de aceptación de los Capítulos I y III, y las interfaces descritas en los Capítulos IV y V.
 
-El capítulo se presenta como planificación y diseño preliminar. No se han incorporado resultados de entrevistas de validación ni mediciones de adopción; por ello, las hipótesis, prioridades, criterios de éxito y propuestas To-Be se deben confirmar antes de tratarlos como decisiones aprobadas. Las pruebas de software del Capítulo VI verifican comportamiento técnico y no reemplazan experimentos con participantes ni evidencia de resultados de negocio.
+Se realizaron sesiones presenciales formativas con tres empleados (06/11/2026) y tres profesionales de Recursos Humanos (05/11/2026). El resumen disponible indica que completaron sin ayuda los flujos probados y que los seis calificaron la facilidad de uso con 5/5. La recepción general fue positiva, pero no se conservaron transcripciones ni notas específicas. Se probó únicamente la última versión disponible; no se mostraron otros prototipos ni se compararon variantes. Estos datos no permiten confirmar las hipótesis, medir adopción ni atribuir efectos de negocio. Las propuestas de comparación y sus umbrales de las secciones siguientes corresponden a trabajo futuro. Las pruebas de software del Capítulo VI verifican comportamiento técnico y no reemplazan la validación con participantes ni evidencia de resultados de negocio.
 
 ## 8.1. Experiment Planning
 
@@ -69,24 +69,28 @@ Las preguntas se clasifican en dos tipos: **impulsadas por creencias** (belief-l
 | 4 | ¿Qué información adicional necesita Recursos Humanos para decidir un siguiente paso a partir del resumen? | Exploratoria | Brecha de conocimiento sobre indicadores del resumen |
 | 5 | ¿Puede Recursos Humanos crear/publicar una encuesta de prueba y actualizar el estado de un reporte ficticio sin ayuda? | Impulsada por creencias | H4 |
 | 6 | ¿Qué diferencias observables aparecen entre completar las tareas en web y en Android? | Exploratoria | Brecha de conocimiento sobre dispositivos y momentos de uso |
+| 7 | ¿Un punto de entrada guiado ayuda a un empleado a iniciar una conversación de orientación y a comprender el alcance de esa ayuda? | Impulsada por creencias | H3 |
 
 ### 8.1.4. Question Backlog
 
-La prioridad de esta tabla es un orden inicial propuesto según el riesgo de confianza, interpretación y operación. No es una priorización obtenida de participantes. Cada pregunta se justifica con su motivación (columna «Por qué») y se puntúa con cuatro criterios: **Confianza**, **Riesgo**, **Impacto** e **Interés**. En caso de empate se prioriza la pregunta con mayor Riesgo. Las puntuaciones están pendientes: el equipo debe acordarlas y, tras el análisis de las sesiones, volver a puntuar y registrar el backlog actualizado.
+El Question Backlog combina las preguntas del plan experimental con los hallazgos agregados de las seis sesiones y del Shareback del 06/11/2026. Las puntuaciones son una **propuesta de priorización del equipo**, no respuestas atribuidas a cada participante. Escala de 1 a 5: **Confianza** mide cuánta evidencia respalda la hipótesis (1 = muy poca, 5 = sólida); **Riesgo**, **Impacto** e **Interés** usan 1 = bajo y 5 = alto. El puntaje de prioridad es `(6 − Confianza) + Riesgo + Impacto + Interés`, con rango de 4 a 20; un valor mayor indica mayor prioridad para aprender. En caso de empate se prioriza Riesgo y luego Impacto.
 
-Esta versión es un backlog amplio (*broad*): reúne preguntas de distintos temas y de ambos segmentos sin profundizar en una sola. Tras la primera ronda, el equipo podrá profundizar en las preguntas con mayor puntuación.
+El backlog es *broad*: contiene preguntas de los dos segmentos y de operación del producto. Las seis valoraciones 5/5 y la finalización sin ayuda se usan como evidencia inicial de facilidad en las tareas realizadas; no se extienden a comprensión de privacidad, utilidad del análisis, comparación entre plataformas ni demanda de publicación móvil.
 
-| Orden inicial | Pregunta | Segmento | Por qué (riesgo asociado) | Confianza | Riesgo | Impacto | Interés | Evidencia esperada | Estado |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | ¿Se comprende qué datos se asocian a un reporte anónimo? | Empleados | Pérdida de confianza o expectativas incorrectas de privacidad. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Explicación en palabras propias, dudas observadas y valoración razonada. | Por validar |
-| 2 | ¿Se interpretan correctamente la distribución y la participación del resumen? | Recursos Humanos | Decisiones basadas en una lectura incorrecta o incompleta. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Interpretación de datos sintéticos y datos adicionales solicitados. | Por validar |
-| 3 | ¿Se completan sin ayuda las tareas principales de participación y reporte? | Empleados | Abandono por fricción o falta de claridad. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Éxito por tarea, necesidad de ayuda, errores y tiempo observado. | Por validar |
-| 4 | ¿El flujo de seguimiento coincide con el trabajo esperado por Recursos Humanos? | Recursos Humanos | Duplicación de pasos o estados poco útiles. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Tarea completada, comentarios sobre estados y pasos externos. | Por validar |
-| 5 | ¿Qué diferencias de comprensión y facilidad hay entre web y Android? | Ambos | Experiencia desigual según dispositivo. | [Puntuar] | [Puntuar] | [Puntuar] | [Puntuar] | Resultados segmentados por plataforma, cuando la muestra permita describirlos. | Por validar |
+| Orden | Pregunta del backlog | Segmento | Por qué / evidencia relacionada | Confianza | Riesgo | Impacto | Interés | Prioridad | Evidencia para responder |
+| :--- | :--- | :--- | :--- | ---: | ---: | ---: | ---: | ---: | :--- |
+| 1 | ¿Qué entienden los empleados por la opción anónima y qué datos creen que verá RR. HH.? | Empleados | El anonimato es central para la confianza; no se registró comprensión específica durante las sesiones. | 1 | 5 | 5 | 4 | 19 | Explicación en palabras propias con un caso ficticio y dudas registradas. |
+| 2 | ¿Qué parte del tiempo de despliegue corresponde al plan gratuito y cómo afecta la disponibilidad para los usuarios? | Empleados / RR. HH. / equipo técnico | El equipo atribuyó la lentitud de despliegues a servicios gratuitos; falta medir cada etapa y componente por separado. | 2 | 4 | 5 | 4 | 17 | Duración de despliegue, arranque en frío y respuesta inicial, separados por proveedor y servicio. |
+| 3 | ¿La publicación desde Play Store responde a una necesidad recurrente y facilitaría instalar y actualizar SafeSpace en Android? | Empleados / equipo | En el Shareback se informó una solicitud de publicación en Play Store; no se registró cuántas personas la formularon. | 2 | 3 | 5 | 5 | 17 | Prueba de interés, revisión del recorrido de instalación y validación de requisitos de publicación. |
+| 4 | ¿Puede RR. HH. interpretar correctamente el periodo, la tasa de respuesta y la distribución del estado de ánimo? | Recursos Humanos | Tres personas revisaron el análisis; no se registraron respuestas de interpretación. | 2 | 4 | 4 | 4 | 16 | Tarea con datos sintéticos, respuestas correctas, errores de lectura y contexto solicitado. |
+| 5 | ¿Los empleados encuentran y completan el reporte con la información que necesitan? | Empleados | Se recordó una duda sobre cómo realizar un reporte, resuelta sin ayuda; las notas no precisan el paso que la originó. | 3 | 3 | 4 | 4 | 14 | Observación por tarea de inicio, envío y confirmación; dudas y retrocesos. |
+| 6 | ¿La interfaz móvil permite completar los mismos flujos con claridad que la web? | Empleados / RR. HH. | RR. HH. probó en móvil (2) y PC (1); los empleados probaron en PC. La muestra no permite comparación equivalente. | 2 | 3 | 4 | 3 | 14 | Mismas tareas en cada plataforma, observadas por separado con participantes de ambos segmentos. |
+| 7 | ¿Los empleados comprenden el alcance del chat de orientación y cuándo usar otro canal de ayuda? | Empleados | Se probó el chat, pero no se registró comprensión del alcance ni evaluación de la orientación. | 2 | 3 | 4 | 3 | 14 | Explicación del alcance en palabras propias y elección de una vía de apoyo en escenarios ficticios. |
+| 8 | ¿La administración de encuestas y actividades semanales coincide con el flujo que RR. HH. necesita? | Recursos Humanos | Los tres participantes completaron estas tareas sin ayuda; no se recopilaron comentarios de pasos o prioridades. | 4 | 2 | 3 | 3 | 10 | Crear y publicar un caso de prueba, describir pasos actuales y señalar datos requeridos. |
 
 ### 8.1.5. Experiment Cards
 
-Las tarjetas siguientes describen experimentos candidatos de bajo riesgo con cuentas de prueba y datos sintéticos. Antes de reclutar, el equipo debe confirmar hipótesis, versión del producto, criterios de éxito, tamaño de muestra, fechas y responsables. Los campos entre corchetes quedan pendientes de esa decisión.
+Las tarjetas siguientes describen comparaciones candidatas de bajo riesgo con cuentas de prueba y datos sintéticos; no son las sesiones ya realizadas. En las sesiones del 5 y 6 de noviembre se probó la aplicación disponible y no se reportó una comparación de condiciones. Antes de ejecutar estas propuestas, el equipo debe confirmar hipótesis, versión del producto, criterios de éxito, tamaño de muestra, fechas y responsables. Los campos entre corchetes presentan parámetros que se definen en la planificación de cada comparación.
 
 Cada tarjeta reúne en su frente la pregunta, el por qué, la hipótesis y el qué (la *Simplest Useful Thing*, la cosa más simple y útil para obtener la respuesta); en su reverso, las medidas, las condiciones y la escala. Las medidas solo pueden referirse a las métricas definidas en 8.2.2.
 
@@ -97,49 +101,66 @@ Cada tarjeta reúne en su frente la pregunta, el por qué, la hipótesis y el qu
 | Pregunta | ¿Puede un empleado completar el flujo y explicar correctamente el alcance del anonimato? |
 | Por qué | Pregunta 1 del Question Backlog: riesgo de pérdida de confianza o de expectativas incorrectas de privacidad. |
 | Hipótesis | Una explicación visible de privacidad, junto a la opción anónima, facilita una comprensión correcta y aumenta la confianza declarada. |
-| Qué (*Simplest Useful Thing*) | Observar el flujo de reporte existente con cuenta y datos sintéticos, sin desarrollo adicional. |
+| Qué (*Simplest Useful Thing*) | Comparar el flujo actual con un prototipo del mismo formulario que añade una explicación de privacidad verificada, sin cambiar backend ni almacenar datos nuevos. |
 | Segmento | Empleados de una organización. |
-| Método | Prueba moderada de tarea con escenario ficticio; entrevista breve posterior. No se solicita narrar experiencias laborales reales. |
+| Método | Comparación formativa dentro de la sesión entre el flujo actual y un prototipo de texto; alternar el orden y usar dos escenarios ficticios equivalentes. Entrevista breve posterior; no se solicitan experiencias laborales reales. |
 | Medidas | Finalización sin ayuda; errores/retrocesos; tiempo; interpretación correcta de qué se muestra y qué se conserva; valoración de confianza de 1 a 5 y su explicación. Métricas de 8.2.2: M2 y M5. |
-| Condiciones | Entorno de prueba, cuenta sintética, reporte neutral; dispositivo/plataforma y versión registrados; guion y aviso de consentimiento iguales para cada sesión. |
-| Criterio de decisión | Definir antes de las sesiones el mínimo aceptable de comprensión y finalización: [acordar]. Revisar cualquier interpretación incorrecta de privacidad como hallazgo prioritario. |
-| Escala (tamaño y fechas) | [Definir con el equipo según disponibilidad y propósito formativo]. Parámetros generales en 8.2.5. |
+| Condiciones | Control: formulario actual. Experimental: prototipo con el texto verificado. Cuenta sintética, dispositivo y guion iguales; orden alternado. No ejecutar el envío contra producción. |
+| Criterio de decisión | Para una futura comparación: umbral formativo propuesto de al menos 4 de 5 participantes que completen sin ayuda y describan correctamente qué implica la opción anónima. Cualquier interpretación crítica incorrecta requiere revisar el texto. No es un resultado observado ni una prueba de significancia. |
+| Escala (tamaño y fechas) | Cinco empleados como objetivo de una futura comparación, sujeto a disponibilidad y confirmación del equipo. Registrar fecha, versión, plataforma y orden de condición. Sin inferencia estadística poblacional. |
 
 #### Tarjeta B — Interpretación del resumen de Recursos Humanos
 
 | Elemento | Diseño preliminar |
 | :--- | :--- |
 | Pregunta | ¿Puede RR. HH. interpretar el resumen y distinguir lo que los datos permiten concluir de lo que no? |
-| Por qué | Pregunta 2 del Question Backlog: riesgo de tomar decisiones a partir de una lectura incorrecta o incompleta del resumen. |
+| Por qué | Pregunta 4 del Question Backlog: riesgo de tomar decisiones a partir de una lectura incorrecta o incompleta del resumen. |
 | Hipótesis | Presentar periodo, cantidad de respuestas, población de referencia y distribución con etiquetas claras facilita interpretar los datos y decidir qué información falta. |
-| Qué (*Simplest Useful Thing*) | Tarea de interpretación sobre el resumen existente con un conjunto de datos sintéticos, sin desarrollo adicional. |
+| Qué (*Simplest Useful Thing*) | Comparar la vista actual con un prototipo que añade contexto a los indicadores, usando datos sintéticos y sin desarrollo de backend. |
 | Segmento | Profesionales de Recursos Humanos. |
-| Método | Prueba moderada con datos sintéticos, tarea de interpretación y entrevista posterior. No se usan datos de una organización real. |
+| Método | Comparación formativa dentro de la sesión entre la vista actual y un prototipo; alternar el orden y usar dos conjuntos equivalentes de datos sintéticos y preguntas. Entrevista posterior; no se usan datos de una organización real. |
 | Medidas | Respuestas correctas a preguntas preparadas; tiempo y ayudas; métricas o etiquetas malinterpretadas; valoración de utilidad de 1 a 5 y explicación. Métricas de 8.2.2: M3 y M5. |
-| Condiciones | Mismo conjunto de datos ficticios y mismas preguntas para cada participante; registrar versión y plataforma. |
-| Criterio de decisión | Definir antes de las sesiones qué preguntas se consideran esenciales y cuántas deben interpretarse correctamente: [acordar]. Documentar conclusiones que no pueden extraerse de la vista actual. |
-| Escala (tamaño y fechas) | [Definir con el equipo]. Parámetros generales en 8.2.5. |
+| Condiciones | Control: resumen actual. Experimental: prototipo con periodo, cantidad de respuestas, población de referencia y definición de la tasa. Mantener dificultad equivalente de datos y preguntas, y alternar el orden. |
+| Criterio de decisión | Para una futura comparación: umbral formativo propuesto de al menos 4 de 5 participantes que respondan correctamente las preguntas esenciales definidas antes de la sesión. Registrar toda interpretación errónea del denominador o del periodo para corregir etiquetas. No es un resultado observado ni una prueba de significancia. |
+| Escala (tamaño y fechas) | Cinco profesionales de RR. HH. como objetivo de una futura comparación, sujeto a disponibilidad y confirmación del equipo. Registrar fecha, versión, plataforma y orden de condición. Sin inferencia estadística poblacional. |
 
 #### Tarjeta C — Flujo de participación y seguimiento
 
 | Elemento | Diseño preliminar |
 | :--- | :--- |
 | Pregunta | ¿Pueden empleados y RR. HH. completar las tareas representativas de participación y seguimiento con el producto disponible? |
-| Por qué | Preguntas 3 y 4 del Question Backlog: riesgo de abandono por fricción o falta de claridad, y de duplicación de pasos o estados poco útiles para Recursos Humanos. |
+| Por qué | Preguntas 5 y 8 del Question Backlog: riesgo de fricción en reportes y desajuste entre la administración de encuestas y actividades y el trabajo de Recursos Humanos. |
 | Hipótesis | Los flujos actuales permiten completar tareas básicas sin asistencia frecuente y con comprensión suficiente de sus confirmaciones y estados. |
 | Qué (*Simplest Useful Thing*) | Tareas representativas sobre los flujos existentes con cuentas y datos sintéticos, sin desarrollo adicional. |
 | Segmento | Empleados y profesionales de Recursos Humanos, analizados por separado. |
-| Método | Prueba moderada de tareas: empleado responde una encuesta o participa en una actividad; RR. HH. crea/publica una encuesta de prueba o actualiza el estado de un reporte ficticio. |
+| Método | Pruebas formativas: el empleado responde una encuesta o participa en una actividad; RR. HH. reconstruye con un caso ficticio los pasos de su proceso habitual y luego realiza una tarea equivalente en SafeSpace. No se abre ni registra información interna de la organización. |
 | Medidas | Éxito por tarea, ayuda requerida, errores, retrocesos, tiempo, comprensión de confirmaciones/estados y facilidad percibida de 1 a 5. Métricas de 8.2.2: M5, y M4 en las tareas de Recursos Humanos. La comprensión de confirmaciones y estados se registra como observación cualitativa, porque no tiene una métrica definida en 8.2.2. |
-| Condiciones | Cuentas de prueba, tareas neutrales, datos sintéticos, sin acciones sobre producción ni información laboral real. |
-| Criterio de decisión | Acordar antes de la prueba umbrales de finalización y facilidad para cada tarea: [definir]. Separar resultados por segmento y plataforma. |
-| Escala (tamaño y fechas) | [Definir con el equipo]. Parámetros generales en 8.2.5. |
+| Condiciones | Empleados: observar el flujo actual, sin comparación causal. RR. HH.: contrastar descriptivamente el proceso habitual reconstruido con la tarea equivalente en el entorno de prueba. Usar cuentas de prueba y datos sintéticos; no realizar acciones en producción. |
+| Criterio de decisión | Para futuras sesiones: umbral formativo propuesto de al menos 4 de 5 participantes por segmento que completen sus tareas sin ayuda. En RR. HH., reportar diferencias de pasos/tiempo solo como observación de sesión, no como ahorro real demostrado. No se aplica retrospectivamente a la muestra ya realizada. |
+| Escala (tamaño y fechas) | Las sesiones iniciales ya realizadas incluyeron 3 empleados y 3 profesionales de RR. HH. Para una futura comparación se propone reclutar cinco por segmento, sujeto a disponibilidad y confirmación. Resultados descriptivos, sin inferencia estadística poblacional. |
+
+#### Tarjeta D — Inicio guiado de orientación digital (H3)
+
+| Elemento | Diseño preliminar |
+| :--- | :--- |
+| Pregunta | ¿Un punto de entrada guiado ayuda a un empleado a iniciar una conversación y comprender el alcance de la orientación digital? |
+| Por qué | Pregunta 7 del Question Backlog: riesgo de abandono al iniciar o de esperar atención profesional de una herramienta de orientación general. |
+| Hipótesis | Una explicación breve del alcance, acompañada de opciones neutrales para comenzar, facilita iniciar una conversación sin generar expectativas de diagnóstico o atención profesional. |
+| Qué (*Simplest Useful Thing*) | Un prototipo navegable de una pantalla previa al chat con el alcance del asistente y tres ejemplos neutrales de inicio. No requiere cambiar el modelo, el backend ni guardar datos nuevos. |
+| Segmento | Empleados de una organización. |
+| Método | Prueba moderada comparativa, dentro de la misma sesión: flujo actual de chat y prototipo guiado. Se alternará el orden entre participantes. Se usará la misma intención de consulta neutral y una conversación de prueba nueva por condición. No se evaluará la calidad de respuestas generadas. |
+| Medidas | Métrica M5: inicio de la conversación sin ayuda, solicitud de ayuda, errores/retrocesos, tiempo y facilidad de 1 a 5. Como observación cualitativa separada, pedir que expliquen qué tipo de ayuda ofrece el asistente y qué no ofrece. No se solicitará información emocional, laboral sensible ni experiencias personales. |
+| Condiciones | Control: pantalla de chat actual. Experimental: prototipo con una explicación de alcance revisada contra la política publicada y sugerencias neutrales (por ejemplo, organizar pausas o preparar una conversación laboral general). Igual dispositivo, tarea, cuenta de prueba e instrucciones; orden alternado. |
+| Criterio de decisión | Para una futura comparación: umbral formativo propuesto de al menos 4 de 5 participantes que inicien sin ayuda en la condición guiada y describan correctamente el alcance general. Cualquier expectativa de diagnóstico o sustitución de atención profesional obliga a revisar el texto antes de continuar. No es un resultado observado ni una prueba de significancia. |
+| Escala (tamaño y fechas) | Las sesiones iniciales incluyeron 3 empleados, quienes probaron el chat actual sin una variante guiada. Para la comparación propuesta se plantea reclutar cinco empleados, sujeto a disponibilidad y confirmación del equipo. Registrar fecha, plataforma y orden de condición. Sin inferencia estadística poblacional. |
 
 ## 8.2. Experiment Design
 
 ### 8.2.1. Hypotheses
 
 Se retoman las cinco hipótesis Lean UX del Capítulo I; la columna de verificación las convierte en afirmaciones observables para esta ronda, sin cambiar su condición de hipótesis. Cada hipótesis de trabajo se empareja con una hipótesis nula (H0), que afirma que no ocurrirá nada como resultado del cambio o que cualquier diferencia se debe al azar. Las hipótesis se ponen a prueba frente a su H0; no se pretende demostrarlas como «verdaderas».
+
+La primera ronda descrita en este capítulo es formativa y usa una muestra de conveniencia. Sus resultados se resumirán de forma descriptiva y cualitativa; no permitirán rechazar H0, estimar adopción poblacional ni atribuir causalidad. Las hipótesis nulas y la fórmula de potencia se conservan como marco para un piloto cuantitativo posterior, si se consiguen población, línea base y muestra suficientes.
 
 | Código de trabajo | Hipótesis Lean UX | Hipótesis nula (H0) | Evidencia observable en el experimento |
 | :--- | :--- | :--- | :--- |
@@ -155,13 +176,13 @@ Cada métrica se describe con su fórmula de cálculo, su técnica de recolecci�
 
 | Código | Resultado de negocio que se desea observar | Métrica | Fórmula / unidad | Técnica de recolección | Meta deseada | Disponibilidad actual |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| M1 | Participación de empleados | Proporción de empleados elegibles que completan una actividad en un periodo | Respuestas válidas / empleados elegibles; requiere definir población y ventana | [Definir; requiere un piloto en una organización] | [Definir con el equipo] | No hay línea base organizacional documentada |
-| M2 | Claridad y confianza en reportes | Comprensión de privacidad y confianza declarada | Comprensión de anonimato (%) = participantes que identifican correctamente los datos visibles y la relación con la cuenta / participantes que respondieron × 100; confianza: distribución de la escala 1–5, mediana y explicación | Entrevista con tarea y sondeo de comprensión; escala 1–5 con explicación (6.3.1) | [Definir con el equipo] | Se medirá en las entrevistas propuestas |
-| M3 | Interpretación de señales por RR. HH. | Exactitud en preguntas de lectura del resumen | Interpretaciones correctas / preguntas definidas antes de la sesión; utilidad percibida: distribución de la escala 1–5, mediana y explicación | Tarea de interpretación sobre datos sintéticos con preguntas preparadas | [Definir con el equipo] | Se medirá con datos sintéticos |
-| M4 | Organización del seguimiento | Tiempo y pasos por tarea administrativa | Duración (mediana y rango) y número de pasos observados; comparación con el proceso actual solo si se documenta la línea base | Observación de la tarea con cronometraje y registro de pasos | [Definir con el equipo] | Línea base pendiente |
-| M5 | Facilidad de los flujos | Finalización sin ayuda, tasa de ayuda, errores y tiempo por tarea | Finalización sin ayuda (%) = tareas completadas sin ayuda / tareas intentadas × 100; tasa de ayuda (%); recuento de errores por tarea; tiempo por tarea (mediana y rango) | Observación de tareas en sesiones moderadas | [Definir con el equipo] | Se medirá en sesiones moderadas |
+| M1 | Participación de empleados | Proporción de empleados elegibles que completan una actividad en un periodo | Respuestas válidas / empleados elegibles; requiere definir población y ventana | [Definir; requiere un piloto en una organización] | [Definir después de establecer línea base y periodo del piloto] | No hay línea base organizacional documentada |
+| M2 | Claridad y confianza en reportes | Comprensión de privacidad y confianza declarada | Comprensión de anonimato (%) = participantes que identifican correctamente los datos visibles y la relación con la cuenta / participantes que respondieron × 100; confianza: distribución de la escala 1–5, mediana y explicación | Entrevista con tarea y sondeo de comprensión; escala 1–5 con explicación (6.3.1) | Para futuras sesiones: umbral formativo propuesto de 4 de 5; la confianza se reporta descriptivamente, sin meta de aumento | No medido en las sesiones iniciales; no se registró comprensión específica del anonimato ni confianza asociada a reportes |
+| M3 | Interpretación de señales por RR. HH. | Exactitud en preguntas de lectura del resumen | Interpretaciones correctas / preguntas definidas antes de la sesión; utilidad percibida: distribución de la escala 1–5, mediana y explicación | Tarea de interpretación sobre datos sintéticos con preguntas preparadas | Para futuras sesiones: umbral formativo propuesto de 4 de 5; utilidad se reporta descriptivamente | RR. HH. revisó el análisis de ánimo, pero no se conservaron respuestas a preguntas de interpretación ni una medida de exactitud |
+| M4 | Organización del seguimiento | Tiempo y pasos por tarea administrativa | Duración (mediana y rango) y número de pasos observados; comparación con el proceso actual solo si se documenta la línea base | Observación de la tarea con cronometraje y registro de pasos | Sin meta de ahorro en esta ronda; documentar ambos flujos y no afirmar eficiencia sin línea base verificable | No se registró una línea base del proceso actual |
+| M5 | Facilidad de los flujos | Finalización sin ayuda, tasa de ayuda, errores y tiempo por tarea | Finalización sin ayuda (%) = tareas completadas sin ayuda / tareas intentadas × 100; tasa de ayuda (%); recuento de errores por tarea; tiempo por tarea (mediana y rango) | Observación de tareas en sesiones moderadas | Para futuras sesiones: umbral formativo propuesto de 4 de 5 por segmento; escalas y tiempos se describen, sin afirmar causalidad | Resumen agregado: seis participantes completaron su flujo sin ayuda y calificaron facilidad con 5/5; no se reportaron errores. Sesiones de 10–15 min, sin duración por tarea; se recordó una duda sobre cómo realizar reportes. No hay desglose para calcular tasas por tarea |
 
-Estas métricas son candidatas para vincular resultados de producto con historias To-Be. No deben confundirse con resultados organizacionales (por ejemplo, reducción de problemas laborales), que requieren un piloto, contexto y periodo de observación apropiados. Las metas permanecen pendientes: no se fija un objetivo numérico hasta revisar una primera ronda y acordar criterios de decisión con el equipo (8.2.7).
+Estas métricas son candidatas para vincular resultados de producto con historias To-Be. El umbral de 4 de 5 es una propuesta para futuras sesiones, no se aplicó retrospectivamente a las seis personas ya participantes ni constituye una meta de negocio. La participación organizacional (M1) y cualquier meta de eficiencia requieren un piloto, contexto y periodo de observación apropiados.
 
 ### 8.2.3. Measures
 
@@ -169,9 +190,16 @@ Para cada sesión se registrará el código anónimo, segmento, dispositivo, ver
 
 ### 8.2.4. Conditions
 
-Para las preguntas impulsadas por creencias (1, 3 y 5 de 8.1.3), las condiciones comprenden una **condición experimental**, que busca evidencia a favor de la hipótesis alternativa, y una **condición de control**, que parte de la suposición de que la hipótesis nula es correcta. En esta versión del diseño la condición de control no está definida: [Definir con el equipo]. Para las preguntas exploratorias (2, 4 y 6), las condiciones delimitan las características del grupo que se estudia: segmento, plataforma y versión del producto, según se registra en cada tarjeta.
+No se reportó que las sesiones realizadas compararan intervenciones: se probó la aplicación disponible con tres participantes por segmento. Por ello, los datos disponibles no responden por sí solos las preguntas que requieren comprobar comprensión de privacidad, exactitud de interpretación o diferencias entre condiciones. La tabla conserva comparaciones futuras para las preguntas impulsadas por creencias; cualquier diferencia de una futura ronda formativa orientará cambios, pero no se presentará como efecto estadísticamente probado.
 
-Las condiciones deben mantenerse comparables: mismos datos ficticios, instrucciones, permisos y criterio de finalización por tarea. Si se comparan web y Android, registrar la plataforma y evitar atribuir diferencias al dispositivo cuando también haya cambiado la tarea, el contenido o la versión. El moderador no completará la tarea por el participante; si necesita intervenir, anotará cuándo y por qué.
+| Pregunta / hipótesis | Condición de control | Condición experimental | Comparación y límites |
+| :--- | :--- | :--- | :--- |
+| 1 / H1 — Reporte anónimo | Flujo actual de reporte, con la opción de anonimato tal como aparece en la versión evaluada. | Prototipo del mismo flujo con explicación breve de privacidad, cuya redacción debe verificarse previamente contra el comportamiento real del backend y la política publicada. | Misma tarea ficticia y datos. Medir comprensión, inicio/finalización y confianza declarada; no inferir disposición real a reportar en una organización. |
+| 3 / H2 — Resumen de RR. HH. | Vista actual del resumen con datos sintéticos. | Prototipo de la misma vista con periodo, número de respuestas, población de referencia y definición de la tasa claramente identificados. | Mantener idénticos datos y preguntas de interpretación. Medir comprensión de los indicadores; no inferir mejores decisiones organizacionales. |
+| 5 / H4 — Seguimiento de reportes | Reconstrucción del proceso habitual de la persona participante con un caso ficticio, registrando solo pasos que pueda describir sin revelar información interna. | La misma tarea equivalente en el entorno SafeSpace de prueba, con datos ficticios y permisos de RR. HH. | Comparación descriptiva de pasos, dudas y tiempo. Si el flujo habitual solo se recuerda y no se observa, no afirmar ahorro real de tiempo ni mejora causal de eficiencia. |
+| 7 / H3 — Inicio de orientación digital | Pantalla actual de entrada al chat. | Prototipo previo al chat con explicación de alcance y opciones neutrales para iniciar. | Misma intención de consulta neutral; alternar el orden y usar una conversación nueva por condición. Medir inicio y facilidad, no calidad clínica ni eficacia del asistente. |
+
+En todas las condiciones se mantendrán iguales el segmento, el dispositivo dentro de cada comparación, la tarea, los permisos, el conjunto de datos sintéticos y la instrucción del moderador. Antes de probar el texto de privacidad o el de orientación, verificar que corresponda a las políticas y al comportamiento implementado. Las tareas no se ejecutarán en producción. El moderador no completará la tarea; toda intervención quedará registrada como ayuda.
 
 ### 8.2.5. Scale Calculations and Decisions
 
@@ -183,18 +211,20 @@ Las métricas de tareas se calcularán con reglas fijadas antes de analizar los 
 - **Tiempo por tarea** = tiempo entre la instrucción y la finalización; reportar mediana y rango, además de las incidencias observadas.
 - **Valoración de facilidad/confianza** = distribución de respuestas de 1 a 5, mediana y explicación textual anonimizada.
 
-La escala de cada experimento se determina a partir de la **certeza** (probabilidad de error aceptable) y la **precisión** (tamaño del cambio que se desea detectar):
+Las sesiones formativas ya realizadas incluyeron **tres empleados y tres profesionales de RR. HH.**, reclutados por conveniencia. El resumen del equipo indica que los seis completaron el flujo esperado sin ayuda y que no se reportaron errores; la única duda recordada fue cómo realizar un reporte y se resolvió sin ayuda. Cada sesión duró aproximadamente entre 10 y 15 minutos, pero no se midió el tiempo por tarea ni se conservó un desglose individual. Los seis participantes calificaron la facilidad con 5/5. Para una futura ronda comparativa se propone como referencia operativa reclutar cinco personas por segmento y observar si al menos cuatro completan cada tarea sin ayuda. Esta propuesta no se aplica a las sesiones ya realizadas. La muestra sirve para localizar problemas y orientar cambios, no para representar a toda la población.
 
-| Parámetro | Qué controla | Valor o decisión |
+Por ese alcance, no se fijan alfa, potencia ni MDE para las entrevistas y pruebas formativas, ni se calcularán valores p. La escala formal para una prueba de dos proporciones se determina a partir de la **certeza** (probabilidad de error aceptable) y la **precisión** (tamaño del cambio que se desea detectar):
+
+| Parámetro para un futuro piloto cuantitativo | Qué controla | Decisión actual |
 | :--- | :--- | :--- |
-| Nivel de significancia (α) | Error Tipo I: concluir que hay un efecto cuando se debe al azar. | 5 % |
-| Potencia estadística (1 − β) | Error Tipo II: no detectar un efecto real. | Entre 80 % y 95 % [fijar el valor con el equipo] |
-| Efecto mínimo detectable (MDE) | Magnitud mínima de diferencia que vale la pena detectar. | [Definir con el equipo para cada métrica de 8.2.2] |
-| Representatividad de los datos | Aplicabilidad de los hallazgos al grupo de interés. | Participantes de los dos segmentos objetivo: empleados y profesionales de Recursos Humanos |
+| Nivel de significancia (α) | Error Tipo I: concluir que hay un efecto cuando se debe al azar. | 5 % como supuesto de planificación; no se aplica a esta ronda formativa. |
+| Potencia estadística (1 − β) | Error Tipo II: no detectar un efecto real. | 80 % como supuesto de planificación para el piloto; no se aplica a esta ronda formativa. |
+| Efecto mínimo detectable (MDE) | Magnitud mínima de diferencia que vale la pena detectar. | Se definirá con una línea base y una decisión de producto antes de un piloto cuantitativo; no aplica a la ronda formativa. |
+| Representatividad de los datos | Aplicabilidad de los hallazgos al grupo de interés. | La ronda formativa usa conveniencia y no representa estadísticamente a los segmentos. |
 
-Para comparar dos proporciones (condición experimental frente a condición de control), el tamaño por grupo es `n = (Z₁₋α/₂ · √(2·p̄·(1 − p̄)) + Z₁₋β · √(p₁(1 − p₁) + p₂(1 − p₂)))² / (p₂ − p₁)²`, con `p̄ = (p₁ + p₂) / 2` y `p₂ − p₁` igual al MDE.
+Para comparar dos proporciones independientes (condición experimental frente a condición de control), el tamaño por grupo es `n = (Z₁₋α/₂ · √(2·p̄·(1 − p̄)) + Z₁₋β · √(p₁(1 − p₁) + p₂(1 − p₂)))² / (p₂ − p₁)²`, con `p̄ = (p₁ + p₂) / 2` y `p₂ − p₁` igual al MDE. Esta fórmula no se usa para el diseño formativo pareado actual: requiere una línea base `p₁`, el MDE y una definición de población/resultado. Al contar con esos valores y decidir un piloto cuantitativo, se calculará el tamaño correspondiente antes de reclutar; no se sustituirá por el objetivo formativo de cinco personas por segmento.
 
-Si el objetivo fuera estimar una proporción poblacional, una referencia de tamaño muestral para población grande sería `n₀ = Z² p(1 − p) / e²`, con corrección por población finita `n = n₀ / (1 + (n₀ − 1) / N)`. En este proyecto no se calcula un valor todavía porque no se han definido la población elegible `N`, la precisión `e`, el nivel de confianza `Z`, la proporción base `p` (`p₁` en la comparación) ni el MDE. Esta fórmula no se debe usar para afirmar representatividad en una prueba cualitativa de usabilidad. El tamaño de las sesiones formativas y el alcance de sus conclusiones se acordarán con el equipo y se reportarán explícitamente.
+Si el objetivo fuera estimar una proporción poblacional, una referencia de tamaño muestral para población grande sería `n₀ = Z² p(1 − p) / e²`, con corrección por población finita `n = n₀ / (1 + (n₀ − 1) / N)`. No se calcula ese tamaño para esta ronda porque no busca estimar una proporción poblacional y no se han definido `N`, precisión `e` ni una proporción base `p`. El objetivo formativo de cinco participantes por segmento se reportará como muestra de conveniencia, nunca como representativa.
 
 ### 8.2.6. Methods Selection
 
@@ -237,50 +267,103 @@ Estos nombres y eventos son una propuesta, no telemetría que se afirme instalad
 
 ## 8.3. Experimentation
 
-La experimentación de esta entrega comienza con el diseño de historias y backlog candidatos. La ejecución con participantes, el análisis de resultados, la re-priorización final del Question Backlog, los To-Be Sprint Backlogs, el pipeline experimental y la sesión Shareback deben completarse y documentarse cuando se realicen. No se reporta aquí una ejecución que todavía no consta en el repositorio.
+#### Resultados de las sesiones de validación formativa
+
+| Segmento | Participantes y fecha | Flujos probados | Resultado agregado |
+| :--- | :--- | :--- | :--- |
+| Empleados | 3; presencial, 06/11/2026 | Encuestas, chat de orientación, respuesta a comentarios y reportes | Los tres completaron el flujo sin ayuda ni errores reportados; facilidad 5/5. |
+| Recursos Humanos | 3; presencial, 05/11/2026 | Crear encuestas y actividades semanales, revisar análisis de ánimo y consultar reportes | Los tres completaron el flujo sin ayuda ni errores reportados; facilidad 5/5. |
+
+**Dispositivo y versión.** Los empleados probaron en PC (3/3); RR. HH. usó móvil (2/3) y PC (1/3). Todos utilizaron la última versión disponible. Cada persona recibió una cuenta con los datos que proporcionó y el equipo confirmó su consentimiento. No se incluyen datos personales ni fotografías.
+
+La recepción general fue positiva, aunque los comentarios fueron breves. Un empleado describió la aplicación como creativa y como algo esperado en las empresas; se registra como paráfrasis, no como cita. La duda recordada fue cómo realizar un reporte y se resolvió sin ayuda. Las sesiones duraron aproximadamente 10–15 minutos; no se midió el tiempo por tarea ni hubo transcripciones o notas detalladas. Los resultados describen facilidad y finalización en las tareas observadas; no representan comprensión del anonimato, adopción, exactitud de análisis ni eficacia de la orientación digital.
 
 ### 8.3.1. To-Be User Stories
 
-Las siguientes historias son propuestas para validar con evidencia; no sustituyen ni modifican automáticamente las 22 historias del Capítulo III.
+Estas historias traducen hallazgos de las seis sesiones y el Shareback del 06/11/2026 en mejoras futuras propuestas. No reemplazan las 22 historias del Capítulo III ni afirman que estén implementadas.
 
-#### Claridad de privacidad en el reporte
+#### TB-01 — Claridad y confianza en los reportes
 
-**Como empleado que desea enviar un reporte, quiero ver antes de enviarlo una explicación breve de qué significa elegir anonimato y qué información verá Recursos Humanos, para decidir con una expectativa clara.**
+**Como empleado que desea comunicar una situación, quiero comprender qué opción de identidad elijo y recibir una confirmación clara, para decidir con información suficiente y saber si el reporte se registró.**
 
-**Criterios candidatos:** la explicación aparece antes de confirmar; diferencia el reporte anónimo del identificado sin prometer anonimato absoluto no verificado; el usuario puede revisar su elección; la decisión se valida primero en las pruebas de comprensión de H1.
+Criterios propuestos: explicar anonimato e identificación conforme al comportamiento real; permitir revisar la elección; confirmar solo lo que el sistema guardó; comprobar comprensión mediante escenarios ficticios.
 
-#### Interpretación de indicadores para Recursos Humanos
+#### TB-03 — Disponibilidad después de un despliegue
 
-**Como profesional de Recursos Humanos, quiero ver el periodo, el número de respuestas y la población de referencia junto con cada indicador, para interpretar el resumen sin confundir participación con el total de empleados.**
+**Como empleado o profesional de RR. HH., quiero que SafeSpace esté disponible sin una espera prolongada después de un periodo de inactividad, para completar mis tareas cuando las necesito.**
 
-**Criterios candidatos:** el periodo y denominador se identifican en la vista; los datos vacíos o insuficientes se explican; la comprensión se evalúa con preguntas de interpretación antes de considerar la historia aceptada.
+Criterios propuestos: medir compilación, publicación y primer arranque por servicio; registrar cinco despliegues consecutivos; separar arranque en frío de respuestas posteriores; documentar costo y beneficio antes de cambiar de plan.
 
-#### Confirmación de participación y estado
+#### TB-02 — Publicación móvil oficial
 
-**Como empleado, quiero recibir una confirmación comprensible después de completar una tarea de participación, para saber si se registró correctamente.**
+**Como empleado que utiliza Android, quiero instalar y actualizar SafeSpace desde Google Play, para acceder a una versión oficial mediante un proceso conocido.**
 
-**Criterios candidatos:** el mensaje confirma únicamente la acción que realmente se guardó; no expone datos de otras personas; los estados observados se contrastan con las tareas de H5.
+Criterios propuestos: paquete de publicación firmado; ficha, política de privacidad y declaraciones requeridas completas; instalación y actualización comprobadas en versiones compatibles; autenticación y flujos esenciales verificados en un canal de prueba.
 
-#### Seguimiento operativo para Recursos Humanos
+#### TB-04 — Lectura del análisis de ánimo
 
-**Como profesional de Recursos Humanos, quiero distinguir claramente los estados y filtros disponibles al revisar reportes, para organizar el seguimiento sin confundir casos nuevos con casos ya atendidos.**
+**Como profesional de RR. HH., quiero ver el periodo, número de respuestas y población de referencia junto a los indicadores, para interpretar el resumen en su contexto.**
 
-**Criterios candidatos:** las etiquetas coinciden con el proceso que el equipo participante describa; los permisos se mantienen; no se agregan notas sensibles sin una decisión de privacidad y seguridad.
+Criterios propuestos: mostrar periodo y denominador; distinguir respuestas de población habilitada; explicar valores insuficientes; comprobar lectura con datos sintéticos.
 
-Todas estas historias están en estado **propuesta / por validar**. Sus criterios deberán refinarse con participantes y revisión del equipo, antes de incorporarlas al backlog comprometido.
+#### TB-05 — Uso coherente en móvil y web
+
+**Como empleado o profesional de RR. HH., quiero completar los flujos disponibles desde el dispositivo que utilizo, para acceder a SafeSpace con una experiencia legible y consistente.**
+
+Criterios propuestos: probar encuestas, reportes y tareas administrativas en dispositivos compatibles; mantener etiquetas y confirmaciones coherentes; validar controles y contenido en los tamaños de pantalla definidos.
 
 ### 8.3.2. To-Be Product Backlog
 
-Backlog candidato derivado de las preguntas y tarjetas de experimento. El orden es provisional y deberá re-priorizarse después del análisis; no se declaran estimaciones, responsables, aceptación final ni estado de implementación.
+Los puntajes remiten al Question Backlog. Las estimaciones son una propuesta inicial en puntos Fibonacci y los responsables se indican por rol para la planificación.
 
-| Orden inicial | Título de la historia candidata | Hipótesis/pregunta | Evidencia para decidir | Estado |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | Claridad de privacidad en el reporte | H1: comprensión del anonimato | Resultado de tarea, sondeo de comprensión y dudas observadas | Propuesta / por validar |
-| 2 | Interpretación de indicadores para Recursos Humanos | H2: utilidad del resumen | Respuestas a preguntas de lectura, límites identificados y datos solicitados | Propuesta / por validar |
-| 3 | Confirmación de participación y estado | H5: claridad y facilidad de uso | Finalización sin ayuda, errores y comprensión de confirmaciones | Propuesta / por validar |
-| 4 | Seguimiento operativo para Recursos Humanos | H4: organización del seguimiento | Tarea de cambio de estado y comparación documentada con el proceso actual | Propuesta / por validar |
-| 5 | Ajustes al flujo de orientación digital | H3: fricción al iniciar apoyo | Observación con ejemplo neutral y revisión de límites de privacidad/seguridad | Pendiente de definir tras validar las primeras historias |
+| Prioridad | ID | Historia | Pregunta | Estimación | Responsable propuesto |
+| ---: | :--- | :--- | :--- | ---: | :--- |
+| 1 | TB-01 | Claridad y confianza en los reportes | QB-01 y QB-05 | 5 puntos | Web/móvil con revisión backend |
+| 2 | TB-03 | Disponibilidad después del despliegue | QB-03 | 5 puntos | DevOps / backend |
+| 3 | TB-02 | Publicación móvil oficial | QB-02 | 13 puntos | Android / publicación |
+| 4 | TB-04 | Lectura del análisis de ánimo | QB-04 | 5 puntos | Consola administrativa |
+| 5 | TB-05 | Uso coherente en móvil y web | QB-06 | 8 puntos | Equipos web y móvil |
 
-**Trabajo requerido para cerrar el objetivo de experimentación del Hito 3:** completar el plan y diseño con decisiones del equipo; ejecutar las sesiones y adjuntar fichas anonimizadas; comparar observaciones con los criterios acordados; analizar e interpretar resultados frente a cada hipótesis; re-puntuar la Question Backlog; decidir y justificar las historias To-Be; elaborar los To-Be Sprint Backlogs y el pipeline correspondiente; y registrar los artefactos de Shareback/Continuous Learning. Cada resultado se añadirá solo después de existir evidencia verificable.
+### 8.3.3. To-Be Sprint Backlog
+
+Plan candidato para iteraciones posteriores a los cuatro sprints organizados en Jira. Es una propuesta de trabajo y no modifica el estado de los sprints existentes.
+
+**Sprint To-Be 5 — Distribución y disponibilidad**
+
+| ID | Trabajo | Estimación | Rol propuesto | Resultado verificable |
+| :--- | :--- | ---: | :--- | :--- |
+| TB-03 | Medir duración de despliegue y primer arranque por servicio | 5 puntos | DevOps / backend | Cinco despliegues medidos por componente y comparación documentada del plan actual. |
+| TB-02 | Preparar la distribución oficial de Android en Google Play | 13 puntos | Android / publicación | Paquete firmado, ficha y declaraciones completas; instalación y actualización verificadas en canal de prueba. |
+| **Total candidato** |  | **18 puntos** |  |  |
+
+**Sprint To-Be 6 — Claridad y lectura de información**
+
+| ID | Trabajo | Estimación | Rol propuesto | Resultado verificable |
+| :--- | :--- | ---: | :--- | :--- |
+| TB-01 | Aclarar identidad, privacidad y confirmación en reportes | 5 puntos | Web/móvil y backend | Comprensión revisada con escenarios ficticios. |
+| TB-04 | Añadir contexto a indicadores de ánimo | 5 puntos | Consola administrativa | Periodo, respuestas y población visibles y comprensibles con datos sintéticos. |
+| TB-05 | Verificar consistencia de flujos en móvil y web | 8 puntos | Web y Android | Matriz de tareas y dispositivos ejecutada y documentada. |
+| **Total candidato** |  | **18 puntos** |  |  |
+
+Los totales ayudan a discutir alcance y capacidad; no representan la velocidad histórica del equipo. Los puntos y roles pueden ajustarse durante la planificación.
+
+### 8.3.4. Shareback and Continuous Learning
+
+**Fecha:** 06/11/2026.
+
+**Participantes:** integrantes actuales del equipo SafeSpace.
+**Propósito:** compartir los resultados de las sesiones con empleados y RR. HH. y traducirlos en oportunidades de mejora.
+
+| Hallazgo compartido | Fuente | Aprendizaje para el equipo |
+| :--- | :--- | :--- |
+| A los participantes les gustó la aplicación y reportaron facilidad 5/5 en ambos segmentos. | Seis sesiones: tres empleados y tres profesionales de RR. HH. | Conservar la claridad de los flujos completados sin ayuda; tomar la recepción positiva como señal inicial. |
+| Un empleado destacó la creatividad de la propuesta y que era esperada en las empresas. | Comentario recordado y parafraseado por el equipo. | Comunicar con claridad el propósito de SafeSpace. |
+| Se observó lentitud en los despliegues; el equipo la relacionó con los servicios gratuitos utilizados. | Conversación interna de Shareback. | Medir compilación, publicación y primer arranque por componente antes de decidir cambios de proveedor o plan. |
+| Se solicitó publicar SafeSpace en Google Play. | Hallazgo compartido durante el ciclo de validación y Shareback. | Incorporar la distribución oficial Android al To-Be Product Backlog. |
+
+**Aprendizajes incorporados.** La facilidad reportada fue alta para las tareas evaluadas. Las oportunidades priorizadas son aclarar el flujo de reportes, explorar Google Play y medir la demora atribuida a los planes gratuitos. TB-01 a TB-05 traducen esos hallazgos en trabajo verificable. Las estimaciones y los sprints To-Be son una propuesta inicial, no una asignación nominal acordada.
+
+**Ciclo de aprendizaje:** observar tareas y operación → compartir resultados → priorizar preguntas y mejoras → ejecutar el Sprint To-Be → volver a medir y actualizar el backlog. Cada iteración conservará versión, fecha, segmento y evidencia agregada, sin datos que identifiquen a participantes.
+
 
 \newpage

@@ -125,13 +125,15 @@ El despliegue debe poder repetirse desde una rama y un commit identificables. La
 | API REST | Render | `master` / [daca205](https://github.com/TheSuccesfulOnes/Backend-SafeSpace/commit/daca205) | Construcción Docker y publicación en Render | `FIREBASE_PROJECT_ID`, `GOOGLE_APPLICATION_CREDENTIALS`, `JWT_SECRET`, `CORS_ALLOWED_ORIGINS`, `PASSWORD_RESET_URL_BASE` y `GEMINI_API_KEY` opcional. | [safespace-backend-q3uv.onrender.com](https://safespace-backend-q3uv.onrender.com) |
 | Base de datos | Firebase Firestore | Colecciones documentales configuradas en el proyecto Firebase | Persistencia no relacional consumida por la API | `FIREBASE_PROJECT_ID` y credenciales de Firebase mediante Application Default Credentials. | Configurada en el entorno de ejecución del backend. |
 
+**Despliegue web informado por el equipo:** Vercel publica automáticamente las aplicaciones web al actualizar la rama Git conectada. Vercel aloja la landing, la aplicación web y la consola administrativa; Firebase Firestore se usa como base de datos.
+
 #### Procedimiento reproducible
 
 1. Clonar el repositorio correspondiente y cambiar al commit documentado.
 2. Instalar las dependencias con el comando definido en su README.
 3. Configurar las variables requeridas usando valores locales o secretos del proveedor.
 4. Ejecutar las pruebas y el comando de compilación del repositorio.
-5. Publicar usando el mecanismo configurado por el proveedor o distribuir el artefacto Android. Las capturas disponibles deben interpretarse como evidencia del estado observado, no como prueba de publicación automática.
+5. Publicar mediante Vercel, que actualiza automáticamente las aplicaciones web desde la rama Git conectada. La descarga e instalación del APK Android continúa siendo manual.
 6. Abrir la URL/artefacto y comprobar los flujos descritos en 5.2.
 
 Comandos de instalación, ejecución y compilación identificados en los repositorios disponibles:
@@ -145,7 +147,7 @@ Evidencia del despliegue del backend en Render:
 
 ![Despliegue del backend de SafeSpace en Render](../assets/images/cap5/deployment/backend-render.jpeg)
 
-**Estado de automatización observado.** La captura de Render identifica el despliegue del backend como iniciado manualmente. Las capturas de producción de Vercel muestran los sitios en estado Ready, pero incluyen la opción Connect Git; por sí solas no prueban que los repositorios estén conectados para desplegar automáticamente cada cambio. La presencia de una URL publicada acredita disponibilidad de una versión, no una canalización CI/CD automática.
+**Estado de automatización observado.** El equipo confirmó que Vercel publica automáticamente las aplicaciones web al recibir cambios en la rama Git conectada. La captura de Render identifica el despliegue del backend como iniciado manualmente. El despliegue web automatizado está separado de las pruebas CI del backend y no se afirma que dependa de ellas.
 
 ## 5.2. Product Implementation & Deployment
 
@@ -153,7 +155,7 @@ Esta sección presenta las funcionalidades y productos desarrollados por el equi
 
 ### 5.2.1. Sprint Backlogs
 
-El Product Backlog del Capítulo III se organiza en Jira en cuatro sprints: 22 historias de usuario (US01–US22) y 31 tareas técnicas (TS01–TS31). El equipo confirmó la finalización de los 53 ítems y sus estados se actualizaron en Jira a **Listo** el **7 de octubre de 2026**. Las horas y responsables de las tablas son propuestas de planificación, porque esos campos no estaban registrados previamente.
+El Product Backlog del Capítulo III se organiza en Jira en cuatro sprints con 22 historias de usuario (US01–US22). El equipo confirmó que las 22 historias están completadas y que sus estados se actualizaron en Jira el 7 de octubre de 2026. Las horas y responsables de las tablas son propuestas de planificación.
 
 [Tablero Jira de SafeSpace](https://milenkorvu.atlassian.net/jira/software/c/projects/SSB/boards/4/backlog)
 
@@ -167,7 +169,7 @@ Las capturas de Jira de esta sección conservan la vista previa a la actualizaci
 | Sprint 4 | Reportes, pagos y asistencia con IA | 6 | 6 completadas |
 | **Total** |  | **22** | **22 completadas** |
 
-Las descripciones completas y criterios de aceptación se desarrollan en el Capítulo III. Esta sección presenta únicamente las 22 historias de usuario; las tareas técnicas del backlog se omiten de estas tablas. Jira no tenía estimaciones ni responsables registrados para las historias, por lo que esos valores se presentan como propuestas.
+Las descripciones completas y criterios de aceptación se desarrollan en el Capítulo III. Esta sección presenta las 22 historias de usuario del backlog organizadas en los cuatro sprints de Jira. Las estimaciones y los responsables de las tablas se presentan como planificación de referencia.
 
 #### Sprint 1 — Base técnica, registro y acceso
 
@@ -195,7 +197,7 @@ Las descripciones completas y criterios de aceptación se desarrollan en el Cap�
 | US03 - Recuperación de contraseña de empleados | Como empleado habilitado que olvidó su contraseña, quiero solicitar un enlace temporal y definir una contraseña nueva, para recuperar el acceso a mi cuenta. El token es de un solo uso, expira y se almacena de forma segura. | 8 | Mauricio Luis Pajés León | Completado |
 | US04 - Actualización de perfil y preferencias | Como usuario autenticado, quiero actualizar mi username, email, nombre visible, idioma y tema, para mantener mi cuenta configurada según mis necesidades. Se validan username y email disponibles. | 8 | Alexther Kamil Diaz Martinez | Completado |
 | US05 - Administración de usuarios | Como administrador del sistema, quiero listar, crear, actualizar, habilitar, deshabilitar, eliminar usuarios y restablecer contraseñas, para controlar las cuentas y permisos de la plataforma. | 14 | Diego Andrés Ávalos Cordova | Completado |
-| US06 - Registro diario de estado de ánimo | Como usuario autenticado, quiero registrar mi estado de ánimo del día, para dejar constancia de mi percepción diaria de bienestar. Solo se admite un registro por usuario y fecha. | 6 | Jean Niels Arizabal Condori | Completado |
+| US06 - Registro diario de estado de ánimo | Como usuario autenticado, quiero registrar mi estado de ánimo del día, para dejar constancia de mi percepción diaria de bienestar. Solo se admite un registro por usuario y fecha. | 6 | Equipo de SafeSpace | Completado |
 | US07 - Resumen administrativo de estado de ánimo | Como miembro de RRHH o administrador del sistema, quiero consultar la distribución diaria de estados de ánimo y la tasa de respuesta, para conocer el pulso general de los empleados. | 8 | Milenko Ruben Cayanchi Avila | Completado |
 
 **Resultado del sprint en Jira:** 5 historias completadas; 0 por hacer.
@@ -216,7 +218,7 @@ Las descripciones completas y criterios de aceptación se desarrollan en el Cap�
 | US11 - Administración avanzada de encuestas | Como administrador del sistema, quiero editar, reabrir, eliminar encuestas y consultar sus respuestas detalladas, para realizar la gestión administrativa completa. | 12 | Jose Gustavo Asto Jacome | Completado |
 | US12 - Comentarios anidados en encuestas | Como usuario autenticado, quiero publicar comentarios y respuestas sobre una encuesta que permite comentarios, para participar en una conversación relacionada con la pregunta. | 10 | Diego Andrés Ávalos Cordova | Completado |
 | US13 - Like o unlike de comentarios | Como usuario autenticado, quiero marcar o desmarcar un comentario con un like, para expresar si considero útil su contenido. Cada usuario mantiene una sola interacción por comentario. | 6 | Alexther Kamil Diaz Martinez | Completado |
-| US14 - Consulta de actividades abiertas | Como usuario autenticado, quiero consultar las actividades semanales abiertas y sus opciones, para elegir en cuál participar. Las actividades cerradas no aparecen públicamente. | 6 | Jean Niels Arizabal Condori | Completado |
+| US14 - Consulta de actividades abiertas | Como usuario autenticado, quiero consultar las actividades semanales abiertas y sus opciones, para elegir en cuál participar. Las actividades cerradas no aparecen públicamente. | 6 | Equipo de SafeSpace | Completado |
 | US15 - Votación y cambio de voto | Como usuario autenticado, quiero votar por una opción de una actividad abierta y poder cambiar mi voto, para participar en la decisión semanal. | 8 | Diego Andrés Ávalos Cordova | Completado |
 | US16 - Gestión de actividades semanales | Como miembro de RRHH o administrador del sistema, quiero crear, consultar, cerrar y reabrir actividades semanales, para administrar las dinámicas participativas. | 10 | Milenko Ruben Cayanchi Avila | Completado |
 
@@ -233,10 +235,10 @@ Las descripciones completas y criterios de aceptación se desarrollan en el Cap�
 | Backlog ID y título | Descripción | Estimación propuesta (h) | Responsable propuesto | Estado |
 | :-------------------- | :------------------------------- | -------------: | :--------- | :----- |
 | US17 - Creación de reportes anónimos o identificados | Como usuario autenticado, quiero enviar un reporte con categoría, título, descripción, prioridad y opción de anonimato, para comunicar una situación que requiere atención. | 10 | Alexther Kamil Diaz Martinez | Completado |
-| US18 - Consulta de reportes propios | Como usuario autenticado, quiero consultar mis reportes identificados, para revisar los casos que envié y su estado. Los reportes anónimos no se vinculan a una cuenta. | 6 | Diego Andrés Ávalos Cordova | Completado |
+| US18 - Consulta de reportes propios | Como usuario autenticado, quiero consultar mis reportes identificados, para revisar los casos que envié y su estado. La API omite el nombre del reportante cuando el reporte se marca anónimo; el documento guardado en Firestore conserva una referencia al usuario, según el hallazgo SEC-01 de 6.2.1.2. | 6 | Diego Andrés Ávalos Cordova | Completado |
 | US19 - Revisión y actualización de reportes | Como miembro de RRHH o administrador del sistema, quiero consultar todos los reportes y cambiar su estado, para realizar el seguimiento administrativo de los casos. | 8 | Milenko Ruben Cayanchi Avila | Completado |
 | US20 - Registro de planes y comprobantes de pago | Como administrador del sistema, quiero consultar los planes disponibles y registrar un pago con beneficiario, plan y comprobante PDF, para conservar evidencia de una renovación o contratación registrada manualmente. | 12 | Jose Gustavo Asto Jacome | Completado |
-| US21 - Administración de conversaciones propias | Como empleado, quiero crear, listar, renombrar y eliminar mis conversaciones de SafeSpace, para organizar mis espacios privados de apoyo emocional. | 8 | Jean Niels Arizabal Condori | Completado |
+| US21 - Administración de conversaciones propias | Como empleado, quiero crear, listar, renombrar y eliminar mis conversaciones de SafeSpace, para organizar mis espacios privados de apoyo emocional. | 8 | Equipo de SafeSpace | Completado |
 | US22 - Envío de mensajes al asistente | Como empleado, quiero enviar mensajes al asistente y recibir una respuesta considerando parte del historial, para obtener orientación breve de bienestar emocional. | 12 | Mauricio Luis Pajés León | Completado |
 
 **Resultado del sprint en Jira:** 6 historias completadas; 0 por hacer.
@@ -245,7 +247,7 @@ Las descripciones completas y criterios de aceptación se desarrollan en el Cap�
 
 **Trazabilidad de commits y pruebas por sprint.** Los repositorios contienen commits y los artefactos de prueba descritos en el Capítulo VI, pero no se encontró una relación verificable entre un commit o una ejecución concreta y cada sprint/ítem de Jira. El cambio de estado a Listo refleja la confirmación del equipo, pero no añade esa relación de trazabilidad. Para la entrega final se deben añadir los SHA y resultados de prueba vinculados a cada sprint.
 
-**Observaciones de trazabilidad y calidad del backlog.** Las tablas muestran las 22 historias de usuario (US01–US22) y omiten las 31 tareas técnicas (TS01–TS31), que todavía se encuentran en Jira mientras se completa su retiro. Las horas y los responsables son propuestas de planificación, no valores registrados previamente.
+**Observaciones de trazabilidad y calidad del backlog.** Las tablas muestran las 22 historias de usuario (US01–US22) organizadas en los cuatro sprints. Las horas y los responsables se presentan como propuestas de planificación para documentar el alcance y la distribución del trabajo.
 
 ### 5.2.2. Implemented Landing Page Evidence
 
@@ -521,7 +523,7 @@ La evidencia disponible combina actividad de Jira y referencias de commits ya id
 
 | Fuente | Dato verificable | Alcance |
 | :--- | :--- | :--- |
-| Jira, tablero del proyecto SafeSpace | 53 ítems en cuatro sprints: 22 historias y 31 tareas técnicas, todos en estado Listo. | El capítulo V muestra únicamente las historias; responsables y horas son propuestas. |
+| Jira, tablero del proyecto SafeSpace | 22 historias de usuario en cuatro sprints, completadas por el equipo. | Capítulo V presenta sus descripciones, responsables y estimaciones de referencia. |
 | GitHub | La sección 5.1.2 identifica commits de referencia por producto y fecha. | Son ejemplos de cambios publicados; no constituyen un conteo completo de contribuciones del sprint. |
 | GitHub Insights | La imagen siguiente procede de la evidencia usada en AV1. | Es un registro histórico agregado; no demuestra por sí solo la actividad del periodo actual ni de todos los repositorios. |
 
@@ -559,7 +561,7 @@ La siguiente captura representa la interfaz de registro de ánimo del producto, 
 
 ![Interfaz web de registro del estado de ánimo, relacionada con el recorrido del producto](../assets/images/cap5/web/frontend-web-mood.png)
 
-**Testimonio positivo de usuario:** pendiente. En los archivos revisados no se encontró una declaración atribuible a una persona usuaria ni su autorización para publicarla. Se debe incorporar una cita breve con fuente o evidencia verificable antes de la entrega final; no se inventa una opinión.
+**Retroalimentación verbal reportada por el equipo:** un empleado describió SafeSpace como una aplicación creativa y como una solución que se espera encontrar en las empresas. Se conserva como paráfrasis, no como cita textual, porque no hay transcripción. No se publicarán fotografías de participantes, pues el equipo indicó que no cuenta con autorización para ello. Si se requiere un testimonio textual, todavía hará falta confirmar la redacción con la persona y obtener su autorización para publicarlo.
 
 
 \newpage

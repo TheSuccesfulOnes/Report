@@ -52,17 +52,17 @@ La entrega continua busca mantener una versión probada en condiciones de ser pu
 
 **Render:** aloja la API REST. `render.yaml` define el runtime Docker, la rama `master`, el perfil `prod`, el puerto 10000 y la ruta de health check `/v3/api-docs`. La captura de despliegue disponible indica que esa publicación se inició manualmente desde el dashboard.
 
-**Vercel:** aloja la aplicación web y la consola administrativa. Las capturas muestran versiones en estado Ready y el control Connect Git; se usan como evidencia del estado visible, no como prueba de una conexión automática con los repositorios.
+**Vercel:** el equipo confirmó despliegue automático de las aplicaciones web al recibir cambios en la rama Git conectada.
 
 **Firebase Firestore:** es la base de datos administrada que consulta el backend en ejecución. El servicio se configura con los parámetros de Firebase y las credenciales del entorno; no utiliza migraciones de MySQL o Flyway.
 
-**Gradle:** construye el APK de Android, que se distribuye por separado de la API y de las aplicaciones web. No se identificó una publicación móvil automatizada.
+**Gradle:** construye el APK de Android, que se distribuye por separado de la API y de las aplicaciones web. El equipo informa que el APK se descarga e instala manualmente; no se identificó una publicación móvil automatizada.
 
 **Practices (Prácticas)**
 
 **Validación antes de publicar:** las pruebas del backend se ejecutan en CI. Para el frontend existen scripts de prueba y compilación, aunque no se encontró una ejecución automática mediante workflow.
 
-**Promoción a producción:** la captura de Render registra una publicación manual. En Vercel, las capturas muestran versiones listas, pero no permiten confirmar el origen de cada publicación.
+**Promoción a producción:** Vercel publica automáticamente los cambios de la rama Git conectada para las aplicaciones web. La captura de Render registra una publicación manual de la API. La automatización web no se presenta como condicionada por el resultado de CI del backend.
 
 **Configuración por entorno:** Firestore y los servicios se conectan mediante parámetros y credenciales configurados en el proveedor, separados del código fuente.
 
@@ -74,11 +74,11 @@ La entrega continua busca mantener una versión probada en condiciones de ser pu
 
 ![Panel de Vercel con la aplicación web en estado Ready](../assets/images/cap7/evidence/vercel-web-ready.png){.inline width=100%}
 
-**Vercel — aplicación web.** Vercel aloja la interfaz web de SafeSpace. La captura muestra el proyecto `safespace-web`, su dominio y una publicación en estado Ready al momento de la captura. El control Connect Git visible no confirma por sí solo una conexión automática al repositorio.
+**Vercel — proyecto web.** La captura muestra `safespace-web`, su dominio y una publicación en estado Ready. El equipo confirmó que Vercel publica automáticamente las aplicaciones web al recibir cambios en la rama Git conectada.
 
 ![Panel de Vercel con la consola administrativa en estado Ready](../assets/images/cap7/evidence/vercel-admin-ready.png){.inline width=100%}
 
-**Vercel — consola administrativa.** La consola se publica como un proyecto separado. La captura muestra su dominio y el estado Ready; sirve como evidencia de disponibilidad en el proveedor, pero no muestra que el despliegue se haya activado automáticamente por un cambio en Git.
+**Vercel — proyecto administrativo.** La captura muestra `safespace-admin`, su dominio y una publicación en estado Ready. El equipo confirmó que la aplicación web se despliega automáticamente mediante Vercel desde la rama Git conectada.
 
 ### 7.2.2. Stages Deployment Pipeline Components
 
@@ -88,7 +88,7 @@ La entrega continua busca mantener una versión probada en condiciones de ser pu
 
 **Construcción y despliegue del backend:** el `Dockerfile` empaqueta la aplicación para ejecución con Java 21. Render aloja el servicio y declara la configuración de producción en `render.yaml`; la captura disponible registra una activación manual.
 
-**Publicación de las interfaces web:** Vercel muestra versiones listas para la aplicación web y la consola administrativa. Las imágenes disponibles no acreditan que cada cambio se integre y publique automáticamente desde Git.
+**Publicación de las interfaces web:** Vercel publica automáticamente la landing, la aplicación web y la consola administrativa desde sus repositorios conectados. El equipo identificó esta automatización en la plataforma.
 
 **Monitoreo y feedback:** Render tiene configurada la ruta `/v3/api-docs` como health check del servicio. No se encontró una prueba smoke automatizada que valide después de publicar los flujos funcionales de SafeSpace.
 
@@ -96,7 +96,7 @@ La entrega continua busca mantener una versión probada en condiciones de ser pu
 
 ## 7.3. Continuous Deployment
 
-El despliegue continuo lleva a producción los cambios que superan las verificaciones configuradas sin una activación manual para cada versión. La configuración revisada de SafeSpace todavía no muestra ese recorrido completo: CI verifica el backend, Render registra un despliegue manual y las capturas de Vercel no acreditan la conexión automática de los repositorios.
+El despliegue continuo lleva a producción los cambios recibidos por la rama Git conectada. En SafeSpace, Vercel publica automáticamente las aplicaciones web. La API se aloja en Render y la captura disponible registra una activación manual; el workflow de GitHub Actions ejecuta pruebas del backend y se documenta por separado del despliegue.
 
 ### 7.3.1. Tools and Practices
 
@@ -106,7 +106,7 @@ En este apartado se describen las herramientas que intervienen en la publicació
 
 - **GitHub Actions y Maven:** validan los cambios del backend con `mvn -B test`. Para utilizarlos como condición de publicación, el despliegue tendría que depender del resultado exitoso del job.
 - **Docker y Render:** Docker construye la imagen de la API y Render la aloja. La publicación observada se inició manualmente; no se presenta como despliegue continuo.
-- **Vercel:** mantiene versiones publicadas de la aplicación web y de la consola administrativa. La conexión de Git debe verificarse antes de afirmar que publica automáticamente al recibir cambios.
+- **Vercel:** aloja las aplicaciones web y la consola administrativa, y publica automáticamente desde la rama Git conectada.
 - **Firebase Firestore:** es el servicio de datos usado por el backend. Las credenciales deben permanecer configuradas en el entorno protegido del proveedor.
 - **Vitest y Playwright:** los scripts del frontend permiten ejecutar pruebas de validación y End-to-End. Para que sean una puerta de calidad, primero deben incorporarse a un workflow de CI.
 - **Gradle:** construye el APK de Android; su publicación permanece separada del flujo de las aplicaciones web y el backend.
@@ -115,13 +115,13 @@ En este apartado se describen las herramientas que intervienen en la publicació
 
 **Despliegue basado en cambios validados:** usar el commit integrado como referencia del artefacto y habilitar la publicación únicamente después de las comprobaciones correspondientes.
 
-**Automatización por componente:** incorporar las pruebas, el análisis y la compilación del frontend al CI; después, vincular el resultado aprobado con el despliegue de Vercel.
+**Automatización por componente:** mantener separada la CI del backend y la publicación automática del frontend en Vercel; incorporar las validaciones del frontend al flujo de CI y hacer visible su resultado junto a la publicación.
 
 **Comprobación posterior:** verificar la disponibilidad del servicio y una operación esencial tras cada publicación. El health check configurado en Render comprueba la ruta declarada, pero no reemplaza estas verificaciones funcionales.
 
 **Recuperación:** conservar una versión anterior identificable y documentar el procedimiento de reversión. La presencia de un control en el dashboard no demuestra que una reversión automática esté configurada.
 
-Estas prácticas describen los pasos que faltan para automatizar la publicación; no se atribuyen al pipeline actual.
+Vercel automatiza la publicación web desde la rama Git conectada. El workflow de backend ejecuta las pruebas, mientras que la publicación de Render observada fue manual; cada flujo se describe de acuerdo con su configuración y evidencia disponible.
 
 ### 7.3.2. Production Deployment Pipeline Components
 
@@ -167,26 +167,26 @@ Firestore es un servicio administrado y se consulta en tiempo de ejecución desd
 
 1. **Validación local:** `package.json` incluye scripts para Vitest, Playwright, typecheck, lint y build.
 2. **Integración continua:** no se identificó un workflow que ejecute esas verificaciones automáticamente en el repositorio web.
-3. **Publicación:** Vercel muestra versiones Ready para la aplicación web y la consola administrativa. Las capturas muestran el control Connect Git, por lo que la conexión automática con los repositorios no queda confirmada.
-4. **Siguiente etapa:** ejecutar las verificaciones en CI y conectar el despliegue a la revisión aprobada antes de describir este flujo como continuo.
+3. **Publicación:** Vercel publica automáticamente las aplicaciones web al recibir cambios en la rama Git conectada.
+4. **Mejora propuesta:** incorporar las verificaciones del frontend al flujo de CI y decidir si la publicación debe esperar a que terminen con resultado aprobado.
 
 ![Logotipo de Vercel](../assets/images/cap7/tool-logos/vercel-wordmark.svg){.inline width=85%}
 
-**Vercel.** Vercel aloja la aplicación web y la consola administrativa. Las capturas muestran ambas publicaciones en estado Ready; la conexión automática con Git no queda confirmada por la evidencia disponible.
+**Vercel.** La plataforma aloja los proyectos web y administrativo y publica automáticamente los cambios recibidos por la rama Git conectada; las capturas muestran versiones en estado Ready.
 
 **Componentes del pipeline de Android (Gradle)**
 
-Gradle construye el APK que se distribuye por separado. No se identificó un workflow que ejecute pruebas y publique el artefacto móvil automáticamente ni una integración de ese proceso con los despliegues de la API y las interfaces web.
+Gradle construye el APK que se distribuye por separado. El equipo informa que la descarga e instalación se hacen manualmente; no se identificó un workflow que ejecute pruebas y publique el artefacto móvil automáticamente ni una integración de ese proceso con los despliegues de la API y las interfaces web.
 
 ![Logotipo de Gradle](../assets/images/cap7/tool-logos/gradle-wordmark.svg){.inline width=85%}
 
-**Gradle.** Gradle construye el APK de Android para su distribución. El proceso móvil permanece separado de los despliegues del backend y de las interfaces web; no se identificó una publicación móvil automatizada.
+**Gradle.** Gradle construye el APK de Android para su distribución. El equipo indica que la descarga e instalación se hacen manualmente. El proceso móvil permanece separado de los despliegues del backend y de las interfaces web; no se identificó una publicación móvil automatizada.
 
-SafeSpace dispone de integración continua para el backend y de servicios publicados en Render y Vercel. Para completar el despliegue continuo, falta enlazar las comprobaciones de cada repositorio con la publicación, validar la versión en producción y definir su recuperación.
+SafeSpace cuenta con CI del backend en GitHub Actions, despliegue automático del frontend en Vercel y publicación de la API en Render, cuya captura registra una activación manual. Android se distribuye mediante APK descargable. La lentitud de los despliegues mencionada en el Shareback se atribuyó al uso de servicios gratuitos; por ello, la sección de experimentación propone registrar tiempos por proveedor y componente antes de decidir cambios de plan.
 
 ## 7.4. Continuous Monitoring
 
-La monitorización continua reúne señales de disponibilidad, errores y comportamiento de los servicios después de desplegar una versión. En SafeSpace se han identificado los paneles de despliegue y logs de Render y los paneles de observabilidad de Vercel. Estas consolas permiten observar actividad del proveedor, pero la evidencia disponible no confirma una política de alertas, notificaciones ni objetivos de servicio configurados por el equipo.
+La monitorización continua reúne señales de disponibilidad, errores y comportamiento de los servicios después de desplegar una versión. En SafeSpace se identifican los paneles de despliegue y logs de Render y los paneles de observabilidad de Vercel; estos servicios también forman parte del análisis operativo compartido por el equipo.
 
 ### 7.4.1. Tools and Practices
 
@@ -196,7 +196,7 @@ La monitorización continua reúne señales de disponibilidad, errores y comport
 | Vercel (web y consola administrativa) | Paneles del proveedor con solicitudes de borde, invocaciones de funciones y tasa de error; las capturas revisadas muestran publicaciones en estado “Ready”. | Las métricas visibles no demuestran que existan umbrales propios o notificaciones al equipo. |
 | Cloud Firestore | Consola de datos y configuración del servicio administrado. | No se identificó en la evidencia adjunta una regla de alerta de Firestore ni un monitor de latencia/errores conectado a un canal del equipo. |
 
-Las prácticas recomendadas para operar estas señales son revisar errores después de una publicación, buscar correlación con el commit desplegado, comprobar una operación funcional de cada rol y evitar registrar tokens, contraseñas, contenido sensible de reportes o mensajes de orientación en logs. La frecuencia de revisión y las personas responsables deben acordarse en el equipo.
+Las prácticas recomendadas para operar estas señales son revisar errores después de una publicación, relacionarlos con el commit desplegado y comprobar una operación funcional por rol. Los logs deben excluir tokens, contraseñas y contenido sensible. El Shareback identificó la lentitud de los servicios gratuitos como aspecto operativo que el equipo desea mejorar.
 
 ### 7.4.2. Monitoring Pipeline Components
 
@@ -208,37 +208,37 @@ El flujo de monitorización documentado con la evidencia actual es el siguiente:
 4. **Verificación funcional:** tras un cambio, ejecutar una comprobación controlada con una cuenta de prueba para una ruta de empleado y otra de RR. HH., sin usar reportes ni datos personales reales. Esta práctica debe registrarse por despliegue; no se afirma que forme parte hoy de un pipeline automático.
 5. **Registro y seguimiento:** anotar fecha, versión, señal revisada, incidente y acción tomada en el registro operativo que el equipo defina.
 
-| Componente | Estado observado | Paso operativo pendiente |
+| Componente | Estado observado | Práctica recomendada |
 | :--- | :--- | :--- |
-| Logs de arranque y estado en Render | Evidenciados en la captura de despliegue | Definir revisión posterior al despliegue y conservación/acceso |
-| Health check `/v3/api-docs` | Declarado en la configuración de Render | Añadir una comprobación funcional independiente si el equipo lo aprueba |
-| Métricas de Vercel | Visibles en los paneles capturados | Definir qué indicadores revisa el equipo y con qué frecuencia |
-| Monitorización de Firestore | No acreditada por la evidencia disponible | Confirmar si se configura en consola y adjuntar la vista o regla vigente |
+| Logs de arranque y estado en Render | Evidenciados en la captura de despliegue | Revisar el arranque tras cada publicación y conservar el enlace al log asociado al commit |
+| Health check `/v3/api-docs` | Declarado en la configuración de Render | Complementar la señal con una verificación funcional de una operación esencial |
+| Métricas de Vercel | Visibles en los paneles capturados | Revisar errores y solicitudes después de publicar y registrar la ventana consultada |
+| Monitorización de Firestore | No acreditada por la evidencia disponible | Revisar errores de acceso en los logs del backend y evaluar una alerta del proveedor |
 
 ### 7.4.3. Alerting Pipeline Components
 
 No se encontró evidencia suficiente para afirmar que SafeSpace tenga umbrales de alerta configurados para errores, indisponibilidad, latencia, consumo o problemas de acceso a Firestore. Por tanto, este apartado describe las decisiones que deben tomarse antes de declarar una alerta operativa.
 
-| Señal candidata | Umbral/ventana | Severidad | Responsable/canal | Estado |
-| :--- | :--- | :--- | :--- | :--- |
-| Fallo repetido del health check de la API | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de configuración y evidencia |
-| Aumento de respuestas HTTP 5xx | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de configuración y evidencia |
-| Incremento de tasa de error o fallo de despliegue en Vercel | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de configuración y evidencia |
-| Fallo de acceso a Firestore | [Definir con el equipo] | [Definir] | [Definir] | Pendiente de confirmar instrumentación |
+| Señal candidata | Umbral/ventana propuestos | Severidad propuesta | Responsable/canal propuesto |
+| :--- | :--- | :--- | :--- |
+| Fallo repetido del health check de la API | Dos fallos consecutivos en una ventana de 5 minutos | Alta | Rol DevOps; correo técnico del equipo o aviso del proveedor |
+| Aumento de respuestas HTTP 5xx | Cinco o más respuestas 5xx en 5 minutos | Alta | Rol backend/DevOps; panel y aviso del proveedor |
+| Fallo de publicación de producción en Vercel | Notificar cada publicación de producción fallida | Media | Rol frontend; notificación del proyecto Vercel |
+| Fallo de acceso a Firestore | Tres fallos consecutivos de operación en 5 minutos | Alta | Rol backend; alerta del servicio y revisión de logs |
 
-Los valores no se fijan en el informe porque no se cuenta con una línea base de tráfico ni con objetivos de disponibilidad acordados. Antes de activar alertas se deben validar el umbral, la ventana, el mecanismo contra notificaciones repetidas y el procedimiento de respuesta. Cada alerta real debe apuntar a una señal observable y a una acción responsable.
+Estos valores forman una propuesta de operación para revisar con la línea base de uso. No describen alertas activas en las cuentas. Antes de configurarlos se debe comprobar que cada proveedor exponga la señal y el canal correspondientes, evitar avisos repetidos y asociar cada alerta con un procedimiento de respuesta.
 
 ### 7.4.4. Notification Pipeline Components
 
-La ruta de notificación debe conectar una alerta confirmada con la persona responsable, incluir servicio, entorno, hora, versión y enlace al panel/log pertinente, y permitir registrar reconocimiento y resolución. No se identificó en la evidencia revisada un canal ya conectado (correo, chat u otro) ni un rol de guardia acordado; ambos quedan por definir.
+La ruta propuesta conecta cada alerta con el rol responsable e incluye servicio, entorno, hora, versión y enlace al panel o log. El canal recomendado es el correo técnico del equipo o las notificaciones integradas del proveedor. El equipo puede registrar reconocimiento, diagnóstico y resolución en un incidente de Jira; la ruta es una recomendación operativa y no una integración ya configurada.
 
 | Evento | Destinatario/canal | Acuse y escalamiento | Evidencia requerida |
 | :--- | :--- | :--- | :--- |
-| Indisponibilidad o degradación de API | [Definir] | [Definir] | Regla activa y notificación de prueba sin datos sensibles |
-| Fallos de interfaz o incremento de errores | [Definir] | [Definir] | Regla activa y notificación de prueba |
-| Problema de acceso a Firestore | [Definir] | [Definir] | Monitor, alerta y responsable documentados |
+| Indisponibilidad o degradación de API | Rol backend/DevOps; correo técnico o notificación de Render | Revisar el health check y logs; registrar diagnóstico y recuperación en Jira | Validar el canal con una notificación de prueba sin datos sensibles |
+| Fallos de interfaz o incremento de errores | Rol frontend; notificación del proyecto Vercel | Revisar el despliegue y los errores del periodo; registrar la acción correctiva | Validar el canal con una notificación de prueba |
+| Problema de acceso a Firestore | Rol backend; correo técnico del equipo | Revisar logs del backend y estado de credenciales; registrar el incidente en Jira | Confirmar qué señal y notificación permite el plan configurado |
 
-Cuando se configuren, se anexarán capturas de la regla y una notificación de prueba con secretos y datos personales ocultos. Hasta entonces, la monitorización se apoya en la consulta de los paneles del proveedor y no se presenta como un pipeline automático de alertas y notificaciones.
+La tabla propone una ruta de respuesta por rol; no afirma que esas notificaciones estén configuradas. La evidencia revisada acredita paneles de proveedor y logs, pero no reglas activas de alerta ni una integración automática con Jira. Antes de activar cada aviso, se debe probar el canal y ocultar secretos y datos personales en las capturas.
 
 
 \newpage

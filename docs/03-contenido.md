@@ -135,7 +135,7 @@
     - [6.2.2. Reviews](#622-reviews)
 * [6.3. Validation Interviews](#63-validation-interviews)
     - [6.3.1. Interview Design](#631-interview-design)
-    - [6.3.2. Interview Records](#632-interview-records)
+    - [6.3.2. Interview Records and Validation Session Summary](#632-interview-records-and-validation-session-summary)
     - [6.3.3. Heuristic Evaluations](#633-heuristic-evaluations)
 * [6.4. UX Audits](#64-ux-audits)
     - [6.4.1. Auditoría realizada](#641-auditoría-realizada)
@@ -189,6 +189,8 @@
 * [8.3. Experimentation](#83-experimentation)
     - [8.3.1. To-Be User Stories](#831-to-be-user-stories)
     - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
+    - [8.3.3. To-Be Sprint Backlog](#833-to-be-sprint-backlog)
+    - [8.3.4. Shareback and Continuous Learning](#834-shareback-and-continuous-learning)
 
 ---
 

@@ -4,18 +4,19 @@ Este capítulo reúne pruebas del backend y de la aplicación web, escenarios de
 
 ## 6.1. Testing Suites & Validation
 
-Las cifras siguientes provienen de artefactos de ejecución ya disponibles en los repositorios. No se lanzó una nueva ejecución de pruebas durante la revisión de este informe. En backend existen tres registros con totales distintos; se muestran como ejecuciones separadas y no se combinan.
+La corrida integral realizada para esta revisión ejecutó el backend con Temurin Java 21 y Maven 3.9.11 el 08/11/2026. El proceso terminó correctamente con **967 pruebas, 0 fallas, 0 errores y 0 omitidas**. Los otros registros que figuran en la tabla corresponden a ejecuciones anteriores y se conservan como tales, sin sumarlos ni presentarlos como el resultado actual.
 
 | Producto/evidencia | Fuente | Resultado que declara |
 | :--- | :--- | :--- |
-| Backend, ejecución documentada | Backend-SafeSpace/TESTING.md | 960 casos en 60 suites; 488 unitarios y 472 de integración local; 0 fallas, errores u omitidos. |
-| Backend, inventario JSON actual | src/test/resources/validation-inventory.json | 966 casos en 60 suites; 0 fallas, errores u omitidos. |
-| Backend, captura de GitHub Actions | backend-ci-summary.png | 958 pruebas aprobadas en una ejecución anterior, identificada en la captura como 06/10/2026. |
+| Backend, corrida integral de esta revisión | Maven 3.9.11; Temurin Java 21; copia local conectada | 967 pruebas; 0 fallas, 0 errores y 0 omitidas; BUILD SUCCESS (08/11/2026). |
+| Backend, ejecución documentada anterior | Backend-SafeSpace/TESTING.md | 960 casos en 60 suites; 488 unitarios y 472 de integración local; 0 fallas, errores u omitidos. |
+| Backend, inventario JSON anterior | src/test/resources/validation-inventory.json | 966 casos en 60 suites; 0 fallas, errores u omitidos. |
+| Backend, captura anterior de GitHub Actions | backend-ci-summary.png | 958 pruebas aprobadas en una ejecución identificada en la captura como 06/10/2026. |
 | Frontend web, pruebas unitarias e integración local | Frontend-Web-SafeSpace/TESTING.md | 494 casos aprobados: 489 Vitest y 5 casos Node conservados. |
 | Frontend web, pruebas de sistema con Playwright | playwright-report-summary-current.png | 6 casos aprobados; 0 fallidos, inestables u omitidos. |
 | Integración continua | Backend-SafeSpace/.github/workflows/ci.yml | Existe un workflow de backend; no se encontró un workflow GitHub Actions en el repositorio conectado del frontend web. |
 
-La documentación del backend, su inventario y la captura de CI no coinciden (960, 966 y 958). Corresponden a distintos artefactos o ejecuciones; no se presenta uno como total consolidado. Para la entrega final se debe ejecutar una corrida limpia, regenerar el inventario y actualizar la captura y la cifra de TESTING.md. El frontend informa 494 casos en su documentación local; sus archivos de prueba y configuración también tienen cambios locales pendientes de integrar al repositorio remoto.
+La corrida de esta revisión se ejecutó sobre la copia local conectada al repositorio y no reemplaza un nuevo registro de GitHub Actions. Los artefactos históricos del backend declaran 960, 966 y 958 casos, respectivamente; reflejan versiones o ejecuciones distintas del total actual. El frontend informa 494 casos en `TESTING.md`; el resultado de Playwright disponible corresponde a seis pruebas End-to-End aprobadas. Typecheck y lint se ejecutaron en esta revisión y se detallan en 6.2.1.
 
 ![Ejecución previa del job de pruebas del backend en GitHub Actions: 958 pruebas aprobadas](../assets/images/cap6/backend-ci-summary.png)
 
@@ -27,9 +28,9 @@ Las suites unitarias se organizan por entidad y comportamiento. Cada caso indica
 
 Ubicación: `src/test/java/com/experimentos/backend/authentication/application/AuthServiceTest.java`.
 
-Verifica el registro de empleados, la codificación de contraseñas y el rechazo de contraseñas no coincidentes, débiles o de credenciales inválidas. La ejecución individual terminó con **11 pruebas aprobadas, 0 fallas y 0 errores**.
+Verifica el registro de empleados, la codificación de contraseñas y el rechazo de contraseñas no coincidentes, débiles o de credenciales inválidas. La corrida integral de esta revisión registró **12 pruebas aprobadas, 0 fallas y 0 errores** en esta suite. La captura individual que acompaña el ejemplo corresponde a una ejecución anterior de 11 pruebas.
 
-![Ejecución de AuthServiceTest: 11 pruebas aprobadas](../assets/images/cap6/unit-tests/auth-service-test.png)
+![Ejecución anterior de AuthServiceTest: 11 pruebas aprobadas](../assets/images/cap6/unit-tests/auth-service-test.png)
 
 #### Registro diario y resumen de ánimo — MoodServiceTest (US06–US07)
 
@@ -64,7 +65,7 @@ Fuente: `src/test/java/com/experimentos/backend/survey/application/SurveyService
 
 Ubicación: `src/test/java/com/experimentos/backend/report/application/ReportServiceTest.java`.
 
-Comprueba que el propietario pueda consultar su reporte anónimo sin exponer la identidad del remitente. La ejecución individual terminó con **1 prueba aprobada, 0 fallas y 0 errores**.
+Comprueba que la respuesta de la API omita el nombre del remitente cuando el reporte está marcado como anónimo. La prueba también conserva una referencia interna a la cuenta del empleado; por ello verifica el ocultamiento del nombre en la respuesta, pero no el anonimato de los datos almacenados. Esta diferencia se describe en el hallazgo SEC-01 de 6.2.1.2. La ejecución individual terminó con **1 prueba aprobada, 0 fallas y 0 errores**.
 
 ![Ejecución de ReportServiceTest: 1 prueba aprobada](../assets/images/cap6/unit-tests/report-service-test.png)
 
@@ -77,7 +78,7 @@ assertThat(ReflectionTestUtils.getField(saved, "user")).isSameAs(employee);
 
 Fuente: `src/test/java/com/experimentos/backend/report/application/ReportServiceTest.java`.
 
-**Resultado de las cuatro suites documentadas: 19 pruebas aprobadas, 0 fallas y 0 errores.**
+**Resultado de las cuatro suites en la corrida integral actual: 20 pruebas aprobadas, 0 fallas y 0 errores.** Las capturas individuales se conservan como ejemplos de ejecución; en `AuthServiceTest` la imagen corresponde a una corrida previa con 11 casos.
 
 ### 6.1.2. Core Integration Tests
 
@@ -353,7 +354,7 @@ Los escenarios enlazan las historias del Capítulo III con las funciones mostrad
 
 ## 6.2. Static Testing & Verification
 
-Esta sección distingue las comprobaciones estáticas configuradas en los repositorios de los resultados de ejecución. Un script disponible no constituye por sí mismo evidencia de que haya sido ejecutado sobre la versión entregada; los resultados, fecha y commit deben registrarse cuando el equipo realice la revisión.
+Esta sección distingue las comprobaciones estáticas configuradas en los repositorios de los resultados ejecutados para esta revisión. Los comandos y resultados se indican por separado para no confundir disponibilidad de una herramienta con ejecución efectiva.
 
 ### 6.2.1. Static Code Analysis
 
@@ -363,22 +364,23 @@ En el frontend web, `package.json` define los comandos `typecheck` (TypeScript),
 
 | Componente | Herramienta o práctica identificada | Evidencia de configuración | Resultado de una corrida para este informe |
 | :--- | :--- | :--- | :--- |
-| Frontend web | TypeScript (`typecheck`) | Script definido en `package.json` | Pendiente de registrar |
-| Frontend web | oxlint (`lint`) | Script definido en `package.json` | Pendiente de registrar |
-| Frontend web | Prettier (`format:check`) | Script definido en `package.json` | Pendiente de registrar |
-| Backend | Convenciones del lenguaje y revisión de cambios | No se identificó una regla automática dedicada en el workflow consultado | Pendiente de registrar; confirmar si existe configuración local adicional |
+| Frontend web | TypeScript (`npm run typecheck`) | Script definido en `package.json` | Aprobado; sin errores de tipo. |
+| Frontend web | oxlint (`npm run lint`) | Script definido en `package.json` | Aprobado; sin hallazgos de lint. |
+| Frontend web | Prettier (`npm run format:check`) | Script definido en `package.json` | 37 archivos requieren ajuste de formato; no se modificaron durante esta revisión. |
+| Backend | Apache Spotless 2.44.4 con Google Java Format AOSP 1.24.0 | Plugin configurado en `pom.xml` | `spotless:check` en Java 21: 172 archivos limpios; 1 archivo requiere ajuste de formato (`AuthServiceTest.java`). |
 
-Para que el control sea reproducible, el equipo debe indicar rama y commit analizados, versión de las herramientas, comando ejecutado, fecha, resultado y excepciones aceptadas. Las advertencias no deben marcarse como resueltas sin revisar el código correspondiente.
+La corrida del backend se realizó sobre la copia local conectada al repositorio, con Java 21 y Maven 3.9.11. El control de Spotless detectó diferencias de formato de fin de línea en el archivo indicado; no se modificó durante esta revisión para conservar los cambios de trabajo existentes. La integración continua del backend ejecuta pruebas, pero el workflow no contiene una herramienta de análisis estático dedicada como SpotBugs, PMD o Sonar.
 
 #### 6.2.1.2. Software Quality and Security
 
-El análisis de calidad debe revisar, como mínimo, tipado y errores estáticos del frontend, problemas de formato y lint, manejo de excepciones, validación de entradas, controles de autorización, exposición de secretos y tratamiento de datos personales. Para SafeSpace, la revisión de seguridad debe prestar atención especial a reportes anónimos, roles de empleado y RR. HH., datos de bienestar, registros de auditoría y credenciales de los servicios.
+La revisión manual de seguridad examinó autenticación, autorización, configuración de secretos, CORS y el tratamiento de los reportes en el código del backend. No se encontró configurado un escáner SAST ni un análisis de dependencias con base de vulnerabilidades; por eso, esta revisión no certifica la ausencia de vulnerabilidades en bibliotecas transitivas.
 
-No se cuenta en esta sección con un informe de escaneo de vulnerabilidades ni con una medición nueva de cobertura. Por eso, esos resultados permanecen pendientes y no se infiere que una herramienta haya aprobado el proyecto. Se recomienda conservar una tabla por corrida:
+| ID / severidad | Hallazgo y evidencia | Impacto y acción recomendada |
+| :--- | :--- | :--- |
+| SEC-01 / Alto | El modelo `Report` conserva una referencia al usuario incluso cuando `anonymous` es `true`. El adaptador de Firestore serializa un snapshot de la entidad relacionada; `ReportService` oculta `reporterDisplayName` en la respuesta HTTP, pero la identidad permanece asociada al documento almacenado. | La opción anónima oculta el nombre en la respuesta de la API, pero no elimina la asociación en Firestore. Revisar el modelo para que el almacenamiento no incluya identidad en reportes anónimos y añadir una prueba del documento persistido antes de describirlos como anónimos frente a quienes administran la base de datos. |
+| SEC-02 / Medio | `application.yml` contiene una clave JWT conocida como valor de respaldo. Render declara `JWT_SECRET` generado para el servicio de producción, pero otros entornos podrían arrancar con la clave de desarrollo si no la reemplazan. | Mantener la clave local solo para desarrollo y exigir un secreto configurado fuera del perfil local; comprobar longitud y rotación en el proveedor. |
 
-| Fecha y commit | Componente | Herramienta/comando | Hallazgos por severidad | Decisión o enlace a evidencia |
-| :--- | :--- | :--- | :--- | :--- |
-| [Completar tras ejecutar] | [Backend/frontend] | [Completar] | [Completar] | [Completar] |
+También se observaron controles favorables: contraseñas codificadas con BCrypt; API stateless con JWT; restricciones por rol en rutas administrativas y de orientación; lista explícita de orígenes CORS configurada por entorno; y la credencial de Firebase montada como secreto del servicio, no embebida en `render.yaml`. La presencia de estas medidas no sustituye el escaneo de dependencias ni las pruebas de privacidad del almacenamiento.
 
 ### 6.2.2. Reviews
 
@@ -386,25 +388,25 @@ La revisión por pares debe verificar la correspondencia entre el cambio, la his
 
 | Cambio o pull request | Revisor | Criterios revisados | Hallazgos y resolución | Evidencia |
 | :--- | :--- | :--- | :--- | :--- |
-| [Completar con una revisión real] | [Integrante] | [Completar] | [Completar] | [Enlace/ID] |
+| Revisión estática y manual del backend conectado | Revisión técnica para esta entrega | Formato, ejecución de pruebas, JWT, roles, CORS, variables de entorno y serialización de reportes | 967 pruebas aprobadas; Spotless encontró 1 archivo con formato por ajustar; se registraron SEC-01 y SEC-02 arriba. | `mvn -B test`; `mvn spotless:check`; código local y `render.yaml` |
 
 No se atribuyen revisiones ni aprobaciones individuales sin su registro correspondiente.
 
 ## 6.3. Validation Interviews
 
-Las entrevistas de validación observarán a personas de los dos segmentos objetivo mientras interactúan con SafeSpace. El propósito es evaluar si comprenden los flujos y si pueden completar tareas representativas; no se busca que confirmen las hipótesis del equipo. La guía siguiente está preparada para aplicar, pero las sesiones, respuestas y conclusiones deben añadirse después de realizarlas.
+Las entrevistas de validación buscan conocer cómo personas de los dos segmentos entienden SafeSpace y sus flujos. Las preguntas de esta sección constituyen una guía para obtener respuestas individuales. Las seis sesiones presenciales de uso que ya se realizaron se resumen en 6.3.2; como no se conservaron transcripciones ni notas pregunta por pregunta, no se afirma que esta guía se haya aplicado literalmente ni se atribuyen respuestas a participantes concretos.
 
 ### 6.3.1. Interview Design
 
 #### Propósito y protocolo común
 
-Se validarán la comprensión del anonimato y el envío de reportes desde el segmento de empleados, y la utilidad percibida del resumen y el seguimiento desde el segmento de Recursos Humanos. También se observarán facilidad, claridad, confianza y puntos de fricción en los flujos disponibles en la versión web o móvil.
+La guía se centra en la comprensión del anonimato y el envío de reportes para empleados, y en la lectura del resumen y el seguimiento para Recursos Humanos. También propone explorar facilidad, claridad, confianza y puntos de fricción en los flujos web o móviles.
 
 Antes de iniciar, el moderador explicará que se evalúa el producto, no a la persona; que puede omitir cualquier pregunta o detener la sesión; que se usarán cuentas y datos ficticios; y que no se deben compartir incidentes laborales reales ni información sensible. Las notas se identificarán con un código y se evitarán nombres de personas, empresas, correos y detalles que permitan reconocer un caso. La grabación de audio o video requerirá autorización separada y explícita; si no se obtiene, se tomarán notas sin grabar.
 
 **Introducción sugerida:** «Gracias por participar. Queremos observar cómo se entienden algunas funciones de SafeSpace. No estamos evaluándote a ti; nos interesa saber qué resulta claro o confuso. Usaremos información ficticia. Puedes saltarte una pregunta o terminar cuando quieras. ¿Tienes alguna duda antes de empezar? ¿Aceptas participar? ¿Aceptas por separado que grabemos la sesión?»
 
-La cantidad de participantes, fechas, modalidad, criterios de reclutamiento y persona moderadora se definirán con el equipo antes de convocar. No se fija aquí una muestra ni se reportan sesiones inexistentes.
+Para una ronda de entrevistas con registro individual, el equipo definirá participantes, criterios de reclutamiento, modalidad y persona moderadora antes de convocar. Esta planificación no sustituye el resumen de las sesiones ya realizadas ni les atribuye preguntas que no quedaron registradas.
 
 #### Segmento 1: empleados de una organización
 
@@ -463,44 +465,38 @@ La cantidad de participantes, fechas, modalidad, criterios de reclutamiento y pe
 
 Para cada tarea se anotará si se completó sin ayuda, con ayuda o no se completó; duración aproximada; errores, retrocesos y dudas observables; comentarios textuales anonimizados; y valoración del participante. Se registrará el dispositivo/plataforma (web o Android) y la versión usada. Las tareas deben realizarse con datos sintéticos y el moderador no debe sugerir una respuesta esperada.
 
-### 6.3.2. Interview Records
+### 6.3.2. Interview Records and Validation Session Summary
 
 #### Segmento 1: empleados de una organización
 
-##### Entrevista 1: Rodrigo Vasquez
+##### Entrevista individual a un empleado — 08/11/2026
 
-- **Fecha:** 08/11/2026.
 - **Modalidad:** Entrevista remota por Discord con demostración de los flujos web de SafeSpace.
-- **Ocupación:** Asistente de operaciones.
-- **Link:** [Ver entrevista](https://upcedupe-my.sharepoint.com/personal/u202410093_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202410093%5Fupc%5Fedu%5Fpe%2FDocuments%2FEntrevista%20Rodrigo%20Vasquez%20%2D%20comprimido%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E43501a40%2D9a41%2D494b%2Dbf46%2Dccdddd32fc29).
-- **Inicio:** 00:00.
 - **Duración:** 11:44.
-
-![Entrevista 1 Empleados - Rodrigo Vasquez](../assets/images/cap6/registro-entrevistas/Entrevista1_Empleados_Rodrigo.png)
 
 **Resumen de la Entrevista**
 
-Rodrigo señala que trabaja como asistente de operaciones y utiliza una computadora para organizar pendientes, revisar documentos y coordinar actividades con su equipo. Normalmente responde encuestas desde su laptop y, a veces, desde el celular si son cortas. Valora que las preguntas sean claras, que responder tome poco tiempo y que se explique para qué se utilizarán las respuestas y quién podrá verlas. Durante la revisión de los flujos de SafeSpace reconoce las confirmaciones del registro de ánimo, la respuesta a la encuesta y el voto en la actividad semanal, y distingue estas dos últimas acciones. Considera que el registro de ánimo es el flujo más fácil de comprender. En el reporte, la etiqueta «Puesto de trabajo» le genera dudas, porque las opciones parecían corresponder a áreas, y solicita una explicación más clara sobre el envío anónimo, los datos de su cuenta que se conservan y quién puede consultar la información. La visibilidad de la opción anónima le genera confianza, aunque desea entender mejor cómo se protege su identidad. Espera ver su reporte guardado en un historial, saber cuándo empieza a revisarse, recibir una notificación cuando cambie su estado y, al finalizar, una explicación sobre cómo se atendió. Sobre la orientación, entiende que la respuesta propone reunir ejemplos, ordenar prioridades y buscar un momento adecuado para conversar sobre la carga de trabajo, y la considera útil como punto de partida para organizar sus ideas. Califica con 5 de 5 la facilidad percibida del funcionamiento, porque los pasos le parecieron claros, y con 4 de 5 la confianza que le dio la opción de privacidad. Utilizaría SafeSpace para responder encuestas, comunicar inquietudes y buscar orientación; ante una necesidad inmediata o falta de seguimiento, preferiría un contacto directo.
+El resumen recibido indica que la persona entrevistada usa herramientas digitales para organizar tareas y coordinar trabajo, y valora que las encuestas sean breves, claras y expliquen el uso de las respuestas. En la demostración identificó las confirmaciones del registro de ánimo, la respuesta a una encuesta y el voto en una actividad semanal; señaló el registro de ánimo como el flujo más fácil de comprender. En el reporte, la etiqueta «Puesto de trabajo» le resultó ambigua y pidió mayor claridad sobre el anonimato, los datos asociados a la cuenta y quién puede consultar la información. También expresó que esperaba consultar el estado del reporte y recibir información cuando avance su atención. Consideró que la orientación puede ayudar a ordenar ideas y calificó la facilidad con 5/5 y la confianza en la privacidad con 4/5. Estas observaciones se presentan como resumen parafraseado, no como citas textuales.
 
-#### Ficha para próximas sesiones
+No se incluye una captura de la videollamada ni un enlace audiovisual en esta versión, porque el registro disponible no documenta autorización para publicar imágenes identificables.
+#### Resumen agregado de las seis sesiones presenciales
 
-Para las próximas entrevistas se utilizará una ficha por sesión, sin datos identificables:
+Se realizaron sesiones presenciales de validación basadas en tareas con tres empleados el 06/11/2026 y tres profesionales de Recursos Humanos el 05/11/2026. Para estas seis sesiones no se conservaron transcripciones ni un registro de las preguntas realizadas; el resumen agregado no permite atribuir cada tarea, observación o frase a una persona específica. Por ello no se incluyen citas textuales ni se reconstruyen respuestas individuales.
 
-| Campo | Registro |
-| :--- | :--- |
-| Código de sesión | [E-01 / RH-01 u otro código no identificable] |
-| Segmento | [Empleado / Recursos Humanos] |
-| Fecha y modalidad | [Completar] |
-| Producto, plataforma y versión | [Completar] |
-| Consentimiento para participar | [Sí/No; si no, no iniciar] |
-| Consentimiento separado para grabar | [Sí/No; medio y ubicación restringida si aplica] |
-| Tareas y resultado observado | [Completar] |
-| Dudas, errores y citas anonimizadas | [Completar] |
-| Valoraciones y explicación | [Completar] |
-| Hallazgos preliminares | [Completar sin atribuir causalidad] |
-| Evidencia asociada | [Enlace interno con acceso restringido o “sin grabación”] |
+| Segmento | Participantes | Fecha/modalidad | Flujos probados según el resumen del equipo |
+| :--- | :---: | :--- | :--- |
+| Empleados | 3 | 06/11/2026, presencial | Encuestas, chat con IA, responder comentarios y reportes. No se especificó si los reportes fueron anónimos o identificados. |
+| Recursos Humanos | 3 | 05/11/2026, presencial | Crear encuestas, crear encuestas para actividades semanales, revisar el análisis de ánimo y consultar reportes de empleados. |
 
-Los hallazgos se resumirán por segmento y tema. Las citas se anonimizarán y no se adjuntarán grabaciones con información personal al informe público. La síntesis y las decisiones derivadas se completarán después de las sesiones.
+**Dispositivo y versión:** los tres empleados utilizaron PC. En Recursos Humanos, dos participantes utilizaron un dispositivo móvil y uno utilizó PC. El equipo indicó que todos probaron la última versión disponible de la aplicación; no se proporcionó un número de versión.
+
+**Datos de las sesiones:** se creó una cuenta por participante con datos que cada persona proporcionó y con su consentimiento para participar. Cada participante siguió el flujo de su segmento. La sesión duró aproximadamente entre 10 y 15 minutos; no se dispone de duración desglosada por tarea. No se reportaron errores. La única duda recordada fue cómo realizar un reporte, y se resolvió sin ayuda; los seis completaron el flujo esperado sin asistencia del moderador. Para proteger la privacidad, no se incluyen datos identificables de las cuentas. A diferencia de estas sesiones, las próximas pruebas deben usar cuentas y datos sintéticos, conforme al protocolo.
+
+**Resultado agregado reportado por el equipo:** los tres participantes de cada segmento calificaron la facilidad de uso con 5/5 y la valoración general fue positiva. Un empleado describió SafeSpace como creativa y como una solución esperada en las empresas; se registra como paráfrasis, no como cita textual. Estos resultados describen esta muestra, no prueban adopción ni satisfacción de toda la población.
+
+No se mostraron otros prototipos ni se compararon variantes, por lo que estas sesiones se registran como validación formativa de la última versión disponible y no como experimento controlado. El equipo confirmó el consentimiento para participar. No cuenta con autorización para publicar fotografías de los participantes; por ello no se incluirán imágenes de estas sesiones.
+
+No se conservó una ficha individual para estas seis sesiones. Se reportan únicamente los datos agregados anteriores; las próximas sesiones se documentarán con códigos no identificables, resultados por tarea y evidencia cuyo uso esté autorizado.
 
 ### 6.3.3. Heuristic Evaluations
 
@@ -521,62 +517,62 @@ La evaluación heurística complementará las entrevistas mediante una revisión
 
 ## 6.4. UX Audits
 
-La auditoría UX documenta dos actividades, de acuerdo con el intercambio que se coordine para el curso: la **auditoría realizada**, en la que el equipo SafeSpace evalúa la experiencia de otro grupo, y la **auditoría recibida**, en la que otro equipo evalúa la experiencia de SafeSpace. Este apartado define el registro y los criterios; no afirma que se haya efectuado una auditoría ni atribuye resultados antes de contar con evidencia.
+Según la indicación del profesor, el intercambio de auditorías UX se realizará en clase. Comprende la **auditoría realizada**, en la que el equipo SafeSpace evalúa la experiencia de otro grupo, y la **auditoría recibida**, en la que otro equipo evalúa SafeSpace. A la fecha de esta versión, las actividades no se han realizado; por ello, el registro siguiente identifica la información que se recogerá en clase y no anticipa hallazgos ni respuestas.
 
 ### 6.4.1. Auditoría realizada
 
 #### 6.4.1.1. Información del grupo auditado
 
-| Campo | Información por completar |
+| Campo | Registro previsto para la sesión en clase |
 | :--- | :--- |
-| Grupo auditado e integrantes | [Completar] |
-| Producto, versión y plataforma auditados | [Completar] |
+| Grupo auditado e integrantes | Se consignarán durante la actividad. |
+| Producto, versión y plataforma auditados | Se registrarán durante la actividad. |
 
 #### 6.4.1.2. Cronograma de auditoría realizada
 
-| Campo | Información por completar |
+| Campo | Registro previsto para la sesión en clase |
 | :--- | :--- |
-| Fecha y duración | [Completar] |
+| Fecha y duración | La fecha se definirá en clase y se anotará junto con la duración. |
 
 #### 6.4.1.3. Contenido de auditoría realizada
 
-| Campo | Información por completar |
+| Campo | Registro previsto para la sesión en clase |
 | :--- | :--- |
-| Flujos incluidos | [Completar con los flujos del producto auditado] |
+| Flujos incluidos | Se anotarán según las tareas evaluadas. |
 | Método y criterios | Lista heurística de 6.3.3 y tareas de validación de 6.3.1 |
-| Hallazgos y severidad | [Completar con observaciones reales] |
-| Evidencia | [Enlace a acta, capturas sin datos sensibles o backlog] |
+| Hallazgos y severidad | Se documentarán a partir de observaciones reales durante la sesión. |
+| Evidencia | Se referenciará el acta, las capturas autorizadas o el backlog resultante. |
 
 ### 6.4.2. Auditoría recibida
 
 #### 6.4.2.1. Información del grupo auditor
 
-| Campo | Información por completar |
+| Campo | Registro previsto para la sesión en clase |
 | :--- | :--- |
-| Equipo que realizó la revisión | [Completar] |
-| Integrantes/contacto académico | [Completar según autorización] |
+| Equipo que realizó la revisión | Se consignará durante la actividad. |
+| Integrantes/contacto académico | Se registrarán con el alcance autorizado. |
 
 #### 6.4.2.2. Cronograma de auditoría recibida
 
-| Campo | Información por completar |
+| Campo | Registro previsto para la sesión en clase |
 | :--- | :--- |
-| Fecha y modalidad | [Completar] |
+| Fecha y modalidad | Se registrarán durante la actividad en clase. |
 
 #### 6.4.2.3. Contenido de auditoría recibida
 
-| Campo | Información por completar |
+| Campo | Registro previsto para la sesión en clase |
 | :--- | :--- |
-| Material y versión revisados | [Completar] |
-| Comentarios recibidos | [Completar sin alterar el sentido de la observación] |
-| Respuesta del equipo SafeSpace | [Aceptar, ajustar o justificar; completar] |
-| Evidencia | [Acta o registro de intercambio] |
+| Material y versión revisados | Se anotarán durante la actividad. |
+| Comentarios recibidos | Se resumirán conservando el sentido de las observaciones. |
+| Respuesta del equipo SafeSpace | Se registrará la decisión acordada para cada hallazgo. |
+| Evidencia | Se vinculará el acta o registro de intercambio. |
 
 #### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
 
-Después de recibir la auditoría, consolidar los hallazgos repetidos y priorizarlos por impacto en la tarea, privacidad y frecuencia observada. Registrar para cada hallazgo el cambio, la decisión o el pendiente, con su estado (pendiente, en curso, resuelto o descartado con justificación) y el enlace a la evidencia, ya sea un issue o un commit. Hasta recibir la auditoría, el resumen y el calendario de correcciones permanecen pendientes.
+Después del intercambio en clase, se consolidarán los hallazgos repetidos y se priorizarán por impacto en la tarea, privacidad y frecuencia observada. Para cada hallazgo se documentará la decisión acordada, el responsable si se asigna y el enlace a la evidencia, como un issue o un commit. No se anticipan modificaciones antes de recibir las observaciones.
 
-| Hallazgo | Cambio, decisión o pendiente | Estado | Evidencia |
+| Hallazgo | Decisión o acción acordada | Estado tras la revisión | Evidencia |
 | :--- | :--- | :--- | :--- |
-| [Completar con un hallazgo real] | [Vincular con issue o commit] | [Pendiente / en curso / resuelto / descartado] | [Enlace] |
+| Se completará con los hallazgos de la auditoría recibida en clase. | Se registrará según el acuerdo del equipo. | Se actualizará después de la revisión. | Se agregará el enlace a la evidencia disponible. |
 
 \newpage

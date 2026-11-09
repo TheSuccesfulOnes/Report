@@ -6,7 +6,7 @@
 
 ## Desarrollo de las actividades de elaboración del informe - AV1
 
-Durante el Avance 1, los seis integrantes trabajaron de manera colaborativa en la definición del problema, la investigación de usuarios, la especificación de requisitos, el diseño inicial de la solución y la integración de la evidencia de implementación. La coordinación del trabajo permitió consolidar los cinco capítulos del informe y mantener una presentación común para la versión AV1.
+Durante el Avance 1, el equipo trabajó de manera colaborativa en la definición del problema, la investigación de usuarios, la especificación de requisitos, el diseño inicial de la solución y la integración de la evidencia de implementación. La coordinación permitió consolidar los cinco capítulos del informe y mantener una presentación común para la versión AV1.
 
 ## Evidencia de colaboración en GitHub - AV1
 
@@ -36,7 +36,7 @@ La siguiente tabla resume los commits verificables en GitHub entre el 9 de octub
 | Frontend-Admin-SafeSpace | 1 | Ávalos Cordova |
 | Frontend-Movil-SafeSapace | 2 | Ávalos Cordova |
 
-La actividad registrada en GitHub se concentra en pocos integrantes durante este periodo. El trabajo de los demás integrantes que no genera commits (por ejemplo, la preparación y realización de las entrevistas, la coordinación y la revisión del informe) debe respaldarse con otra evidencia: [Completar con actas de reunión, sesiones de trabajo y responsable de cada actividad].
+La actividad registrada en GitHub se concentra en pocos integrantes durante este periodo. En el Shareback interno del 06/11/2026 participaron los integrantes actuales del equipo y se compartieron los resultados agregados de las sesiones, la lentitud observada en los despliegues y la solicitud de publicar SafeSpace en Google Play. Los hallazgos y su traducción en oportunidades de trabajo se resumen en la sección 8.3.4. La distribución individual de tareas que no queda reflejada en los commits no se atribuye sin un registro que la respalde.
 
 ## Evidencia de colaboración en GitHub - AV2
 

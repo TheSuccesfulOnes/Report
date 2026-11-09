@@ -63,10 +63,6 @@
       <td style="border: none; padding: 3px 15px;">U202412316</td>
       <td style="border: none; padding: 3px 15px;">Diaz Martinez, Alexther Kamil</td>
     </tr>
-    <tr style="border: none;">
-      <td style="border: none; padding: 3px 15px;">U201919096</td>
-      <td style="border: none; padding: 3px 15px;">Arizabal Condori, Jean Niels</td>
-    </tr>
   </table>
 
   <br><br>
