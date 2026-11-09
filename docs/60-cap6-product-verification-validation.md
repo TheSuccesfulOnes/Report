@@ -465,7 +465,18 @@ Para cada tarea se anotará si se completó sin ayuda, con ayuda o no se complet
 
 ### 6.3.2. Interview Records
 
-No se incorporan respuestas de participantes porque las entrevistas de validación aún deben realizarse. Se utilizará una ficha por sesión, sin datos identificables:
+#### Segmento 1: empleados de una organización
+
+##### Entrevista 1: Rodrigo Vasquez
+
+- **Link:** [Ver entrevista en Microsoft Stream](https://upcedupe-my.sharepoint.com/personal/u202410093_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202410093%5Fupc%5Fedu%5Fpe%2FDocuments%2FEntrevista%20Rodrigo%20Vasquez%20%2D%20comprimido%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E43501a40%2D9a41%2D494b%2Dbf46%2Dccdddd32fc29).
+- **Duración del video:** 11:44.
+
+La revisión de las respuestas y la síntesis de hallazgos de esta grabación quedan pendientes.
+
+#### Ficha de registro de sesiones
+
+Se utilizará una ficha por sesión, sin datos identificables:
 
 | Campo | Registro |
 | :--- | :--- |
