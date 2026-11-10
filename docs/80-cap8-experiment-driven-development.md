@@ -73,20 +73,20 @@ Las preguntas se clasifican en dos tipos: **impulsadas por creencias** (belief-l
 
 ### 8.1.4. Question Backlog
 
-El Question Backlog combina las preguntas del plan experimental con los hallazgos agregados de las seis sesiones y del Shareback del 06/11/2026. Las puntuaciones son una **propuesta de priorización del equipo**, no respuestas atribuidas a cada participante. Escala de 1 a 5: **Confianza** mide cuánta evidencia respalda la hipótesis (1 = muy poca, 5 = sólida); **Riesgo**, **Impacto** e **Interés** usan 1 = bajo y 5 = alto. El puntaje de prioridad es `(6 − Confianza) + Riesgo + Impacto + Interés`, con rango de 4 a 20; un valor mayor indica mayor prioridad para aprender. En caso de empate se prioriza Riesgo y luego Impacto.
+El Question Backlog combina las preguntas del plan experimental con los hallazgos agregados de las seis sesiones y del Shareback del 06/11/2026. Las puntuaciones son una **propuesta de priorización del equipo**, no respuestas atribuidas a cada participante. Escala de 1 a 5: **Confianza** mide cuánta evidencia respalda la hipótesis (1 = muy poca, 5 = sólida); **Riesgo**, **Impacto** e **Interés** usan 1 = bajo y 5 = alto. El puntaje de prioridad es `(6 − Confianza) + Riesgo + Impacto + Interés`, con rango de 4 a 20; un valor mayor indica mayor prioridad para aprender. En caso de empate se prioriza Riesgo y luego Impacto. Los códigos QB-01 a QB-08 identifican cada pregunta y siguen el orden de prioridad.
 
 El backlog es *broad*: contiene preguntas de los dos segmentos y de operación del producto. Las transcripciones aportan indicios sobre comprensión de privacidad y contexto de los indicadores, pero no una medición comparable entre las seis personas. Las valoraciones y la finalización sin ayuda no se generalizan a dimensiones que no se midieron, a comparación entre plataformas ni a demanda de publicación móvil.
 
-| Orden | Pregunta del backlog | Segmento | Por qué / evidencia relacionada | Confianza | Riesgo | Impacto | Interés | Prioridad | Evidencia para responder |
+| ID | Pregunta del backlog | Segmento | Por qué / evidencia relacionada | Confianza | Riesgo | Impacto | Interés | Prioridad | Evidencia para responder |
 | :--- | :--- | :--- | :--- | ---: | ---: | ---: | ---: | ---: | :--- |
-| 1 | ¿Qué entienden los empleados por la opción anónima y qué datos creen que verá RR. HH.? | Empleados | E-01 y E-03 pidieron aclarar qué datos quedan asociados a la cuenta y quién puede acceder; E-02 expresó temor a filtraciones. La comprensión no se midió con una rúbrica común. | 2 | 5 | 5 | 4 | 18 | Explicación en palabras propias con un caso ficticio y dudas registradas. |
-| 2 | ¿Qué parte del tiempo de despliegue corresponde al plan gratuito y cómo afecta la disponibilidad para los usuarios? | Empleados / RR. HH. / equipo técnico | El equipo atribuyó la lentitud de despliegues a servicios gratuitos; falta medir cada etapa y componente por separado. | 2 | 4 | 5 | 4 | 17 | Duración de despliegue, arranque en frío y respuesta inicial, separados por proveedor y servicio. |
-| 3 | ¿La publicación desde Play Store responde a una necesidad recurrente y facilitaría instalar y actualizar SafeSpace en Android? | Empleados / equipo | En el Shareback se informó una solicitud de publicación en Play Store; no se registró cuántas personas la formularon. | 2 | 3 | 5 | 5 | 17 | Prueba de interés, revisión del recorrido de instalación y validación de requisitos de publicación. |
-| 4 | ¿Puede RR. HH. interpretar correctamente el periodo, la tasa de respuesta y la distribución del estado de ánimo? | Recursos Humanos | RH-02 identificó que faltaban el periodo y el total de personas para interpretar el resumen; calificó su utilidad final con 3/5 por falta de contexto. | 3 | 4 | 4 | 4 | 15 | Tarea con datos sintéticos, respuestas correctas, errores de lectura y contexto solicitado. |
-| 5 | ¿Los empleados encuentran y completan el reporte con la información que necesitan? | Empleados | E-03 pidió aclarar «Puesto de trabajo», el anonimato y el seguimiento; E-01 preguntó qué datos quedan vinculados a su cuenta. Las demostraciones no permiten medir autonomía por persona. | 3 | 3 | 4 | 4 | 14 | Observación por tarea de inicio, envío y confirmación; dudas y retrocesos. |
-| 6 | ¿La interfaz móvil permite completar los mismos flujos con claridad que la web? | Empleados / RR. HH. | RR. HH. probó en móvil (2) y PC (1); los empleados probaron en PC. La muestra no permite comparación equivalente. | 2 | 3 | 4 | 3 | 14 | Mismas tareas en cada plataforma, observadas por separado con participantes de ambos segmentos. |
-| 7 | ¿Los empleados comprenden el alcance del chat de orientación y cuándo usar otro canal de ayuda? | Empleados | E-03 lo consideró útil para ordenar ideas; E-01 pidió garantías de privacidad. No se comprobó comprensión de límites o rutas de derivación. | 2 | 3 | 4 | 3 | 14 | Explicación del alcance en palabras propias y elección de una vía de apoyo en escenarios ficticios. |
-| 8 | ¿La administración de encuestas y actividades semanales coincide con el flujo que RR. HH. necesita? | Recursos Humanos | RH-02 pudo crear y publicar, aunque confundió guardar con publicar hasta recibir una indicación adicional; las entrevistas también describen diferencias entre prácticas actuales y necesidades de seguimiento. | 3 | 2 | 3 | 3 | 11 | Crear y publicar un caso de prueba, describir pasos actuales y señalar datos requeridos. |
+| QB-01 | ¿Qué entienden los empleados por la opción anónima y qué datos creen que verá RR. HH.? | Empleados | E-01 y E-03 pidieron aclarar qué datos quedan asociados a la cuenta y quién puede acceder; E-02 expresó temor a filtraciones. La revisión técnica (SEC-01, 6.2.1.2) encontró además que el documento de Firestore conserva la referencia al usuario en los reportes anónimos; esto se aborda en TB-06. La comprensión no se midió con una rúbrica común. | 2 | 5 | 5 | 4 | 18 | Explicación en palabras propias con un caso ficticio y dudas registradas. |
+| QB-02 | ¿Qué parte del tiempo de despliegue corresponde al plan gratuito y cómo afecta la disponibilidad para los usuarios? | Empleados / RR. HH. / equipo técnico | El equipo atribuyó la lentitud de despliegues a servicios gratuitos; falta medir cada etapa y componente por separado. | 2 | 4 | 5 | 4 | 17 | Duración de despliegue, arranque en frío y respuesta inicial, separados por proveedor y servicio. |
+| QB-03 | ¿La publicación desde Play Store responde a una necesidad recurrente y facilitaría instalar y actualizar SafeSpace en Android? | Empleados / equipo | En el Shareback se informó una solicitud de publicación en Play Store; no se registró cuántas personas la formularon. | 2 | 3 | 5 | 5 | 17 | Prueba de interés, revisión del recorrido de instalación y validación de requisitos de publicación. |
+| QB-04 | ¿Puede RR. HH. interpretar correctamente el periodo, la tasa de respuesta y la distribución del estado de ánimo? | Recursos Humanos | RH-02 identificó que faltaban el periodo y el total de personas para interpretar el resumen; calificó su utilidad final con 3/5 por falta de contexto. | 3 | 4 | 4 | 4 | 15 | Tarea con datos sintéticos, respuestas correctas, errores de lectura y contexto solicitado. |
+| QB-05 | ¿Los empleados encuentran y completan el reporte con la información que necesitan? | Empleados | E-03 pidió aclarar «Puesto de trabajo», el anonimato y el seguimiento; E-01 preguntó qué datos quedan vinculados a su cuenta. Las demostraciones no permiten medir autonomía por persona. | 3 | 3 | 4 | 4 | 14 | Observación por tarea de inicio, envío y confirmación; dudas y retrocesos. |
+| QB-06 | ¿La interfaz móvil permite completar los mismos flujos con claridad que la web? | Empleados / RR. HH. | RR. HH. probó en móvil (2) y PC (1); los empleados probaron en PC. La muestra no permite comparación equivalente. | 2 | 3 | 4 | 3 | 14 | Mismas tareas en cada plataforma, observadas por separado con participantes de ambos segmentos. |
+| QB-07 | ¿Los empleados comprenden el alcance del chat de orientación y cuándo usar otro canal de ayuda? | Empleados | E-03 lo consideró útil para ordenar ideas; E-01 pidió garantías de privacidad. No se comprobó comprensión de límites o rutas de derivación. | 2 | 3 | 4 | 3 | 14 | Explicación del alcance en palabras propias y elección de una vía de apoyo en escenarios ficticios. |
+| QB-08 | ¿La administración de encuestas y actividades semanales coincide con el flujo que RR. HH. necesita? | Recursos Humanos | RH-02 pudo crear y publicar, aunque confundió guardar con publicar hasta recibir una indicación adicional; las entrevistas también describen diferencias entre prácticas actuales y necesidades de seguimiento. | 3 | 2 | 3 | 3 | 11 | Crear y publicar un caso de prueba, describir pasos actuales y señalar datos requeridos. |
 
 ### 8.1.5. Experiment Cards
 
@@ -280,7 +280,7 @@ La recepción general fue positiva. Un empleado describió la aplicación como c
 
 ### 8.3.1. To-Be User Stories
 
-Estas historias traducen hallazgos de las seis sesiones y el Shareback del 06/11/2026 en mejoras futuras propuestas. No reemplazan las 22 historias del Capítulo III ni afirman que estén implementadas.
+Estas historias traducen hallazgos de las seis sesiones, del Shareback del 06/11/2026 y de la revisión técnica de seguridad (SEC-01, 6.2.1.2) en mejoras futuras propuestas. No reemplazan las 22 historias del Capítulo III ni afirman que estén implementadas.
 
 #### TB-01 — Claridad y confianza en los reportes
 
@@ -288,13 +288,13 @@ Estas historias traducen hallazgos de las seis sesiones y el Shareback del 06/11
 
 Criterios propuestos: explicar anonimato e identificación conforme al comportamiento real; permitir revisar la elección; confirmar solo lo que el sistema guardó; comprobar comprensión mediante escenarios ficticios.
 
-#### TB-03 — Disponibilidad después de un despliegue
+#### TB-02 — Disponibilidad después de un despliegue
 
 **Como empleado o profesional de RR. HH., quiero que SafeSpace esté disponible sin una espera prolongada después de un periodo de inactividad, para completar mis tareas cuando las necesito.**
 
 Criterios propuestos: medir compilación, publicación y primer arranque por servicio; registrar cinco despliegues consecutivos; separar arranque en frío de respuestas posteriores; documentar costo y beneficio antes de cambiar de plan.
 
-#### TB-02 — Publicación móvil oficial
+#### TB-03 — Publicación móvil oficial
 
 **Como empleado que utiliza Android, quiero instalar y actualizar SafeSpace desde Google Play, para acceder a una versión oficial mediante un proceso conocido.**
 
@@ -312,17 +312,26 @@ Criterios propuestos: mostrar periodo y denominador; distinguir respuestas de po
 
 Criterios propuestos: probar encuestas, reportes y tareas administrativas en dispositivos compatibles; mantener etiquetas y confirmaciones coherentes; validar controles y contenido en los tamaños de pantalla definidos.
 
+#### TB-06 — Anonimato verificable en el almacenamiento
+
+**Como empleado que envía un reporte anónimo, quiero que el sistema no conserve una referencia identificable de mi cuenta en el reporte almacenado, para que la opción anónima corresponda con lo que se me explica.**
+
+Origen: hallazgo SEC-01 de 6.2.1.2, según el cual el documento de Firestore conserva la referencia al usuario aunque la respuesta de la API oculte el nombre.
+
+Criterios propuestos: el modelo del reporte no incluye una referencia identificable del usuario cuando el reporte es anónimo; una prueba automatizada verifica el documento persistido y no solo la respuesta de la API; el equipo decide cómo tratar los reportes anónimos ya almacenados; y la explicación de TB-01 coincide con el comportamiento implementado. Mientras no se corrija, TB-01 debe describir el comportamiento real.
+
 ### 8.3.2. To-Be Product Backlog
 
-Los puntajes remiten al Question Backlog. Las estimaciones son una propuesta inicial en puntos Fibonacci y los responsables se indican por rol para la planificación.
+Los puntajes remiten al Question Backlog. Las estimaciones son una propuesta inicial en puntos Fibonacci y los responsables se indican por rol para la planificación. TB-06 se ubica en primera prioridad porque aclarar el anonimato (TB-01) sin corregir el almacenamiento describiría una protección que el sistema todavía no ofrece.
 
-| Prioridad | ID | Historia | Pregunta | Estimación | Responsable propuesto |
+| Prioridad | ID | Historia | Pregunta o hallazgo | Estimación | Responsable propuesto |
 | ---: | :--- | :--- | :--- | ---: | :--- |
-| 1 | TB-01 | Claridad y confianza en los reportes | QB-01 y QB-05 | 5 puntos | Web/móvil con revisión backend |
-| 2 | TB-03 | Disponibilidad después del despliegue | QB-03 | 5 puntos | DevOps / backend |
-| 3 | TB-02 | Publicación móvil oficial | QB-02 | 13 puntos | Android / publicación |
-| 4 | TB-04 | Lectura del análisis de ánimo | QB-04 | 5 puntos | Consola administrativa |
-| 5 | TB-05 | Uso coherente en móvil y web | QB-06 | 8 puntos | Equipos web y móvil |
+| 1 | TB-06 | Anonimato verificable en el almacenamiento | QB-01 y SEC-01 | 5 puntos | Backend |
+| 2 | TB-01 | Claridad y confianza en los reportes | QB-01 y QB-05 | 5 puntos | Web/móvil con revisión backend |
+| 3 | TB-02 | Disponibilidad después del despliegue | QB-02 | 5 puntos | DevOps / backend |
+| 4 | TB-03 | Publicación móvil oficial | QB-03 | 13 puntos | Android / publicación |
+| 5 | TB-04 | Lectura del análisis de ánimo | QB-04 | 5 puntos | Consola administrativa |
+| 6 | TB-05 | Uso coherente en móvil y web | QB-06 | 8 puntos | Equipos web y móvil |
 
 ### 8.3.3. To-Be Sprint Backlog
 
@@ -332,18 +341,19 @@ Plan candidato para iteraciones posteriores a los cuatro sprints organizados en 
 
 | ID | Trabajo | Estimación | Rol propuesto | Resultado verificable |
 | :--- | :--- | ---: | :--- | :--- |
-| TB-03 | Medir duración de despliegue y primer arranque por servicio | 5 puntos | DevOps / backend | Cinco despliegues medidos por componente y comparación documentada del plan actual. |
-| TB-02 | Preparar la distribución oficial de Android en Google Play | 13 puntos | Android / publicación | Paquete firmado, ficha y declaraciones completas; instalación y actualización verificadas en canal de prueba. |
+| TB-02 | Medir duración de despliegue y primer arranque por servicio | 5 puntos | DevOps / backend | Cinco despliegues medidos por componente y comparación documentada del plan actual. |
+| TB-03 | Preparar la distribución oficial de Android en Google Play | 13 puntos | Android / publicación | Paquete firmado, ficha y declaraciones completas; instalación y actualización verificadas en canal de prueba. |
 | **Total candidato** |  | **18 puntos** |  |  |
 
-**Sprint To-Be 6 — Claridad y lectura de información**
+**Sprint To-Be 6 — Privacidad, claridad y lectura de información**
 
 | ID | Trabajo | Estimación | Rol propuesto | Resultado verificable |
 | :--- | :--- | ---: | :--- | :--- |
+| TB-06 | Eliminar la referencia identificable del usuario en los reportes anónimos almacenados | 5 puntos | Backend | Modelo corregido y prueba automatizada sobre el documento persistido. |
 | TB-01 | Aclarar identidad, privacidad y confirmación en reportes | 5 puntos | Web/móvil y backend | Comprensión revisada con escenarios ficticios. |
 | TB-04 | Añadir contexto a indicadores de ánimo | 5 puntos | Consola administrativa | Periodo, respuestas y población visibles y comprensibles con datos sintéticos. |
 | TB-05 | Verificar consistencia de flujos en móvil y web | 8 puntos | Web y Android | Matriz de tareas y dispositivos ejecutada y documentada. |
-| **Total candidato** |  | **18 puntos** |  |  |
+| **Total candidato** |  | **23 puntos** |  |  |
 
 Los totales ayudan a discutir alcance y capacidad; no representan la velocidad histórica del equipo. Los puntos y roles pueden ajustarse durante la planificación.
 
@@ -361,7 +371,7 @@ Los totales ayudan a discutir alcance y capacidad; no representan la velocidad h
 | Se observó lentitud en los despliegues; el equipo la relacionó con los servicios gratuitos utilizados. | Conversación interna de Shareback. | Medir compilación, publicación y primer arranque por componente antes de decidir cambios de proveedor o plan. |
 | Se solicitó publicar SafeSpace en Google Play. | Hallazgo compartido durante el ciclo de validación y Shareback. | Incorporar la distribución oficial Android al To-Be Product Backlog. |
 
-**Aprendizajes incorporados.** Las entrevistas apoyan una recepción inicial positiva y señalan problemas concretos de interpretación y confianza. Las oportunidades priorizadas son aclarar anonimato y seguimiento de reportes, añadir contexto al resumen, mejorar la confirmación de publicación, explorar Google Play y medir la demora atribuida a los planes gratuitos. TB-01 a TB-05 traducen esos hallazgos en trabajo verificable. Las estimaciones y los sprints To-Be son una propuesta inicial, no una asignación nominal acordada.
+**Aprendizajes incorporados.** Las entrevistas apoyan una recepción inicial positiva y señalan problemas concretos de interpretación y confianza. Las oportunidades priorizadas son aclarar anonimato y seguimiento de reportes, añadir contexto al resumen, mejorar la confirmación de publicación, explorar Google Play y medir la demora atribuida a los planes gratuitos. TB-01 a TB-05 traducen esos hallazgos en trabajo verificable; TB-06 traduce el hallazgo técnico SEC-01 de 6.2.1.2 (la referencia al usuario que persiste en los reportes anónimos). Las estimaciones y los sprints To-Be son una propuesta inicial, no una asignación nominal acordada.
 
 **Ciclo de aprendizaje:** observar tareas y operación → compartir resultados → priorizar preguntas y mejoras → ejecutar el Sprint To-Be → volver a medir y actualizar el backlog. Cada iteración conservará versión, fecha, segmento y evidencia agregada, sin datos que identifiquen a participantes.
 

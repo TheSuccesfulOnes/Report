@@ -65,7 +65,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     Durante AV1, el equipo reconoció responsabilidades éticas y profesionales relacionadas con la privacidad, la confidencialidad y el tratamiento responsable de la información del bienestar laboral al elaborar los cinco capítulos del informe.<br><br>
     <strong>Trabajo Parcial:</strong> El equipo reforzó esta responsabilidad al mantener trazabilidad entre requisitos, implementación, pruebas, despliegues y evidencias presentadas en el informe.<br><br>
     <strong>TB1:</strong> El equipo consolidó la responsabilidad ética documentando la verificación del producto con pruebas unitarias, de integración, BDD y sistema, asegurando que las funcionalidades entregadas respondan a los criterios declarados y no expongan información sensible de los usuarios.<br><br>
-    <strong>AV2:</strong> El equipo documentó en los Capítulos VI a VIII la verificación técnica, el análisis de seguridad, las seis sesiones formativas, el Shareback y las propuestas de experimentación. También describió controles de consentimiento y uso de cuentas de prueba para resguardar la información de los participantes.
+    <strong>AV2:</strong> El equipo documentó en los Capítulos VI a VIII la verificación técnica, el análisis de seguridad, las seis sesiones formativas, el Shareback y las propuestas de experimentación. También describió controles de consentimiento y uso de cuentas de prueba para resguardar la información de los participantes. Además, documentó el hallazgo SEC-01 (la referencia al usuario que persiste en los reportes anónimos) en lugar de omitirlo, y lo convirtió en la historia TB-06 del Capítulo VIII.
   </td>
 </tr>
 
