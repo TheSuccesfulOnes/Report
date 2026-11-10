@@ -157,6 +157,14 @@
       Reemplazo del registro previo de validación por seis entrevistas basadas en las transcripciones reales suministradas por el equipo (tres empleados y tres profesionales de RR. HH.), con códigos, nombres de pila, fechas y entrevistadores informados. Actualización de los Capítulos VI, VIII y conclusiones para diferenciar las respuestas registradas de los resúmenes agregados anteriores y reflejar las limitaciones de las demostraciones y puntuaciones disponibles. Se incorporan las capturas autorizadas de las seis entrevistas.
     </td>
   </tr>
+  <tr>
+    <td align="center">V1.16.0</td>
+    <td align="center">10/11/26</td>
+    <td>Cayanchi Avila, Milenko Ruben</td>
+    <td>
+      Ajustes finales del Avance 2: carátula y capítulos III y V referidos al Avance 2; definición de los códigos QB-01 a QB-08 en el Question Backlog y renumeración de TB-02 y TB-03 para que los códigos de las historias To-Be sigan el orden de prioridad; incorporación de la historia TB-06 a partir del hallazgo SEC-01 (referencia al usuario almacenada en reportes anónimos) en el To-Be Product Backlog y en el Sprint To-Be 6; conclusiones del Avance 2 con el contraste de las hipótesis Lean UX frente a las seis entrevistas. Esta versión deja sin efecto la restricción sobre fotografías indicada en V1.7.0 y V1.8.0: los seis participantes autorizaron la publicación de su imagen y de su nombre de pila, según confirmó el equipo, y así se consigna en 6.3.2.
+    </td>
+  </tr>
 
 </tbody>
 </table>

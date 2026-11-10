@@ -1,10 +1,10 @@
 # Conclusiones
 
-## Conclusiones y recomendaciones
+## Conclusiones y recomendaciones del Avance 2 (AV2)
 
 ### Conclusiones generales
 
-El Trabajo Parcial documenta SafeSpace como una solución web y móvil de bienestar laboral, respaldada por una Landing Page, aplicaciones web para empleados y Recursos Humanos, una aplicación Android y una API REST. Los capítulos de requisitos y diseño se conectan con las funciones implementadas y con las evidencias visuales incluidas en el informe.
+El Avance 2 documenta SafeSpace como una solución web y móvil de bienestar laboral, respaldada por una Landing Page, aplicaciones web para empleados y Recursos Humanos, una aplicación Android y una API REST. Los capítulos de requisitos y diseño se conectan con las funciones implementadas y con las evidencias visuales incluidas en el informe.
 
 La revisión del backend permitió precisar la configuración técnica: Java 21, Spring Boot 3.5.5 y Firebase Firestore como persistencia documental. El backend organiza sus datos en colecciones mediante adaptadores de repositorio; MySQL, JPA y Flyway no forman parte de la configuración de ejecución. Los repositorios y capturas muestran componentes publicados en Vercel y Render.
 
@@ -23,6 +23,20 @@ La inspección estática y manual de seguridad confirmó uso de BCrypt, JWT stat
 | Promover la participación del equipo. | Actividades semanales con opciones de votación y resultados. | Interfaces web y Android de actividades semanales. |
 | Acceder a orientación general de manera privada. | Chat de asistencia con IA y aviso de alcance informativo. | Capturas de conversación web y Android. |
 
+### Contraste con las hipótesis Lean UX
+
+La tabla contrasta las cinco hipótesis Lean UX del Capítulo I (1.2.2.3), con la hipótesis nula (H0) definida en 8.2.1, frente a lo que registran las seis entrevistas de 6.3.2. Las lecturas son prudentes: describen esta muestra formativa y no demuestran ni descartan las hipótesis.
+
+| Hipótesis | H0 | Evidencia de las seis entrevistas | Lectura |
+| :--- | :--- | :--- | :--- |
+| H1. Un canal de reportes anónimos y con seguimiento aumentará la disposición a comunicar inquietudes. | El canal no modifica esa disposición. | E-01 valoró la elección entre anonimato e identificación; E-01 y E-03 esperan seguimiento y pidieron aclarar qué datos quedan asociados a la cuenta; E-02 expresó temor a filtraciones. SEC-01 confirma que el almacenamiento conserva la referencia al usuario. | Sin respaldo suficiente. La disposición a reportar no se midió y la confianza en el anonimato depende de TB-01 y TB-06. No se rechaza H0. |
+| H2. Un dashboard consolidado permitirá a RR. HH. identificar patrones y priorizar acciones. | El dashboard no ayuda a identificar patrones ni a priorizar. | RH-01 y RH-03 consideraron útil un panel actualizado. RH-02 entendió la dirección general del ánimo, pero pidió el periodo y el total de personas, y calificó la utilidad final con 3/5. | Respaldo parcial: utilidad percibida de la idea. La lectura del resumen actual necesita contexto (TB-04). No se probó la priorización de acciones. |
+| H3. La asistencia digital y los flujos guiados reducirán la fricción para iniciar un reporte. | No reducen la fricción. | E-03 usaría la orientación para ordenar ideas; E-01 pidió claridad de privacidad en el chat. No se midió el esfuerzo para iniciar un reporte. | No concluyente. |
+| H4. Centralizar reportes y estados de atención aumentará la eficiencia del proceso de RR. HH. | Centralizar no mejora la eficiencia. | RH-02 actualizó el estado de un reporte y señaló que reuniones y parte del seguimiento seguirían siendo manuales. No hay línea base del proceso actual ni se midió el tiempo. | No comprobable en esta ronda. |
+| H5. Una plataforma simple, anónima y orientada al usuario aumentará la participación. | No aumenta la participación. | E-03 calificó la facilidad con 5/5 y la privacidad con 4/5; E-02 respondió 5/5 a una pregunta conjunta de facilidad y confianza. La recepción general fue favorable y la participación no se midió. | Señal favorable de facilidad percibida. El efecto sobre la participación requiere un piloto. |
+
+En relación con los resultados esperados para los usuarios (1.2.2.2), las entrevistas indican que la seguridad al comunicar problemas todavía depende de aclarar el anonimato y de corregir el almacenamiento de los reportes anónimos. Estas lecturas provienen de seis personas, con transcripciones que contienen indicaciones del entrevistador, y no se generalizan. A la fecha de esta versión, las tarjetas de experimento A–C del Capítulo VIII no se han ejecutado, y la evaluación heurística (6.3.3) y las auditorías UX (6.4) están pendientes de evidencia.
+
 ### Lecciones aprendidas
 
 **Requisitos y diseño.** Vincular las historias de usuario, criterios de aceptación y pantallas permite mantener un hilo claro entre la necesidad, el comportamiento esperado y la solución presentada.
@@ -33,14 +47,18 @@ La inspección estática y manual de seguridad confirmó uso de BCrypt, JWT stat
 
 **Entrega.** El backend cuenta con integración continua en GitHub Actions y la web con despliegue automático en Vercel. La publicación de la API en Render se registró como manual y Android se distribuye mediante APK. El equipo relacionó la lentitud de despliegues con los planes gratuitos; el Capítulo VIII propone medir cada etapa antes de tomar decisiones de costo o proveedor. La solicitud de publicar en Google Play quedó incorporada al backlog To-Be.
 
+**Validación.** Las seis entrevistas dejaron observaciones útiles, pero no registraron por persona el dispositivo, el tiempo ni si hubo ayuda del entrevistador, por lo que no se pudo calcular la finalización sin ayuda. En las próximas rondas conviene llevar una hoja de observación por sesión, como propone 6.3.1.
+
 ### Recomendaciones para la evolución del producto
 
-1. Corregir el modelo de persistencia para que los reportes anónimos no guarden una referencia identificable del usuario y añadir una prueba del documento almacenado.
-2. Exigir una clave JWT fuerte fuera del perfil local y mantener los secretos en la configuración protegida del proveedor.
-3. Integrar typecheck, lint, formato y pruebas web en un flujo de CI asociado a las publicaciones automáticas de Vercel.
-4. Medir la compilación, publicación y primera respuesta de cada servicio; usar esos datos para valorar el efecto de los planes gratuitos y el costo de alternativas.
-5. Preparar y validar la distribución de Android en Google Play, según la historia TB-02 del Capítulo VIII.
-6. Mantener sincronizados el inventario de endpoints, las historias soportadas y la documentación OpenAPI con cada actualización del backend.
+1. Corregir el modelo de persistencia para que los reportes anónimos no guarden una referencia identificable del usuario y añadir una prueba del documento almacenado (historia TB-06 del Capítulo VIII). Hasta entonces, la explicación del anonimato debe describir su comportamiento real (TB-01).
+2. Mostrar el periodo y la población junto al resumen de ánimo (TB-04) y aclarar en la consola la diferencia entre guardar y publicar una encuesta.
+3. Exigir una clave JWT fuerte fuera del perfil local y mantener los secretos en la configuración protegida del proveedor.
+4. Integrar typecheck, lint, formato y pruebas web en un flujo de CI asociado a las publicaciones automáticas de Vercel.
+5. Medir la compilación, publicación y primera respuesta de cada servicio; usar esos datos para valorar el efecto de los planes gratuitos y el costo de alternativas (historia TB-02).
+6. Preparar y validar la distribución de Android en Google Play, según la historia TB-03 del Capítulo VIII.
+7. Mantener sincronizados el inventario de endpoints, las historias soportadas y la documentación OpenAPI con cada actualización del backend.
+8. Ejecutar las tarjetas de experimento A–C con una hoja de observación por sesión y volver a puntuar el Question Backlog con sus resultados.
 
 Estas recomendaciones plantean una ruta de mejora continua para las siguientes versiones y complementan las capacidades y artefactos presentados en este hito.
 

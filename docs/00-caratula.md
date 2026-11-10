@@ -19,7 +19,7 @@
     <strong>9097</strong>
   </p>
 
-  <h3><strong>Trabajo Parcial</strong></h3>
+  <h3><strong>Avance 2</strong></h3>
 
   <p>
     Docente<br>

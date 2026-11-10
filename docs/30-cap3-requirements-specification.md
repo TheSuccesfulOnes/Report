@@ -1,6 +1,6 @@
 ﻿# Capítulo III: Requirements Specification
 
-En este capítulo se detallan los requisitos funcionales de SafeSpace y las User Stories que trazan las capacidades disponibles para empleados, miembros de RRHH y administradores. Se presentan escenarios To-Be, épicas, criterios de aceptación y el Product Backlog para mantener coherencia entre las necesidades del negocio, la implementación y las evidencias del Trabajo Parcial.
+En este capítulo se detallan los requisitos funcionales de SafeSpace y las User Stories que trazan las capacidades disponibles para empleados, miembros de RRHH y administradores. Se presentan escenarios To-Be, épicas, criterios de aceptación y el Product Backlog para mantener coherencia entre las necesidades del negocio, la implementación y las evidencias del Avance 2.
 
 ## 3.1. To-Be Scenario Mapping
 
@@ -36,7 +36,7 @@ El administrador mantiene las cuentas, controla las operaciones administrativas 
 | Administración avanzada | Edita, elimina o reabre encuestas y administra actividades según las reglas del sistema. | US11, US16 |
 | Gestión de pagos | Consulta planes y registra comprobantes de pago válidos. | US20 |
 
-Estos escenarios permiten relacionar las necesidades de cada rol con las 22 User Stories y con las evidencias de implementación y prueba del Trabajo Parcial.
+Estos escenarios permiten relacionar las necesidades de cada rol con las 22 User Stories y con las evidencias de implementación y prueba del Avance 2.
 
 ## 3.2. User Stories
 

@@ -1,6 +1,6 @@
 # Capítulo V: Product Implementation
 
-Este capítulo documenta la configuración, implementación y evidencia verificable de SafeSpace para el Trabajo Parcial. Mantiene como línea base las evidencias presentadas en AV1 y las actualiza cuando existe una modificación comprobable en repositorios, despliegues, enlaces o capturas. La trazabilidad se mantiene entre las historias del Product Backlog, las tareas del Sprint, los cambios en los repositorios, las pruebas y la ejecución de cada producto.
+Este capítulo documenta la configuración, implementación y evidencia verificable de SafeSpace para el Avance 2. Mantiene como línea base las evidencias presentadas en AV1 y en el Trabajo Parcial, y las actualiza cuando existe una modificación comprobable en repositorios, despliegues, enlaces o capturas. La trazabilidad se mantiene entre las historias del Product Backlog, las tareas del Sprint, los cambios en los repositorios, las pruebas y la ejecución de cada producto.
 
 ## 5.1. Software Configuration Management
 
