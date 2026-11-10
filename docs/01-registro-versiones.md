@@ -149,6 +149,14 @@
       Actualización del Capítulo V para reflejar las 22 historias de usuario en cuatro sprints de Jira; corrección del hosting web a Vercel y separación de Firebase Firestore como base de datos; actualización del Capítulo VI con 967 pruebas backend y análisis estático/de seguridad; ampliación del Capítulo VIII con puntuación del Question Backlog, historias y Sprint Backlogs To-Be, y síntesis del Shareback del 06/11/2026. Se retiró del roster a un integrante que ya no forma parte del equipo.
     </td>
   </tr>
+  <tr>
+    <td align="center">V1.15.0</td>
+    <td align="center">10/11/26</td>
+    <td>Equipo SafeSpace</td>
+    <td>
+      Reemplazo del registro previo de validación por seis entrevistas basadas en las transcripciones reales suministradas por el equipo (tres empleados y tres profesionales de RR. HH.), con códigos, nombres de pila, fechas y entrevistadores informados. Actualización de los Capítulos VI, VIII y conclusiones para diferenciar las respuestas registradas de los resúmenes agregados anteriores y reflejar las limitaciones de las demostraciones y puntuaciones disponibles. Se incorporan las capturas autorizadas de las seis entrevistas.
+    </td>
+  </tr>
 
 </tbody>
 </table>

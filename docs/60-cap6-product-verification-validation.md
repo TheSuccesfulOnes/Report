@@ -394,13 +394,13 @@ No se atribuyen revisiones ni aprobaciones individuales sin su registro correspo
 
 ## 6.3. Validation Interviews
 
-Las entrevistas de validación buscan conocer cómo personas de los dos segmentos entienden SafeSpace y sus flujos. Las preguntas de esta sección constituyen una guía para obtener respuestas individuales. Las seis sesiones presenciales de uso que ya se realizaron se resumen en 6.3.2; como no se conservaron transcripciones ni notas pregunta por pregunta, no se afirma que esta guía se haya aplicado literalmente ni se atribuyen respuestas a participantes concretos.
+Las entrevistas de validación buscan conocer cómo personas de los dos segmentos entienden SafeSpace y sus flujos. La sección 6.3.2 registra las seis entrevistas reales realizadas: tres empleados y tres profesionales de Recursos Humanos. Las preguntas de 6.3.1 funcionan como guía temática; las entrevistas se resumen a partir de las transcripciones recibidas y no se presentan como aplicación literal de esta guía. Los resultados de las demostraciones y tareas se integran con estas mismas seis personas, sin contar una segunda muestra.
 
 ### 6.3.1. Interview Design
 
 #### Propósito y protocolo común
 
-La guía se centra en la comprensión del anonimato y el envío de reportes para empleados, y en la lectura del resumen y el seguimiento para Recursos Humanos. También propone explorar facilidad, claridad, confianza y puntos de fricción en los flujos web o móviles.
+La guía se centra en la comprensión del anonimato y el envío de reportes para empleados, y en la lectura del resumen y el seguimiento para Recursos Humanos. También propone explorar facilidad, claridad, confianza y puntos de fricción en los flujos web o móviles. El protocolo y las preguntas que siguen son una guía para una próxima ronda; no describen literalmente el procedimiento aplicado en las seis entrevistas registradas en 6.3.2.
 
 Antes de iniciar, el moderador explicará que se evalúa el producto, no a la persona; que puede omitir cualquier pregunta o detener la sesión; que se usarán cuentas y datos ficticios; y que no se deben compartir incidentes laborales reales ni información sensible. Las notas se identificarán con un código y se evitarán nombres de personas, empresas, correos y detalles que permitan reconocer un caso. La grabación de audio o video requerirá autorización separada y explícita; si no se obtiene, se tomarán notas sin grabar.
 
@@ -467,36 +467,108 @@ Para cada tarea se anotará si se completó sin ayuda, con ayuda o no se complet
 
 ### 6.3.2. Interview Records and Validation Session Summary
 
+Las seis fichas siguientes corresponden a la muestra real de validación: E-01, E-02 y E-03 son empleados; RH-01, RH-02 y RH-03 son profesionales de Recursos Humanos. Se usan códigos junto con el nombre de pila para mantener un formato claro sin incluir apellidos. Se indican los entrevistadores del equipo según la asignación informada. Las fechas corresponden a las fechas comunicadas para cada segmento: empleados, 06/11/2026; Recursos Humanos, 05/11/2026. Las capturas muestran reuniones por videollamada; por ello, en estos registros la modalidad se consigna como remota. Con la autorización de publicación confirmada por el equipo, se incluye una captura por entrevista. La guía de 6.3.1 es temática y no una transcripción literal de las preguntas efectivamente formuladas. Las fichas y hallazgos se presentan como síntesis parafraseadas.
+
 #### Segmento 1: empleados de una organización
 
-##### Entrevista individual a un empleado — 08/11/2026
+##### E-01 — Entrevista a Brayan, empleado
 
-- **Modalidad:** Entrevista remota por Discord con demostración de los flujos web de SafeSpace.
-- **Duración:** 11:44.
+![Captura de la entrevista de validación de E-01, Brayan](../assets/images/cap6/validation-interviews/brayan.png)
 
-**Resumen de la Entrevista**
+**Captura de la videollamada con Brayan y demostración de SafeSpace.** La ficha resume su contexto de uso y las observaciones que expresó durante la sesión.
 
-El resumen recibido indica que la persona entrevistada usa herramientas digitales para organizar tareas y coordinar trabajo, y valora que las encuestas sean breves, claras y expliquen el uso de las respuestas. En la demostración identificó las confirmaciones del registro de ánimo, la respuesta a una encuesta y el voto en una actividad semanal; señaló el registro de ánimo como el flujo más fácil de comprender. En el reporte, la etiqueta «Puesto de trabajo» le resultó ambigua y pidió mayor claridad sobre el anonimato, los datos asociados a la cuenta y quién puede consultar la información. También expresó que esperaba consultar el estado del reporte y recibir información cuando avance su atención. Consideró que la orientación puede ayudar a ordenar ideas y calificó la facilidad con 5/5 y la confianza en la privacidad con 4/5. Estas observaciones se presentan como resumen parafraseado, no como citas textuales.
+| Campo | Registro de la entrevista |
+| :--- | :--- |
+| Fecha y modalidad | 06/11/2026; entrevista remota con demostración de SafeSpace. |
+| Entrevistador | José. |
+| Contexto de uso | Trabaja en facturación electrónica y utiliza computadora, hojas de cálculo, documentos, archivos PDF y scripts. |
+| Hallazgos | Considera monótonas las encuestas reducidas a preguntas simples de escala y espera que la opinión de los empleados se analice y se traduzca en mejoras. Encontró familiar comentar y responder comentarios. Valoró las actividades semanales para integrar al equipo, y propuso complementarlas con objetivos o tareas del trabajo. Sobre los reportes, valoró la elección entre anonimato e identificación, pero pidió explicar qué datos quedan asociados a la cuenta y quién puede verlos. También espera seguimiento y una vía para ampliar información o dialogar sobre soluciones. Solicitó claridad sobre privacidad en el chat de orientación. |
+| Valoración registrada | La transcripción no conserva una cifra individual de facilidad o privacidad. |
 
-No se incluye una captura de la videollamada ni un enlace audiovisual en esta versión, porque el registro disponible no documenta autorización para publicar imágenes identificables.
-#### Resumen agregado de las seis sesiones presenciales
+##### E-02 — Entrevista a Eduardo, empleado
 
-Se realizaron sesiones presenciales de validación basadas en tareas con tres empleados el 06/11/2026 y tres profesionales de Recursos Humanos el 05/11/2026. Para estas seis sesiones no se conservaron transcripciones ni un registro de las preguntas realizadas; el resumen agregado no permite atribuir cada tarea, observación o frase a una persona específica. Por ello no se incluyen citas textuales ni se reconstruyen respuestas individuales.
+![Captura de la entrevista de validación de E-02, Eduardo](../assets/images/cap6/validation-interviews/eduardo.png)
 
-| Segmento | Participantes | Fecha/modalidad | Flujos probados según el resumen del equipo |
-| :--- | :---: | :--- | :--- |
-| Empleados | 3 | 06/11/2026, presencial | Encuestas, chat con IA, responder comentarios y reportes. No se especificó si los reportes fueron anónimos o identificados. |
-| Recursos Humanos | 3 | 05/11/2026, presencial | Crear encuestas, crear encuestas para actividades semanales, revisar el análisis de ánimo y consultar reportes de empleados. |
+**Captura de la videollamada con Eduardo durante la demostración de la aplicación.** El cuadro presenta los principales comentarios de la entrevista y distingue la calificación conjunta de una puntuación separada por dimensión.
 
-**Dispositivo y versión:** los tres empleados utilizaron PC. En Recursos Humanos, dos participantes utilizaron un dispositivo móvil y uno utilizó PC. El equipo indicó que todos probaron la última versión disponible de la aplicación; no se proporcionó un número de versión.
+| Campo | Registro de la entrevista |
+| :--- | :--- |
+| Fecha y modalidad | 06/11/2026; entrevista remota con demostración de SafeSpace. |
+| Entrevistador | Alexther. |
+| Contexto de uso | Trabaja con tareas operativas y herramientas digitales para registrar información de ventas y clientes. |
+| Hallazgos | Le preocupa que los comentarios visibles para toda la organización se conviertan en motivo de burla o no reciban atención; sugirió limitar la audiencia y habilitar la denuncia de comentarios. Consideró creativas las actividades semanales, y propuso incluir tareas u objetivos laborales además de actividades recreativas. En reportes, planteó poder identificar anónimamente a la persona señalada sin revelar al reportante. Indicó que podría usar la aplicación en un contexto laboral o universitario. |
+| Valoración registrada | Respondió 5/5 a una pregunta conjunta de facilidad y confianza, pero no separó ambas dimensiones. En su explicación se centró en el riesgo de filtración de datos. |
 
-**Datos de las sesiones:** se creó una cuenta por participante con datos que cada persona proporcionó y con su consentimiento para participar. Cada participante siguió el flujo de su segmento. La sesión duró aproximadamente entre 10 y 15 minutos; no se dispone de duración desglosada por tarea. No se reportaron errores. La única duda recordada fue cómo realizar un reporte, y se resolvió sin ayuda; los seis completaron el flujo esperado sin asistencia del moderador. Para proteger la privacidad, no se incluyen datos identificables de las cuentas. A diferencia de estas sesiones, las próximas pruebas deben usar cuentas y datos sintéticos, conforme al protocolo.
+##### E-03 — Entrevista a Rodrigo, empleado
 
-**Resultado agregado reportado por el equipo:** los tres participantes de cada segmento calificaron la facilidad de uso con 5/5 y la valoración general fue positiva. Un empleado describió SafeSpace como creativa y como una solución esperada en las empresas; se registra como paráfrasis, no como cita textual. Estos resultados describen esta muestra, no prueban adopción ni satisfacción de toda la población.
+![Captura de la entrevista de validación de E-03, Rodrigo](../assets/images/cap6/validation-interviews/rodrigo.png)
 
-No se mostraron otros prototipos ni se compararon variantes, por lo que estas sesiones se registran como validación formativa de la última versión disponible y no como experimento controlado. El equipo confirmó el consentimiento para participar. No cuenta con autorización para publicar fotografías de los participantes; por ello no se incluirán imágenes de estas sesiones.
+**Captura entregada como evidencia de la sesión remota con Rodrigo.** La tabla recoge su valoración de facilidad y privacidad y sus dudas sobre el flujo de reportes.
 
-No se conservó una ficha individual para estas seis sesiones. Se reportan únicamente los datos agregados anteriores; las próximas sesiones se documentarán con códigos no identificables, resultados por tarea y evidencia cuyo uso esté autorizado.
+| Campo | Registro de la entrevista |
+| :--- | :--- |
+| Fecha y modalidad | 06/11/2026; entrevista remota con demostración de cuatro flujos. |
+| Entrevistador | Mauricio. |
+| Contexto de uso | Trabaja como asistente de operaciones y usa principalmente una laptop; también puede responder encuestas breves desde el celular. |
+| Hallazgos | Prefiere preguntas claras, breves y con explicación del uso de las respuestas. Reconoció las confirmaciones del registro del ánimo, la respuesta a una encuesta y el voto semanal; consideró más fácil el registro del ánimo. La etiqueta «Puesto de trabajo» le pareció ambigua. Pidió aclarar qué datos oculta el anonimato, cuáles se conservan y quién accede. Espera consultar un historial, recibir avisos de cambio de estado y conocer cómo se atendió el caso. Usaría la orientación para ordenar ideas; ante una urgencia o falta de seguimiento, buscaría contacto directo. |
+| Valoración registrada | Facilidad: 5/5. Confianza en privacidad: 4/5. |
+
+#### Segmento 2: profesionales de Recursos Humanos
+
+##### RH-01 — Entrevista a Elizabeth, profesional de Recursos Humanos
+
+![Captura de la entrevista de validación de RH-01, Elizabeth](../assets/images/cap6/validation-interviews/elizabeth.png)
+
+**Captura de la videollamada con Elizabeth.** El cuadro sintetiza cómo recopilan y revisan actualmente la información de clima laboral y qué esperan de la herramienta.
+
+| Campo | Registro de la entrevista |
+| :--- | :--- |
+| Fecha y modalidad | 05/11/2026; entrevista remota. |
+| Entrevistador | Diego. |
+| Contexto de trabajo | Su organización realiza una encuesta anual de compromiso y grupos focales trimestrales; utiliza SurveyMonkey y Microsoft Forms. |
+| Hallazgos | La frecuencia anual dificulta observar la evolución del clima; la respuesta a un problema suele tomar entre tres y seis meses, según la gravedad. Las incomodidades se canalizan inicialmente mediante el jefe directo. Le interesan qué valoran los empleados, la rotación y el cansancio asociado a las actividades. Los resultados se revisan en reuniones con Excel o PowerPoint. Consideró útil un panel actualizado, y destacó anonimato, posibilidad de verificar quejas, identificar el área de origen y contar con sugerencias de resolución. |
+| Valoración registrada | No se conserva una calificación numérica. Manifestó disposición a invertir si la herramienta ahorra tiempo, acelera la solución de problemas y mejora la comunicación. |
+
+##### RH-02 — Entrevista a Diego, profesional de Recursos Humanos
+
+![Captura de la entrevista de validación de RH-02, Diego](../assets/images/cap6/validation-interviews/diego.png)
+
+**Captura de la entrevista de RR. HH. con el panel de SafeSpace compartido.** La ficha destaca la interpretación del resumen, la publicación de encuestas y el seguimiento de reportes.
+
+| Campo | Registro de la entrevista |
+| :--- | :--- |
+| Fecha y modalidad | 05/11/2026; entrevista remota con revisión del resumen, publicación de una encuesta y actualización de un reporte. |
+| Entrevistador | Milenko. |
+| Contexto de trabajo | Coordina el clima laboral y atiende reportes de convivencia. |
+| Hallazgos | Entendió la dirección general del ánimo, pero pidió mostrar el periodo y el total de personas para interpretar los datos. La creación de la encuesta le pareció clara; confundió guardar con publicar y no advirtió el segundo clic de confirmación. Para priorizar reportes pidió categoría, fecha y área, y recomendó restringir la identidad en casos sensibles. Añadió que reuniones con responsables de área y parte del seguimiento seguirían siendo manuales. Solicitó roles de acceso, registro de quién consulta los datos y política de retención. |
+| Valoración registrada | Facilidad: 4/5. Utilidad del resumen: 4/5 inicialmente, ajustada a 3/5 por falta de contexto del periodo y de la población; se conserva la respuesta final. |
+
+##### RH-03 — Entrevista a Jorge, profesional de Recursos Humanos
+
+![Captura de la entrevista de validación de RH-03, Jorge](../assets/images/cap6/validation-interviews/jorge.png)
+
+**Captura de la videollamada con Jorge.** El cuadro resume sus procesos de evaluación del clima y los indicadores que considera útiles para detectar cambios.
+
+| Campo | Registro de la entrevista |
+| :--- | :--- |
+| Fecha y modalidad | 05/11/2026; entrevista remota. |
+| Entrevistador | Diego. |
+| Contexto de trabajo | Analista de gestión de talento y desempeño. Describió formularios de Google, correo corporativo y sesiones de retroalimentación cuyos registros se cargan manualmente. |
+| Hallazgos | Las evaluaciones de clima suelen ser trimestrales o semestrales; el monitoreo semanal se orienta más a productividad. En operaciones, el ánimo puede cambiar de una semana a otra, y analizar causas y ejecutar un plan puede tomar días o semanas. Mencionó satisfacción, rotación, calidad y ausentismo como indicadores útiles. Consolida resultados con hojas de cálculo y tablas dinámicas. Consideró que un panel actualizado ayudaría a detectar señales antes y esperaría una experiencia sencilla, opiniones anónimas y un costo razonable frente al impacto de rotación y productividad. |
+| Valoración registrada | No se conserva una calificación numérica. |
+
+#### Síntesis de las seis entrevistas y contraste con el registro de tareas
+
+Las seis entrevistas corresponden a las mismas personas incluidas en el resumen de tareas que el equipo había comunicado previamente; no se suman como una segunda muestra. El resumen previo indicaba que cada participante siguió el flujo de su segmento, que las sesiones duraron entre 10 y 15 minutos y que no se reportaron errores. También consignaba facilidad 5/5 para los seis. Al contrastarlo con las transcripciones, se observan diferencias: estas documentan instrucciones y demostraciones del entrevistador durante varios flujos, y las puntuaciones individuales conservadas no respaldan una calificación de facilidad 5/5 para las seis personas. Por ello, las puntuaciones se presentan únicamente en las fichas donde aparecen explícitamente y la finalización sin ayuda se conserva como dato agregado comunicado por el equipo, no como resultado verificable de cada transcripción.
+
+| Segmento | Participantes reales (códigos) | Fecha comunicada | Dispositivo informado por el equipo | Flujos incluidos en el registro de tareas |
+| :--- | :---: | :--- | :--- | :--- |
+| Empleados | 3 (E-01–E-03) | 06/11/2026 | PC (3) | Encuestas, orientación digital, comentarios y reportes. |
+| Recursos Humanos | 3 (RH-01–RH-03) | 05/11/2026 | Móvil (2) y PC (1) | Crear encuestas y actividades semanales, revisar análisis de ánimo y consultar reportes. |
+
+Las capturas entregadas muestran videollamadas con pantalla compartida. Esto difiere del registro previo, que describía las sesiones como presenciales; para las entrevistas individuales se consigna modalidad remota de acuerdo con la evidencia visual. El equipo informó que se usó la última versión disponible, que cada participante tuvo una cuenta creada con su consentimiento y que la interacción duró aproximadamente 10–15 minutos. La transcripción de RH-02 contiene instrucciones concretas para navegar y publicar; otros registros también describen demostraciones guiadas. En consecuencia, no se calculan tasas de autonomía ni errores por participante a partir de estas transcripciones.
+
+El equipo comunicó una impresión general positiva. Un empleado describió la aplicación como creativa y como algo esperado en las empresas; se conserva como paráfrasis. La evidencia individual también permitió identificar oportunidades específicas: explicar mejor anonimato y acceso a reportes, restringir la audiencia de comentarios, mostrar periodo y población junto a los indicadores, aclarar la confirmación de publicación y comunicar el seguimiento de casos. Las capturas se incorporan con autorización confirmada por el equipo.
 
 ### 6.3.3. Heuristic Evaluations
 
