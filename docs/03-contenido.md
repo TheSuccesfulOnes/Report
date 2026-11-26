@@ -138,15 +138,11 @@
     - [6.3.2. Interview Records and Validation Session Summary](#632-interview-records-and-validation-session-summary)
     - [6.3.3. Heuristic Evaluations](#633-heuristic-evaluations)
 * [6.4. UX Audits](#64-ux-audits)
-    - [6.4.1. Auditoría realizada](#641-auditoría-realizada)
-        - [6.4.1.1. Información del grupo auditado](#6411-información-del-grupo-auditado)
-        - [6.4.1.2. Cronograma de auditoría realizada](#6412-cronograma-de-auditoría-realizada)
-        - [6.4.1.3. Contenido de auditoría realizada](#6413-contenido-de-auditoría-realizada)
-    - [6.4.2. Auditoría recibida](#642-auditoría-recibida)
-        - [6.4.2.1. Información del grupo auditor](#6421-información-del-grupo-auditor)
-        - [6.4.2.2. Cronograma de auditoría recibida](#6422-cronograma-de-auditoría-recibida)
-        - [6.4.2.3. Contenido de auditoría recibida](#6423-contenido-de-auditoría-recibida)
-        - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
+    - [6.4.1. Auditoría propia de SafeSpace](#641-auditoría-propia-de-safespace)
+        - [6.4.1.1. Información del producto auditado](#6411-información-del-producto-auditado)
+        - [6.4.1.2. Cronograma y método](#6412-cronograma-y-método)
+        - [6.4.1.3. Flujos y hallazgos](#6413-flujos-y-hallazgos)
+    - [6.4.2. Resumen de modificaciones para subsanar hallazgos](#642-resumen-de-modificaciones-para-subsanar-hallazgos)
 
 ---
 
@@ -191,12 +187,22 @@
     - [8.3.2. To-Be Product Backlog](#832-to-be-product-backlog)
     - [8.3.3. To-Be Sprint Backlog](#833-to-be-sprint-backlog)
     - [8.3.4. Shareback and Continuous Learning](#834-shareback-and-continuous-learning)
+* [8.4. Experiment Aftermath & Analysis](#84-experiment-aftermath--analysis)
+    - [8.4.1. Analysis and Interpretation of Results](#841-analysis-and-interpretation-of-results)
+    - [8.4.2. Re-scored and Re-prioritized Question Backlog](#842-re-scored-and-re-prioritized-question-backlog)
+* [8.5. Continuous Learning](#85-continuous-learning)
+    - [8.5.1. Shareback Session Artifacts: Learning Workflow](#851-shareback-session-artifacts-learning-workflow)
+* [8.6. To-Be Software Platform Pre-launch](#86-to-be-software-platform-pre-launch)
+    - [8.6.1. About-the-Product Intro Video](#861-about-the-product-intro-video)
+    - [8.6.2. Resumen usando GEES Framework: Matriz de Evaluación Ética y de Impacto](#862-resumen-usando-gees-framework-matriz-de-evaluación-ética-y-de-impacto)
 
 ---
 
 ## [Conclusiones](#conclusiones)
 
 * [Conclusiones y recomendaciones del Avance 2 (AV2)](#conclusiones-y-recomendaciones-del-avance-2-av2)
+* [Video App Validation](#video-app-validation)
+* [Video About-the-Team](#video-about-the-team)
 
 ---
 

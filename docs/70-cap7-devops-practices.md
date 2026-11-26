@@ -8,11 +8,12 @@ Este capítulo presenta las herramientas y etapas que participan en la integraci
 
 El repositorio [Backend-SafeSpace](https://github.com/TheSuccesfulOnes/Backend-SafeSpace) contiene el workflow `Backend CI`, definido en `.github/workflows/ci.yml`. GitHub Actions lo ejecuta cuando hay un `push` o un `pull_request` hacia `master`; el job prepara Temurin JDK 21 y Maven, y ejecuta `mvn -B test`.
 
-El backend combina pruebas unitarias con escenarios BDD. En el frontend web, `package.json` incluye scripts de Vitest y Playwright, además de comandos para revisar tipos, lint y compilar. Esos comandos están disponibles para ejecución local; no se encontró un workflow de CI en el repositorio del frontend.
+El frontend web también tiene un workflow de CI definido en `.github/workflows/ci.yml`: se activa con `push` y `pull_request` a `master` o `develop`, y automatiza typecheck, lint, Vitest, build y Playwright. La primera ejecución remota se activó mediante un `push` a `master` y terminó correctamente: GitHub Actions reporta el job `validate` como exitoso en 1 min 14 s. La ejecución muestra una advertencia no bloqueante porque `actions/checkout@v4` y `actions/setup-node@v4` usan Node.js 20, cuyo runtime está en proceso de retiro. Vercel publica desde la rama conectada, pero la evidencia disponible no demuestra que el despliegue esté condicionado al resultado de este workflow.
 
 | Herramienta | Tipo | Descripción | Propósito |
 | :--- | :--- | :--- | :--- |
 | GitHub Actions | Plataforma de integración continua | Ejecuta `Backend CI` ante `push` o `pull_request` dirigidos a `master`. | Asociar las verificaciones del backend con cada cambio recibido. |
+| GitHub Actions | Plataforma de integración continua | `Frontend CI` corre en `master` y `develop`: TypeScript, oxlint, Vitest, build y Playwright. La primera corrida remota en `master` terminó con el job `validate` exitoso. | Detectar problemas de tipos, lint, pruebas, build y recorridos del navegador. |
 | Maven | Construcción y ejecución de pruebas | El workflow ejecuta `mvn -B test` con Java 21 y Temurin. | Compilar el backend y ejecutar sus pruebas automatizadas. |
 | JUnit 5 | Framework de pruebas | Ejecuta las pruebas Java y los escenarios BDD expuestos como pruebas dinámicas. | Verificar el comportamiento de unidades y servicios del backend. |
 | Mockito | Framework de dobles de prueba | Permite sustituir dependencias durante las pruebas Java. | Aislar el componente que se está verificando. |
@@ -26,7 +27,7 @@ El backend mantiene cuatro archivos `.feature`. La captura de IntelliJ IDEA perm
 
 **Integración continua del backend:** el workflow descarga la revisión con `actions/checkout@v4`, prepara Ubuntu y Temurin JDK 21 con `actions/setup-java@v4`, y habilita la caché de Maven. Después ejecuta `mvn -B test`; GitHub Actions publica el resultado del job asociado al commit.
 
-**Pruebas del frontend:** los scripts locales permiten ejecutar Vitest, Playwright, typecheck, lint y build. Al no encontrarse un workflow en el repositorio web, estas comprobaciones no se ejecutan automáticamente por cada `push` o `pull_request`.
+**Integración continua del frontend:** el workflow web prepara Node.js 22, instala dependencias con `npm ci` y ejecuta `npm run test:typecheck`, `npm run lint`, `npm run test:validation`, `npm run build` y `npm run test:e2e -- --workers=1`, tras instalar Chromium. La primera ejecución remota documentada, activada por un `push` a `master`, terminó con el job `validate` exitoso en 1 min 14 s. La captura de GitHub Actions incluye una advertencia no bloqueante por el uso de Node.js 20 en `actions/checkout@v4` y `actions/setup-node@v4`; conviene actualizar esas acciones para retirar el aviso.
 
 **Alcance del pipeline:** el workflow `Backend CI` termina al finalizar las pruebas. No construye ni publica una versión en Render, y tampoco coordina el despliegue de Vercel.
 
@@ -38,9 +39,13 @@ El backend mantiene cuatro archivos `.feature`. La captura de IntelliJ IDEA perm
 
 **GitHub Actions.** El workflow `Backend CI` automatiza la validación del backend para cambios dirigidos a `master`: prepara Java 21 y Maven y ejecuta `mvn -B test`. En la captura se ven varias ejecuciones recientes con estado exitoso; el workflow no publica por sí mismo el backend.
 
+![Ejecución de Frontend CI en GitHub Actions con el job validate exitoso](../assets/images/cap7/evidence/frontend-ci-success.png){.inline width=100%}
+
+**Frontend CI.** La ejecución se disparó por un `push` a `master` y el job `validate` terminó correctamente. GitHub señala una advertencia de runtime Node.js 20 para dos acciones; la advertencia no impidió completar el workflow.
+
 ## 7.2. Continuous Delivery
 
-La entrega continua busca mantener una versión probada en condiciones de ser publicada. En SafeSpace, la validación automática está configurada para el backend; la publicación de la API y de las interfaces se gestiona en sus respectivos proveedores.
+La entrega continua busca mantener una versión probada en condiciones de ser publicada. SafeSpace tiene workflows de CI configurados para backend y frontend. La API y las interfaces se publican en sus respectivos proveedores; aún no hay evidencia de que el resultado del nuevo workflow web sea un control requerido por Vercel.
 
 ### 7.2.1. Tools and Practices
 
@@ -60,9 +65,9 @@ La entrega continua busca mantener una versión probada en condiciones de ser pu
 
 **Practices (Prácticas)**
 
-**Validación antes de publicar:** las pruebas del backend se ejecutan en CI. Para el frontend existen scripts de prueba y compilación, aunque no se encontró una ejecución automática mediante workflow.
+**Validación antes de publicar:** los workflows configurados automatizan las pruebas del backend y las verificaciones del frontend. La primera corrida remota de `Frontend CI` ya terminó correctamente; falta decidir si Vercel debe esperar explícitamente este check antes de publicar.
 
-**Promoción a producción:** Vercel publica automáticamente los cambios de la rama Git conectada para las aplicaciones web. La captura de Render registra una publicación manual de la API. La automatización web no se presenta como condicionada por el resultado de CI del backend.
+**Promoción a producción:** Vercel publica automáticamente los cambios de la rama Git conectada para las aplicaciones web. La captura de Render registra una publicación manual de la API. CI y despliegue se documentan por separado porque no se ha demostrado que Vercel espere el resultado de `Frontend CI`.
 
 **Configuración por entorno:** Firestore y los servicios se conectan mediante parámetros y credenciales configurados en el proveedor, separados del código fuente.
 
@@ -80,9 +85,13 @@ La entrega continua busca mantener una versión probada en condiciones de ser pu
 
 **Vercel — proyecto administrativo.** La captura muestra `safespace-admin`, su dominio y una publicación en estado Ready. El equipo confirmó que la aplicación web se despliega automáticamente mediante Vercel desde la rama Git conectada.
 
+![Check de despliegue de Vercel asociado a una revisión de GitHub](../assets/images/cap7/evidence/github-vercel-deployment-check.png)
+
+**Check de Vercel en GitHub.** La captura muestra un check exitoso con el texto `Vercel — Deployment has completed`. Acredita que el despliegue de Vercel asociado a esa revisión terminó; no muestra la ejecución del workflow `Frontend CI` ni resultados de TypeScript, lint o pruebas.
+
 ### 7.2.2. Stages Deployment Pipeline Components
 
-**Integración continua (CI):** al recibir cambios en el backend, GitHub Actions prepara el entorno Java y ejecuta Maven. El frontend cuenta con scripts locales de validación, pero no con un workflow automático identificado.
+**Integración continua (CI):** al recibir cambios en el backend, GitHub Actions prepara el entorno Java y ejecuta Maven. Para el frontend, `Frontend CI` está publicado en `.github/workflows/ci.yml`; ejecuta typecheck, lint, pruebas, build y recorridos Playwright. Su primera ejecución remota en `master` terminó con éxito.
 
 **Validación en staging:** no se identificó un entorno de staging ni una etapa de promoción entre ambientes en la configuración revisada. Las versiones Ready de Vercel y el servicio de Render corresponden a publicaciones de los proveedores.
 
@@ -108,14 +117,14 @@ En este apartado se describen las herramientas que intervienen en la publicació
 - **Docker y Render:** Docker construye la imagen de la API y Render la aloja. La publicación observada se inició manualmente; no se presenta como despliegue continuo.
 - **Vercel:** aloja las aplicaciones web y la consola administrativa, y publica automáticamente desde la rama Git conectada.
 - **Firebase Firestore:** es el servicio de datos usado por el backend. Las credenciales deben permanecer configuradas en el entorno protegido del proveedor.
-- **Vitest y Playwright:** los scripts del frontend permiten ejecutar pruebas de validación y End-to-End. Para que sean una puerta de calidad, primero deben incorporarse a un workflow de CI.
+- **Vitest y Playwright:** sus pruebas forman parte del workflow remoto `Frontend CI`, junto con typecheck, lint y build. La primera ejecución de GitHub Actions en `master` terminó con el job `validate` exitoso.
 - **Gradle:** construye el APK de Android; su publicación permanece separada del flujo de las aplicaciones web y el backend.
 
 **Practices (Prácticas)**
 
 **Despliegue basado en cambios validados:** usar el commit integrado como referencia del artefacto y habilitar la publicación únicamente después de las comprobaciones correspondientes.
 
-**Automatización por componente:** mantener separada la CI del backend y la publicación automática del frontend en Vercel; incorporar las validaciones del frontend al flujo de CI y hacer visible su resultado junto a la publicación.
+**Automatización por componente:** mantener separada la CI del backend y la publicación automática del frontend en Vercel; hacer visible el resultado de `Frontend CI` junto a la publicación y evaluar si Vercel debe esperar un check aprobado.
 
 **Comprobación posterior:** verificar la disponibilidad del servicio y una operación esencial tras cada publicación. El health check configurado en Render comprueba la ruta declarada, pero no reemplaza estas verificaciones funcionales.
 
@@ -125,7 +134,7 @@ Vercel automatiza la publicación web desde la rama Git conectada. El workflow d
 
 ### 7.3.2. Production Deployment Pipeline Components
 
-Este apartado detalla los componentes de datos, backend, frontend y Android. En cada uno se describe el flujo que se observa y la etapa que aún requiere automatización.
+Este apartado detalla los componentes de datos, backend, frontend y Android. En cada uno se describe el flujo configurado, la evidencia disponible y las limitaciones que siguen abiertas.
 
 **Componentes del pipeline de datos (Firebase Firestore)**
 
@@ -166,9 +175,9 @@ Firestore es un servicio administrado y se consulta en tiempo de ejecución desd
 **Componentes del pipeline del frontend (Vercel)**
 
 1. **Validación local:** `package.json` incluye scripts para Vitest, Playwright, typecheck, lint y build.
-2. **Integración continua:** no se identificó un workflow que ejecute esas verificaciones automáticamente en el repositorio web.
+2. **Integración continua:** el workflow `Frontend CI` definido en `.github/workflows/ci.yml` ejecuta esas verificaciones para `push` y `pull_request` a `master` o `develop`; la primera ejecución remota en `master` terminó correctamente. Actualizar las acciones para retirar la advertencia de runtime Node.js 20.
 3. **Publicación:** Vercel publica automáticamente las aplicaciones web al recibir cambios en la rama Git conectada.
-4. **Mejora propuesta:** incorporar las verificaciones del frontend al flujo de CI y decidir si la publicación debe esperar a que terminen con resultado aprobado.
+4. **Mejora propuesta:** verificar la corrida remota de CI y decidir si la publicación debe esperar a que terminen las verificaciones con resultado aprobado.
 
 ![Logotipo de Vercel](../assets/images/cap7/tool-logos/vercel-wordmark.svg){.inline width=85%}
 

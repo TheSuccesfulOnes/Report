@@ -8,7 +8,7 @@ El Avance 2 documenta SafeSpace como una solución web y móvil de bienestar lab
 
 La revisión del backend permitió precisar la configuración técnica: Java 21, Spring Boot 3.5.5 y Firebase Firestore como persistencia documental. El backend organiza sus datos en colecciones mediante adaptadores de repositorio; MySQL, JPA y Flyway no forman parte de la configuración de ejecución. Los repositorios y capturas muestran componentes publicados en Vercel y Render.
 
-La corrida integral del backend ejecutada para esta revisión terminó con 967 pruebas aprobadas, sin fallas ni errores. El workflow Backend CI ejecuta Maven ante cambios dirigidos a `master`. En el frontend web, TypeScript y oxlint aprobaron; Prettier identificó 37 archivos con formato por ajustar. Vercel publica automáticamente las aplicaciones web desde la rama Git conectada; esta publicación funciona por separado del workflow de pruebas del backend. Render aloja la API y la captura revisada muestra una activación manual; Android se distribuye mediante APK.
+La corrida integral del backend ejecutada para esta revisión terminó con 967 pruebas aprobadas, sin fallas ni errores. El workflow Backend CI ejecuta Maven ante cambios dirigidos a `master`. En el frontend web, la corrida local del 25/11/2026 terminó con 489 pruebas Vitest aprobadas y dos recorridos Playwright de capturas heurísticas aprobados; TypeScript, oxlint y build aprobaron. La primera corrida remota de Frontend CI, tras un `push` a `master`, terminó con el job `validate` exitoso en 1 min 14 s. La captura registra una advertencia no bloqueante por el runtime Node.js 20 de `actions/checkout@v4` y `actions/setup-node@v4`; conviene actualizar esas acciones. Prettier identificó 37 archivos con formato por ajustar. Vercel publica automáticamente las aplicaciones web desde la rama Git conectada; no se acreditó que el despliegue dependa del resultado de la nueva CI. Render aloja la API y la captura revisada muestra una activación manual; Android se distribuye mediante APK.
 
 La ronda de validación reunió a tres empleados y tres profesionales de Recursos Humanos, identificados en el informe con código y nombre de pila. Las transcripciones y capturas corresponden a entrevistas remotas con demostraciones; no se tratan como una segunda muestra respecto del resumen de tareas. La evidencia muestra una recepción inicial favorable y también dudas concretas sobre anonimato, seguimiento de reportes, contexto del análisis de ánimo y confirmación de publicación. Las transcripciones registran puntuaciones individuales distintas o no desglosadas y contienen indicaciones del entrevistador, por lo que no permiten afirmar que las seis personas completaron tareas sin ayuda ni atribuir 5/5 de facilidad a cada una. El Shareback del 06/11/2026 convirtió estos hallazgos, la lentitud atribuida a los planes gratuitos y la solicitud de Google Play en preguntas de aprendizaje e historias To-Be propuestas.
 
@@ -35,7 +35,7 @@ La tabla contrasta las cinco hipótesis Lean UX del Capítulo I (1.2.2.3), con l
 | H4. Centralizar reportes y estados de atención aumentará la eficiencia del proceso de RR. HH. | Centralizar no mejora la eficiencia. | RH-02 actualizó el estado de un reporte y señaló que reuniones y parte del seguimiento seguirían siendo manuales. No hay línea base del proceso actual ni se midió el tiempo. | No comprobable en esta ronda. |
 | H5. Una plataforma simple, anónima y orientada al usuario aumentará la participación. | No aumenta la participación. | E-03 calificó la facilidad con 5/5 y la privacidad con 4/5; E-02 respondió 5/5 a una pregunta conjunta de facilidad y confianza. La recepción general fue favorable y la participación no se midió. | Señal favorable de facilidad percibida. El efecto sobre la participación requiere un piloto. |
 
-En relación con los resultados esperados para los usuarios (1.2.2.2), las entrevistas indican que la seguridad al comunicar problemas todavía depende de aclarar el anonimato y de corregir el almacenamiento de los reportes anónimos. Estas lecturas provienen de seis personas, con transcripciones que contienen indicaciones del entrevistador, y no se generalizan. A la fecha de esta versión, las tarjetas de experimento A–C del Capítulo VIII no se han ejecutado, y la evaluación heurística (6.3.3) y las auditorías UX (6.4) están pendientes de evidencia.
+En relación con los resultados esperados para los usuarios (1.2.2.2), las entrevistas indican que la seguridad al comunicar problemas todavía depende de aclarar el anonimato y de corregir el almacenamiento de los reportes anónimos. Estas lecturas provienen de seis personas, con transcripciones que contienen indicaciones del entrevistador, y no se generalizan. A la fecha de esta versión, las tarjetas de experimento A–C del Capítulo VIII y las auditorías UX de intercambio entre equipos (6.4) no se han ejecutado; la evaluación heurística (6.3.3) sí se completó con capturas Playwright y datos sintéticos.
 
 ### Lecciones aprendidas
 
@@ -54,13 +54,29 @@ En relación con los resultados esperados para los usuarios (1.2.2.2), las entre
 1. Corregir el modelo de persistencia para que los reportes anónimos no guarden una referencia identificable del usuario y añadir una prueba del documento almacenado (historia TB-06 del Capítulo VIII). Hasta entonces, la explicación del anonimato debe describir su comportamiento real (TB-01).
 2. Mostrar el periodo y la población junto al resumen de ánimo (TB-04) y aclarar en la consola la diferencia entre guardar y publicar una encuesta.
 3. Exigir una clave JWT fuerte fuera del perfil local y mantener los secretos en la configuración protegida del proveedor.
-4. Integrar typecheck, lint, formato y pruebas web en un flujo de CI asociado a las publicaciones automáticas de Vercel.
+4. Mantener `Frontend CI` y actualizar las acciones para retirar la advertencia de Node.js 20; evaluar si Vercel debe publicar solo revisiones cuyo workflow haya terminado correctamente.
 5. Medir la compilación, publicación y primera respuesta de cada servicio; usar esos datos para valorar el efecto de los planes gratuitos y el costo de alternativas (historia TB-02).
 6. Preparar y validar la distribución de Android en Google Play, según la historia TB-03 del Capítulo VIII.
 7. Mantener sincronizados el inventario de endpoints, las historias soportadas y la documentación OpenAPI con cada actualización del backend.
 8. Ejecutar las tarjetas de experimento A–C con una hoja de observación por sesión y volver a puntuar el Question Backlog con sus resultados.
 
 Estas recomendaciones plantean una ruta de mejora continua para las siguientes versiones y complementan las capacidades y artefactos presentados en este hito.
+
+## Actualización para la revisión del informe (25/11/2026)
+
+La evaluación heurística del Capítulo VI sigue el formato del Anexo D, utiliza severidad de 1 a 4 y adjunta capturas Playwright de pantallas web con datos sintéticos. Identifica tres hallazgos; el más importante es la discrepancia entre el texto de confidencialidad del formulario y la referencia de usuario que permanece en Firestore. La inspección no sustituye entrevistas moderadas ni certifica accesibilidad.
+
+El Capítulo VIII contiene ocho preguntas cuantificables, cada una con unidad, cálculo, fuente de datos y estado de evidencia. Las entrevistas actuales orientan su prioridad, pero no producen porcentajes de éxito, comparación pareada, tiempos de despliegue ni una lectura estandarizada del dashboard. Los resultados de esas métricas se mantienen pendientes de una nueva ronda.
+
+El workflow CI del frontend está publicado en `master` y su primera ejecución remota terminó correctamente; la captura está incorporada en los capítulos VI y VII. El Capítulo VI documenta la evaluación del equipo sobre SafeSpace según la aclaración del profesor. La evidencia de distribución/prueba móvil y el video final About-the-Team aún requieren sus archivos correspondientes.
+
+### Video App Validation
+
+El enunciado pide documentar la evaluación de la aplicación mediante pruebas de usuario y la distribución de la aplicación móvil con Firebase App Distribution. El presente informe registra entrevistas formativas con interacción sobre los flujos y capturas automatizadas con Playwright para web; estas evidencias no acreditan una sesión de Firebase App Distribution ni sustituyen el video solicitado. **Estado:** pendiente de incorporar el enlace privado de Microsoft Stream, duración, captura del video y evidencia del flujo de distribución/dispositivos que realmente se usó.
+
+### Video About-the-Team
+
+La entrega final debe resumir el contenido del video del equipo e incluir secuencias con tiempos de inicio `hh:mm:ss`, un fotograma representativo y enlaces publicados. **Estado:** el video no está en los archivos disponibles para este informe; completar duración, secuencias, captura y URL de Microsoft Stream y YouTube después de grabarlo y publicarlo.
 
 ---
 
@@ -96,7 +112,7 @@ El backend ejecuta integración continua en GitHub Actions, se empaqueta con Doc
 ### Recomendaciones para el Trabajo Final
 
 1. Mantener una única corrida de referencia del backend y actualizar el inventario de pruebas con su resultado verificable.
-2. Integrar las verificaciones estáticas y las pruebas del frontend web en un flujo de CI previo o asociado a la publicación de Vercel.
+2. Mantener `Frontend CI` en GitHub Actions, actualizar las acciones con advertencia de Node.js 20 y decidir si los checks aprobados deben ser requisito de publicación.
 3. Añadir una prueba funcional posterior a la publicación de Render que valide un flujo esencial del backend.
 4. Implementar el ajuste de privacidad de reportes anónimos y reforzar la configuración de la clave JWT.
 5. Medir tiempos de despliegue y primer arranque, y utilizar la evidencia junto con la solicitud de Google Play para ordenar el backlog To-Be.

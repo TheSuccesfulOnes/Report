@@ -58,14 +58,15 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <strong>Trabajo Parcial</strong><br>
     Organizó evidencias de implementación y pruebas para mantener coherencia entre el producto desplegado, los repositorios y el informe.<br><br>
     <strong>AV2</strong><br>
-    [Pendiente de confirmar al completar la actividad: realizará la evaluación heurística de los flujos de empleado y de Recursos Humanos en el formato del Anexo D, registrando cada problema con su severidad y su evidencia, incluidos los que afecten la comprensión de la privacidad.]<br><br>
+    La contribución individual a la inspección heurística de esta actualización no se atribuye sin una bitácora del equipo. El informe registra una inspección automatizada asistida por Playwright en 6.3.3; sus hallazgos y responsabilidades de corrección requieren revisión y asignación del equipo.<br><br>
   </td>
 
   <td valign="top">
     Durante AV1, el equipo reconoció responsabilidades éticas y profesionales relacionadas con la privacidad, la confidencialidad y el tratamiento responsable de la información del bienestar laboral al elaborar los cinco capítulos del informe.<br><br>
     <strong>Trabajo Parcial:</strong> El equipo reforzó esta responsabilidad al mantener trazabilidad entre requisitos, implementación, pruebas, despliegues y evidencias presentadas en el informe.<br><br>
     <strong>TB1:</strong> El equipo consolidó la responsabilidad ética documentando la verificación del producto con pruebas unitarias, de integración, BDD y sistema, asegurando que las funcionalidades entregadas respondan a los criterios declarados y no expongan información sensible de los usuarios.<br><br>
-    <strong>AV2:</strong> El equipo documentó en los Capítulos VI a VIII la verificación técnica, el análisis de seguridad, las seis sesiones formativas, el Shareback y las propuestas de experimentación. También describió controles de consentimiento y uso de cuentas de prueba para resguardar la información de los participantes. Además, documentó el hallazgo SEC-01 (la referencia al usuario que persiste en los reportes anónimos) en lugar de omitirlo, y lo convirtió en la historia TB-06 del Capítulo VIII.
+    <strong>AV2:</strong> El equipo documentó en los Capítulos VI a VIII la verificación técnica, el análisis de seguridad, las seis sesiones formativas, el Shareback y las propuestas de experimentación. También describió controles de consentimiento y uso de cuentas de prueba para resguardar la información de los participantes. Además, documentó el hallazgo SEC-01 (la referencia al usuario que persiste en los reportes anónimos) en lugar de omitirlo, y lo convirtió en la historia TB-06 del Capítulo VIII.<br><br>
+    <strong>Trabajo Final:</strong> El informe incorpora una inspección heurística de la interfaz web con evidencia Playwright, registra la discrepancia de privacidad y separa los hallazgos sintéticos de los resultados de entrevistas. La corrección del modelo de persistencia aún debe acreditarse con un cambio de producto y una prueba correspondiente.
   </td>
 </tr>
 
@@ -110,14 +111,15 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <strong>Trabajo Parcial</strong><br>
     Contrastó las evidencias de interfaz y API con los requisitos documentados, considerando accesibilidad y claridad para los distintos roles de usuario.<br><br>
     <strong>AV2</strong><br>
-    [Pendiente de confirmar al completar la actividad: valorará cómo los problemas de usabilidad, diseño inclusivo y arquitectura de información hallados en la evaluación heurística afectan a los distintos roles de usuario y qué correcciones deben priorizarse.]<br><br>
+    La responsabilidad individual sobre el análisis de impacto de cada hallazgo no se atribuye sin un registro de quién tomó esa decisión. La sección 6.3.3 documenta una propuesta de prioridad, con la limitación de que no reemplaza validación moderada.<br><br>
   </td>
 
   <td valign="top">
     Durante AV1, el equipo consideró principalmente el impacto social y profesional de SafeSpace como solución para mejorar la comunicación laboral. La evaluación de impactos globales, económicos y ambientales requiere evidencia adicional en entregas posteriores.<br><br>
     <strong>Trabajo Parcial:</strong> El equipo amplió el análisis al relacionar la calidad, disponibilidad, privacidad y mantenibilidad de la solución con sus efectos sociales, económicos y profesionales sobre los usuarios y la organización.<br><br>
     <strong>TB1:</strong> El equipo emitió juicios informados sobre el impacto de las decisiones de ingeniería al documentar las prácticas CI/CD, los resultados de prueba y las recomendaciones de evolución del producto, considerando su efecto en la confianza del usuario, la sostenibilidad del servicio y la reducción de riesgos operativos.<br><br>
-    <strong>AV2:</strong> El equipo delimitó el alcance de sus juicios de impacto: las pruebas con participantes y datos sintéticos permiten evaluar claridad, comprensión y confianza declaradas, pero no demuestran adopción ni mejora del clima laboral, que requieren un piloto. Los impactos globales, económicos y ambientales siguen requiriendo evidencia adicional en la entrega final.
+    <strong>AV2:</strong> El equipo delimitó el alcance de sus juicios de impacto: las pruebas con participantes y datos sintéticos permiten evaluar claridad, comprensión y confianza declaradas, pero no demuestran adopción ni mejora del clima laboral, que requieren un piloto. Los impactos globales, económicos y ambientales requieren evidencia adicional.<br><br>
+    <strong>Trabajo Final:</strong> El Capítulo VIII aplica cualitativamente la matriz del Anexo F y añade impactos globales y ambientales para el Student Outcome. Identifica grupos afectados y mitigaciones propuestas, sin presentar como medidos el ahorro económico, el efecto en salud laboral ni el consumo energético.
   </td>
 </tr>
 

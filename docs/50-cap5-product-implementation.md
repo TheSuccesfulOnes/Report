@@ -548,7 +548,7 @@ El video **About the Product-SafeSpace** presenta el problema de comunicación y
 | 00:15–00:22 | Identidad de SafeSpace y presentación inicial del modelo de suscripción en la Landing Page. |
 | 00:22–00:38 | Recorrido del empleado por la aplicación web: historial del asistente, registro del estado de ánimo y encuestas. |
 | 00:38–00:47 | Contexto organizacional y necesidad de información para Recursos Humanos. |
-| 00:47–01:08 | Creación de un reporte confidencial y revisión administrativa de reportes y estados. |
+| 00:47–01:08 | Recorrido de creación de un reporte y revisión administrativa de reportes y estados. La afirmación de confidencialidad del material requiere revisarse frente al hallazgo SEC-01 de 6.2.1.2. |
 | 01:08–01:23 | Historial y conversación con el asistente de IA. |
 | 01:23–01:38 | Gestión de actividades semanales y encuestas desde el espacio de Recursos Humanos. |
 | 01:38–01:53 | Planes de suscripción y formulario de contacto de la Landing Page. |
@@ -561,7 +561,7 @@ La siguiente captura representa la interfaz de registro de ánimo del producto, 
 
 ![Interfaz web de registro del estado de ánimo, relacionada con el recorrido del producto](../assets/images/cap5/web/frontend-web-mood.png)
 
-**Retroalimentación verbal reportada por el equipo:** un empleado describió SafeSpace como una aplicación creativa y como una solución que se espera encontrar en las empresas. Se conserva como paráfrasis, no como cita textual, porque no hay transcripción. No se publicarán fotografías de participantes, pues el equipo indicó que no cuenta con autorización para ello. Si se requiere un testimonio textual, todavía hará falta confirmar la redacción con la persona y obtener su autorización para publicarlo.
+**Retroalimentación verbal reportada por el equipo:** un empleado describió SafeSpace como una aplicación creativa y como una solución que se espera encontrar en las empresas. Se conserva como paráfrasis, no como cita textual, porque no hay transcripción. El equipo confirmó autorización para publicar las capturas de entrevistas y los nombres de pila, como se consigna en 6.3.2; la imagen que acompaña esta sección es una captura de interfaz, no un fotograma del video.
 
 
 \newpage

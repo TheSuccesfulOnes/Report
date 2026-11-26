@@ -13,10 +13,14 @@ La corrida integral realizada para esta revisión ejecutó el backend con Temuri
 | Backend, inventario JSON anterior | src/test/resources/validation-inventory.json | 966 casos en 60 suites; 0 fallas, errores u omitidos. |
 | Backend, captura anterior de GitHub Actions | backend-ci-summary.png | 958 pruebas aprobadas en una ejecución identificada en la captura como 06/10/2026. |
 | Frontend web, pruebas unitarias e integración local | Frontend-Web-SafeSpace/TESTING.md | 494 casos aprobados: 489 Vitest y 5 casos Node conservados. |
+| Frontend web, ejecución local de Vitest | `npm run test:validation`, copia conectada | 489 pruebas aprobadas, 0 fallas; ejecución del 25/11/2026. |
 | Frontend web, pruebas de sistema con Playwright | playwright-report-summary-current.png | 6 casos aprobados; 0 fallidos, inestables u omitidos. |
-| Integración continua | Backend-SafeSpace/.github/workflows/ci.yml | Existe un workflow de backend; no se encontró un workflow GitHub Actions en el repositorio conectado del frontend web. |
+| Frontend web, capturas heurísticas automatizadas | `tests/e2e/heuristic-review.spec.ts` | 2 pruebas aprobadas en Chromium local; datos de API sintéticos, ejecución del 25/11/2026. |
+| Integración continua del frontend | Frontend-Web-SafeSpace/.github/workflows/ci.yml; ejecución de GitHub Actions | `Frontend CI` se ejecutó al recibir un `push` en `master`; job `validate` exitoso en 1 min 14 s. GitHub reportó una advertencia no bloqueante por acciones que usan Node.js 20. |
 
-La corrida de esta revisión se ejecutó sobre la copia local conectada al repositorio y no reemplaza un nuevo registro de GitHub Actions. Los artefactos históricos del backend declaran 960, 966 y 958 casos, respectivamente; reflejan versiones o ejecuciones distintas del total actual. El frontend informa 494 casos en `TESTING.md`; el resultado de Playwright disponible corresponde a seis pruebas End-to-End aprobadas. Typecheck y lint se ejecutaron en esta revisión y se detallan en 6.2.1.
+La corrida integral del backend y las pruebas locales del frontend se documentan según sus fuentes y fechas. Los artefactos históricos del backend declaran 960, 966 y 958 casos, respectivamente; reflejan versiones o ejecuciones distintas del total actual. El frontend informa 494 casos en `TESTING.md`; las dos pruebas nuevas de captura heurística de Playwright pasaron localmente con respuestas de API sintéticas. Además, `Frontend CI` completó correctamente su job `validate` en GitHub Actions tras un `push` a `master`; la captura registra el resultado y una advertencia no bloqueante sobre el runtime Node.js 20 de algunas acciones.
+
+![Ejecución exitosa de Frontend CI en GitHub Actions, con el job validate aprobado](../assets/images/cap7/evidence/frontend-ci-success.png)
 
 ![Ejecución previa del job de pruebas del backend en GitHub Actions: 958 pruebas aprobadas](../assets/images/cap6/backend-ci-summary.png)
 
@@ -572,79 +576,121 @@ El equipo comunicó una impresión general positiva. Un empleado describió la a
 
 ### 6.3.3. Heuristic Evaluations
 
-La evaluación heurística complementará las entrevistas mediante una revisión estructurada de los flujos de registro de ánimo, participación, reporte anónimo y gestión de RR. HH. Cada evaluador registrará pantalla, dispositivo, paso, problema observado, principio afectado, severidad de 0 a 4 y recomendación. La severidad y los hallazgos quedan pendientes de revisión real.
+#### Formato de evaluación UX según el Anexo D
 
-| Principio de revisión | Pregunta de evaluación |
+**UX Heuristics & Principles Evaluation — Usability, Inclusive Design, Information Architecture**
+
+| Campo del formato | Registro |
 | :--- | :--- |
-| Visibilidad del estado | ¿La interfaz confirma el envío, guardado, publicación o cambio de estado? |
-| Correspondencia con el lenguaje del usuario | ¿Las etiquetas y estados se entienden sin conocer términos internos del sistema? |
-| Reconocimiento y claridad | ¿Las acciones, opciones y requisitos están visibles cuando se necesitan? |
-| Control y reversibilidad | ¿Se puede corregir o cancelar una acción antes de que tenga consecuencias? |
-| Prevención y recuperación de errores | ¿Se explican los errores y el camino para resolverlos sin perder información? |
-| Privacidad y confianza | ¿La interfaz explica qué se comparte y con quién, especialmente al elegir anonimato? |
+| Carrera | Ingeniería de Software |
+| Curso / NRC | Diseño de Experimentos de Ingeniería de Software / 9097 |
+| Profesores auditores | No participaron en esta inspección; completar solo si el curso realiza una auditoría docente. |
+| Grupo evaluador | Inspección preparada durante la elaboración del informe con Playwright y Chromium. No se atribuye a participantes, docente ni a una auditoría de intercambio; el equipo SafeSpace debe revisar y validar los hallazgos. |
+| Clientes / segmentos | Empleados y profesionales de Recursos Humanos; la sesión automatizada emplea cuentas y respuestas sintéticas. |
+| Sitio o aplicación evaluada | Frontend web de SafeSpace, copia local del repositorio conectado, renderizado en Chromium. La vista móvil es el sitio responsivo; no es la aplicación nativa Android. |
+| Tareas incluidas | (1) abrir el resumen de ánimo de RR. HH.; (2) revisar Gestión y el formulario de nueva encuesta; (3) abrir en una ventana estrecha el Centro de encuestas y localizar el flujo Reportes. |
+| Tareas excluidas | Enviar un reporte o encuesta real; verificar persistencia desde esta sesión; probar Android nativo; evaluar teclado/lector de pantalla; inspeccionar todas las pantallas y roles; validar el despliegue publicado. |
+| Fecha y entorno | 25/11/2026; Playwright, Chromium, viewport de escritorio 1440×1000 y viewport web móvil 390×844; datos de API simulados. |
 
-| Evaluador/fecha | Flujo y pantalla | Problema y principio | Severidad (0–4) | Recomendación/estado |
-| :--- | :--- | :--- | :--- | :--- |
-| [Pendiente] | [Pendiente] | [Pendiente] | [Pendiente] | [Pendiente] |
+La inspección combina heurísticas de visibilidad y correspondencia entre sistema y mensaje, confianza, facilidad de encontrar funciones en la arquitectura de información y revisión visual del flujo en viewport móvil. Las capturas se generaron con Playwright; las respuestas de API y la identidad son sintéticas. No son grabaciones de sesiones con usuarios ni pruebas de accesibilidad automatizadas. La valoración heurística debe ser revisada por el equipo antes de declarar subsanados los hallazgos.
+
+**Escala de severidad del Anexo D:** 1 = superficial y de baja frecuencia; 2 = menor, resolver en una próxima versión; 3 = mayor y de alta prioridad; 4 = muy grave e impide continuar el uso, corregir antes del lanzamiento.
+
+##### Tabla resumen
+
+| # | Problema | Escala de severidad | Heurística / principio violado |
+| :---: | :--- | :---: | :--- |
+| 1 | El flujo promete un reporte «seguro y confidencial», pero el almacenamiento conserva la referencia del empleado en los reportes marcados anónimos. | 3 | Usability: visibilidad del estado real y confianza / transparencia. |
+| 2 | El resumen identifica una tendencia semanal, pero no muestra las fechas exactas del periodo ni define junto a la tasa quién integra el denominador. | 2 | Information Architecture: ¿es comprensible y utilizable la información en contexto? |
+| 3 | El acceso a reportes se presenta como pestaña dentro del «Centro de encuestas», aunque comunica un canal sensible distinto de responder encuestas o votar actividades. | 2 | Information Architecture: ¿es fácil encontrar la función según la tarea del usuario? |
+
+##### Descripción de problemas
+
+**PROBLEMA #1: El texto de privacidad no coincide con la identidad que se conserva**
+
+**Severidad:** 3.
+
+**Heurística violada:** Usability — transparencia y correspondencia entre lo que comunica el sistema y lo que realmente hace.
+
+**Problema:** en el formulario móvil web, el panel «Canal privado» afirma «Comparte una situación de forma segura y confidencial». Sin embargo, la revisión del modelo y del adaptador Firestore documentada en SEC-01 (6.2.1.2) encontró que un reporte con `anonymous=true` mantiene una referencia a la cuenta del empleado en el documento persistido. La API omite el nombre en la respuesta, pero eso no elimina la asociación almacenada. La interfaz, por tanto, puede llevar al empleado a interpretar que su identidad no queda vinculada.
+
+![Vista móvil web del formulario de reportes; se muestra el mensaje de privacidad evaluado](../assets/images/cap6/heuristics/employee-report-mobile-viewport.png)
+
+**Recomendación:** corregir la persistencia para que un reporte anónimo no conserve una referencia identificable, agregar una prueba que inspeccione el documento persistido y alinear el texto de privacidad con el comportamiento y la política real. Hasta entonces, no describir el flujo como anónimo frente a quienes tienen acceso a Firestore.
+
+**PROBLEMA #2: El resumen no delimita el periodo de los indicadores**
+
+**Severidad:** 2.
+
+**Heurística violada:** Information Architecture — la información debe poder interpretarse en el contexto y ser utilizable.
+
+**Problema:** el tablero muestra «Tendencia semanal de la plantilla», ocho respuestas, 12 empleados activos y una tasa de respuesta de 67 %, pero no presenta las fechas de inicio y fin de la semana ni define de forma visible la población que compone la tasa. RH-02 ya pidió el periodo y el total de personas para interpretar el panel (registro de entrevista en 6.3.2). La captura se ejecutó con valores sintéticos; no representa datos de una organización.
+
+![Resumen de ánimo de Recursos Humanos usado en la inspección heurística](../assets/images/cap6/heuristics/hr-dashboard-desktop.png)
+
+**Recomendación:** mostrar el rango exacto de fechas y definir «empleados activos» y «tasa de respuesta» mediante texto de ayuda o una etiqueta persistente; incluir la población/denominador usado para el cálculo.
+
+**PROBLEMA #3: El canal sensible de reportes queda agrupado bajo encuestas**
+
+**Severidad:** 2.
+
+**Heurística violada:** Information Architecture — findability y agrupación según el modelo mental del usuario.
+
+**Problema:** para llegar al formulario, el empleado abre «Encuestas», entra al «Centro de encuestas» y cambia a la pestaña «Reportes». La misma zona contiene respuestas a encuestas y actividades semanales. Por su sensibilidad y propósito, el canal puede no ser encontrado por una persona que busca comunicar un incidente y no una encuesta. La captura documenta la ubicación, no demuestra una tasa de abandono.
+
+![Pestaña Reportes dentro del Centro de encuestas en viewport móvil](../assets/images/cap6/heuristics/employee-report-mobile-viewport.png)
+
+**Recomendación:** ofrecer un acceso de primer nivel con el nombre «Reportar una situación», conservar las encuestas y actividades bajo su categoría y comprobar la encontrabilidad con una tarea moderada y una medida de éxito/tasa de localización.
+
+**Alcance inclusivo revisado:** se comprobó que el menú del viewport móvil se puede abrir y que las opciones están rotuladas; los campos del formulario de RR. HH. también tienen etiquetas visibles. Son señales favorables de reconocimiento y navegación, no una auditoría de accesibilidad. Esta inspección no midió contraste, teclado, lector de pantalla, ampliación de texto ni Android nativo. Las evidencias visuales de formulario y navegación están en `../assets/images/cap6/heuristics/hr-survey-create-desktop.png` y `../assets/images/cap6/heuristics/employee-menu-mobile.png`.
+
+**Capturas complementarias de Playwright:** estas vistas documentan las pantallas adicionales recorridas para comprobar la navegación de Recursos Humanos y la rotulación del formulario. Se usaron respuestas sintéticas; no se guardaron encuestas reales.
+
+![Gestión de encuestas de Recursos Humanos revisada en escritorio](../assets/images/cap6/heuristics/hr-management-desktop.png)
+
+![Formulario de creación de encuesta de Recursos Humanos con campos rotulados](../assets/images/cap6/heuristics/hr-survey-create-desktop.png)
+
+![Menú del empleado abierto en viewport móvil web](../assets/images/cap6/heuristics/employee-menu-mobile.png)
 
 ## 6.4. UX Audits
 
-Según la indicación del profesor, el intercambio de auditorías UX se realizará en clase. Comprende la **auditoría realizada**, en la que el equipo SafeSpace evalúa la experiencia de otro grupo, y la **auditoría recibida**, en la que otro equipo evalúa SafeSpace. A la fecha de esta versión, las actividades no se han realizado; por ello, el registro siguiente identifica la información que se recogerá en clase y no anticipa hallazgos ni respuestas.
+De acuerdo con la aclaración del profesor, cada equipo debía evaluar su propio producto; no se requiere una auditoría externa recibida. Esta sección documenta la revisión de SafeSpace y consolida los hallazgos de la inspección heurística de 6.3.3. El recorrido de interfaz y las capturas se automatizaron con Playwright en un entorno local con datos sintéticos; por eso, la evidencia no representa una prueba con usuarios ni una auditoría de accesibilidad.
 
-### 6.4.1. Auditoría realizada
+### 6.4.1. Auditoría propia de SafeSpace
 
-#### 6.4.1.1. Información del grupo auditado
+#### 6.4.1.1. Información del producto auditado
 
-| Campo | Registro previsto para la sesión en clase |
+| Campo | Registro |
 | :--- | :--- |
-| Grupo auditado e integrantes | Se consignarán durante la actividad. |
-| Producto, versión y plataforma auditados | Se registrarán durante la actividad. |
+| Equipo responsable | Equipo SafeSpace. La inspección documentada se preparó con apoyo de Playwright; no se asignan hallazgos a una persona individual sin una bitácora del equipo. |
+| Producto y versión | Frontend web de SafeSpace, copia local usada para la revisión; las respuestas de API son sintéticas. |
+| Plataformas incluidas | Vista web de escritorio y vista web responsiva en viewport móvil. No se evaluó la aplicación Android nativa. |
 
-#### 6.4.1.2. Cronograma de auditoría realizada
+#### 6.4.1.2. Cronograma y método
 
-| Campo | Registro previsto para la sesión en clase |
+| Campo | Registro |
 | :--- | :--- |
-| Fecha y duración | La fecha se definirá en clase y se anotará junto con la duración. |
+| Fecha | 25/11/2026, fecha de ejecución de las capturas automatizadas. |
+| Entorno | Playwright y Chromium; escritorio 1440×1000 y viewport móvil 390×844. |
+| Duración | No se registró la duración total de la revisión. |
+| Método | Recorrido de los flujos definidos en 6.3.3, inspección de claridad, coherencia del mensaje, contexto de métricas y encontrabilidad. Hallazgos calificados en escala 1–4 del Anexo D. |
 
-#### 6.4.1.3. Contenido de auditoría realizada
+#### 6.4.1.3. Flujos y hallazgos
 
-| Campo | Registro previsto para la sesión en clase |
+| Flujo revisado | Resultado / hallazgo | Referencia |
 | :--- | :--- |
-| Flujos incluidos | Se anotarán según las tareas evaluadas. |
-| Método y criterios | Lista heurística de 6.3.3 y tareas de validación de 6.3.1 |
-| Hallazgos y severidad | Se documentarán a partir de observaciones reales durante la sesión. |
-| Evidencia | Se referenciará el acta, las capturas autorizadas o el backlog resultante. |
+| Empleado: localizar y revisar el flujo de reportes en viewport móvil | El canal está dentro del Centro de encuestas; además, el texto de confidencialidad no refleja que Firestore conserva una referencia de cuenta en reportes anónimos. Severidad 3 para privacidad y 2 para encontrabilidad. | Hallazgos 1 y 3 de 6.3.3; `employee-report-mobile-viewport.png`. |
+| RR. HH.: revisar resumen semanal de ánimo | El periodo exacto y el denominador de la tasa no se explican junto a los indicadores. Severidad 2. | Hallazgo 2 de 6.3.3; `hr-dashboard-desktop.png`. |
+| RR. HH.: revisar gestión y creación de encuesta | Se observaron etiquetas visibles y navegación disponible en las capturas; no se ejecutó una prueba de accesibilidad. | `hr-management-desktop.png`, `hr-survey-create-desktop.png`. |
 
-### 6.4.2. Auditoría recibida
+### 6.4.2. Resumen de modificaciones para subsanar hallazgos
 
-#### 6.4.2.1. Información del grupo auditor
-
-| Campo | Registro previsto para la sesión en clase |
-| :--- | :--- |
-| Equipo que realizó la revisión | Se consignará durante la actividad. |
-| Integrantes/contacto académico | Se registrarán con el alcance autorizado. |
-
-#### 6.4.2.2. Cronograma de auditoría recibida
-
-| Campo | Registro previsto para la sesión en clase |
-| :--- | :--- |
-| Fecha y modalidad | Se registrarán durante la actividad en clase. |
-
-#### 6.4.2.3. Contenido de auditoría recibida
-
-| Campo | Registro previsto para la sesión en clase |
-| :--- | :--- |
-| Material y versión revisados | Se anotarán durante la actividad. |
-| Comentarios recibidos | Se resumirán conservando el sentido de las observaciones. |
-| Respuesta del equipo SafeSpace | Se registrará la decisión acordada para cada hallazgo. |
-| Evidencia | Se vinculará el acta o registro de intercambio. |
-
-#### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
-
-Después del intercambio en clase, se consolidarán los hallazgos repetidos y se priorizarán por impacto en la tarea, privacidad y frecuencia observada. Para cada hallazgo se documentará la decisión acordada, el responsable si se asigna y el enlace a la evidencia, como un issue o un commit. No se anticipan modificaciones antes de recibir las observaciones.
+La auditoría recibida de otro equipo no aplica según la aclaración del profesor. Las acciones siguientes responden a los hallazgos de la evaluación propia; el estado distingue las recomendaciones del código ya modificado.
 
 | Hallazgo | Decisión o acción acordada | Estado tras la revisión | Evidencia |
 | :--- | :--- | :--- | :--- |
-| Se completará con los hallazgos de la auditoría recibida en clase. | Se registrará según el acuerdo del equipo. | Se actualizará después de la revisión. | Se agregará el enlace a la evidencia disponible. |
+| La referencia de usuario persiste en reportes anónimos (SEC-01). | Corregir el modelo de persistencia y añadir una prueba que confirme que el documento anónimo no conserva identidad; alinear el texto de privacidad. | Pendiente de cambio en el producto y de verificación; este informe registra el riesgo. | 6.2.1.2 y hallazgo 1 de 6.3.3. |
+| El resumen semanal no muestra periodo y denominador. | Mostrar rango de fechas y explicar la población y la tasa de respuesta. | Recomendación registrada; implementación y nueva evaluación no acreditadas. | Hallazgo 2 de 6.3.3. |
+| El acceso a reportes puede ser difícil de encontrar. | Evaluar un acceso de primer nivel a “Reportar una situación” y medir éxito de localización. | Recomendación registrada; requiere implementación y validación con usuarios. | Hallazgo 3 de 6.3.3. |
 
 \newpage

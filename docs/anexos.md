@@ -17,8 +17,11 @@ La relación se amplía con cada entrega del proyecto. Cada video indica la entr
 | :--- | :--- | :--- |
 | AV1 | About the Product — video de presentación de SafeSpace | [Ver en YouTube](https://youtu.be/LQMtdRskbRs) · [Microsoft 365](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQCGpIJb9aonTLG1yEctvKw2ASu2vkNiDx2fEkP3M_4wXiA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=g11Gr9) |
 | AV1 | Exposición AV1 | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQCMrgPbZR7qQqwR238OZomZAecNXBTj96MNbKUz5qdsMOM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiJ9fQ%3D&e=kFGtG3) |
-| Trabajo Parcial | Exposición del Trabajo Parcial | [Completar con el enlace del video en Microsoft Stream] |
-| AV2 | Exposición AV2 | [Completar con el enlace del video en Microsoft Stream una vez grabado y subido] |
+| Trabajo Parcial | Exposición del Trabajo Parcial | Pendiente: agregar el enlace privado de Microsoft Stream. |
+| AV2 | Exposición AV2 | Pendiente: agregar el enlace privado de Microsoft Stream. |
+| Trabajo Final | About-the-Product Intro Video | Se documenta el video de producto AV1 en 5.3; insertar una captura real del corte elegido y confirmar si se reutiliza o se publica una versión final actualizada. |
+| Trabajo Final | Video App Validation | Pendiente: enlace de Stream, duración, captura del video y evidencia de la prueba/distribución móvil realmente realizada. |
+| Trabajo Final | Video About-the-Team | Pendiente: enlace de Stream y YouTube, duración, secuencia de contenidos con tiempos y fotograma representativo. |
 
 ## Anexo C. Repositorios y servicios publicados
 

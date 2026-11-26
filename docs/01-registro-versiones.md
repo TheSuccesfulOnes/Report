@@ -165,6 +165,14 @@
       Ajustes finales del Avance 2: carátula y capítulos III y V referidos al Avance 2; definición de los códigos QB-01 a QB-08 en el Question Backlog y renumeración de TB-02 y TB-03 para que los códigos de las historias To-Be sigan el orden de prioridad; incorporación de la historia TB-06 a partir del hallazgo SEC-01 (referencia al usuario almacenada en reportes anónimos) en el To-Be Product Backlog y en el Sprint To-Be 6; conclusiones del Avance 2 con el contraste de las hipótesis Lean UX frente a las seis entrevistas. Esta versión deja sin efecto la restricción sobre fotografías indicada en V1.7.0 y V1.8.0: los seis participantes autorizaron la publicación de su imagen y de su nombre de pila, según confirmó el equipo, y así se consigna en 6.3.2.
     </td>
   </tr>
+  <tr>
+    <td align="center">V1.17.0</td>
+    <td align="center">25/11/26</td>
+    <td>Asto Jacome, Jose Gustavo</td>
+    <td>
+      Revisión de los Capítulos VI–VIII y conclusiones para el Trabajo Final: formato de evaluación heurística según Anexo D con capturas Playwright sobre datos sintéticos; resultado local de 489 pruebas Vitest y dos recorridos de captura aprobados; CI del frontend documentada y check de despliegue Vercel clasificado por separado; ocho preguntas cuantificables con fórmulas, análisis y repriorización explícitos; matriz ética y de impacto según Anexo F; corrección de 6.4 según la aclaración docente sobre auditoría propia y registro de videos aún no disponibles.
+    </td>
+  </tr>
 
 </tbody>
 </table>

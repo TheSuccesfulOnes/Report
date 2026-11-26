@@ -20,7 +20,9 @@ Entre el 19 de septiembre y el 8 de octubre de 2026, el equipo actualizó el inf
 
 ## Evidencia de colaboración en GitHub - Trabajo Parcial
 
-[Agregar aquí la captura agregada de la colaboración del repositorio del informe correspondiente al Trabajo Parcial.]
+![GitHub Insights Contributors del repositorio Report, periodo All](../assets/images/shared/insights/report-contributors-all.png){width=100%}
+
+**Alcance de la captura:** GitHub muestra `Period: All`, por lo que el gráfico resume la actividad acumulada del repositorio Report y no filtra exclusivamente los commits del Trabajo Parcial. Los cinco commits descritos arriba corresponden al intervalo indicado en el texto; esta imagen se presenta como evidencia agregada del repositorio.
 
 ## Desarrollo de las actividades de elaboración del informe - AV2
 
@@ -40,6 +42,12 @@ La actividad registrada en GitHub se concentra en pocos integrantes durante este
 
 ## Evidencia de colaboración en GitHub - AV2
 
-[Agregar aquí la captura agregada de la colaboración del repositorio del informe y de los repositorios del producto correspondiente al AV2, tomada de GitHub (Insights → Contributors) con el periodo del 9 de octubre al 8 de noviembre de 2026.]
+Las siguientes vistas de `Insights → Contributors` también muestran `Period: All`. Documentan la actividad acumulada de cada repositorio y complementan la tabla de commits del 9 de octubre al 8 de noviembre; no aíslan ese intervalo. El gráfico de Report aparece en la sección anterior. No se recibió una captura de `Frontend-Admin-SafeSpace`.
+
+![GitHub Insights Contributors de Backend-SafeSpace, periodo All](../assets/images/shared/insights/backend-contributors-all.png){width=100%}
+
+![GitHub Insights Contributors de Frontend-Web-SafeSpace, periodo All](../assets/images/shared/insights/frontend-web-contributors-all.png){width=100%}
+
+![GitHub Insights Contributors de Frontend-Movil-SafeSapace, periodo All](../assets/images/shared/insights/frontend-mobile-contributors-all.png){width=100%}
 
 \newpage
